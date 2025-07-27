@@ -6,22 +6,21 @@
   <meta name="description" content="Blog de Filmes e Séries - Lançamentos, reviews e novidades do cinema e streaming.">
   <title>Lançamentos de Filmes e Séries</title>
   <style>
- body {
+body {
   font-family: Arial, sans-serif;
-  background-color: #ffffff; /* cinza escuro */
-  color: #ddd; /* cinza claro */
+  background-color: #111; /* fundo escuro */
+  color: #f5f5f5; /* texto claro */
   margin: 0;
   padding: 0;
 }
 
 header {
-  background-color: #5c2a72; /* roxo escuro */
+  background-color: #e50914; /* vermelho Netflix */
   padding: 20px;
   text-align: center;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   font-weight: 700;
-  color: #eee;
-  user-select: none;
+  color: #fff;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -29,200 +28,53 @@ header {
   box-shadow: 0 4px 15px rgba(0,0,0,0.5);
 }
 
-.logo-icon {
-  font-size: 3.5rem;
-  transform: rotate(-10deg);
-  filter: drop-shadow(2px 2px 2px rgba(0,0,0,0.5));
-  line-height: 1;
-}
-
-.logo-text-wrapper {
-  text-align: left;
-  line-height: 1.1;
-}
-
-.logo-main {
-  display: block;
-  font-family: 'Oswald', serif;
-  font-style: italic;
-  font-weight: 900;
-  font-size: 2.8rem;
-  letter-spacing: 5px;
-  text-transform: uppercase;
-  color: #ffffff; /* lilás claro */
-}
-
-.logo-sub {
-  display: block;
-  font-family: 'Oswald', Tahoma, Geneva, Verdana, sans-serif;
-  font-weight: 500;
-  font-size: 1.1rem;
-  letter-spacing: 1.5px;
-  margin-top: 4px;
-  text-transform: none;
-  font-style: normal;
-  color: #ffffff; /* roxo médio */
-}
-
 nav {
-  background: #3c2f4a; /* roxo cinza */
+  background: #b00610; /* vermelho mais escuro */
   display: flex;
   justify-content: center;
   padding: 10px;
-  border-bottom: 2px solid #7e57c2; /* roxo */
+  border-bottom: 2px solid #ff9800;
 }
-
 nav a {
-  color: #d1c4e9; /* lilás claro */
+  color: #fdd835; /* amarelo vivo */
   text-decoration: none;
   margin: 0 15px;
   font-weight: bold;
   transition: 0.3s;
 }
 nav a:hover {
-  color: #b39ddb; /* roxo médio */
-}
-
-.container {
-  width: 90%;
-  max-width: 1200px;
-  margin: auto;
-  padding: 20px 0;
-}
-
-.grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 20px;
+  color: #fff;
 }
 
 .card {
-  background: #424242; /* cinza médio escuro */
+  background: #1c1c1c;
   border-radius: 10px;
-  border: 2px solid #7e57c2; /* roxo */
+  border: 2px solid #e50914;
   overflow: hidden;
   box-shadow: 0 0 10px rgba(0,0,0,0.5);
   transition: transform 0.3s;
-  color: #ddd;
+  color: #f5f5f5;
 }
 .card:hover {
   transform: scale(1.05);
-  border-color: #b39ddb; /* roxo mais claro */
-}
-.card img {
-  width: 100%;
-  height: 350px;
-  object-fit: cover;
-  border-bottom: 2px solid #7e57c2;
+  border-color: #ff9800;
 }
 .card h3 {
   margin: 10px;
   font-size: 1.2rem;
-  color: #d1c4e9;
-}
-.card p {
-  margin: 10px;
-  font-size: 0.9rem;
-  color: #ccc;
-}
-
-footer {
-  background: #5c2a72;
-  text-align: center;
-  padding: 20px;
-  color: #eee;
-  font-size: 0.8rem;
-}
-
-.ads {
-  background: #3a3a3a;
-  border: 2px dashed #7e57c2;
-  padding: 20px;
-  text-align: center;
-  margin: 20px 0;
-  border-radius: 10px;
-  color: #ddd;
+  color: #ff9800;
 }
 
 .section-title {
-  color: #d1c4e9;
+  color: #ff9800;
   margin: 40px 0 20px;
   font-size: 1.8rem;
-}
-
-.ranking-wrapper {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 24px;
-}
-
-.ranking-card {
-  background: #424242;
-  border: 2px solid #7e57c2;
-  border-radius: 12px;
-  padding: 20px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.3);
-  color: #ddd;
-}
-
-.ranking-card h3 {
-  color: #d1c4e9;
-  margin-top: 0;
-}
-
-.ranking-list {
-  list-style: none;
-  padding: 0;
-  margin: 10px 0 0;
-  color: #ccc;
-}
-
-.ranking-list li {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  padding: 6px 0;
-  border-bottom: 1px solid rgba(255,255,255,0.1);
-}
-
-.ranking-list li:last-child {
-  border-bottom: 0;
-}
-
-.pos {
-  background: #7e57c2;
-  color: #fff;
-  font-weight: bold;
-  width: 26px;
-  height: 26px;
-  border-radius: 50%;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 0.85rem;
-}
-
-.tag-list {
-  list-style: none;
-  padding: 0;
-  margin: 0 0 8px;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 6px;
-}
-
-.tag {
-  background: #7e57c2;
-  color: #fff;
-  padding: 2px 8px;
-  border-radius: 999px;
-  font-size: 0.75rem;
 }
 
 .btn-red {
   display: inline-block;
   margin-top: 12px;
-  background: #7e57c2;
+  background: #e50914;
   color: #fff;
   text-decoration: none;
   padding: 10px 14px;
@@ -233,214 +85,28 @@ footer {
   transition: 0.2s;
 }
 .btn-red:hover {
-  background: #512da8; /* roxo escuro */
+  background: #b00610;
   color: #fff;
 }
 
-/* Tabs */
-.tabs {
-  display: flex;
-  gap: 8px;
-  margin-bottom: 16px;
-}
-.tab-btn {
-  background: #424242;
-  color: #7e57c2;
-  border: 2px solid #7e57c2;
-  border-radius: 8px;
-  padding: 8px 14px;
-  cursor: pointer;
-  font-weight: bold;
-  transition: 0.2s;
-}
-.tab-btn.active, .tab-btn:hover {
-  background: #7e57c2;
-  color: #fff;
-}
-.tab-content { display: none; }
-.tab-content.active { display: block; }
-
-/* Enquetes */
-.poll-card {
-  background: #424242;
-  border: 2px solid #7e57c2;
-  border-radius: 12px;
-  padding: 18px;
-  margin-bottom: 18px;
-  color: #ddd;
-}
-.poll-card h4 {
-  color: #d1c4e9;
-  margin: 0 0 10px 0;
-}
-.poll-option {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  margin: 6px 0;
-}
-.poll-results {
-  margin-top: 10px;
-}
-.bar {
-  height: 8px;
-  background: #7e57c2;
-  border-radius: 999px;
-}
-.bar-wrap {
-  width: 100%;
-  background: rgba(255,255,255,0.1);
-  border-radius: 999px;
-  overflow: hidden;
-  margin: 4px 0 10px 0;
-}
-.vote-btn {
-  margin-top: 10px;
-  background: #7e57c2;
-  color: #fff;
-  border: none;
-  border-radius: 8px;
-  padding: 8px 14px;
-  cursor: pointer;
-  font-weight: bold;
-}
-.vote-btn:disabled {
-  background: #999;
-  cursor: not-allowed;
-}
-
-/* Quiz */
-.quiz-card {
-  background: #424242;
-  border: 2px solid #7e57c2;
-  border-radius: 12px;
-  padding: 20px;
-  color: #ddd;
-}
-.quiz-card h3 {
-  color: #d1c4e9;
-  margin-top: 0;
-}
-.quiz-question p {
-  margin-bottom: 6px;
-}
-
-/* Comentários */
-.comments-card {
-  background: #424242;
-  border: 2px solid #7e57c2;
-  border-radius: 12px;
-  padding: 20px;
-  color: #ddd;
-}
-#comment-form input,
-#comment-form textarea {
-  background: #333;
-  border: 2px solid #7e57c2;
-  border-radius: 8px;
-  padding: 10px;
-  font-family: inherit;
-  color: #ddd;
-}
-.comments-list {
-  margin-top: 18px;
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-}
-.comment-item {
-  border-left: 4px solid #7e57c2;
-  padding-left: 10px;
-  color: #ccc;
-}
-.comment-item .author {
-  font-weight: bold;
-  color: #d1c4e9;
-}
-.comment-item .date {
-  font-size: 0.75rem;
-  color: #999;
-}
-
-/* Abas laterais de anúncios */
-.ad-tab-left,
-.ad-tab-right {
-  position: fixed;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 120px;
-  background: #7e57c2;
-  color: white;
-  font-weight: bold;
+footer {
+  background: #e50914;
   text-align: center;
-  padding: 10px;
-  border-radius: 8px;
-  cursor: pointer;
-  writing-mode: vertical-rl;
-  text-orientation: mixed;
-  box-shadow: 0 0 8px rgba(0,0,0,0.5);
-  z-index: 9999;
-  transition: background 0.3s;
+  padding: 20px;
+  color: #fff;
+  font-size: 0.8rem;
 }
 
-.ad-tab-left {
-  left: 0;
-  border-top-right-radius: 0;
-  border-bottom-right-radius: 0;
+.ads {
+  background: #222;
+  border: 2px dashed #e50914;
+  padding: 20px;
+  text-align: center;
+  margin: 20px 0;
+  border-radius: 10px;
+  color: #f5f5f5;
 }
 
-.ad-tab-right {
-  right: 0;
-  border-top-left-radius: 0;
-  border-bottom-left-radius: 0;
-}
-
-.ad-tab-left:hover,
-.ad-tab-right:hover {
-  background: #512da8;
-}
-
-/* Conteúdo do anúncio fixo */
-.ad-content-left,
-.ad-content-right {
-  position: fixed;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 160px;
-  height: 300px;
-  background: #333;
-  border: 2px solid #7e57c2;
-  border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.7);
-  padding: 10px;
-  overflow: auto;
-  z-index: 9998;
-  display: none; /* começa escondido */
-}
-
-.ad-content-left {
-  left: 120px; /* fica ao lado da aba esquerda */
-}
-
-.ad-content-right {
-  right: 120px; /* fica ao lado da aba direita */
-}
-
-/* Input de busca */
-#searchInput {
-  background: #333;
-  border: 2px solid #7e57c2;
-  color: #ddd;
-  border-radius: 8px;
-  padding: 10px;
-  font-size: 1rem;
-  width: 80%;
-  max-width: 400px;
-}
-
-#searchInput::placeholder {
-  color: #b39ddb;
-}
 
   </style>
 </head>
@@ -467,14 +133,14 @@ footer {
     <h2 style="color:#e50914;">Últimos Lançamentos</h2>
     <div class="grid">
      <div class="card">
-  <img src=" alt="Quarteto Fantástico">
+  <img src="img/Quarteto-Fantastico-1170x658.jpg" alt="Quarteto Fantástico">
   <h3>“Novo Quarteto Fantástico chega aos cinemas em julho destacando os laços familiares”</h3>
   <p>Sinopse, elenco, data e curiosidades...</p>
 </div>
 
 <!-- Série Stranger Things -->
 <div class="card">
-  <img src="" alt="Stranger Things 5">
+  <img src="img/stranger-things-season-5-uw-3840x2400.jpg" alt="Stranger Things 5">
   <h3>"Tudo o que sabemos até agora sobre a 5ª temporada de 'Stranger Things': Detalhes e novidades"</h3>
   <p>Sinopse, elenco, data de lançamento...</p>
 </div>
