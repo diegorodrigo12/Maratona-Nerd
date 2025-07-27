@@ -800,6 +800,7 @@ adTabRight.addEventListener('click', () => {
 });
 const searchInput = document.getElementById('searchInput');
 const cards = document.querySelectorAll('.grid .card');
+console.log(cards); // Veja se os cards estão sendo capturados
 
 searchInput.addEventListener('input', () => {
   const filter = searchInput.value.toLowerCase();
