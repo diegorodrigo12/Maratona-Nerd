@@ -6,27 +6,28 @@
   <meta name="description" content="Blog de Filmes e Séries - Lançamentos, reviews e novidades do cinema e streaming.">
   <title>Lançamentos de Filmes e Séries</title>
   <style>
- body {
+body {
   font-family: Arial, sans-serif;
-  background-color: #ffffff; /* cinza escuro */
-  color: #ddd; /* cinza claro */
+  background-color: #1b1b1b; /* fundo cinza escuro */
+  color: #e0e0e0; /* cinza claro */
   margin: 0;
   padding: 0;
 }
 
+/* HEADER */
 header {
-  background-color: #5c2a72; /* roxo escuro */
+  background-color: #4b0082; /* roxo escuro */
   padding: 20px;
   text-align: center;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   font-weight: 700;
-  color: #eee;
+  color: #ffffff;
   user-select: none;
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 16px;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
 }
 
 .logo-icon {
@@ -49,7 +50,7 @@ header {
   font-size: 2.8rem;
   letter-spacing: 5px;
   text-transform: uppercase;
-  color: #ffffff; /* lilás claro */
+  color: #e1bee7; /* lilás claro */
 }
 
 .logo-sub {
@@ -59,13 +60,12 @@ header {
   font-size: 1.1rem;
   letter-spacing: 1.5px;
   margin-top: 4px;
-  text-transform: none;
-  font-style: normal;
-  color: #ffffff; /* roxo médio */
+  color: #d1c4e9; /* roxo médio */
 }
 
+/* NAV */
 nav {
-  background: #3c2f4a; /* roxo cinza */
+  background: #2e1a47; /* roxo profundo */
   display: flex;
   justify-content: center;
   padding: 10px;
@@ -80,9 +80,10 @@ nav a {
   transition: 0.3s;
 }
 nav a:hover {
-  color: #b39ddb; /* roxo médio */
+  color: #ffffff; /* branco no hover */
 }
 
+/* CONTAINERS */
 .container {
   width: 90%;
   max-width: 1200px;
@@ -90,6 +91,7 @@ nav a:hover {
   padding: 20px 0;
 }
 
+/* GRID E CARDS */
 .grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -97,17 +99,17 @@ nav a:hover {
 }
 
 .card {
-  background: #424242; /* cinza médio escuro */
+  background: #2c2c2c; /* cinza médio escuro */
   border-radius: 10px;
   border: 2px solid #7e57c2; /* roxo */
   overflow: hidden;
   box-shadow: 0 0 10px rgba(0,0,0,0.5);
-  transition: transform 0.3s;
-  color: #ddd;
+  transition: transform 0.3s, border-color 0.3s;
+  color: #e0e0e0;
 }
 .card:hover {
   transform: scale(1.05);
-  border-color: #b39ddb; /* roxo mais claro */
+  border-color: #b39ddb; /* roxo claro */
 }
 .card img {
   width: 100%;
@@ -118,7 +120,7 @@ nav a:hover {
 .card h3 {
   margin: 10px;
   font-size: 1.2rem;
-  color: #d1c4e9;
+  color: #e1bee7; /* título lilás */
 }
 .card p {
   margin: 10px;
@@ -126,14 +128,16 @@ nav a:hover {
   color: #ccc;
 }
 
+/* FOOTER */
 footer {
-  background: #5c2a72;
+  background: #4b0082; /* roxo escuro */
   text-align: center;
   padding: 20px;
   color: #eee;
   font-size: 0.8rem;
 }
 
+/* ADS */
 .ads {
   background: #3a3a3a;
   border: 2px dashed #7e57c2;
@@ -144,51 +148,26 @@ footer {
   color: #ddd;
 }
 
+/* TITULOS */
 .section-title {
-  color: #d1c4e9;
+  color: #e1bee7;
   margin: 40px 0 20px;
   font-size: 1.8rem;
 }
 
-.ranking-wrapper {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 24px;
-}
-
+/* RANKINGS */
 .ranking-card {
-  background: #424242;
+  background: #333;
   border: 2px solid #7e57c2;
   border-radius: 12px;
   padding: 20px;
   box-shadow: 0 0 10px rgba(0,0,0,0.3);
   color: #ddd;
 }
-
 .ranking-card h3 {
-  color: #d1c4e9;
+  color: #b39ddb;
   margin-top: 0;
 }
-
-.ranking-list {
-  list-style: none;
-  padding: 0;
-  margin: 10px 0 0;
-  color: #ccc;
-}
-
-.ranking-list li {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  padding: 6px 0;
-  border-bottom: 1px solid rgba(255,255,255,0.1);
-}
-
-.ranking-list li:last-child {
-  border-bottom: 0;
-}
-
 .pos {
   background: #7e57c2;
   color: #fff;
@@ -201,16 +180,6 @@ footer {
   justify-content: center;
   font-size: 0.85rem;
 }
-
-.tag-list {
-  list-style: none;
-  padding: 0;
-  margin: 0 0 8px;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 6px;
-}
-
 .tag {
   background: #7e57c2;
   color: #fff;
@@ -219,6 +188,7 @@ footer {
   font-size: 0.75rem;
 }
 
+/* BOTÕES */
 .btn-red {
   display: inline-block;
   margin-top: 12px;
@@ -233,202 +203,13 @@ footer {
   transition: 0.2s;
 }
 .btn-red:hover {
-  background: #512da8; /* roxo escuro */
-  color: #fff;
-}
-
-/* Tabs */
-.tabs {
-  display: flex;
-  gap: 8px;
-  margin-bottom: 16px;
-}
-.tab-btn {
-  background: #424242;
-  color: #7e57c2;
-  border: 2px solid #7e57c2;
-  border-radius: 8px;
-  padding: 8px 14px;
-  cursor: pointer;
-  font-weight: bold;
-  transition: 0.2s;
-}
-.tab-btn.active, .tab-btn:hover {
-  background: #7e57c2;
-  color: #fff;
-}
-.tab-content { display: none; }
-.tab-content.active { display: block; }
-
-/* Enquetes */
-.poll-card {
-  background: #424242;
-  border: 2px solid #7e57c2;
-  border-radius: 12px;
-  padding: 18px;
-  margin-bottom: 18px;
-  color: #ddd;
-}
-.poll-card h4 {
-  color: #d1c4e9;
-  margin: 0 0 10px 0;
-}
-.poll-option {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  margin: 6px 0;
-}
-.poll-results {
-  margin-top: 10px;
-}
-.bar {
-  height: 8px;
-  background: #7e57c2;
-  border-radius: 999px;
-}
-.bar-wrap {
-  width: 100%;
-  background: rgba(255,255,255,0.1);
-  border-radius: 999px;
-  overflow: hidden;
-  margin: 4px 0 10px 0;
-}
-.vote-btn {
-  margin-top: 10px;
-  background: #7e57c2;
-  color: #fff;
-  border: none;
-  border-radius: 8px;
-  padding: 8px 14px;
-  cursor: pointer;
-  font-weight: bold;
-}
-.vote-btn:disabled {
-  background: #999;
-  cursor: not-allowed;
-}
-
-/* Quiz */
-.quiz-card {
-  background: #424242;
-  border: 2px solid #7e57c2;
-  border-radius: 12px;
-  padding: 20px;
-  color: #ddd;
-}
-.quiz-card h3 {
-  color: #d1c4e9;
-  margin-top: 0;
-}
-.quiz-question p {
-  margin-bottom: 6px;
-}
-
-/* Comentários */
-.comments-card {
-  background: #424242;
-  border: 2px solid #7e57c2;
-  border-radius: 12px;
-  padding: 20px;
-  color: #ddd;
-}
-#comment-form input,
-#comment-form textarea {
-  background: #333;
-  border: 2px solid #7e57c2;
-  border-radius: 8px;
-  padding: 10px;
-  font-family: inherit;
-  color: #ddd;
-}
-.comments-list {
-  margin-top: 18px;
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-}
-.comment-item {
-  border-left: 4px solid #7e57c2;
-  padding-left: 10px;
-  color: #ccc;
-}
-.comment-item .author {
-  font-weight: bold;
-  color: #d1c4e9;
-}
-.comment-item .date {
-  font-size: 0.75rem;
-  color: #999;
-}
-
-/* Abas laterais de anúncios */
-.ad-tab-left,
-.ad-tab-right {
-  position: fixed;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 120px;
-  background: #7e57c2;
-  color: white;
-  font-weight: bold;
-  text-align: center;
-  padding: 10px;
-  border-radius: 8px;
-  cursor: pointer;
-  writing-mode: vertical-rl;
-  text-orientation: mixed;
-  box-shadow: 0 0 8px rgba(0,0,0,0.5);
-  z-index: 9999;
-  transition: background 0.3s;
-}
-
-.ad-tab-left {
-  left: 0;
-  border-top-right-radius: 0;
-  border-bottom-right-radius: 0;
-}
-
-.ad-tab-right {
-  right: 0;
-  border-top-left-radius: 0;
-  border-bottom-left-radius: 0;
-}
-
-.ad-tab-left:hover,
-.ad-tab-right:hover {
   background: #512da8;
+  color: #fff;
 }
 
-/* Conteúdo do anúncio fixo */
-.ad-content-left,
-.ad-content-right {
-  position: fixed;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 160px;
-  height: 300px;
-  background: #333;
-  border: 2px solid #7e57c2;
-  border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.7);
-  padding: 10px;
-  overflow: auto;
-  z-index: 9998;
-  display: none; /* começa escondido */
-}
-
-.ad-content-left {
-  left: 120px; /* fica ao lado da aba esquerda */
-}
-
-.ad-content-right {
-  right: 120px; /* fica ao lado da aba direita */
-}
-
-/* Input de busca */
+/* INPUT DE BUSCA */
 #searchInput {
-  background: #333;
+  background: #2c2c2c;
   border: 2px solid #7e57c2;
   color: #ddd;
   border-radius: 8px;
@@ -437,7 +218,6 @@ footer {
   width: 80%;
   max-width: 400px;
 }
-
 #searchInput::placeholder {
   color: #b39ddb;
 }
