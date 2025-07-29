@@ -364,69 +364,6 @@ footer {
   color: #999;
 }
 
-/* Abas laterais de anúncios */
-.ad-tab-left,
-.ad-tab-right {
-  position: fixed;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 120px;
-  background: #7e57c2;
-  color: white;
-  font-weight: bold;
-  text-align: center;
-  padding: 10px;
-  border-radius: 8px;
-  cursor: pointer;
-  writing-mode: vertical-rl;
-  text-orientation: mixed;
-  box-shadow: 0 0 8px rgba(0,0,0,0.5);
-  z-index: 9999;
-  transition: background 0.3s;
-}
-
-.ad-tab-left {
-  left: 0;
-  border-top-right-radius: 0;
-  border-bottom-right-radius: 0;
-}
-
-.ad-tab-right {
-  right: 0;
-  border-top-left-radius: 0;
-  border-bottom-left-radius: 0;
-}
-
-.ad-tab-left:hover,
-.ad-tab-right:hover {
-  background: #512da8;
-}
-
-/* Conteúdo do anúncio fixo */
-.ad-content-left,
-.ad-content-right {
-  position: fixed;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 160px;
-  height: 300px;
-  background: #333;
-  border: 2px solid #7e57c2;
-  border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.7);
-  padding: 10px;
-  overflow: auto;
-  z-index: 9998;
-  display: none; /* começa escondido */
-}
-
-.ad-content-left {
-  left: 120px; /* fica ao lado da aba esquerda */
-}
-
-.ad-content-right {
-  right: 120px; /* fica ao lado da aba direita */
-}
 
 /* Input de busca */
 #searchInput {
