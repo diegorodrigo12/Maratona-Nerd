@@ -1,508 +1,539 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Blog de Filmes e Séries - Lançamentos, reviews e novidades do cinema e streaming.">
   <title>Lançamentos de Filmes e Séries</title>
   <style>
-body {
-  font-family: Arial, sans-serif;
-  background-color: #f8f9fa;
-  color: #333;
-  margin: 0;
-  padding: 0;
-}
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f8f9fa;
+      color: #333;
+      margin: 0;
+      padding: 0;
+    }
 
-header {
-  background-color: #ffffff;
-  padding: 20px;
-  text-align: center;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  font-weight: 700;
-  color: #2c3e50;
-  user-select: none;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 16px;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-}
+    header {
+      background-color: #ffffff;
+      padding: 20px;
+      text-align: center;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      font-weight: 700;
+      color: #2c3e50;
+      user-select: none;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 16px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    }
 
-.logo-icon {
-  font-size: 3.5rem;
-  transform: rotate(-10deg);
-  color: #e74c3c;
-  line-height: 1;
-}
+    .logo-icon {
+      font-size: 3.5rem;
+      transform: rotate(-10deg);
+      color: #e74c3c;
+      line-height: 1;
+    }
 
-.logo-text-wrapper {
-  text-align: left;
-  line-height: 1.1;
-}
+    .logo-text-wrapper {
+      text-align: left;
+      line-height: 1.1;
+    }
 
-.logo-main {
-  display: block;
-  font-family: 'Oswald', serif;
-  font-style: italic;
-  font-weight: 900;
-  font-size: 2.8rem;
-  letter-spacing: 5px;
-  text-transform: uppercase;
-  color: #2c3e50;
-}
+    .logo-main {
+      display: block;
+      font-family: 'Oswald', serif;
+      font-style: italic;
+      font-weight: 900;
+      font-size: 2.8rem;
+      letter-spacing: 5px;
+      text-transform: uppercase;
+      color: #2c3e50;
+    }
 
-.logo-sub {
-  display: block;
-  font-family: 'Oswald', Tahoma, Geneva, Verdana, sans-serif;
-  font-weight: 500;
-  font-size: 1.1rem;
-  letter-spacing: 1.5px;
-  margin-top: 4px;
-  text-transform: none;
-  font-style: normal;
-  color: #7f8c8d;
-}
+    .logo-sub {
+      display: block;
+      font-family: 'Oswald', Tahoma, Geneva, Verdana, sans-serif;
+      font-weight: 500;
+      font-size: 1.1rem;
+      letter-spacing: 1.5px;
+      margin-top: 4px;
+      text-transform: none;
+      font-style: normal;
+      color: #7f8c8d;
+    }
 
-nav {
-  background: #ecf0f1;
-  display: flex;
-  justify-content: center;
-  padding: 10px;
-  border-bottom: 1px solid #bdc3c7;
-}
+    nav {
+      background: #ecf0f1;
+      display: flex;
+      justify-content: center;
+      padding: 10px;
+      border-bottom: 1px solid #bdc3c7;
+    }
 
-nav a {
-  color: #34495e;
-  text-decoration: none;
-  margin: 0 15px;
-  font-weight: bold;
-  transition: 0.3s;
-}
-nav a:hover {
-  color: #e74c3c;
-}
+    nav a {
+      color: #34495e;
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: bold;
+      transition: 0.3s;
+    }
 
-.container {
-  width: 90%;
-  max-width: 1200px;
-  margin: auto;
-  padding: 20px 0;
-}
+    nav a:hover {
+      color: #e74c3c;
+    }
 
-.grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 20px;
-}
+    .container {
+      width: 90%;
+      max-width: 1200px;
+      margin: auto;
+      padding: 20px 0;
+    }
 
-.card {
-  background: #ffffff;
-  border-radius: 10px;
-  border: 1px solid #ddd;
-  overflow: hidden;
-  box-shadow: 0 0 10px rgba(0,0,0,0.05);
-  transition: transform 0.3s;
-  color: #333;
-}
-.card:hover {
-  transform: scale(1.03);
-  box-shadow: 0 0 15px rgba(0,0,0,0.1);
-}
-.card img {
-  width: 100%;
-  height: 350px;
-  object-fit: cover;
-  border-bottom: 1px solid #ddd;
-}
-.card h3 {
-  margin: 10px;
-  font-size: 1.2rem;
-  color: #e74c3c;
-}
-.card p {
-  margin: 10px;
-  font-size: 0.9rem;
-  color: #555;
-}
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
 
-footer {
-  background: #ffffff;
-  text-align: center;
-  padding: 20px;
-  color: #888;
-  font-size: 0.8rem;
-  border-top: 1px solid #ddd;
-}
+    .card {
+      background: #ffffff;
+      border-radius: 10px;
+      border: 1px solid #ddd;
+      overflow: hidden;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+      transition: transform 0.3s;
+      color: #333;
+    }
 
+    .card:hover {
+      transform: scale(1.03);
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    }
 
-.ads {
-  background: #3a3a3a;
-  border: 2px dashed #7e57c2;
-  padding: 20px;
-  text-align: center;
-  margin: 20px 0;
-  border-radius: 10px;
-  color: #ddd;
-}
+    .card img {
+      width: 100%;
+      height: 350px;
+      object-fit: cover;
+      border-bottom: 1px solid #ddd;
+    }
 
-.section-title {
-  color: #e50914;
-  margin: 40px 0 20px;
-  font-size: 1.5rem;
-}
+    .card h3 {
+      margin: 10px;
+      font-size: 1.2rem;
+      color: #e74c3c;
+    }
 
-.ranking-wrapper {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 24px;
-}
+    .card p {
+      margin: 10px;
+      font-size: 0.9rem;
+      color: #555;
+    }
 
-.ranking-card {
-  background: #424242;
-  border: 2px solid #7e57c2;
-  border-radius: 12px;
-  padding: 20px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.3);
-  color: #ddd;
-}
-
-.ranking-card h3 {
-  color: #d1c4e9;
-  margin-top: 0;
-}
-
-.ranking-list {
-  list-style: none;
-  padding: 0;
-  margin: 10px 0 0;
-  color: #ccc;
-}
-
-.ranking-list li {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  padding: 6px 0;
-  border-bottom: 1px solid rgba(255,255,255,0.1);
-}
-
-.ranking-list li:last-child {
-  border-bottom: 0;
-}
-
-.pos {
-  background: #7e57c2;
-  color: #fff;
-  font-weight: bold;
-  width: 26px;
-  height: 26px;
-  border-radius: 50%;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 0.85rem;
-}
-
-.tag-list {
-  list-style: none;
-  padding: 0;
-  margin: 0 0 8px;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 6px;
-}
-
-.tag {
-  background: #7e57c2;
-  color: #fff;
-  padding: 2px 8px;
-  border-radius: 999px;
-  font-size: 0.75rem;
-}
-
-.btn-red {
-  display: inline-block;
-  margin-top: 12px;
-  background: #7e57c2;
-  color: #fff;
-  text-decoration: none;
-  padding: 10px 14px;
-  border-radius: 8px;
-  font-weight: bold;
-  border: none;
-  cursor: pointer;
-  transition: 0.2s;
-}
-.btn-red:hover {
-  background: #512da8; /* roxo escuro */
-  color: #fff;
-}
-
-/* Tabs */
-.tabs {
-  display: flex;
-  gap: 8px;
-  margin-bottom: 16px;
-}
-.tab-btn {
-  background: #424242;
-  color: #7e57c2;
-  border: 2px solid #7e57c2;
-  border-radius: 8px;
-  padding: 8px 14px;
-  cursor: pointer;
-  font-weight: bold;
-  transition: 0.2s;
-}
-.tab-btn.active, .tab-btn:hover {
-  background: #7e57c2;
-  color: #fff;
-}
-.tab-content { display: none; }
-.tab-content.active { display: block; }
-
-/* Enquetes */
-.poll-card {
-  background: #424242;
-  border: 2px solid #7e57c2;
-  border-radius: 12px;
-  padding: 18px;
-  margin-bottom: 18px;
-  color: #ddd;
-}
-.poll-card h4 {
-  color: #d1c4e9;
-  margin: 0 0 10px 0;
-}
-.poll-option {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  margin: 6px 0;
-}
-.poll-results {
-  margin-top: 10px;
-}
-.bar {
-  height: 8px;
-  background: #7e57c2;
-  border-radius: 999px;
-}
-.bar-wrap {
-  width: 100%;
-  background: rgba(255,255,255,0.1);
-  border-radius: 999px;
-  overflow: hidden;
-  margin: 4px 0 10px 0;
-}
-.vote-btn {
-  margin-top: 10px;
-  background: #7e57c2;
-  color: #fff;
-  border: none;
-  border-radius: 8px;
-  padding: 8px 14px;
-  cursor: pointer;
-  font-weight: bold;
-}
-.vote-btn:disabled {
-  background: #999;
-  cursor: not-allowed;
-}
-
-/* Quiz */
-.quiz-card {
-  background: #424242;
-  border: 2px solid #7e57c2;
-  border-radius: 12px;
-  padding: 20px;
-  color: #ddd;
-}
-.quiz-card h3 {
-  color: #d1c4e9;
-  margin-top: 0;
-}
-.quiz-question p {
-  margin-bottom: 6px;
-}
-
-/* Comentários */
-.comments-card {
-  background: #424242;
-  border: 2px solid #7e57c2;
-  border-radius: 12px;
-  padding: 20px;
-  color: #ddd;
-}
-#comment-form input,
-#comment-form textarea {
-  background: #333;
-  border: 2px solid #7e57c2;
-  border-radius: 8px;
-  padding: 10px;
-  font-family: inherit;
-  color: #ddd;
-}
-.comments-list {
-  margin-top: 18px;
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-}
-.comment-item {
-  border-left: 4px solid #7e57c2;
-  padding-left: 10px;
-  color: #ccc;
-}
-.comment-item .author {
-  font-weight: bold;
-  color: #d1c4e9;
-}
-.comment-item .date {
-  font-size: 0.75rem;
-  color: #999;
-}
+    footer {
+      background: #ffffff;
+      text-align: center;
+      padding: 20px;
+      color: #888;
+      font-size: 0.8rem;
+      border-top: 1px solid #ddd;
+    }
 
 
-/* Input de busca */
-#searchInput {
-  background: #333;
-  border: 2px solid #7e57c2;
-  color: #ddd;
-  border-radius: 8px;
-  padding: 10px;
-  font-size: 1rem;
-  width: 80%;
-  max-width: 400px;
-}
+    .ads {
+      background: #3a3a3a;
+      border: 2px dashed #7e57c2;
+      padding: 20px;
+      text-align: center;
+      margin: 20px 0;
+      border-radius: 10px;
+      color: #ddd;
+    }
 
-#searchInput::placeholder {
-  color: #b39ddb;
-}
-.btn-wrapper {
-  text-align: center;
-  margin-top: 10px;
-}
+    .section-title {
+      color: #e50914;
+      margin: 40px 0 20px;
+      font-size: 1.5rem;
+    }
 
-.btn-red {
-  display: inline-block;
-  background: linear-gradient(135deg, #7e57c2, #512da8);
-  color: #fff;
-  text-decoration: none;
-  padding: 10px 20px;
-  border-radius: 50px;
-  font-weight: bold;
-  font-size: 0.95rem;
-  border: none;
-  cursor: pointer;
-  transition: background 0.3s, transform 0.2s;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-}
+    .ranking-wrapper {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 24px;
+    }
 
-.btn-red:hover {
-  background: linear-gradient(135deg, #9575cd, #5e35b1);
-  transform: translateY(-2px);
-}
+    .ranking-card {
+      background: #424242;
+      border: 2px solid #7e57c2;
+      border-radius: 12px;
+      padding: 20px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+      color: #ddd;
+    }
+
+    .ranking-card h3 {
+      color: #d1c4e9;
+      margin-top: 0;
+    }
+
+    .ranking-list {
+      list-style: none;
+      padding: 0;
+      margin: 10px 0 0;
+      color: #ccc;
+    }
+
+    .ranking-list li {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 6px 0;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .ranking-list li:last-child {
+      border-bottom: 0;
+    }
+
+    .pos {
+      background: #7e57c2;
+      color: #fff;
+      font-weight: bold;
+      width: 26px;
+      height: 26px;
+      border-radius: 50%;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.85rem;
+    }
+
+    .tag-list {
+      list-style: none;
+      padding: 0;
+      margin: 0 0 8px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+    }
+
+    .tag {
+      background: #7e57c2;
+      color: #fff;
+      padding: 2px 8px;
+      border-radius: 999px;
+      font-size: 0.75rem;
+    }
+
+    .btn-red {
+      display: inline-block;
+      margin-top: 12px;
+      background: #7e57c2;
+      color: #fff;
+      text-decoration: none;
+      padding: 10px 14px;
+      border-radius: 8px;
+      font-weight: bold;
+      border: none;
+      cursor: pointer;
+      transition: 0.2s;
+    }
+
+    .btn-red:hover {
+      background: #512da8;
+      /* roxo escuro */
+      color: #fff;
+    }
+
+    /* Tabs */
+    .tabs {
+      display: flex;
+      gap: 8px;
+      margin-bottom: 16px;
+    }
+
+    .tab-btn {
+      background: #424242;
+      color: #7e57c2;
+      border: 2px solid #7e57c2;
+      border-radius: 8px;
+      padding: 8px 14px;
+      cursor: pointer;
+      font-weight: bold;
+      transition: 0.2s;
+    }
+
+    .tab-btn.active,
+    .tab-btn:hover {
+      background: #7e57c2;
+      color: #fff;
+    }
+
+    .tab-content {
+      display: none;
+    }
+
+    .tab-content.active {
+      display: block;
+    }
+
+    /* Enquetes */
+    .poll-card {
+      background: #424242;
+      border: 2px solid #7e57c2;
+      border-radius: 12px;
+      padding: 18px;
+      margin-bottom: 18px;
+      color: #ddd;
+    }
+
+    .poll-card h4 {
+      color: #d1c4e9;
+      margin: 0 0 10px 0;
+    }
+
+    .poll-option {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin: 6px 0;
+    }
+
+    .poll-results {
+      margin-top: 10px;
+    }
+
+    .bar {
+      height: 8px;
+      background: #7e57c2;
+      border-radius: 999px;
+    }
+
+    .bar-wrap {
+      width: 100%;
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 999px;
+      overflow: hidden;
+      margin: 4px 0 10px 0;
+    }
+
+    .vote-btn {
+      margin-top: 10px;
+      background: #7e57c2;
+      color: #fff;
+      border: none;
+      border-radius: 8px;
+      padding: 8px 14px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    .vote-btn:disabled {
+      background: #999;
+      cursor: not-allowed;
+    }
+
+    /* Quiz */
+    .quiz-card {
+      background: #424242;
+      border: 2px solid #7e57c2;
+      border-radius: 12px;
+      padding: 20px;
+      color: #ddd;
+    }
+
+    .quiz-card h3 {
+      color: #d1c4e9;
+      margin-top: 0;
+    }
+
+    .quiz-question p {
+      margin-bottom: 6px;
+    }
+
+    /* Comentários */
+    .comments-card {
+      background: #424242;
+      border: 2px solid #7e57c2;
+      border-radius: 12px;
+      padding: 20px;
+      color: #ddd;
+    }
+
+    #comment-form input,
+    #comment-form textarea {
+      background: #333;
+      border: 2px solid #7e57c2;
+      border-radius: 8px;
+      padding: 10px;
+      font-family: inherit;
+      color: #ddd;
+    }
+
+    .comments-list {
+      margin-top: 18px;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .comment-item {
+      border-left: 4px solid #7e57c2;
+      padding-left: 10px;
+      color: #ccc;
+    }
+
+    .comment-item .author {
+      font-weight: bold;
+      color: #d1c4e9;
+    }
+
+    .comment-item .date {
+      font-size: 0.75rem;
+      color: #999;
+    }
 
 
-.agenda-geek {
-  background: #ffffff;
-  padding: 30px 20px;
-  border-radius: 10px;
-  box-shadow: 0 0 15px rgba(0,0,0,0.05);
-  margin-bottom: 40px;
-}
+    /* Input de busca */
+    #searchInput {
+      background: #333;
+      border: 2px solid #7e57c2;
+      color: #ddd;
+      border-radius: 8px;
+      padding: 10px;
+      font-size: 1rem;
+      width: 80%;
+      max-width: 400px;
+    }
 
-.agenda-list {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
+    #searchInput::placeholder {
+      color: #b39ddb;
+    }
 
-.agenda-list li {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: center;
-  padding: 15px 10px;
-  border-bottom: 1px solid #eee;
-  transition: background 0.3s;
-}
+    .btn-wrapper {
+      text-align: center;
+      margin-top: 10px;
+    }
 
-.agenda-list li:hover {
-  background: #fcecea;
-}
+    .btn-red {
+      display: inline-block;
+      background: linear-gradient(135deg, #7e57c2, #512da8);
+      color: #fff;
+      text-decoration: none;
+      padding: 10px 20px;
+      border-radius: 50px;
+      font-weight: bold;
+      font-size: 0.95rem;
+      border: none;
+      cursor: pointer;
+      transition: background 0.3s, transform 0.2s;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    }
 
-.agenda-date {
-  font-weight: 700;
-  color: #e74c3c;
-  width: 120px;
-  flex-shrink: 0;
-}
-
-.agenda-title {
-  flex: 1;
-  color: #2c3e50;
-  font-weight: 600;
-}
-
-.agenda-platform {
-  font-style: italic;
-  color: #7f8c8d;
-  width: 140px;
-  text-align: right;
-  flex-shrink: 0;
-}
+    .btn-red:hover {
+      background: linear-gradient(135deg, #9575cd, #5e35b1);
+      transform: translateY(-2px);
+    }
 
 
+    .agenda-geek {
+      background: #ffffff;
+      padding: 30px 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.05);
+      margin-bottom: 40px;
+    }
+
+    .agenda-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .agenda-list li {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 10px;
+      border-bottom: 1px solid #eee;
+      transition: background 0.3s;
+    }
+
+    .agenda-list li:hover {
+      background: #fcecea;
+    }
+
+    .agenda-date {
+      font-weight: 700;
+      color: #e74c3c;
+      width: 120px;
+      flex-shrink: 0;
+    }
+
+    .agenda-title {
+      flex: 1;
+      color: #2c3e50;
+      font-weight: 600;
+    }
+
+    .agenda-platform {
+      font-style: italic;
+      color: #7f8c8d;
+      width: 140px;
+      text-align: right;
+      flex-shrink: 0;
+    }
   </style>
 </head>
+
 <body>
- <header>
-  <span class="logo-icon">🎬</span>
-  <div class="logo-text-wrapper">
-    <span class="logo-main">Cine Geek</span><br>
-    <span class="logo-sub">"Sua central de cultura pop no cinema e streaming."
+  <header>
+    <span class="logo-icon">🎬</span>
+    <div class="logo-text-wrapper">
+      <span class="logo-main">Cine Geek</span><br>
+      <span class="logo-sub">"Sua central de cultura pop no cinema e streaming."
 
-</span>
-  </div>
-</header>
-<nav>
-  <a href="index.html">Início</a>
-  <a href="filmes.html">Filmes</a>
-  <a href="series.html">Séries</a>
-  <a href="reviews.html">Reviews</a>
-  <a href="contato.html">Contato</a>
-</nav>
+      </span>
+    </div>
+  </header>
+  <nav>
+    <a href="index.html">Início</a>
+    <a href="filmes.html">Filmes</a>
+    <a href="series.html">Séries</a>
+    <a href="reviews.html">Reviews</a>
+    <a href="contato.html">Contato</a>
+  </nav>
 
 
 
-<section class="agenda-geek container">
-  <h2 class="section-title">Agenda Geek - Próximos Lançamentos</h2>
-  <ul class="agenda-list">
-    <li>
-      <span class="agenda-date">05/08/2025</span>
-      <span class="agenda-title">Filme: "O Guardião das Estrelas"</span>
-      <span class="agenda-platform">Nos cinemas</span>
-    </li>
-    <li>
-      <span class="agenda-date">12/08/2025</span>
-      <span class="agenda-title">Série: "Cyberverse"</span>
-      <span class="agenda-platform">Netflix</span>
-    </li>
-    <li>
-      <span class="agenda-date">18/08/2025</span>
-      <span class="agenda-title">Filme: "Última Fronteira"</span>
-      <span class="agenda-platform">Amazon Prime Video</span>
-    </li>
-    <li>
-      <span class="agenda-date">25/08/2025</span>
-      <span class="agenda-title">Série: "Mistérios de Avalon"</span>
-      <span class="agenda-platform">HBO Max</span>
-    </li>
-  </ul>
-</section>
+  <section class="agenda-geek container">
+    <h2 class="section-title">Agenda Geek - Próximos Lançamentos</h2>
+    <ul class="agenda-list">
+      <li>
+        <span class="agenda-date">05/08/2025</span>
+        <span class="agenda-title">Filme: "O Guardião das Estrelas"</span>
+        <span class="agenda-platform">Nos cinemas</span>
+      </li>
+      <li>
+        <span class="agenda-date">12/08/2025</span>
+        <span class="agenda-title">Série: "Cyberverse"</span>
+        <span class="agenda-platform">Netflix</span>
+      </li>
+      <li>
+        <span class="agenda-date">18/08/2025</span>
+        <span class="agenda-title">Filme: "Última Fronteira"</span>
+        <span class="agenda-platform">Amazon Prime Video</span>
+      </li>
+      <li>
+        <span class="agenda-date">25/08/2025</span>
+        <span class="agenda-title">Série: "Mistérios de Avalon"</span>
+        <span class="agenda-platform">HBO Max</span>
+      </li>
+    </ul>
+  </section>
 
 
 
@@ -511,182 +542,183 @@ footer {
   <div class="container">
     <div class="ads">Espaço para Anúncios (Google AdSense)</div>
     <div style="margin-bottom: 20px; text-align: center;">
-  <input type="text" id="searchInput" placeholder="Pesquisar filmes e séries..." style="width: 80%; max-width: 400px; padding: 10px; border: 2px solid #e50914; border-radius: 8px; font-size: 1rem;">
-</div>
+      <input type="text" id="searchInput" placeholder="Pesquisar filmes e séries..."
+        style="width: 80%; max-width: 400px; padding: 10px; border: 2px solid #e50914; border-radius: 8px; font-size: 1rem;">
+    </div>
     <h2 style="color:#e50914;">Últimos Lançamentos</h2>
     <div class="grid">
 
 
       <!-- Filme Quarteto Fantastico -->
-    <div class="card">
-  <img src="img/Quarteto-Fantastico-1170x658.jpg" alt="Quarteto Fantástico">
-  <h3>“Quarteto Fantástico chega aos cinemas em julho destacando os laços familiares”</h3>
-  <div class="btn-wrapper">
-    <a href="quartetofantastico.html" class="btn-red">Saiba Mais</a>
-  </div>
-</div>
+      <div class="card">
+        <img src="img/Quarteto-Fantastico-1170x658.jpg" alt="Quarteto Fantástico">
+        <h3>“Quarteto Fantástico chega aos cinemas em julho destacando os laços familiares”</h3>
+        <div class="btn-wrapper">
+          <a href="quartetofantastico.html" class="btn-red">Saiba Mais</a>
+        </div>
+      </div>
 
-<!-- Série Stranger Things -->
-<div class="card">
-  <img src="img/stranger-things-season-5-uw-3840x2400.jpg" alt="Stranger Things 5">
-  <h3>"Tudo o que sabemos até agora sobre a 5ª temporada de 'Stranger Things'.</h3>
-  <div class="btn-wrapper">
-  <a href="strangerthings.html" class="btn-red">Saiba Mais</a>
-  </div>
-</div>
+      <!-- Série Stranger Things -->
+      <div class="card">
+        <img src="img/stranger-things-season-5-uw-3840x2400.jpg" alt="Stranger Things 5">
+        <h3>"Tudo o que sabemos até agora sobre a 5ª temporada de 'Stranger Things'.</h3>
+        <div class="btn-wrapper">
+          <a href="strangerthings.html" class="btn-red">Saiba Mais</a>
+        </div>
+      </div>
 
-<!-- Filme Lilo e Stitch -->
-<div class="card">
-  <img src="img/lilo-stitch-beauty-5120x2880-21935.jpg" alt="Lilo e Stitch">
-  <h3>"Sucesso na estreia: ‘Lilo e Stitch’ leva 500 mil pessoas aos cinemas do Brasil"</h3>
-    <div class="btn-wrapper">
-  <a href="" class="btn-red">Saiba Mais</a>
-  </div>
-</div>
+      <!-- Filme Lilo e Stitch -->
+      <div class="card">
+        <img src="img/lilo-stitch-beauty-5120x2880-21935.jpg" alt="Lilo e Stitch">
+        <h3>"Sucesso na estreia: ‘Lilo e Stitch’ leva 500 mil pessoas aos cinemas do Brasil"</h3>
+        <div class="btn-wrapper">
+          <a href="" class="btn-red">Saiba Mais</a>
+        </div>
+      </div>
 
-<!-- Filme Superman-->
-<div class="card">
-  <img src="img/superman.jpg" alt="Superman">
-  <h3>"‘Superman’ dispara nas bilheterias e se aproxima do topo mundial"</h3>
-  <div class="btn-wrapper">
-  <a href="" class="btn-red">Saiba Mais</a>
-    </div>
-  </div>
+      <!-- Filme Superman-->
+      <div class="card">
+        <img src="img/superman.jpg" alt="Superman">
+        <h3>"‘Superman’ dispara nas bilheterias e se aproxima do topo mundial"</h3>
+        <div class="btn-wrapper">
+          <a href="" class="btn-red">Saiba Mais</a>
+        </div>
+      </div>
 
-  <!-- Serie The Walking Dead: Daryl Dixon -->
-<div class="card">
-  <img src="img/The Walking Dead Daryl Dixon.jpg" alt="The Walking Dead: Daryl Dixon">
-  <h3>"The Walking Dead: Daryl Dixon": 4ª temporada da série será a última"</h3>
-  <div class="btn-wrapper">
-  <a href="" class="btn-red">Saiba Mais</a>
-    </div>
-    </div>
+      <!-- Serie The Walking Dead: Daryl Dixon -->
+      <div class="card">
+        <img src="img/The Walking Dead Daryl Dixon.jpg" alt="The Walking Dead: Daryl Dixon">
+        <h3>"The Walking Dead: Daryl Dixon": 4ª temporada da série será a última"</h3>
+        <div class="btn-wrapper">
+          <a href="" class="btn-red">Saiba Mais</a>
+        </div>
+      </div>
       <!-- Jurassic World: Recomeço -->
-<div class="card">
-  <img src="img/jurassic world recomeco.jpg" alt="Jurassic World: Recomeço">
-  <h3>"Jurassic World: Recomeço’ rompe a marca de US$ 700 milhões nas bilheteiras globais"</h3>
-  <div class="btn-wrapper">
-  <a href="" class="btn-red">Saiba Mais</a>
-    </div>
-    </div>
-    </div>
-
-
-  <section id="listas" class="container">
-  <h2 class="section-title">Listas & Rankings</h2>
-
-  <div class="ranking-wrapper">
-
-    <!-- Ranking 1 -->
-    <div class="ranking-card">
-      <h3>Top 10 Filmes de 2025 para assistir no cinema</h3>
-      <ol class="ranking-list">
-        <li><span class="pos">1</span> Quarteto Fantástico: Primeiros Passos</li>
-        <li><span class="pos">2</span> Mickey 17</li>
-        <li><span class="pos">3</span> Final Destination: Bloodlines</li>
-        <li><span class="pos">4</span> Como Treinar o seu Dragão</li>
-        <li><span class="pos">5</span> Joker: Folie à Deux</li>
-        <li><span class="pos">6</span> Inside Out 2 (Divertida Mente 2)</li>
-        <li><span class="pos">7</span> Wicked: For Good</li>
-        <li><span class="pos">8</span> Thunderbolts</li>
-        <li><span class="pos">9</span> The Batman – Parte II (quando confirmado)</li>
-        <li><span class="pos">10</span> Deadpool & Wolverine</li>
-      </ol>
+      <div class="card">
+        <img src="img/jurassic world recomeco.jpg" alt="Jurassic World: Recomeço">
+        <h3>"Jurassic World: Recomeço’ rompe a marca de US$ 700 milhões nas bilheteiras globais"</h3>
+        <div class="btn-wrapper">
+          <a href="" class="btn-red">Saiba Mais</a>
+        </div>
+      </div>
     </div>
 
-    <!-- Ranking 2 -->
-    <div class="ranking-card">
-      <h3>Melhores séries para maratonar em 2025 (Streaming)</h3>
-      <ul class="tag-list">
-        <li class="tag">Netflix</li>
-        <li class="tag">Prime Video</li>
-        <li class="tag">HBO Max</li>
-        <li class="tag">Disney+</li>
-      </ul>
-      <ol class="ranking-list">
-        <li><span class="pos">1</span> Stranger Things – Temporada Final</li>
-        <li><span class="pos">2</span> The Boys – Temp. 5</li>
-        <li><span class="pos">3</span> House of the Dragon – Temp. 2</li>
-        <li><span class="pos">4</span> The Last of Us – Temp. 2</li>
-        <li><span class="pos">5</span> Andor – Temp. 2</li>
-      </ol>
-    </div>
 
-    <!-- Ranking 3 -->
-    <div class="ranking-card">
-      <h3>Top 5 finais mais confusos (explicados)</h3>
-      <ol class="ranking-list">
-        <li><span class="pos">1</span> Donnie Darko</li>
-        <li><span class="pos">2</span> Tenet</li>
-        <li><span class="pos">3</span> Midsommar</li>
-        <li><span class="pos">4</span> Mother! (Mãe!)</li>
-        <li><span class="pos">5</span> Enemy (O Homem Duplicado)</li>
-      </ol>
-      <a href="#" class="btn-red">Ver explicações completas</a>
-    </div>
+    <section id="listas" class="container">
+      <h2 class="section-title">Listas & Rankings</h2>
 
-  </div>
-</section>
-  <section id="interativo" class="container">
-  <h2 class="section-title">Área Interativa</h2>
+      <div class="ranking-wrapper">
 
-  <!-- Abas -->
-  <div class="tabs">
-    <button class="tab-btn active" data-tab="polls">Enquetes</button>
-    <button class="tab-btn" data-tab="quiz">Quiz</button>
-    <button class="tab-btn" data-tab="comments">Comentários</button>
-  </div>
+        <!-- Ranking 1 -->
+        <div class="ranking-card">
+          <h3>Top 10 Filmes de 2025 para assistir no cinema</h3>
+          <ol class="ranking-list">
+            <li><span class="pos">1</span> Quarteto Fantástico: Primeiros Passos</li>
+            <li><span class="pos">2</span> Mickey 17</li>
+            <li><span class="pos">3</span> Final Destination: Bloodlines</li>
+            <li><span class="pos">4</span> Como Treinar o seu Dragão</li>
+            <li><span class="pos">5</span> Joker: Folie à Deux</li>
+            <li><span class="pos">6</span> Inside Out 2 (Divertida Mente 2)</li>
+            <li><span class="pos">7</span> Wicked: For Good</li>
+            <li><span class="pos">8</span> Thunderbolts</li>
+            <li><span class="pos">9</span> The Batman – Parte II (quando confirmado)</li>
+            <li><span class="pos">10</span> Deadpool & Wolverine</li>
+          </ol>
+        </div>
 
-  <!-- ENQUETES -->
-  <div class="tab-content active" id="polls">
-    <div id="polls-root"></div>
-  </div>
+        <!-- Ranking 2 -->
+        <div class="ranking-card">
+          <h3>Melhores séries para maratonar em 2025 (Streaming)</h3>
+          <ul class="tag-list">
+            <li class="tag">Netflix</li>
+            <li class="tag">Prime Video</li>
+            <li class="tag">HBO Max</li>
+            <li class="tag">Disney+</li>
+          </ul>
+          <ol class="ranking-list">
+            <li><span class="pos">1</span> Stranger Things – Temporada Final</li>
+            <li><span class="pos">2</span> The Boys – Temp. 5</li>
+            <li><span class="pos">3</span> House of the Dragon – Temp. 2</li>
+            <li><span class="pos">4</span> The Last of Us – Temp. 2</li>
+            <li><span class="pos">5</span> Andor – Temp. 2</li>
+          </ol>
+        </div>
 
-  <!-- QUIZ -->
-  <div class="tab-content" id="quiz">
-    <form id="quiz-form" class="quiz-card">
-      <h3>Quiz: Você manja de filmes & séries?</h3>
+        <!-- Ranking 3 -->
+        <div class="ranking-card">
+          <h3>Top 5 finais mais confusos (explicados)</h3>
+          <ol class="ranking-list">
+            <li><span class="pos">1</span> Donnie Darko</li>
+            <li><span class="pos">2</span> Tenet</li>
+            <li><span class="pos">3</span> Midsommar</li>
+            <li><span class="pos">4</span> Mother! (Mãe!)</li>
+            <li><span class="pos">5</span> Enemy (O Homem Duplicado)</li>
+          </ol>
+          <a href="#" class="btn-red">Ver explicações completas</a>
+        </div>
 
-      <div class="quiz-question">
-        <p>1) Quem dirige “Mickey 17”?</p>
-        <label><input type="radio" name="q1" value="a"> Denis Villeneuve</label>
-        <label><input type="radio" name="q1" value="b"> Bong Joon Ho</label>
-        <label><input type="radio" name="q1" value="c"> Christopher Nolan</label>
+      </div>
+    </section>
+    <section id="interativo" class="container">
+      <h2 class="section-title">Área Interativa</h2>
+
+      <!-- Abas -->
+      <div class="tabs">
+        <button class="tab-btn active" data-tab="polls">Enquetes</button>
+        <button class="tab-btn" data-tab="quiz">Quiz</button>
+        <button class="tab-btn" data-tab="comments">Comentários</button>
       </div>
 
-      <div class="quiz-question">
-        <p>2) Em qual década se passa Stranger Things?</p>
-        <label><input type="radio" name="q2" value="a"> 1970</label>
-        <label><input type="radio" name="q2" value="b"> 1980</label>
-        <label><input type="radio" name="q2" value="c"> 1990</label>
+      <!-- ENQUETES -->
+      <div class="tab-content active" id="polls">
+        <div id="polls-root"></div>
       </div>
 
-      <div class="quiz-question">
-        <p>3) Qual é o poder de Sue Storm no Quarteto Fantástico?</p>
-        <label><input type="radio" name="q3" value="a"> Elasticidade</label>
-        <label><input type="radio" name="q3" value="b"> Invisibilidade e campos de força</label>
-        <label><input type="radio" name="q3" value="c"> Controle do fogo</label>
+      <!-- QUIZ -->
+      <div class="tab-content" id="quiz">
+        <form id="quiz-form" class="quiz-card">
+          <h3>Quiz: Você manja de filmes & séries?</h3>
+
+          <div class="quiz-question">
+            <p>1) Quem dirige “Mickey 17”?</p>
+            <label><input type="radio" name="q1" value="a"> Denis Villeneuve</label>
+            <label><input type="radio" name="q1" value="b"> Bong Joon Ho</label>
+            <label><input type="radio" name="q1" value="c"> Christopher Nolan</label>
+          </div>
+
+          <div class="quiz-question">
+            <p>2) Em qual década se passa Stranger Things?</p>
+            <label><input type="radio" name="q2" value="a"> 1970</label>
+            <label><input type="radio" name="q2" value="b"> 1980</label>
+            <label><input type="radio" name="q2" value="c"> 1990</label>
+          </div>
+
+          <div class="quiz-question">
+            <p>3) Qual é o poder de Sue Storm no Quarteto Fantástico?</p>
+            <label><input type="radio" name="q3" value="a"> Elasticidade</label>
+            <label><input type="radio" name="q3" value="b"> Invisibilidade e campos de força</label>
+            <label><input type="radio" name="q3" value="c"> Controle do fogo</label>
+          </div>
+
+          <button type="submit" class="btn-red">Enviar respostas</button>
+          <p id="quiz-result" class="quiz-result"></p>
+        </form>
       </div>
 
-      <button type="submit" class="btn-red">Enviar respostas</button>
-      <p id="quiz-result" class="quiz-result"></p>
-    </form>
-  </div>
-
-  <!-- COMENTÁRIOS -->
-  <div class="tab-content" id="comments">
-    <div class="comments-card">
-      <h3>Deixe seu comentário</h3>
-      <form id="comment-form">
-        <input type="text" id="comment-name" placeholder="Seu nome" required>
-        <textarea id="comment-text" placeholder="O que você achou dos lançamentos?" required></textarea>
-        <button type="submit" class="btn-red">Publicar</button>
-      </form>
-      <div id="comments-list" class="comments-list"></div>
-    </div>
-  </div>
-</section>
- <footer>© 2025 Blog de Filmes e Séries. Todos os direitos reservados.</footer>
+      <!-- COMENTÁRIOS -->
+      <div class="tab-content" id="comments">
+        <div class="comments-card">
+          <h3>Deixe seu comentário</h3>
+          <form id="comment-form">
+            <input type="text" id="comment-name" placeholder="Seu nome" required>
+            <textarea id="comment-text" placeholder="O que você achou dos lançamentos?" required></textarea>
+            <button type="submit" class="btn-red">Publicar</button>
+          </form>
+          <div id="comments-list" class="comments-list"></div>
+        </div>
+      </div>
+    </section>
+    <footer>© 2025 Blog de Filmes e Séries. Todos os direitos reservados.</footer>
 
 </body>
 
@@ -697,174 +729,174 @@ footer {
 
 
 <<script>
-/* ======= Espera o DOM estar pronto ======= */
-document.addEventListener('DOMContentLoaded', () => {
+  /* ======= Espera o DOM estar pronto ======= */
+  document.addEventListener('DOMContentLoaded', () => {
   /* ======= TABS ======= */
   document.querySelectorAll('.tab-btn').forEach(btn => {
-    btn.addEventListener('click', () => {
-      document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
-      document.querySelectorAll('.tab-content').forEach(tc => tc.classList.remove('active'));
-      btn.classList.add('active');
-      document.getElementById(btn.dataset.tab).classList.add('active');
-    });
+  btn.addEventListener('click', () => {
+  document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+  document.querySelectorAll('.tab-content').forEach(tc => tc.classList.remove('active'));
+  btn.classList.add('active');
+  document.getElementById(btn.dataset.tab).classList.add('active');
+  });
   });
 
   /* ======= ENQUETES ======= */
   const pollsData = [
-    {
-      id: 'poll1',
-      question: 'Qual foi o melhor vilão da Marvel nos cinemas?',
-      options: ['Thanos', 'Loki', 'Killmonger', 'Duende Verde'],
-    },
-    {
-      id: 'poll2',
-      question: 'Qual série você mais espera em 2025?',
-      options: ['Stranger Things (final)', 'The Last of Us T2', 'The Boys T5', 'House of the Dragon T2'],
-    }
+  {
+  id: 'poll1',
+  question: 'Qual foi o melhor vilão da Marvel nos cinemas?',
+  options: ['Thanos', 'Loki', 'Killmonger', 'Duende Verde'],
+  },
+  {
+  id: 'poll2',
+  question: 'Qual série você mais espera em 2025?',
+  options: ['Stranger Things (final)', 'The Last of Us T2', 'The Boys T5', 'House of the Dragon T2'],
+  }
   ];
 
   function getPollVotes(id) {
-    const stored = localStorage.getItem('poll_' + id);
-    return stored ? JSON.parse(stored) : Array(pollsData.find(p => p.id === id).options.length).fill(0);
+  const stored = localStorage.getItem('poll_' + id);
+  return stored ? JSON.parse(stored) : Array(pollsData.find(p => p.id === id).options.length).fill(0);
   }
 
   function setPollVotes(id, votes) {
-    localStorage.setItem('poll_' + id, JSON.stringify(votes));
+  localStorage.setItem('poll_' + id, JSON.stringify(votes));
   }
 
   function hasVoted(id) {
-    return localStorage.getItem('poll_voted_' + id) === 'true';
+  return localStorage.getItem('poll_voted_' + id) === 'true';
   }
 
   function markVoted(id) {
-    localStorage.setItem('poll_voted_' + id, 'true');
+  localStorage.setItem('poll_voted_' + id, 'true');
   }
 
   function renderPolls() {
-    const root = document.getElementById('polls-root');
-    root.innerHTML = '';
+  const root = document.getElementById('polls-root');
+  root.innerHTML = '';
 
-    pollsData.forEach(poll => {
-      const votes = getPollVotes(poll.id);
-      const total = votes.reduce((a, b) => a + b, 0) || 1;
+  pollsData.forEach(poll => {
+  const votes = getPollVotes(poll.id);
+  const total = votes.reduce((a, b) => a + b, 0) || 1;
 
-      const card = document.createElement('div');
-      card.className = 'poll-card';
+  const card = document.createElement('div');
+  card.className = 'poll-card';
 
-      const title = document.createElement('h4');
-      title.textContent = poll.question;
-      card.appendChild(title);
+  const title = document.createElement('h4');
+  title.textContent = poll.question;
+  card.appendChild(title);
 
-      const form = document.createElement('div');
-      poll.options.forEach((opt, i) => {
-        const wrap = document.createElement('label');
-        wrap.className = 'poll-option';
+  const form = document.createElement('div');
+  poll.options.forEach((opt, i) => {
+  const wrap = document.createElement('label');
+  wrap.className = 'poll-option';
 
-        const radio = document.createElement('input');
-        radio.type = 'radio';
-        radio.name = poll.id;
-        radio.value = i;
-        radio.disabled = hasVoted(poll.id);
+  const radio = document.createElement('input');
+  radio.type = 'radio';
+  radio.name = poll.id;
+  radio.value = i;
+  radio.disabled = hasVoted(poll.id);
 
-        const span = document.createElement('span');
-        span.textContent = opt;
+  const span = document.createElement('span');
+  span.textContent = opt;
 
-        wrap.appendChild(radio);
-        wrap.appendChild(span);
-        form.appendChild(wrap);
-      });
-      card.appendChild(form);
+  wrap.appendChild(radio);
+  wrap.appendChild(span);
+  form.appendChild(wrap);
+  });
+  card.appendChild(form);
 
-      const voteBtn = document.createElement('button');
-      voteBtn.className = 'vote-btn';
-      voteBtn.textContent = hasVoted(poll.id) ? 'Voto registrado' : 'Votar';
-      voteBtn.disabled = hasVoted(poll.id);
-      voteBtn.addEventListener('click', () => {
-        const selected = form.querySelector('input[type="radio"]:checked');
-        if (!selected) return alert('Escolha uma opção!');
-        const index = parseInt(selected.value, 10);
-        const v = getPollVotes(poll.id);
-        v[index] += 1;
-        setPollVotes(poll.id, v);
-        markVoted(poll.id);
-        renderPolls();
-      });
-      card.appendChild(voteBtn);
+  const voteBtn = document.createElement('button');
+  voteBtn.className = 'vote-btn';
+  voteBtn.textContent = hasVoted(poll.id) ? 'Voto registrado' : 'Votar';
+  voteBtn.disabled = hasVoted(poll.id);
+  voteBtn.addEventListener('click', () => {
+  const selected = form.querySelector('input[type="radio"]:checked');
+  if (!selected) return alert('Escolha uma opção!');
+  const index = parseInt(selected.value, 10);
+  const v = getPollVotes(poll.id);
+  v[index] += 1;
+  setPollVotes(poll.id, v);
+  markVoted(poll.id);
+  renderPolls();
+  });
+  card.appendChild(voteBtn);
 
-      const results = document.createElement('div');
-      results.className = 'poll-results';
+  const results = document.createElement('div');
+  results.className = 'poll-results';
 
-      poll.options.forEach((opt, i) => {
-        const percent = Math.round((votes[i] / total) * 100);
-        const line = document.createElement('div');
-        line.innerHTML = `<strong>${opt}</strong> — ${votes[i]} voto(s) (${percent}%)`;
-        const barWrap = document.createElement('div');
-        barWrap.className = 'bar-wrap';
-        const bar = document.createElement('div');
-        bar.className = 'bar';
-        bar.style.width = percent + '%';
-        barWrap.appendChild(bar);
-        results.appendChild(line);
-        results.appendChild(barWrap);
-      });
+  poll.options.forEach((opt, i) => {
+  const percent = Math.round((votes[i] / total) * 100);
+  const line = document.createElement('div');
+  line.innerHTML = `<strong>${opt}</strong> — ${votes[i]} voto(s) (${percent}%)`;
+  const barWrap = document.createElement('div');
+  barWrap.className = 'bar-wrap';
+  const bar = document.createElement('div');
+  bar.className = 'bar';
+  bar.style.width = percent + '%';
+  barWrap.appendChild(bar);
+  results.appendChild(line);
+  results.appendChild(barWrap);
+  });
 
-      card.appendChild(results);
-      root.appendChild(card);
-    });
+  card.appendChild(results);
+  root.appendChild(card);
+  });
   }
   renderPolls();
 
   /* ======= QUIZ ======= */
   const quizAnswers = { q1: 'b', q2: 'b', q3: 'b' };
   document.getElementById('quiz-form').addEventListener('submit', (e) => {
-    e.preventDefault();
-    let score = 0, total = Object.keys(quizAnswers).length;
-    Object.keys(quizAnswers).forEach(q => {
-      const selected = document.querySelector(`input[name="${q}"]:checked`);
-      if (selected && selected.value === quizAnswers[q]) score++;
-    });
-    const msg = `Você acertou ${score} de ${total}!`;
-    const res = document.getElementById('quiz-result');
-    res.textContent = msg;
+  e.preventDefault();
+  let score = 0, total = Object.keys(quizAnswers).length;
+  Object.keys(quizAnswers).forEach(q => {
+  const selected = document.querySelector(`input[name="${q}"]:checked`);
+  if (selected && selected.value === quizAnswers[q]) score++;
+  });
+  const msg = `Você acertou ${score} de ${total}!`;
+  const res = document.getElementById('quiz-result');
+  res.textContent = msg;
   });
 
   /* ======= COMENTÁRIOS ======= */
   function getComments() {
-    const data = localStorage.getItem('comments');
-    return data ? JSON.parse(data) : [];
+  const data = localStorage.getItem('comments');
+  return data ? JSON.parse(data) : [];
   }
 
   function saveComments(list) {
-    localStorage.setItem('comments', JSON.stringify(list));
+  localStorage.setItem('comments', JSON.stringify(list));
   }
 
   function renderComments() {
-    const container = document.getElementById('comments-list');
-    container.innerHTML = '';
-    const comments = getComments().reverse();
-    comments.forEach(c => {
-      const item = document.createElement('div');
-      item.className = 'comment-item';
-      item.innerHTML = `
-        <div class="author">${c.name}</div>
-        <div class="text">${c.text}</div>
-        <div class="date">${new Date(c.date).toLocaleString()}</div>
-      `;
-      container.appendChild(item);
-    });
+  const container = document.getElementById('comments-list');
+  container.innerHTML = '';
+  const comments = getComments().reverse();
+  comments.forEach(c => {
+  const item = document.createElement('div');
+  item.className = 'comment-item';
+  item.innerHTML = `
+  <div class="author">${c.name}</div>
+  <div class="text">${c.text}</div>
+  <div class="date">${new Date(c.date).toLocaleString()}</div>
+  `;
+  container.appendChild(item);
+  });
   }
   renderComments();
 
   document.getElementById('comment-form').addEventListener('submit', (e) => {
-    e.preventDefault();
-    const name = document.getElementById('comment-name').value.trim();
-    const text = document.getElementById('comment-text').value.trim();
-    if (!name || !text) return;
-    const comments = getComments();
-    comments.push({ name, text, date: Date.now() });
-    saveComments(comments);
-    document.getElementById('comment-form').reset();
-    renderComments();
+  e.preventDefault();
+  const name = document.getElementById('comment-name').value.trim();
+  const text = document.getElementById('comment-text').value.trim();
+  if (!name || !text) return;
+  const comments = getComments();
+  comments.push({ name, text, date: Date.now() });
+  saveComments(comments);
+  document.getElementById('comment-form').reset();
+  renderComments();
   });
 
   /* ======= CAMPO DE BUSCA ======= */
@@ -872,18 +904,18 @@ document.addEventListener('DOMContentLoaded', () => {
   const cards = document.querySelectorAll('.grid .card');
 
   searchInput.addEventListener('input', () => {
-    const filter = searchInput.value.toLowerCase();
+  const filter = searchInput.value.toLowerCase();
 
-    cards.forEach(card => {
-      const title = card.querySelector('h3').textContent.toLowerCase();
-      if (title.includes(filter)) {
-        card.style.display = '';
-      } else {
-        card.style.display = 'none';
-      }
-    });
+  cards.forEach(card => {
+  const title = card.querySelector('h3').textContent.toLowerCase();
+  if (title.includes(filter)) {
+  card.style.display = '';
+  } else {
+  card.style.display = 'none';
+  }
   });
-});
-</script>
+  });
+  });
+  </script>
 
 </html>
