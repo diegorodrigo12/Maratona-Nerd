@@ -539,12 +539,36 @@ footer {
   <a href="contato.html">Contato</a>
 </nav>
 
+
+
 <section class="agenda-geek container">
   <h2 class="section-title">Agenda Geek - Próximos Lançamentos</h2>
-  <ul id="agenda-list" class="agenda-list">
-    <!-- lançamentos carregados aqui via JS -->
+  <ul class="agenda-list">
+    <li>
+      <span class="agenda-date">05/08/2025</span>
+      <span class="agenda-title">Filme: "O Guardião das Estrelas"</span>
+      <span class="agenda-platform">Nos cinemas</span>
+    </li>
+    <li>
+      <span class="agenda-date">12/08/2025</span>
+      <span class="agenda-title">Série: "Cyberverse"</span>
+      <span class="agenda-platform">Netflix</span>
+    </li>
+    <li>
+      <span class="agenda-date">18/08/2025</span>
+      <span class="agenda-title">Filme: "Última Fronteira"</span>
+      <span class="agenda-platform">Amazon Prime Video</span>
+    </li>
+    <li>
+      <span class="agenda-date">25/08/2025</span>
+      <span class="agenda-title">Série: "Mistérios de Avalon"</span>
+      <span class="agenda-platform">HBO Max</span>
+    </li>
   </ul>
 </section>
+
+
+
 
 
   <div class="container">
@@ -726,40 +750,6 @@ footer {
   </div>
 </section>
  <footer>© 2025 Blog de Filmes e Séries. Todos os direitos reservados.</footer>
-
-
- <script>
-  async function carregarAgenda() {
-    try {
-      const resposta = await fetch('lancamentos.json');
-      const lancamentos = await resposta.json();
-
-      const lista = document.getElementById('agenda-list');
-      lista.innerHTML = '';
-
-      lancamentos.forEach(item => {
-        const li = document.createElement('li');
-
-        // Formatar data para dd/mm/yyyy
-        const data = new Date(item.data);
-        const dataFormatada = data.toLocaleDateString('pt-BR');
-
-        li.innerHTML = `
-          <span class="agenda-date">${dataFormatada}</span>
-          <span class="agenda-title">${item.titulo}</span>
-          <span class="agenda-platform">${item.plataforma}</span>
-        `;
-
-        lista.appendChild(li);
-      });
-    } catch (error) {
-      console.error('Erro ao carregar agenda:', error);
-    }
-  }
-
-  carregarAgenda();
-</script>
-
 
 </body>
 
