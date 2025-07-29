@@ -468,6 +468,57 @@ footer {
   transform: translateY(-2px);
 }
 
+
+.agenda-geek {
+  background: #ffffff;
+  padding: 30px 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.05);
+  margin-bottom: 40px;
+}
+
+.agenda-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.agenda-list li {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 10px;
+  border-bottom: 1px solid #eee;
+  transition: background 0.3s;
+}
+
+.agenda-list li:hover {
+  background: #fcecea;
+}
+
+.agenda-date {
+  font-weight: 700;
+  color: #e74c3c;
+  width: 120px;
+  flex-shrink: 0;
+}
+
+.agenda-title {
+  flex: 1;
+  color: #2c3e50;
+  font-weight: 600;
+}
+
+.agenda-platform {
+  font-style: italic;
+  color: #7f8c8d;
+  width: 140px;
+  text-align: right;
+  flex-shrink: 0;
+}
+
+
   </style>
 </head>
 <body>
@@ -487,6 +538,15 @@ footer {
   <a href="reviews.html">Reviews</a>
   <a href="contato.html">Contato</a>
 </nav>
+
+<section class="agenda-geek container">
+  <h2 class="section-title">Agenda Geek - Próximos Lançamentos</h2>
+  <ul id="agenda-list" class="agenda-list">
+    <!-- lançamentos carregados aqui via JS -->
+  </ul>
+</section>
+
+
   <div class="container">
     <div class="ads">Espaço para Anúncios (Google AdSense)</div>
     <div style="margin-bottom: 20px; text-align: center;">
@@ -666,6 +726,40 @@ footer {
   </div>
 </section>
  <footer>© 2025 Blog de Filmes e Séries. Todos os direitos reservados.</footer>
+
+
+ <script>
+  async function carregarAgenda() {
+    try {
+      const resposta = await fetch('lancamentos.json');
+      const lancamentos = await resposta.json();
+
+      const lista = document.getElementById('agenda-list');
+      lista.innerHTML = '';
+
+      lancamentos.forEach(item => {
+        const li = document.createElement('li');
+
+        // Formatar data para dd/mm/yyyy
+        const data = new Date(item.data);
+        const dataFormatada = data.toLocaleDateString('pt-BR');
+
+        li.innerHTML = `
+          <span class="agenda-date">${dataFormatada}</span>
+          <span class="agenda-title">${item.titulo}</span>
+          <span class="agenda-platform">${item.plataforma}</span>
+        `;
+
+        lista.appendChild(li);
+      });
+    } catch (error) {
+      console.error('Erro ao carregar agenda:', error);
+    }
+  }
+
+  carregarAgenda();
+</script>
+
 
 </body>
 
