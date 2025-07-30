@@ -15,7 +15,7 @@
   /* 1. Reset e estilos básicos */
 body {
   font-family: Arial, sans-serif;
-  background-color: #f8f9fa;
+  background-color: #ffffff;
   color: #333;
   margin: 0;
   padding: 0;
@@ -23,7 +23,7 @@ body {
 
 /* 2. Header */
 header {
-  background-color: #8454e6;
+  background-color: #1E90FF;
   padding: 20px;
   text-align: center;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -38,10 +38,20 @@ header {
 }
 
 .logo-icon {
-  font-size: 3.5rem;
-  transform: rotate(-10deg);
-  color: #e74c3c;
-  line-height: 1;
+  
+  /* removi transform, pois com imagem pode distorcer */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.logo-icon img {
+  width: 150px;
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain; /* mantém a proporção da imagem */
+  display: block;
 }
 
 .logo-text-wrapper {
@@ -90,7 +100,7 @@ nav a {
 }
 
 nav a:hover {
-  color: #e74c3c;
+  color: #1E90FF;
 }
 
 /* 4. Container geral */
@@ -132,7 +142,7 @@ nav a:hover {
 
 .agenda-date {
   font-weight: 700;
-  color: #e74c3c;
+  color: #FF6F61;
   width: 120px;
   flex-shrink: 0;
 }
@@ -164,8 +174,8 @@ nav a:hover {
 
 /* 7. Barra de pesquisa (input) */
 #searchInput {
-  background: #333;
-  border: 2px solid #7e57c2;
+  background: #F0F8FF;
+  border: 2px solid #FF6F61;
   color: #ddd;
   border-radius: 8px;
   padding: 10px;
@@ -180,7 +190,7 @@ nav a:hover {
 
 /* 8. Últimos lançamentos - grid e cards */
 h2 {
-  color: #e50914;
+  color: #2C3E50;
   margin: 40px 0 20px;
 }
 
@@ -215,7 +225,7 @@ h2 {
 .card h3 {
   margin: 10px;
   font-size: 1.2rem;
-  color: #e74c3c;
+  color: #2C3E50;
 }
 
 .card p {
@@ -232,7 +242,7 @@ h2 {
 
 .btn-red {
   display: inline-block;
-  background: linear-gradient(135deg, #7e57c2, #512da8);
+  background: linear-gradient(135deg, #1E90FF, #2C3E50);
   color: #fff;
   text-decoration: none;
   padding: 10px 20px;
@@ -246,13 +256,13 @@ h2 {
 }
 
 .btn-red:hover {
-  background: linear-gradient(135deg, #9575cd, #5e35b1);
+  background: linear-gradient(135deg, #2C3E50, #1E90FF);
   transform: translateY(-2px);
 }
 
 /* 9. Listas & Rankings */
 .section-title {
-  color: #e50914;
+  color: #FF6F61;
   margin: 40px 0 20px;
   font-size: 1.5rem;
 }
@@ -264,8 +274,8 @@ h2 {
 }
 
 .ranking-card {
-  background: #424242;
-  border: 2px solid #7e57c2;
+  background:  #F0F8FF;
+  border: 2px solid #1E90FF;
   border-radius: 12px;
   padding: 20px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
@@ -273,7 +283,7 @@ h2 {
 }
 
 .ranking-card h3 {
-  color: #d1c4e9;
+  color: #2C3E50;
   margin-top: 0;
 }
 
@@ -281,7 +291,7 @@ h2 {
   list-style: none;
   padding: 0;
   margin: 10px 0 0;
-  color: #ccc;
+  color: #2C3E50;
 }
 
 .ranking-list li {
@@ -297,7 +307,7 @@ h2 {
 }
 
 .pos {
-  background: #7e57c2;
+  background: #1E90FF ;
   color: #fff;
   font-weight: bold;
   width: 26px;
@@ -319,7 +329,7 @@ h2 {
 }
 
 .tag {
-  background: #7e57c2;
+  background: #1E90FF ;
   color: #fff;
   padding: 2px 8px;
   border-radius: 999px;
@@ -334,9 +344,9 @@ h2 {
 }
 
 .tab-btn {
-  background: #424242;
-  color: #7e57c2;
-  border: 2px solid #7e57c2;
+  background: #1E90FF;
+  color: #F0F8FF;
+  border: 2px solid #1E90FF;
   border-radius: 8px;
   padding: 8px 14px;
   cursor: pointer;
@@ -346,8 +356,8 @@ h2 {
 
 .tab-btn.active,
 .tab-btn:hover {
-  background: #7e57c2;
-  color: #fff;
+  background: #FF6F61;
+  color: #2C3E50;
 }
 
 .tab-content {
@@ -360,16 +370,16 @@ h2 {
 
 /* 11. Enquetes */
 .poll-card {
-  background: #424242;
-  border: 2px solid #7e57c2;
+  background: #F0F8FF;
+  border: 2px solid #1E90FF;
   border-radius: 12px;
   padding: 18px;
   margin-bottom: 18px;
-  color: #ddd;
+  color:  #2C3E50;
 }
 
 .poll-card h4 {
-  color: #d1c4e9;
+  color:#2C3E50;
   margin: 0 0 10px 0;
 }
 
@@ -416,15 +426,15 @@ h2 {
 
 /* 12. Quiz */
 .quiz-card {
-  background: #424242;
-  border: 2px solid #7e57c2;
+  background: #F0F8FF;
+  border: 2px solid #1E90FF;
   border-radius: 12px;
   padding: 20px;
-  color: #ddd;
+  color: #2C3E50;
 }
 
 .quiz-card h3 {
-  color: #d1c4e9;
+  color: #2C3E50;
   margin-top: 0;
 }
 
@@ -434,22 +444,22 @@ h2 {
 
 /* 13. Comentários */
 .comments-card {
-  background: #424242;
-  border: 2px solid #7e57c2;
-  border-radius: 12px;
+  background: #F0F8FF;
+  border: 2px solid #1E90FF;
+  border-radius: 5px;
   padding: 20px;
-  color: #ddd;
+  color: #2C3E50;
 }
 
 #comment-form input,
 #comment-form textarea {
-  background: #333;
-  border: 2px solid #7e57c2;
+  background: #F0F8FF;
+  border: 2px solid #2C3E50;
   border-radius: 8px;
   padding: 10px;
   font-family: inherit;
-  color: #ddd;
-  width: 100%;
+  color: #2C3E50;
+  width: 90%;
   margin-bottom: 10px;
 }
 
@@ -493,10 +503,12 @@ footer {
 
 <body>
   <header>
-    <span class="logo-icon">🎬</span>
+    <span class="logo-icon">
+      <img src="img/3adc24fa-13ad-4ebc-914a-3de66b269ec9.png" >
+    </span>
     <div class="logo-text-wrapper">
-      <span class="logo-main">ReelUp</span><br>
-      <span class="logo-sub">"Sua central de cultura pop no cinema e streaming."
+      <span class="logo-main">Maratonando Geek</span><br>
+      <span class="logo-sub">"Conteúdo nerd para maratonar sem parar."
 
       </span>
     </div>
