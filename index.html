@@ -478,12 +478,15 @@ h2 {
 
 /* 14. Footer */
 footer {
+  width: 100%;
   background: #ffffff;
   text-align: center;
   padding: 20px;
   color: #888;
   font-size: 0.8rem;
   border-top: 1px solid #ddd;
+  margin: 0;           /* Remove margens externas */
+  box-sizing: border-box; /* Inclui padding na largura total */
 }
   </style>
 </head>
@@ -544,7 +547,7 @@ footer {
       <input type="text" id="searchInput" placeholder="Pesquisar filmes e séries..."
         style="width: 80%; max-width: 400px; padding: 10px; border: 2px solid #e50914; border-radius: 8px; font-size: 1rem;">
     </div>
-    <h2 style="color:#e50914;">Últimos Lançamentos</h2>
+    <h2 style="color:#e50914;">Últimas Noticias</h2>
     <div class="grid">
 
 
