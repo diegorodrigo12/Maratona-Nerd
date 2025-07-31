@@ -521,6 +521,75 @@ footer {
   margin: 0;           /* Remove margens externas */
   box-sizing: border-box; /* Inclui padding na largura total */
 }
+
+
+
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    padding: 16px;
+    text-align: center;
+  }
+
+  .logo-icon img {
+    width: 120px;
+  }
+
+  .logo-main {
+    font-size: 2rem;
+    letter-spacing: 2px;
+    text-align: center;
+  }
+
+  .logo-sub {
+    font-size: 0.85rem;
+    letter-spacing: 1px;
+    text-align: center;
+  }
+
+  .social-icons {
+    margin-left: 0;
+    margin-top: 10px;
+    justify-content: center;
+  }
+
+  nav {
+    flex-wrap: wrap;
+    padding: 10px 5px;
+  }
+
+  nav a {
+    margin: 5px 10px;
+    font-size: 0.95rem;
+  }
+
+  .agenda-list li {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 5px;
+  }
+
+  .agenda-date,
+  .agenda-title,
+  .agenda-platform {
+    width: 100%;
+    text-align: left;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .ranking-wrapper {
+    grid-template-columns: 1fr;
+  }
+
+  #searchInput {
+    width: 100%;
+    max-width: none;
+  }
+}
+
   </style>
 </head>
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3533636004938881"
@@ -532,7 +601,7 @@ footer {
     </span>
     <div class="logo-text-wrapper">
       
-    <h2>"Sua central de cultura pop no cinema e streaming."</h2>
+   <span class="logo-sub">Sua central de cultura pop no cinema e streaming.</span>
 
       </span>
        </div>
@@ -601,7 +670,7 @@ footer {
 
       <!-- Filme Quarteto Fantastico -->
       <div class="card">
-        <img src="img/Quarteto-Fantastico-1170x658.jpg" alt="Quarteto Fantástico">
+        <img src="img/Quarteto-Fantastico-1170x658.jpg" alt="Quarteto Fantástico" loading="lazy">
         <h3>“Quarteto Fantástico chega aos cinemas em julho destacando os laços familiares”</h3>
         <div class="btn-wrapper">
           <a href="quartetofantastico.html" class="btn-red">Saiba Mais</a>
@@ -610,7 +679,7 @@ footer {
 
       <!-- Série Stranger Things -->
       <div class="card">
-        <img src="img/stranger-things-season-5-uw-3840x2400.jpg" alt="Stranger Things 5">
+        <img src="img/stranger-things-season-5-uw-3840x2400.jpg" alt="Stranger Things 5" loading="lazy">
         <h3>"Tudo o que sabemos até agora sobre a 5ª temporada de 'Stranger Things'.</h3>
         <div class="btn-wrapper">
           <a href="strangerthings.html" class="btn-red">Saiba Mais</a>
@@ -619,7 +688,7 @@ footer {
 
       <!-- Filme Lilo e Stitch -->
       <div class="card">
-        <img src="img/lilo-stitch-beauty-5120x2880-21935.jpg" alt="Lilo e Stitch">
+        <img src="img/lilo-stitch-beauty-5120x2880-21935.jpg" alt="Lilo e Stitch" loading="lazy">
         <h3>"Sucesso na estreia: ‘Lilo e Stitch’ leva 500 mil pessoas aos cinemas do Brasil"</h3>
         <div class="btn-wrapper">
           <a href="" class="btn-red">Saiba Mais</a>
@@ -628,7 +697,7 @@ footer {
 
       <!-- Filme Superman-->
       <div class="card">
-        <img src="img/superman.jpg" alt="Superman">
+        <img src="img/superman.jpg" alt="Superman" loading="lazy">
         <h3>"‘Superman’ dispara nas bilheterias e se aproxima do topo mundial"</h3>
         <div class="btn-wrapper">
           <a href="" class="btn-red">Saiba Mais</a>
@@ -637,7 +706,7 @@ footer {
 
       <!-- Serie The Walking Dead: Daryl Dixon -->
       <div class="card">
-        <img src="img/The Walking Dead Daryl Dixon.jpg" alt="The Walking Dead: Daryl Dixon">
+        <img src="img/The Walking Dead Daryl Dixon.jpg" alt="The Walking Dead: Daryl Dixon" loading="lazy">
         <h3>"The Walking Dead: Daryl Dixon": 4ª temporada da série será a última"</h3>
         <div class="btn-wrapper">
           <a href="" class="btn-red">Saiba Mais</a>
@@ -645,7 +714,7 @@ footer {
       </div>
       <!-- Jurassic World: Recomeço -->
       <div class="card">
-        <img src="img/jurassic world recomeco.jpg" alt="Jurassic World: Recomeço">
+        <img src="img/jurassic world recomeco.jpg" alt="Jurassic World: Recomeço" loading="lazy">
         <h3>"Jurassic World: Recomeço’ rompe a marca de US$ 700 milhões nas bilheteiras globais"</h3>
         <div class="btn-wrapper">
           <a href="" class="btn-red">Saiba Mais</a>
