@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Lançamentos, notícias e reviews de filmes - Maratonando" />
+  <title>Filmes - Maratonando</title>
+
+  <!-- Google Fonts -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@900&family=Poppins:wght@500&display=swap"
+    rel="stylesheet"
+  />
+
+  <style>
+    /* Reset e básico */
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #fff;
+      color: #333;
+      margin: 0;
+      padding: 0;
+    }
+
+    /* Header */
+    header {
+      background-color: #1E90FF;
+      padding: 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 16px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      user-select: none;
+    }
+
+    .logo-main {
+      font-family: 'Montserrat', sans-serif;
+      font-style: italic;
+      font-weight: 900;
+      font-size: 2.8rem;
+      letter-spacing: 5px;
+      text-transform: uppercase;
+      color: #ffffff;
+    }
+
+    .logo-sub {
+      font-family: 'Poppins', sans-serif;
+      font-weight: 500;
+      font-size: 0.9rem;
+      color: #ffffff;
+      margin-left: 8px;
+    }
+
+    /* Navegação */
+    nav {
+      background: #ecf0f1;
+      display: flex;
+      justify-content: center;
+      padding: 10px 0;
+      border-bottom: 1px solid #bdc3c7;
+    }
+
+    nav a {
+      color: #34495e;
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    nav a:hover {
+      color: #1E90FF;
+    }
+
+    nav a.active {
+      color: #e50914;
+      border-bottom: 2px solid #e50914;
+      padding-bottom: 4px;
+    }
+
+    /* Container */
+    .container {
+      width: 90%;
+      max-width: 1200px;
+      margin: 30px auto;
+      padding-bottom: 40px;
+    }
+
+    /* Título da seção */
+    h1 {
+      color: #e50914;
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    /* Filtro de plataformas */
+    #filter-buttons {
+      text-align: center;
+      margin-bottom: 25px;
+    }
+
+    #filter-buttons button {
+      background: #1E90FF;
+      border: none;
+      color: #fff;
+      padding: 10px 18px;
+      margin: 0 6px 10px 6px;
+      border-radius: 25px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    #filter-buttons button.active,
+    #filter-buttons button:hover {
+      background: #e50914;
+    }
+
+    /* Pesquisa */
+    #searchInput {
+      display: block;
+      margin: 0 auto 30px auto;
+      width: 80%;
+      max-width: 400px;
+      padding: 10px;
+      font-size: 1rem;
+      border-radius: 8px;
+      border: 2px solid #e50914;
+      outline: none;
+      color: #333;
+    }
+
+    #searchInput::placeholder {
+      color: #b39ddb;
+    }
+
+    /* Grid cards filmes */
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+
+    .card {
+      background: #fff;
+      border-radius: 10px;
+      border: 1px solid #ddd;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+      overflow: hidden;
+      transition: transform 0.3s, box-shadow 0.3s;
+      color: #333;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .card:hover {
+      transform: scale(1.03);
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.15);
+    }
+
+    .card img {
+      width: 100%;
+      height: 350px;
+      object-fit: cover;
+      border-bottom: 1px solid #ddd;
+    }
+
+    .card h3 {
+      margin: 15px 15px 8px 15px;
+      font-size: 1.2rem;
+      color: #2C3E50;
+      flex-grow: 1;
+    }
+
+    .card .tag {
+      display: inline-block;
+      background: #1E90FF;
+      color: white;
+      font-size: 0.8rem;
+      padding: 4px 10px;
+      border-radius: 25px;
+      margin: 0 15px 10px 15px;
+      font-weight: 600;
+    }
+
+    .btn-wrapper {
+      text-align: center;
+      margin: 0 15px 15px 15px;
+    }
+
+    .btn-red {
+      display: inline-block;
+      background: linear-gradient(135deg, #1E90FF, #2C3E50);
+      color: #fff;
+      text-decoration: none;
+      padding: 10px 20px;
+      border-radius: 50px;
+      font-weight: bold;
+      font-size: 0.95rem;
+      border: none;
+      cursor: pointer;
+      transition: background 0.3s, transform 0.2s;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    .btn-red:hover {
+      background: linear-gradient(135deg, #2C3E50, #1E90FF);
+      transform: translateY(-2px);
+    }
+
+    /* Responsividade */
+    @media (max-width: 768px) {
+      header {
+        flex-direction: column;
+        padding: 16px;
+      }
+
+      .logo-main {
+        font-size: 2rem;
+        letter-spacing: 2px;
+        text-align: center;
+      }
+
+      .logo-sub {
+        font-size: 0.85rem;
+        letter-spacing: 1px;
+        text-align: center;
+        margin-left: 0;
+      }
+
+      nav {
+        flex-wrap: wrap;
+        padding: 10px 5px;
+      }
+
+      nav a {
+        margin: 5px 10px;
+        font-size: 0.95rem;
+      }
+
+      #searchInput {
+        width: 100%;
+        max-width: none;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <div class="logo-main">Maratonando</div>
+    <div class="logo-sub">Sua central de cultura pop no cinema e streaming.</div>
+  </header>
+
+  <nav>
+    <a href="index.html">Início</a>
+    <a href="filmes.html" class="active">Filmes</a>
+    <a href="series.html">Séries</a>
+    <a href="reviews.html">Reviews</a>
+    <a href="contato.html">Contato</a>
+  </nav>
+
+  <div class="container">
+    <h1>Filmes - Lançamentos e Notícias</h1>
+
+    <!-- Filtro por plataforma -->
+    <div id="filter-buttons">
+      <button class="tab-btn active" data-platform="all">Todos</button>
+      <button class="tab-btn" data-platform="Netflix">Netflix</button>
+      <button class="tab-btn" data-platform="Prime Video">Prime Video</button>
+      <button class="tab-btn" data-platform="Disney+">Disney+</button>
+      <button class="tab-btn" data-platform="Cinemas">Cinemas</button>
+    </div>
+
+    <!-- Pesquisa -->
+    <input
+      type="text"
+      id="searchInput"
+      placeholder="Pesquisar filmes..."
+      aria-label="Pesquisar filmes"
+    />
+
+    <!-- Grid de cards -->
+    <div class="grid" id="cardsGrid">
+
+      <!-- Exemplo card 1 -->
+      <div class="card" data-platform="Cinemas">
+        <img src="img/Quarteto-Fantastico-1170x658.jpg" alt="Quarteto Fantástico" loading="lazy" />
+        <h3>Quarteto Fantástico: Primeiros Passos</h3>
+        <span class="tag">Estreia: 05/07/2025</span>
+        <div class="btn-wrapper">
+          <a href="quartetofantastico.html" class="btn-red">Saiba Mais</a>
+        </div>
+      </div>
+
+      <!-- Exemplo card 2 -->
+      <div class="card" data-platform="Netflix">
+        <img src="img/stranger-things-season-5-uw-3840x2400.jpg" alt="Stranger Things 5" loading="lazy" />
+        <h3>Stranger Things – Temporada Final</h3>
+        <span class="tag">Estreia: 12/08/2025</span>
+        <div class="btn-wrapper">
+          <a href="strangerthings.html" class="btn-red">Saiba Mais</a>
+        </div>
+      </div>
+
+      <!-- Exemplo card 3 -->
+      <div class="card" data-platform="Disney+">
+        <img src="img/lilo-stitch-beauty-5120x2880-21935.jpg" alt="Lilo e Stitch" loading="lazy" />
+        <h3>Lilo e Stitch: Sucesso na estreia</h3>
+        <span class="tag">Estreia: 02/08/2025</span>
+        <div class="btn-wrapper">
+          <a href="#" class="btn-red">Saiba Mais</a>
+        </div>
+      </div>
+
+      <!-- Exemplo card 4 -->
+      <div class="card" data-platform="Cinemas">
+        <img src="img/superman.jpg" alt="Superman" loading="lazy" />
+        <h3>Superman dispara nas bilheterias</h3>
+        <span class="tag">Estreia: 20/07/2025</span>
+        <div class="btn-wrapper">
+          <a href="#" class="btn-red">Saiba Mais</a>
+        </div>
+      </div>
+
+      <!-- Exemplo card 5 -->
+      <div class="card" data-platform="Cinemas">
+        <img src="img/jurassic world recomeco.jpg" alt="Jurassic World: Recomeço" loading="lazy" />
+        <h3>Jurassic World: Recomeço rompe a marca de US$ 700 milhões</h3>
+        <span class="tag">Estreia: 15/07/2025</span>
+        <div class="btn-wrapper">
+          <a href="#" class="btn-red">Saiba Mais</a>
+        </div>
+      </div>
+
+      <!-- Exemplo card 6 -->
+      <div class="card" data-platform="Prime Video">
+        <img src="img/blade.jpg" alt="Blade" loading="lazy" />
+        <h3>Blade retorna com Mahershala Ali</h3>
+        <span class="tag">Estreia: 15/09/2025</span>
+        <div class="btn-wrapper">
+          <a href="#" class="btn-red">Saiba Mais</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Filtro por plataforma
+    const filterButtons = document.querySelectorAll('#filter-buttons .tab-btn');
+    const cards = document.querySelectorAll('.card');
+    const searchInput = document.getElementById('searchInput');
+
+    filterButtons.forEach(button => {
+      button.addEventListener('click', () => {
+        filterButtons.forEach(btn => btn.classList.remove('active'));
+        button.classList.add('active');
+
+        const platform = button.getAttribute('data-platform');
+        filterCards(platform, searchInput.value.trim().toLowerCase());
+      });
+    });
+
+    // Pesquisa (filtra pelo título)
+    searchInput.addEventListener('input', () => {
+      const activePlatform = document.querySelector('#filter-buttons .tab-btn.active').getAttribute('data-platform');
+      filterCards(activePlatform, searchInput.value.trim().toLowerCase());
+    });
+
+    function filterCards(platform, searchText) {
+      cards.forEach(card => {
+        const cardPlatform = card.getAttribute('data-platform');
+        const title = card.querySelector('h3').textContent.toLowerCase();
+
+        const platformMatch = platform === 'all' || cardPlatform === platform;
+        const textMatch = title.includes(searchText);
+
+        if (platformMatch && textMatch) {
+          card.style.display = 'flex';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    }
+  </script>
+</body>
+
+</html>
