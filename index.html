@@ -37,20 +37,24 @@ header {
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
+
+ header h2 {
+  font-size: 1.2rem;
+  color:#ffffff;
+
+  }
 .logo-icon {
-  
-  /* removi transform, pois com imagem pode distorcer */
   display: flex;
-  justify-content: center;
+  justify-content: flex-start; /* 👈 alinha o conteúdo da logo à esquerda */
   align-items: center;
   overflow: hidden;
 }
 
 .logo-icon img {
-  width: 150px;
+  width: 160px; /* ajuste conforme o tamanho ideal da sua imagem */
   max-width: 100%;
   max-height: 100%;
-  object-fit: contain; /* mantém a proporção da imagem */
+  object-fit: contain;
   display: block;
 }
 
@@ -81,6 +85,25 @@ header {
   font-style: normal;
   color: #ffffff;
 }
+
+/* Redes sociais */
+.social-icons {
+  display: flex;
+  gap: 12px;
+  margin-left: 40px; /* ou 30px, se quiser mais ainda */
+}
+
+.social-icons img {
+  width: 28px;
+  height: 28px;
+  filter: invert(1);
+  transition: transform 0.2s;
+}
+
+.social-icons a:hover img {
+  transform: scale(1.2);
+}
+
 
 /* 3. Navegação (nav) */
 nav {
@@ -504,14 +527,26 @@ footer {
 <body>
   <header>
     <span class="logo-icon">
-      <img src="img/3adc24fa-13ad-4ebc-914a-3de66b269ec9.png" >
+      <img src="img/logo" >
     </span>
     <div class="logo-text-wrapper">
-      <span class="logo-main">Maratonando Geek</span><br>
-      <span class="logo-sub">"Conteúdo nerd para maratonar sem parar."
+      
+    <h2>"Sua central de cultura pop no cinema e streaming."</h2>
 
       </span>
-    </div>
+       </div>
+      <div class="social-icons">
+    <a href="https://www.youtube.com/@seucanal" target="_blank" title="YouTube">
+      <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/youtube.svg" alt="YouTube">
+    </a>
+    <a href="https://www.tiktok.com/@seutiktok" target="_blank" title="TikTok">
+      <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/tiktok.svg" alt="TikTok">
+    </a>
+    <a href="https://www.instagram.com/seuinstagram" target="_blank" title="Instagram">
+      <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/instagram.svg" alt="Instagram">
+    </a>
+  </div>
+   
   </header>
   <nav>
     <a href="index.html">Início</a>
