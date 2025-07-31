@@ -300,95 +300,150 @@
     <!-- Grid de cards -->
     <div class="grid" id="cardsGrid">
 
-      <!-- Exemplo card 1 -->
-      <div class="card" data-platform="Cinemas">
-        <img src="img/Quarteto-Fantastico-1170x658.jpg" alt="Quarteto Fantástico" loading="lazy" />
-        <h3>Quarteto Fantástico: Primeiros Passos</h3>
-        <span class="tag">Estreia: 05/07/2025</span>
-        <div class="btn-wrapper">
-          <a href="quartetofantastico.html" class="btn-red">Saiba Mais</a>
-        </div>
-      </div>
+          <div class="grid" id="tmdb-filmes">
+  <!-- Os cards dos filmes vindos da API vão aparecer aqui -->
+</div>
 
-      <!-- Exemplo card 3 -->
-      <div class="card" data-platform="Disney+">
-        <img src="img/lilo-stitch-beauty-5120x2880-21935.jpg" alt="Lilo e Stitch" loading="lazy" />
-        <h3>Lilo e Stitch</h3>
-        <span class="tag">Estreia: 02/08/2025</span>
-        <div class="btn-wrapper">
-          <a href="#" class="btn-red">Saiba Mais</a>
-        </div>
-      </div>
-
-      <!-- Exemplo card 4 -->
-      <div class="card" data-platform="Cinemas">
-        <img src="img/superman.jpg" alt="Superman" loading="lazy" />
-        <h3>Superman</h3>
-        <span class="tag">Estreia: 20/07/2025</span>
-        <div class="btn-wrapper">
-          <a href="#" class="btn-red">Saiba Mais</a>
-        </div>
-      </div>
-
-      <!-- Exemplo card 5 -->
-      <div class="card" data-platform="Cinemas">
-        <img src="img/jurassic world recomeco.jpg" alt="Jurassic World: Recomeço" loading="lazy" />
-        <h3>Jurassic World: Recomeço</h3>
-        <span class="tag">Estreia: 15/07/2025</span>
-        <div class="btn-wrapper">
-          <a href="#" class="btn-red">Saiba Mais</a>
-        </div>
-      </div>
-
-      <!-- Exemplo card 6 -->
-      <div class="card" data-platform="Prime Video">
-        <img src="img/Sem título.jpg" alt="Blade" loading="lazy" />
-        <h3>Blade</h3>
-        <span class="tag">Estreia: 15/09/2025</span>
-        <div class="btn-wrapper">
-          <a href="#" class="btn-red">Saiba Mais</a>
-        </div>
-      </div>
+    
     </div>
   </div>
 
   <script>
-    // Filtro por plataforma
-    const filterButtons = document.querySelectorAll('#filter-buttons .tab-btn');
-    const cards = document.querySelectorAll('.card');
-    const searchInput = document.getElementById('searchInput');
+  const API_KEY = 'e33ea358df3fec9b511058ec9ef1701f';
+const BASE_URL = 'https://api.themoviedb.org/3';
 
-    filterButtons.forEach(button => {
-      button.addEventListener('click', () => {
-        filterButtons.forEach(btn => btn.classList.remove('active'));
-        button.classList.add('active');
+const container = document.getElementById('tmdb-filmes');
+const searchInput = document.getElementById('searchInput');
+const filterButtons = document.querySelectorAll('#filter-buttons .tab-btn');
 
-        const platform = button.getAttribute('data-platform');
-        filterCards(platform, searchInput.value.trim().toLowerCase());
-      });
+// Cria um card de filme com o estilo definido
+function criarCardFilme(filme) {
+  const posterUrl = filme.poster_path
+    ? `https://image.tmdb.org/t/p/w500${filme.poster_path}`
+    : 'img/poster-placeholder.jpg';
+
+  const card = document.createElement('div');
+  card.className = 'card';
+
+  // Aqui você pode colocar data-platform para filtros futuros, 
+  // mas como não tem essa info na API TMDB, uso "all" por padrão
+  card.setAttribute('data-platform', 'all');
+
+  card.innerHTML = `
+    <img src="${posterUrl}" alt="${filme.title}" loading="lazy" />
+    <h3>${filme.title}</h3>
+    <p>Data de lançamento: ${filme.release_date || 'N/A'}</p>
+    <div class="btn-wrapper">
+      <a href="https://www.themoviedb.org/movie/${filme.id}" target="_blank" class="btn-red">Saiba Mais</a>
+    </div>
+  `;
+
+  return card;
+}
+
+// Carrega filmes populares e mostra na tela
+async function carregarFilmesPopulares() {
+  try {
+    const res = await fetch(`${BASE_URL}/movie/popular?api_key=${API_KEY}&language=pt-BR&page=1`);
+    if (!res.ok) throw new Error('Erro ao buscar filmes populares');
+    const dados = await res.json();
+
+    container.innerHTML = '';
+    dados.results.forEach(filme => {
+      const card = criarCardFilme(filme);
+      container.appendChild(card);
     });
 
-    // Pesquisa (filtra pelo título)
-    searchInput.addEventListener('input', () => {
-      const activePlatform = document.querySelector('#filter-buttons .tab-btn.active').getAttribute('data-platform');
-      filterCards(activePlatform, searchInput.value.trim().toLowerCase());
-    });
+    // Após carregar filmes, aplica o filtro atual para ajustar visibilidade
+    const plataformaAtiva = document.querySelector('#filter-buttons .tab-btn.active').getAttribute('data-platform');
+    const textoBusca = searchInput.value.trim().toLowerCase();
+    filterCards(plataformaAtiva, textoBusca);
 
-    function filterCards(platform, searchText) {
-      cards.forEach(card => {
-        const cardPlatform = card.getAttribute('data-platform');
-        const title = card.querySelector('h3').textContent.toLowerCase();
+  } catch (err) {
+    console.error(err);
+    container.innerHTML = '<p>Erro ao carregar filmes.</p>';
+  }
+}
 
-        const platformMatch = platform === 'all' || cardPlatform === platform;
-        const textMatch = title.includes(searchText);
+// Busca filmes por texto e mostra na tela
+async function buscarFilmes(query) {
+  if (!query) {
+    carregarFilmesPopulares();
+    return;
+  }
 
-        if (platformMatch && textMatch) {
-          card.style.display = 'flex';
-        } else {
-          card.style.display = 'none';
-        }
-      });
+  try {
+    const res = await fetch(`${BASE_URL}/search/movie?api_key=${API_KEY}&language=pt-BR&query=${encodeURIComponent(query)}&page=1&include_adult=false`);
+    if (!res.ok) throw new Error('Erro na busca');
+    const dados = await res.json();
+
+    container.innerHTML = '';
+    if (dados.results.length === 0) {
+      container.innerHTML = '<p>Nenhum filme encontrado.</p>';
+      return;
     }
+
+    dados.results.forEach(filme => {
+      const card = criarCardFilme(filme);
+      container.appendChild(card);
+    });
+
+    // Aplica filtro (mesmo que plataforma esteja "all", só para consistência)
+    const plataformaAtiva = document.querySelector('#filter-buttons .tab-btn.active').getAttribute('data-platform');
+    const textoBusca = searchInput.value.trim().toLowerCase();
+    filterCards(plataformaAtiva, textoBusca);
+
+  } catch (err) {
+    console.error(err);
+    container.innerHTML = '<p>Erro ao buscar filmes.</p>';
+  }
+}
+
+// Filtra os cards visíveis baseado na plataforma e texto de busca localmente
+function filterCards(platform, searchText) {
+  const cards = document.querySelectorAll('.card');
+
+  cards.forEach(card => {
+    const cardPlatform = card.getAttribute('data-platform') || 'all';
+    const title = card.querySelector('h3').textContent.toLowerCase();
+
+    const platformMatch = platform === 'all' || cardPlatform === platform;
+    const textMatch = title.includes(searchText);
+
+    if (platformMatch && textMatch) {
+      card.style.display = 'flex';
+    } else {
+      card.style.display = 'none';
+    }
+  });
+}
+
+// Eventos para filtro por plataforma (botões)
+filterButtons.forEach(button => {
+  button.addEventListener('click', () => {
+    filterButtons.forEach(btn => btn.classList.remove('active'));
+    button.classList.add('active');
+
+    const plataforma = button.getAttribute('data-platform');
+    const textoBusca = searchInput.value.trim().toLowerCase();
+
+    filterCards(plataforma, textoBusca);
+  });
+});
+
+// Evento para busca ao pressionar Enter no campo de texto
+searchInput.addEventListener('keydown', e => {
+  if (e.key === 'Enter') {
+    const query = searchInput.value.trim();
+    buscarFilmes(query);
+  }
+});
+
+// Inicializa a página carregando os filmes populares
+document.addEventListener('DOMContentLoaded', () => {
+  carregarFilmesPopulares();
+});
+
   </script>
      <footer>
   <p>© 2025 Blog de Filmes e Séries. Todos os direitos reservados.</p>

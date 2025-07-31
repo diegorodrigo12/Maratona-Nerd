@@ -90,6 +90,8 @@
     -->.
  
     <h2 style="color:#e50914;">Últimas Noticias</h2>
+
+
     <div class="grid">
 
 
@@ -161,7 +163,7 @@
     <a href="percyjackson1.html" class="btn-red">Saiba Mais</a>
   </div>
 </div>
-    </div>
+    </div>-->
 
 
     <section id="listas" class="container">
@@ -482,6 +484,48 @@
   });
   });
   });
+
+
+const API_KEY = 'e33ea358df3fec9b511058ec9ef1701f'; // substitua pela sua chave TMDB
+const BASE_URL = 'https://api.themoviedb.org/3';
+
+async function carregarFilmesTMDB() {
+  try {
+    const resposta = await fetch(`${BASE_URL}/movie/popular?api_key=${API_KEY}&language=pt-BR&page=1`);
+    if (!resposta.ok) throw new Error('Erro ao buscar filmes: ' + resposta.status);
+    const dados = await resposta.json();
+
+    const container = document.getElementById('tmdb-filmes');
+    container.innerHTML = ''; // Limpa antes de adicionar
+
+    dados.results.forEach(filme => {
+      const card = document.createElement('div');
+      card.className = 'card'; // reutiliza sua classe card para estilo
+
+      // URL da imagem do poster
+      const posterUrl = filme.poster_path 
+        ? `https://image.tmdb.org/t/p/w500${filme.poster_path}` 
+        : 'img/poster-placeholder.jpg'; // uma imagem fallback
+
+      card.innerHTML = `
+        <img src="${posterUrl}" alt="${filme.title}" loading="lazy" />
+        <h3>${filme.title}</h3>
+        <p>Data de lançamento: ${filme.release_date || 'N/A'}</p>
+        <div class="btn-wrapper">
+          <a href="https://www.themoviedb.org/movie/${filme.id}" target="_blank" class="btn-red">Saiba Mais</a>
+        </div>
+      `;
+      container.appendChild(card);
+    });
+
+  } catch (error) {
+    console.error(error);
+  }
+}
+
+// Chama para carregar assim que a página estiver pronta
+document.addEventListener('DOMContentLoaded', carregarFilmesTMDB);
+
   </script>
 
 </html>
