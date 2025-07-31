@@ -1,104 +1,204 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Notícia: 2ª temporada de Percy Jackson no Disney+</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Percy Jackson - 2ª Temporada Confirmada</title>
+  <link rel="stylesheet" href="estilo.css">
   <style>
-    /* Reset básico */
-    * {
-      box-sizing: border-box;
-    }
     body {
-      font-family: 'Poppins', sans-serif;
-      background-color: #f4f7fb;
-      color: #2c3e50;
-      margin: 0;
-      padding: 0 20px;
-      line-height: 1.6;
-    }
-    header {
-      background-color: #1E90FF;
-      padding: 20px;
-      color: white;
-      text-align: center;
-      font-weight: 700;
-      font-size: 1.8rem;
-      letter-spacing: 1.5px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.15);
-    }
+  font-family: 'Poppins', sans-serif;
+  background-color: #ffffff;
+  color: #333;
+  margin: 0;
+  padding: 0;
+}
+
+/* 2. Header */
+header {
+  background-color: #1E90FF;
+  padding: 20px;
+  text-align: center;
+  font-weight: 700;
+  color: #2c3e50;
+  user-select: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.logo-icon {
+  display: flex;
+  justify-content: flex-start; /* 👈 alinha o conteúdo da logo à esquerda */
+  align-items: center;
+  overflow: hidden;
+}
+
+.logo-icon img {
+  width: 160px; /* ajuste conforme o tamanho ideal da sua imagem */
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  display: block;
+}
+
+.logo-text-wrapper {
+  text-align: left;
+  line-height: 1;
+}
+
+.logo-main {
+  display: block;
+  font-family:'Montserrat', sans-serif;
+  font-style: italic;
+  font-weight: 900;
+  font-size: 2.8rem;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  color: #ffffff;
+}
+
+.logo-sub {
+  display: block;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  font-size: 0.9rem;
+  letter-spacing: 1.5px;
+  margin-top: 1px;
+  text-transform: none;
+  font-style: normal;
+  color: #ffffff;
+}
+
+/* Redes sociais */
+.social-icons {
+  display: flex;
+  gap: 12px;
+  margin-left: 40px; /* ou 30px, se quiser mais ainda */
+}
+
+.social-icons img {
+  width: 28px;
+  height: 28px;
+  filter: invert(1);
+  transition: transform 0.2s;
+}
+
+.social-icons a:hover img {
+  transform: scale(1.2);
+}
+
+
+/* 3. Navegação (nav) */
+nav {
+  background: #ecf0f1;
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+  border-bottom: 1px solid #bdc3c7;
+}
+
+nav a {
+  color: #34495e;
+  text-decoration: none;
+  margin: 0 15px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
     main {
       max-width: 900px;
       margin: 40px auto;
-      background: white;
-      padding: 30px 40px;
-      border-radius: 12px;
-      box-shadow: 0 3px 15px rgba(0,0,0,0.1);
+      padding: 20px;
+      background-color: white;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
     }
+
     h1 {
-      margin-bottom: 15px;
-      font-family: 'Montserrat', sans-serif;
-      font-weight: 900;
-      font-style: italic;
       color: #1E90FF;
     }
-    .date {
-      font-size: 0.9rem;
-      color: #888;
-      margin-bottom: 30px;
-    }
+
     img {
       max-width: 100%;
-      border-radius: 10px;
-      margin-bottom: 30px;
-      box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+      border-radius: 8px;
+      margin: 20px 0;
     }
-    p {
+
+    .tag {
+      display: inline-block;
+      background: #1E90FF;
+      color: white;
+      padding: 6px 12px;
+      border-radius: 4px;
+      font-size: 0.8rem;
       margin-bottom: 20px;
-      font-size: 1.1rem;
     }
-    strong {
-      color: #1E90FF;
-    }
-    footer {
-      margin-top: 60px;
+
+    /* 14. Footer */
+   footer {
       text-align: center;
-      font-size: 0.9rem;
-      color: #aaa;
-      padding-bottom: 30px;
+      margin-top: 60px;
+      padding: 20px;
+      background-color: #fff;
+      border-top: 1px solid #ddd;
+      font-size: 0.85rem;
+      color: #777;
     }
-    @media (max-width: 600px) {
-      main {
-        padding: 20px;
-        margin: 20px 10px;
-      }
-    }
+
   </style>
 </head>
 <body>
-  <header>Maratonando - Notícias Geek</header>
+
+  <header>
+    <h2>Maratonando Geek</h2>
+    <p>Sua central de cultura pop no cinema e streaming</p>
+
+      <div class="social-icons">
+    <a href="https://www.youtube.com/@seucanal" target="_blank" title="YouTube">
+      <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/youtube.svg" alt="YouTube">
+    </a>
+    <a href="https://www.tiktok.com/@seutiktok" target="_blank" title="TikTok">
+      <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/tiktok.svg" alt="TikTok">
+    </a>
+    <a href="https://www.instagram.com/seuinstagram" target="_blank" title="Instagram">
+      <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/instagram.svg" alt="Instagram">
+    </a>
+  </div>
+   
+  </header>
+  <nav>
+    <a href="index.html">Início</a>
+    <a href="filmes.html">Filmes</a>
+    <a href="series.html">Séries</a>
+    <a href="reviews.html">Reviews</a>
+    <a href="contato.html">Contato</a>
+  </nav>
+
+
+  </header>
+
   <main>
-    <h1>Disney+ confirma a 2ª temporada de <em>Percy Jackson</em> com novos deuses e mais ação</h1>
-    <div class="date">Publicado em 31 de julho de 2025</div>
+    <span class="tag">Notícias</span>
+    <h1>Disney+ confirma a 2ª temporada de 'Percy Jackson'</h1>
+    <p><strong>31 de julho de 2025</strong></p>
+    <img src="https://img.odcdn.com.br/wp-content/uploads/2023/12/percy-jackson-disney.jpg" alt="Percy Jackson na 2ª temporada">
+    
+    <p>Os fãs de semideuses podem comemorar! O Disney+ anunciou oficialmente a renovação da série <strong>"Percy Jackson e os Olimpianos"</strong> para a <strong>2ª temporada</strong>, prometendo ainda mais ação, mitologia e novos personagens divinos.</p>
 
-    <img src="https://upload.wikimedia.org/wikipedia/pt/1/1f/Percy_Jackson_%28s%C3%A9rie_de_televis%C3%A3o%29_logo.png" alt="Percy Jackson Disney+">
+    <p>A nova temporada vai adaptar o segundo livro da saga escrita por Rick Riordan, <em>"O Mar de Monstros"</em>, e promete mergulhar mais fundo no universo mitológico, trazendo criaturas lendárias e deuses inéditos na série, como <strong>Hermes</strong>, <strong>Circe</strong> e <strong>Polifemo</strong>.</p>
 
-    <p>O <strong>Disney+</strong> acaba de confirmar oficialmente a produção da segunda temporada da série <em>Percy Jackson e os Olimpianos</em>, baseada na popular saga de livros escrita por Rick Riordan.</p>
+    <p>Segundo o próprio Rick Riordan, que também atua como produtor executivo da série, os roteiros já estão sendo desenvolvidos e o elenco principal deve retornar. Walker Scobell, que interpreta Percy, foi muito elogiado por fãs e críticos na 1ª temporada.</p>
 
-    <p>Depois do sucesso da primeira temporada, que conquistou fãs por todo o mundo ao adaptar com fidelidade as aventuras do jovem semideus, a produção promete trazer ainda mais emoção, novos personagens e uma trama repleta de ação.</p>
+    <p>A produção da nova temporada está prevista para iniciar ainda este ano, com estreia esperada para <strong>2026</strong> no Disney+. A expectativa é de que a série mantenha o tom épico, agora com aventuras ainda maiores pelo mundo dos deuses gregos.</p>
 
-    <p>De acordo com os produtores, a segunda temporada vai introduzir <strong>novos deuses do panteão grego</strong> que irão desafiar Percy e seus amigos, aumentando a complexidade da história e aprofundando o universo mitológico da série.</p>
-
-    <p>A ação será intensificada com sequências inéditas, efeitos visuais aprimorados e desenvolvimento mais profundo dos personagens, trazendo uma experiência ainda mais envolvente para os assinantes do Disney+.</p>
-
-    <p>Os fãs podem esperar também por novos desafios, alianças inesperadas e revelações surpreendentes que prometem manter a audiência grudada na tela.</p>
-
-    <p>A data de estreia da segunda temporada ainda não foi divulgada, mas a expectativa é que seja lançada no primeiro semestre de 2026.</p>
-
-    <p>Enquanto isso, a primeira temporada está disponível no Disney+ para quem quer relembrar ou se aventurar pela primeira vez nesse universo fantástico.</p>
+    <p>Fique ligado aqui no <strong>Maratonando</strong> para mais novidades sobre o universo de Percy Jackson e muito mais!</p>
   </main>
-  <footer>
-    &copy; 2025 Maratonando - Todos os direitos reservados
+ <footer>
+    © 2025 Maratonando Geek. Todos os direitos reservados.
   </footer>
+
 </body>
 </html>
