@@ -175,17 +175,6 @@
       flex-grow: 1;
     }
 
-    .card .tag {
-      display: inline-block;
-      background: #1E90FF;
-      color: white;
-      font-size: 0.8rem;
-      padding: 4px 10px;
-      border-radius: 25px;
-      margin: 0 15px 10px 15px;
-      font-weight: 600;
-    }
-
     .btn-wrapper {
       text-align: center;
       margin: 0 15px 15px 15px;
@@ -211,7 +200,6 @@
       transform: translateY(-2px);
     }
 
-    
     footer {
       text-align: center;
       margin-top: 60px;
@@ -221,6 +209,7 @@
       font-size: 0.85rem;
       color: #777;
     }
+
     /* Responsividade */
     @media (max-width: 768px) {
       header {
@@ -261,17 +250,17 @@
 
 <body>
   <header>
-     <h2>Maratonando Geek</h2>
+    <h2>Maratonando Geek</h2>
     <div class="logo-sub">Sua central de cultura pop no cinema e streaming.</div>
   </header>
 
   <nav>
     <a href="index.html">Início</a>
     <a href="filmes.html">Filmes</a>
-    <a href="series.html">Séries</a>
+    <a href="series.html" class="active">Séries</a>
     <a href="reviews.html">Reviews</a>
     <a href="contato.html">Contato</a>
-     <a href="sobre.html">Sobre</a>
+    <a href="sobre.html">Sobre</a>
   </nav>
 
   <div class="container">
@@ -284,7 +273,6 @@
       <button class="tab-btn" data-platform="Prime Video">Prime Video</button>
       <button class="tab-btn" data-platform="Disney+">Disney+</button>
       <button class="tab-btn" data-platform="AMC">AMC</button>
-     
     </div>
 
     <!-- Pesquisa -->
@@ -295,154 +283,134 @@
       aria-label="Pesquisar séries"
     />
 
-    <!-- Grid de cards -->
-    <div class="grid" id="cardsGrid">
-
-      <!-- Exemplo card 1 -->
-      <div class="card" data-platform="Netflix">
-        <img src="img/stranger-things-season-5-uw-3840x2400.jpg" alt="Stranger Things 5" loading="lazy" />
-        <h3>Stranger Things – Temporada Final</h3>
-        <span class="tag">Estreia: 12/08/2025</span>
-        <div class="btn-wrapper">
-          <a href="strangerthings.html" class="btn-red">Saiba Mais</a>
-        </div>
-      </div>
-
-      <!-- Exemplo card 2 -->
-      <div class="card" data-platform="Prime Video">
-        <img src="img/the-boys.jpeg" alt="The Boys" loading="lazy" />
-        <h3>The Boys</h3>
-        <span class="tag">Estreia: 05/09/2025</span>
-        <div class="btn-wrapper">
-          <a href="#" class="btn-red">Saiba Mais</a>
-        </div>
-      </div>
-
-      <!-- Exemplo card 3 -->
-      <div class="card" data-platform="Disney+">
-        <img src="img/loki.jpg" alt="Loki" loading="lazy" />
-        <h3>Loki</h3>
-        <span class="tag">Estreia: 20/07/2025</span>
-        <div class="btn-wrapper">
-          <a href="#" class="btn-red">Saiba Mais</a>
-        </div>
-      </div>
-
-      <!-- Exemplo card 4 -->
-      <div class="card" data-platform="HBO Max">
-        <img src="img/house-of-the-dragon.jpg" alt="House of the Dragon" loading="lazy" />
-        <h3>House of the Dragon</h3>
-        <span class="tag">Estreia: 10/09/2025</span>
-        <div class="btn-wrapper">
-          <a href="#" class="btn-red">Saiba Mais</a>
-        </div>
-      </div>
-
-      <!-- Exemplo card 5 -->
-      <div class="card" data-platform="Netflix">
-        <img src="img/arcane.jpg" alt="Arcane" loading="lazy" />
-        <h3>Arcane </h3>
-        <span class="tag">Estreia: 01/08/2025</span>
-        <div class="btn-wrapper">
-          <a href="#" class="btn-red">Saiba Mais</a>
-        </div>
-      </div>
-
-      <!-- Exemplo card 6 -->
-      <div class="card" data-platform="Prime Video">
-        <img src="img/jack-ryan.jpg" alt="Jack Ryan" loading="lazy" />
-        <h3>Jack Ryan</h3>
-        <span class="tag">Estreia: 15/09/2025</span>
-        <div class="btn-wrapper">
-          <a href="#" class="btn-red">Saiba Mais</a>
-        </div>
-      </div>
-      <!-- Exemplo card From -->
-<div class="card" data-platform="Prime Video">
-  <img src="img/from.jpg" alt="From" loading="lazy" />
-  <h3>From</h3>
-  <span class="tag">Estreia: 22/09/2025</span>
-  <div class="btn-wrapper">
-    <a href="#" class="btn-red">Saiba Mais</a>
-  </div>
-</div>
-
-<!-- Exemplo card The Walking Dead -->
-<div class="card" data-platform="AMC">
-  <img src="img/the-walking-dead.jpg" alt="The Walking Dead" loading="lazy" />
-  <h3>The Walking Dead</h3>
-  <span class="tag">Estreia: 30/10/2025</span>
-  <div class="btn-wrapper">
-    <a href="#" class="btn-red">Saiba Mais</a>
-  </div>
-</div>
-<!-- Spin-off The Walking Dead: Daryl Dixon -->
-<div class="card" data-platform="AMC">
-  <img src="img/The Walking Dead Daryl Dixon.jpg" alt="The Walking Dead: Daryl Dixon" loading="lazy" />
-  <h3>The Walking Dead: Daryl Dixon</h3>
-  <span class="tag">Estreia: 15/09/2025</span>
-  <div class="btn-wrapper">
-    <a href="#" class="btn-red">Saiba Mais</a>
-  </div>
-</div>
-
-<!-- Spin-off The Walking Dead: Dead City -->
-<div class="card" data-platform="AMC">
-  <img src="img/twd.jpg" alt="The Walking Dead: Dead City" loading="lazy" />
-  <h3>The Walking Dead: Dead City </h3>
-  <span class="tag">Estreia: 20/10/2025</span>
-  <div class="btn-wrapper">
-    <a href="#" class="btn-red">Saiba Mais</a>
-  </div>
-</div>
-    </div>
+    <!-- Grid de cards (vazio, vai preencher via JS) -->
+    <div class="grid" id="tmdb-series"></div>
   </div>
 
   <script>
-    // Filtro por plataforma
-    const filterButtons = document.querySelectorAll('#filter-buttons .tab-btn');
-    const cards = document.querySelectorAll('.card');
+    const API_KEY = 'e33ea358df3fec9b511058ec9ef1701f';
+    const BASE_URL = 'https://api.themoviedb.org/3';
+
+    const containerSeries = document.getElementById('tmdb-series');
     const searchInput = document.getElementById('searchInput');
+    const filterButtons = document.querySelectorAll('#filter-buttons .tab-btn');
 
-    filterButtons.forEach(button => {
-      button.addEventListener('click', () => {
-        filterButtons.forEach(btn => btn.classList.remove('active'));
-        button.classList.add('active');
+    // Função para criar o card da série
+    function criarCardSerie(serie) {
+      const posterUrl = serie.poster_path
+        ? `https://image.tmdb.org/t/p/w500${serie.poster_path}`
+        : 'img/poster-placeholder.jpg';
 
-        const platform = button.getAttribute('data-platform');
-        filterCards(platform, searchInput.value.trim().toLowerCase());
-      });
-    });
+      const card = document.createElement('div');
+      card.className = 'card';
+      card.setAttribute('data-platform', 'all'); // Sem filtro real, placeholder
 
-    // Pesquisa (filtra pelo título)
-    searchInput.addEventListener('input', () => {
+      card.innerHTML = `
+        <img src="${posterUrl}" alt="${serie.name}" loading="lazy" />
+        <h3>${serie.name}</h3>
+        <p>Primeira exibição: ${serie.first_air_date || 'N/A'}</p>
+        <div class="btn-wrapper">
+          <a href="https://www.themoviedb.org/tv/${serie.id}" target="_blank" class="btn-red">Saiba Mais</a>
+        </div>
+      `;
+      return card;
+    }
+
+    // Carrega séries populares
+    async function carregarSeriesPopulares() {
+      try {
+        const res = await fetch(`${BASE_URL}/tv/popular?api_key=${API_KEY}&language=pt-BR&page=1`);
+        if (!res.ok) throw new Error('Erro ao buscar séries populares');
+        const dados = await res.json();
+
+        containerSeries.innerHTML = '';
+        dados.results.forEach(serie => {
+          const card = criarCardSerie(serie);
+          containerSeries.appendChild(card);
+        });
+        aplicarFiltro();
+      } catch (err) {
+        console.error(err);
+        containerSeries.innerHTML = '<p>Erro ao carregar séries.</p>';
+      }
+    }
+
+    // Busca séries por termo
+    async function buscarSeries(query) {
+      if (!query) {
+        carregarSeriesPopulares();
+        return;
+      }
+
+      try {
+        const res = await fetch(`${BASE_URL}/search/tv?api_key=${API_KEY}&language=pt-BR&query=${encodeURIComponent(query)}&page=1&include_adult=false`);
+        if (!res.ok) throw new Error('Erro na busca');
+        const dados = await res.json();
+
+        containerSeries.innerHTML = '';
+        if (dados.results.length === 0) {
+          containerSeries.innerHTML = '<p>Nenhuma série encontrada.</p>';
+          return;
+        }
+
+        dados.results.forEach(serie => {
+          const card = criarCardSerie(serie);
+          containerSeries.appendChild(card);
+        });
+        aplicarFiltro();
+      } catch (err) {
+        console.error(err);
+        containerSeries.innerHTML = '<p>Erro ao buscar séries.</p>';
+      }
+    }
+
+    // Filtro por plataforma (aplica filtro nos cards)
+    function aplicarFiltro() {
       const activePlatform = document.querySelector('#filter-buttons .tab-btn.active').getAttribute('data-platform');
-      filterCards(activePlatform, searchInput.value.trim().toLowerCase());
-    });
+      const cards = containerSeries.querySelectorAll('.card');
 
-    function filterCards(platform, searchText) {
       cards.forEach(card => {
         const cardPlatform = card.getAttribute('data-platform');
-        const title = card.querySelector('h3').textContent.toLowerCase();
-
-        const platformMatch = platform === 'all' || cardPlatform === platform;
-        const textMatch = title.includes(searchText);
-
-        if (platformMatch && textMatch) {
+        // Como API não tem plataforma, estamos usando 'all' para todos
+        // Se quiser integrar plataforma real, precisa mapear isso
+        if (activePlatform === 'all' || cardPlatform === activePlatform) {
           card.style.display = 'flex';
         } else {
           card.style.display = 'none';
         }
       });
     }
+
+    // Eventos filtro por plataforma
+    filterButtons.forEach(button => {
+      button.addEventListener('click', () => {
+        filterButtons.forEach(btn => btn.classList.remove('active'));
+        button.classList.add('active');
+        aplicarFiltro();
+      });
+    });
+
+    // Evento ao digitar Enter no input
+    searchInput.addEventListener('keydown', e => {
+      if (e.key === 'Enter') {
+        const query = searchInput.value.trim();
+        buscarSeries(query);
+      }
+    });
+
+    // Inicializa com séries populares
+    document.addEventListener('DOMContentLoaded', () => {
+      carregarSeriesPopulares();
+    });
   </script>
- <footer>
-  <p>© 2025 Blog de Filmes e Séries. Todos os direitos reservados.</p>
-  <div class="footer-links">
-    <a href="privacidade.html">Política de Privacidade</a> |
-    <a href="termos.html">Termos de Uso</a>
-  </div>
-</footer>
+
+  <footer>
+    <p>© 2025 Blog de Filmes e Séries. Todos os direitos reservados.</p>
+    <div class="footer-links">
+      <a href="privacidade.html">Política de Privacidade</a> |
+      <a href="termos.html">Termos de Uso</a>
+    </div>
+  </footer>
 </body>
 
 </html>
