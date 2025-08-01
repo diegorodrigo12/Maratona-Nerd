@@ -146,10 +146,17 @@ nav a:hover {
 
   <div class="container">
     <h1>Fale com a gente</h1>
-    <form action="enviar-email.php" method="POST">
+   <form action="https://formsubmit.co/tecnoplayhardware@gmail.com" method="POST">
   <input type="text" name="nome" placeholder="Seu nome" required>
   <input type="email" name="email" placeholder="Seu e-mail" required>
   <textarea name="mensagem" rows="5" placeholder="Sua mensagem" required></textarea>
+
+  <!-- Evita spam -->
+  <input type="hidden" name="_captcha" value="false">
+
+  <!-- Redireciona após o envio -->
+  <input type="hidden" name="_next" value="https://seusite.github.io/obrigado.html">
+
   <button type="submit">Enviar mensagem</button>
 </form>
   </div>
