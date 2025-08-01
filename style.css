@@ -583,53 +583,65 @@ footer {
   }
 }
 
-  .noticias-em-alta {
-      width: 100%;
-      max-width: 900px;
-      margin: 40px auto;
-      text-align: center;
-      position: relative;
-    }
+.noticias-em-alta > h2 {
+  color: #e50914;
+  text-align: left;      /* Alinha o texto à esquerda */
+  margin-left: 0;        /* Remove margem esquerda */
+  margin-bottom: 10px;   /* Espaço pequeno abaixo do título */
+  padding-left: 5px;     /* Pequeno espaçamento da borda */
+  font-weight: 700;
+}
 
-    .noticias-em-alta h2 {
-      margin-bottom: 20px;
-    }
+  .carrossel-em-alta {
+  position: relative;
+  max-width: 900px;
+  margin: auto;
+  overflow: hidden;
+}
+.carrossel-em-alta img {
+  width: 120%;         /* Faz a imagem ocupar toda a largura do slide */
+  height: 500px;       /* Altura fixa para uniformizar (ajuste conforme preferir) */
+  object-fit: cover;   /* Corta a imagem para preencher o espaço mantendo proporção */
+  border-radius: 10px; /* Borda arredondada opcional, para ficar mais bonito */
+  display: block;
+}
 
-    .carrossel-em-alta {
-      position: relative;
-      overflow: hidden;
-      border-radius: 12px;
-    }
+.slide {
+  display: none;
+  position: relative;
+}
 
-    .carrossel-em-alta .slide {
-      display: none;
-      width: 100%;
-      height: auto;
-      position: absolute;
-      top: 0;
-      left: 0;
-    }
+.slide.active {
+  display: block;
+}
 
-    .carrossel-em-alta .slide.active {
-      display: block;
-      position: relative;
-    }
+.carrossel-caption {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  color: #fff;
+  background: rgba(0,0,0,0.5);
+  padding: 10px 15px;
+  border-radius: 8px;
+  max-width: 80%;
+}
 
-    .carrossel-em-alta img {
-      width: 100%;
-      border-radius: 12px;
-      height: auto;
-    }
+.carrossel-dots {
+  text-align: center;
+  margin-top: 10px;
+}
 
-    .carrossel-caption {
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      width: 100%;
-      padding: 15px;
-      background: rgba(0, 0, 0, 0.6);
-      color: #fff;
-      text-align: left;
-      font-size: 1rem;
-      border-radius: 0 0 12px 12px;
-    }
+.carrossel-dots .dot {
+  height: 12px;
+  width: 12px;
+  margin: 0 5px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.carrossel-dots .dot.active {
+  background-color: #e50914;
+}
