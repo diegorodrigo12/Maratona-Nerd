@@ -571,3 +571,53 @@ footer {
   }
 }
 
+  .noticias-em-alta {
+      width: 100%;
+      max-width: 900px;
+      margin: 40px auto;
+      text-align: center;
+      position: relative;
+    }
+
+    .noticias-em-alta h2 {
+      margin-bottom: 20px;
+    }
+
+    .carrossel-em-alta {
+      position: relative;
+      overflow: hidden;
+      border-radius: 12px;
+    }
+
+    .carrossel-em-alta .slide {
+      display: none;
+      width: 100%;
+      height: auto;
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+
+    .carrossel-em-alta .slide.active {
+      display: block;
+      position: relative;
+    }
+
+    .carrossel-em-alta img {
+      width: 100%;
+      border-radius: 12px;
+      height: auto;
+    }
+
+    .carrossel-caption {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      padding: 15px;
+      background: rgba(0, 0, 0, 0.6);
+      color: #fff;
+      text-align: left;
+      font-size: 1rem;
+      border-radius: 0 0 12px 12px;
+    }

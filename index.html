@@ -79,6 +79,33 @@
     </ul>
   </section>
 
+< <section class="noticias-em-alta">
+      <h2>Notícias em Alta</h2>
+      <div class="carrossel-em-alta">
+        <div class="slide active">
+          <img src="img/" alt="Destaque 1">
+          <div class="carrossel-caption">
+            <h3>Nova Temporada de Stranger Things anunciada!</h3>
+            <p>A Netflix confirma novos episódios para 2025.</p>
+          </div>
+        </div>
+        <div class="slide">
+          <img src="img/emalta2.jpg" alt="Destaque 2">
+          <div class="carrossel-caption">
+            <h3>Homem-Aranha do Aranhaverso ganha spin-off</h3>
+            <p>Foco será na Spider-Gwen e suas aventuras multiversais.</p>
+          </div>
+        </div>
+        <div class="slide">
+          <img src="img/emalta3.jpg" alt="Destaque 3">
+          <div class="carrossel-caption">
+            <h3>One Piece live-action é renovado para a 3ª temporada</h3>
+            <p>Mais aventuras com Luffy e sua tripulação!</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
   <div class="container">
     <!-- 
     <div class="ads">Espaço para Anúncios (Google AdSense)</div>
@@ -159,7 +186,7 @@
     <a href="percyjackson1.html" class="btn-red">Saiba Mais</a>
   </div>
 </div>
-    </div>-->
+    </div>
 
 
     <section id="listas" class="container">
@@ -523,6 +550,21 @@ async function carregarFilmesTMDB() {
 // Chama para carregar assim que a página estiver pronta
 document.addEventListener('DOMContentLoaded', carregarFilmesTMDB);
 
-  </script>
+
+
+
+
+
+      const slides = document.querySelectorAll(".carrossel-em-alta .slide");
+      let index = 0;
+
+      setInterval(() => {
+        slides[index].classList.remove("active");
+        index = (index + 1) % slides.length;
+        slides[index].classList.add("active");
+      }, 5000);
+    </script>
+
+
 
 </html>
