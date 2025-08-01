@@ -506,12 +506,29 @@ footer {
 
 
 @media (max-width: 768px) {
-  header {
-    flex-direction: column;
-    padding: 16px;
-    text-align: center;
-  }
+ .topo-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  flex-wrap: wrap;
+}
 
+.branding {
+  max-width: 60%;
+}
+
+.social-icons {
+  display: flex;
+  gap: 12px;
+  margin-top: 10px;
+}
+
+.social-icons img {
+  width: 24px;
+  height: 24px;
+  filter: invert(1); /* caso esteja usando fundo escuro */
+}
   .logo-icon img {
     width: 120px;
   }
@@ -528,11 +545,6 @@ footer {
     text-align: center;
   }
 
-  .social-icons {
-    margin-left: 0;
-    margin-top: 10px;
-    justify-content: center;
-  }
 
   nav {
     flex-wrap: wrap;

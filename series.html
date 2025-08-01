@@ -2,9 +2,12 @@
 <html lang="pt-BR">
 
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="Lançamentos, notícias e reviews de séries - Maratonando" />
+<meta name="description" content="Blog geek com lançamentos, filmes, séries e cultura pop. Maratonando Geek é sua central de entretenimento.">
+<meta name="keywords" content="filmes, séries, cultura geek, lançamentos, reviews, maratonando geek">
+<meta name="author" content="Maratonando Geek">
+<meta name="robots" content="index, follow">
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Séries - Maratonando</title>
 
   <!-- Google Fonts -->
@@ -269,10 +272,10 @@
     <!-- Filtro por plataforma -->
     <div id="filter-buttons">
       <button class="tab-btn active" data-platform="all">Todos</button>
-      <button class="tab-btn" data-platform="Netflix">Netflix</button>
-      <button class="tab-btn" data-platform="Prime Video">Prime Video</button>
-      <button class="tab-btn" data-platform="Disney+">Disney+</button>
-      <button class="tab-btn" data-platform="AMC">AMC</button>
+      <button class="tab-btn" data-platform="netflix">Netflix</button>
+      <button class="tab-btn" data-platform="prime video">Prime Video</button>
+      <button class="tab-btn" data-platform="disney+">Disney+</button>
+      <button class="tab-btn" data-platform="amc">AMC</button>
     </div>
 
     <!-- Pesquisa -->
@@ -283,7 +286,7 @@
       aria-label="Pesquisar séries"
     />
 
-    <!-- Grid de cards (vazio, vai preencher via JS) -->
+    <!-- Grid de cards -->
     <div class="grid" id="tmdb-series"></div>
   </div>
 
@@ -295,15 +298,20 @@
     const searchInput = document.getElementById('searchInput');
     const filterButtons = document.querySelectorAll('#filter-buttons .tab-btn');
 
-    // Função para criar o card da série
+    // Função para criar o card da série, com data-platform simples para filtro
     function criarCardSerie(serie) {
       const posterUrl = serie.poster_path
         ? `https://image.tmdb.org/t/p/w500${serie.poster_path}`
         : 'img/poster-placeholder.jpg';
 
+      // Exemplo genérico: coloque as plataformas que desejar aqui separadas por vírgula, minúsculas
+      // Você pode personalizar para cada série se quiser.
+      // Por enquanto todas têm todas as plataformas para exemplo
+      const plataformasExemplo = "netflix,prime video,disney+,amc";
+
       const card = document.createElement('div');
       card.className = 'card';
-      card.setAttribute('data-platform', 'all'); // Sem filtro real, placeholder
+      card.setAttribute('data-platform', plataformasExemplo);
 
       card.innerHTML = `
         <img src="${posterUrl}" alt="${serie.name}" loading="lazy" />
@@ -364,16 +372,14 @@
       }
     }
 
-    // Filtro por plataforma (aplica filtro nos cards)
+    // Filtro simples que verifica se plataforma está no atributo data-platform do card
     function aplicarFiltro() {
-      const activePlatform = document.querySelector('#filter-buttons .tab-btn.active').getAttribute('data-platform');
+      const activePlatform = document.querySelector('#filter-buttons .tab-btn.active').getAttribute('data-platform').toLowerCase();
       const cards = containerSeries.querySelectorAll('.card');
 
       cards.forEach(card => {
-        const cardPlatform = card.getAttribute('data-platform');
-        // Como API não tem plataforma, estamos usando 'all' para todos
-        // Se quiser integrar plataforma real, precisa mapear isso
-        if (activePlatform === 'all' || cardPlatform === activePlatform) {
+        const plataformas = card.getAttribute('data-platform').toLowerCase();
+        if (activePlatform === 'all' || plataformas.includes(activePlatform)) {
           card.style.display = 'flex';
         } else {
           card.style.display = 'none';
@@ -390,7 +396,7 @@
       });
     });
 
-    // Evento ao digitar Enter no input
+    // Evento para buscar ao pressionar Enter no campo de pesquisa
     searchInput.addEventListener('keydown', e => {
       if (e.key === 'Enter') {
         const query = searchInput.value.trim();
@@ -406,8 +412,9 @@
 
   <footer>
     <p>© 2025 Blog de Filmes e Séries. Todos os direitos reservados.</p>
-   <p>Dados e imagens fornecidos por <a href="https://www.themoviedb.org/" target="_blank" rel="noopener noreferrer">The Movie Database (TMDb)</a>.</p>
-<p><em>This product uses the TMDb API but is not endorsed or certified by TMDb.</em></p>
+    <p>Dados e imagens fornecidos por <a href="https://www.themoviedb.org/" target="_blank" rel="noopener noreferrer">The Movie Database (TMDb)</a>.</p>
+    <p><em>This product uses the TMDb API but is not endorsed or certified by TMDb.</em></p>
+    <div>
       <a href="privacidade.html">Política de Privacidade</a> |
       <a href="termos.html">Termos de Uso</a>
     </div>
