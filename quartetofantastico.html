@@ -1,263 +1,222 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Blog de Filmes e Séries - Lançamentos, reviews e novidades do cinema e streaming.">
-  <title>Lançamentos de Filmes e Séries</title>
-   <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="description" content="Review completo do filme Quarteto Fantástico: Primeiros Passos, com sinopse, elenco, avaliação e curiosidades." />
+<meta name="keywords" content="Quarteto Fantástico, Marvel, filme, review, super-heróis" />
+<meta name="author" content="Maratonando Geek" />
+<title>Review: Quarteto Fantástico - Primeiros Passos</title>
+
+<link
+  href="https://fonts.googleapis.com/css2?family=Montserrat:wght@900&family=Poppins:wght@500&display=swap"
+  rel="stylesheet"
+/>
+
+<style>
+  body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #fff;
+    color: #333;
+    margin: 0;
+    padding: 0;
+  }
+
+  header {
+    background-color: #1E90FF;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    user-select: none;
+  }
+
+  .logo-main {
+    font-family: 'Montserrat', sans-serif;
+    font-style: italic;
+    font-weight: 900;
+    font-size: 2.8rem;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    color: #ffffff;
+  }
+
+  .logo-sub {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    font-size: 0.9rem;
+    color: #ffffff;
+    margin-left: 8px;
+  }
+
+  nav {
+    background: #ecf0f1;
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    border-bottom: 1px solid #bdc3c7;
+  }
+
+  nav a {
+    color: #34495e;
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: bold;
+    transition: 0.3s;
+  }
+
+  nav a:hover,
+  nav a.active {
+    color: #1E90FF;
+  }
+
+  .container {
+    width: 90%;
+    max-width: 900px;
+    margin: auto;
+    padding: 30px 0;
+  }
+
+  h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 900;
+    font-size: 2.4rem;
+    text-align: center;
+    color: #2C3E50;
+    margin-bottom: 30px;
+  }
+
+  .poster {
+    width: 100%;
+    border-radius: 12px;
+    border: 2px solid #1E90FF;
+    box-shadow: 0 0 10px rgba(30, 144, 255, 0.3);
+    margin-bottom: 30px;
+  }
+
+  .ratings {
+    font-size: 1.1rem;
+    color: #FF6F61;
+    margin-bottom: 25px;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    font-weight: 600;
+  }
+
+  section {
+    margin-bottom: 35px;
+    color: #444;
+    line-height: 1.5;
+  }
+
+  section h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 1.6rem;
+    color: #1E90FF;
+    margin-bottom: 12px;
+    border-bottom: 3px solid #1E90FF;
+    padding-bottom: 6px;
+  }
+
+  ul {
+    list-style-type: disc;
+    margin-left: 20px;
+  }
+
+  footer {
+    width: 100%;
+    background: #ffffff;
+    text-align: center;
+    padding: 20px;
+    color: #888;
+    font-size: 0.85rem;
+    border-top: 1px solid #ddd;
+    margin: 0;
+    box-sizing: border-box;
+  }
+
+  @media (max-width: 768px) {
+    .ratings {
+      flex-direction: column;
+      gap: 10px;
+    }
+  }
+</style>
 </head>
+
 <body>
- <header>
-  <span class="logo-icon">🎬</span>
-  <div class="logo-text-wrapper">
-    <h2>Maratonando geek</h2>
-    <span class="logo-sub">Seu Passaporte para o Universo Geek!</span>
-  </div>
+
+<header>
+  <h1 class="logo-main">Maratonando Geek</h1>
+  <div class="logo-sub">Sua central de cultura pop no cinema e streaming.</div>
 </header>
+
 <nav>
   <a href="index.html">Início</a>
   <a href="filmes.html">Filmes</a>
   <a href="series.html">Séries</a>
-  <a href="reviews.html">Reviews</a>
+  <a href="reviews.html" class="active">Reviews</a>
   <a href="contato.html">Contato</a>
+  <a href="sobre.html">Sobre</a>
 </nav>
-  <div class="container">
-   <h1 style="color:#e50914;">Quarteto Fantástico (2025)</h1>
 
-    <div class="card" style="margin-top: 20px;">
-      <img src="img/Quarteto-Fantastico-1170x658.jpg" alt="Quarteto Fantástico">
-      <div style="padding: 20px;">
-        <p><strong>Gênero:</strong> Ação, Aventura, Ficção Científica</p>
-        <p><strong>Direção:</strong> Matt Shakman</p>
-        <p><strong>Elenco:</strong> Pedro Pascal (Sr. Fantástico), Vanessa Kirby (Mulher Invisível), Joseph Quinn (Tocha Humana), Ebon Moss-Bachrach (Coisa)</p>
-        <p><strong>Estreia:</strong> Julho de 2025</p>
+<div class="container">
+  <h1>Quarteto Fantástico: Primeiros Passos (2025)</h1>
 
-        <h2 style="color: #d1c4e9;">Sinopse</h2>
-        <p>
-          Após um acidente cósmico em uma missão espacial, quatro cientistas desenvolvem poderes extraordinários. Agora, eles precisam aprender a trabalhar juntos como uma equipe para enfrentar ameaças que colocam a Terra em risco — tudo isso enquanto lidam com os desafios de serem uma família.
-        </p>
+  <img src="img/the-fantastic-four-first-steps-poster-official-FF_Teaser2_Theatrical_1Sht_Digital_v3_Lg-cover-Th.jpg" alt="Poster Quarteto Fantástico" class="poster" loading="lazy" />
 
-        <h2 style="color: #d1c4e9;">Curiosidades</h2>
-        <ul style="color: #ccc;">
-          <li>É a primeira aparição oficial do Quarteto no MCU.</li>
-          <li>O filme promete um tom mais leve e centrado nos laços familiares.</li>
-          <li>As gravações ocorreram em locações nos EUA e Reino Unido.</li>
-        </ul>
-        <h2 style="color: #d1c4e9;">Trailer Oficial</h2>
-       <a href="https://www.youtube.com/watch?v=KGa3BUvBnDg" target="_blank">
-  Assista ao Trailer no YouTube
-</a>
-      </div>
-    </div>
-  </main>
+  <div class="ratings">
+    <div><strong>Avaliação Crítica:</strong> ★★★★☆ (8.5/10)</div>
+    <div><strong>Avaliação Público:</strong> ★★★★☆ (8.0/10)</div>
   </div>
- <footer>© 2025 Blog de Filmes e Séries. Todos os direitos reservados.</footer>
+
+  <section>
+    <h2>Sinopse</h2>
+    <p>“Quarteto Fantástico: Primeiros Passos” apresenta uma nova versão da icônica equipe da Marvel. Após uma experiência científica que deu errado, quatro amigos ganham superpoderes e devem aprender a controlar suas habilidades para salvar o mundo de uma ameaça iminente.</p>
+  </section>
+
+  <section>
+    <h2>Elenco Principal</h2>
+    <ul>
+      <li>John Krasinski como Reed Richards / Senhor Fantástico</li>
+      <li>Emily Blunt como Susan Storm / Mulher Invisível</li>
+      <li>Michael B. Jordan como Johnny Storm / Tocha Humana</li>
+      <li>Miles Teller como Ben Grimm / Coisa</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Informações Técnicas</h2>
+    <ul>
+      <li>Diretor: Jonathan Liebesman</li>
+      <li>Gênero: Ação, Aventura, Ficção Científica</li>
+      <li>Duração: 120 minutos</li>
+      <li>Data de lançamento: 8 de agosto de 2025</li>
+      <li>Classificação Indicativa: 12 anos</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Curiosidades</h2>
+    <ul>
+      <li>O filme é um reboot que traz uma nova abordagem para a famosa equipe da Marvel.</li>
+      <li>As cenas de ação foram produzidas com tecnologia de ponta em efeitos visuais.</li>
+      <li>A química entre o elenco foi muito elogiada pela crítica especializada.</li>
+      <li>Possui diversas referências aos quadrinhos clássicos do Quarteto Fantástico.</li>
+    </ul>
+  </section>
+</div>
+
+<footer>
+  © 2025 Blog de Filmes e Séries. Todos os direitos reservados.<br />
+  <a href="privacidade.html">Política de Privacidade</a> | <a href="termos.html">Termos de Uso</a>
+</footer>
 
 </body>
 
-<script>
-/* ======= TABS ======= */
-document.querySelectorAll('.tab-btn').forEach(btn => {
-  btn.addEventListener('click', () => {
-    document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
-    document.querySelectorAll('.tab-content').forEach(tc => tc.classList.remove('active'));
-
-    btn.classList.add('active');
-    document.getElementById(btn.dataset.tab).classList.add('active');
-  });
-});
-
-/* ======= ENQUETES ======= */
-const pollsData = [
-  {
-    id: 'poll1',
-    question: 'Qual foi o melhor vilão da Marvel nos cinemas?',
-    options: ['Thanos', 'Loki', 'Killmonger', 'Duende Verde'],
-  },
-  {
-    id: 'poll2',
-    question: 'Qual série você mais espera em 2025?',
-    options: ['Stranger Things (final)', 'The Last of Us T2', 'The Boys T5', 'House of the Dragon T2'],
-  }
-];
-
-function getPollVotes(id) {
-  const stored = localStorage.getItem('poll_' + id);
-  return stored ? JSON.parse(stored) : Array(pollsData.find(p => p.id === id).options.length).fill(0);
-}
-function setPollVotes(id, votes) {
-  localStorage.setItem('poll_' + id, JSON.stringify(votes));
-}
-function hasVoted(id) {
-  return localStorage.getItem('poll_voted_' + id) === 'true';
-}
-function markVoted(id) {
-  localStorage.setItem('poll_voted_' + id, 'true');
-}
-
-function renderPolls() {
-  const root = document.getElementById('polls-root');
-  root.innerHTML = '';
-
-  pollsData.forEach(poll => {
-    const votes = getPollVotes(poll.id);
-    const total = votes.reduce((a,b) => a+b, 0) || 1;
-
-    const card = document.createElement('div');
-    card.className = 'poll-card';
-
-    const title = document.createElement('h4');
-    title.textContent = poll.question;
-    card.appendChild(title);
-
-    const form = document.createElement('div');
-    poll.options.forEach((opt, i) => {
-      const wrap = document.createElement('label');
-      wrap.className = 'poll-option';
-
-      const radio = document.createElement('input');
-      radio.type = 'radio';
-      radio.name = poll.id;
-      radio.value = i;
-      radio.disabled = hasVoted(poll.id);
-
-      const span = document.createElement('span');
-      span.textContent = opt;
-
-      wrap.appendChild(radio);
-      wrap.appendChild(span);
-      form.appendChild(wrap);
-    });
-    card.appendChild(form);
-
-    const voteBtn = document.createElement('button');
-    voteBtn.className = 'vote-btn';
-    voteBtn.textContent = hasVoted(poll.id) ? 'Voto registrado' : 'Votar';
-    voteBtn.disabled = hasVoted(poll.id);
-    voteBtn.addEventListener('click', () => {
-      const selected = form.querySelector('input[type="radio"]:checked');
-      if (!selected) return alert('Escolha uma opção!');
-      const index = parseInt(selected.value, 10);
-      const v = getPollVotes(poll.id);
-      v[index] += 1;
-      setPollVotes(poll.id, v);
-      markVoted(poll.id);
-      renderPolls();
-    });
-    card.appendChild(voteBtn);
-
-    // Resultados
-    const results = document.createElement('div');
-    results.className = 'poll-results';
-
-    poll.options.forEach((opt, i) => {
-      const percent = Math.round((votes[i] / total) * 100);
-      const line = document.createElement('div');
-      line.innerHTML = `<strong>${opt}</strong> — ${votes[i]} voto(s) (${percent}%)`;
-      const barWrap = document.createElement('div');
-      barWrap.className = 'bar-wrap';
-      const bar = document.createElement('div');
-      bar.className = 'bar';
-      bar.style.width = percent + '%';
-      barWrap.appendChild(bar);
-      results.appendChild(line);
-      results.appendChild(barWrap);
-    });
-
-    card.appendChild(results);
-    root.appendChild(card);
-  });
-}
-renderPolls();
-
-/* ======= QUIZ ======= */
-const quizAnswers = { q1: 'b', q2: 'b', q3: 'b' };
-document.getElementById('quiz-form').addEventListener('submit', (e) => {
-  e.preventDefault();
-  let score = 0, total = Object.keys(quizAnswers).length;
-  Object.keys(quizAnswers).forEach(q => {
-    const selected = document.querySelector(`input[name="${q}"]:checked`);
-    if (selected && selected.value === quizAnswers[q]) score++;
-  });
-  const msg = `Você acertou ${score} de ${total}!`;
-  const res = document.getElementById('quiz-result');
-  res.textContent = msg;
-});
-
-/* ======= COMENTÁRIOS ======= */
-function getComments() {
-  const data = localStorage.getItem('comments');
-  return data ? JSON.parse(data) : [];
-}
-function saveComments(list) {
-  localStorage.setItem('comments', JSON.stringify(list));
-}
-function renderComments() {
-  const container = document.getElementById('comments-list');
-  container.innerHTML = '';
-  const comments = getComments().reverse();
-  comments.forEach(c => {
-    const item = document.createElement('div');
-    item.className = 'comment-item';
-    item.innerHTML = `
-      <div class="author">${c.name}</div>
-      <div class="text">${c.text}</div>
-      <div class="date">${new Date(c.date).toLocaleString()}</div>
-    `;
-    container.appendChild(item);
-  });
-}
-renderComments();
-
-document.getElementById('comment-form').addEventListener('submit', (e) => {
-  e.preventDefault();
-  const name = document.getElementById('comment-name').value.trim();
-  const text = document.getElementById('comment-text').value.trim();
-  if (!name || !text) return;
-  const comments = getComments();
-  comments.push({ name, text, date: Date.now() });
-  saveComments(comments);
-  document.getElementById('comment-form').reset();
-  renderComments();
-});
-
-const adTabLeft = document.getElementById('adTabLeft');
-const adContentLeft = document.getElementById('adContentLeft');
-const adTabRight = document.getElementById('adTabRight');
-const adContentRight = document.getElementById('adContentRight');
-
-adTabLeft.addEventListener('click', () => {
-  if (adContentLeft.style.display === 'block') {
-    adContentLeft.style.display = 'none';
-  } else {
-    adContentLeft.style.display = 'block';
-  }
-});
-
-adTabRight.addEventListener('click', () => {
-  if (adContentRight.style.display === 'block') {
-    adContentRight.style.display = 'none';
-  } else {
-    adContentRight.style.display = 'block';
-  }
-});
-const searchInput = document.getElementById('searchInput');
-const cards = document.querySelectorAll('.grid .card');
-console.log(cards); // Veja se os cards estão sendo capturados
-
-searchInput.addEventListener('input', () => {
-  const filter = searchInput.value.toLowerCase();
-
-  cards.forEach(card => {
-    const title = card.querySelector('h3').textContent.toLowerCase();
-    if (title.includes(filter)) {
-      card.style.display = '';
-    } else {
-      card.style.display = 'none';
-    }
-  });
-});
-
-</script>
 </html>
