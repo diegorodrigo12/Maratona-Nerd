@@ -85,38 +85,70 @@
   </ol>
 </section>
 
-    <!-- NOVA SEÇÃO - LANÇAMENTOS 2025 -->
-    <section class="container">
-      <h2 class="section-title" style="margin-top: 60px;">🚀 Lançamentos de Animes em 2025</h2>
-      <ul class="agenda-list">
-        <li>
-          <span class="agenda-date">03/08/2025</span>
-          <span class="agenda-title">"Chainsaw Man: Segunda Temporada"</span>
-          <span class="agenda-platform">Crunchyroll</span>
-        </li>
-        <li>
-          <span class="agenda-date">10/08/2025</span>
-          <span class="agenda-title">"Solo Leveling – Parte 2"</span>
-          <span class="agenda-platform">Aniplus</span>
-        </li>
-        <li>
-          <span class="agenda-date">17/08/2025</span>
-          <span class="agenda-title">"Spy x Family – Temporada 3"</span>
-          <span class="agenda-platform">Netflix</span>
-        </li>
-        <li>
-          <span class="agenda-date">24/08/2025</span>
-          <span class="agenda-title">"Bleach: Thousand-Year Blood War – Final"</span>
-          <span class="agenda-platform">Disney+</span>
-        </li>
-        <li>
-          <span class="agenda-date">31/08/2025</span>
-          <span class="agenda-title">"Jujutsu Kaisen – Temporada 3"</span>
-          <span class="agenda-platform">Crunchyroll</span>
-        </li>
-      </ul>
-    </section>
-  </div>
+  <section class="container" style="margin-top: 60px;">
+  <h2 class="section-title">🗳️ Enquetes: Animes e Personagens</h2>
+  
+  <!-- Enquete 1: Melhor anime estilo Dragon Ball/Naruto -->
+  <form id="poll-anime" onsubmit="return submitPoll('poll-anime')">
+    <h3>Qual seu anime favorito no estilo Dragon Ball / Naruto?</h3>
+    <label><input type="radio" name="anime" value="Dragon Ball" required> Dragon Ball</label><br>
+    <label><input type="radio" name="anime" value="Naruto" > Naruto</label><br>
+    <label><input type="radio" name="anime" value="Bleach" > Bleach</label><br>
+    <label><input type="radio" name="anime" value="One Piece" > One Piece</label><br>
+    <label><input type="radio" name="anime" value="My Hero Academia" > My Hero Academia</label><br>
+    <button type="submit" class="btn-red">Votar</button>
+  </form>
+  
+  <hr style="margin: 40px 0;">
+  
+  <!-- Enquete 2: Personagem favorito -->
+  <form id="poll-character" onsubmit="return submitPoll('poll-character')">
+    <h3>Quem é seu personagem favorito?</h3>
+    <label><input type="radio" name="character" value="Goku" required> Goku</label><br>
+    <label><input type="radio" name="character" value="Naruto Uzumaki" > Naruto Uzumaki</label><br>
+    <label><input type="radio" name="character" value="Luffy" > Monkey D. Luffy</label><br>
+    <label><input type="radio" name="character" value="Ichigo Kurosaki" > Ichigo Kurosaki</label><br>
+    <label><input type="radio" name="character" value="Midoriya Izuku" > Midoriya Izuku</label><br>
+    <button type="submit" class="btn-red">Votar</button>
+  </form>
+  
+  <!-- Espaço para mostrar resultados -->
+  <div id="poll-results" style="margin-top: 30px;"></div>
+</section>
+
+<script>
+  const votes = {
+    'poll-anime': { 'Dragon Ball': 0, 'Naruto': 0, 'Bleach': 0, 'One Piece': 0, 'My Hero Academia': 0 },
+    'poll-character': { 'Goku': 0, 'Naruto Uzumaki': 0, 'Luffy': 0, 'Ichigo Kurosaki': 0, 'Midoriya Izuku': 0 }
+  };
+
+  function submitPoll(formId) {
+    const form = document.getElementById(formId);
+    const selected = form.querySelector('input[type="radio"]:checked');
+    if (!selected) {
+      alert('Por favor, escolha uma opção.');
+      return false;
+    }
+    const choice = selected.value;
+    votes[formId][choice]++;
+    alert('Voto computado! Obrigado por participar.');
+
+    showResults(formId);
+    form.reset();
+    return false; // impedir recarregamento
+  }
+
+  function showResults(formId) {
+    const resultsDiv = document.getElementById('poll-results');
+    let html = `<h3>Resultados da enquete "${formId === 'poll-anime' ? 'Anime Favorito' : 'Personagem Favorito'}"</h3><ul>`;
+    for (const [option, count] of Object.entries(votes[formId])) {
+      html += `<li><strong>${option}:</strong> ${count} votos</li>`;
+    }
+    html += '</ul>';
+    resultsDiv.innerHTML = html;
+  }
+</script>
+
 
   <footer>
     <p>© 2025 Maratonando Geek. Todos os direitos reservados.</p>
