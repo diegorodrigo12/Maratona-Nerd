@@ -92,6 +92,8 @@ nav {
   justify-content: center;
   padding: 10px;
   border-bottom: 1px solid #bdc3c7;
+   padding-bottom: 8px;   /* diminui padding inferior */
+  margin-bottom: 8px;    /* diminui margem inferior */
 }
 
 nav a {
@@ -112,6 +114,8 @@ nav a:hover {
   max-width: 1200px;
   margin: auto;
   padding: 20px 0;
+  padding-top: 10px;    /* reduz padding superior */
+  margin-top: 0;
 }
 
 /* 5. Agenda Geek */
@@ -655,6 +659,8 @@ footer {
   margin: 40px auto;
   padding: 0 15px;
   flex-wrap: wrap;
+    align-items: stretch;
+     margin: 10px auto 40px auto;
 }
 
 .noticias-em-alta {
@@ -663,9 +669,13 @@ footer {
 }
 
 .agenda-geek {
-  flex: 1;
-  min-width: 260px;
-  margin-top: 0;
+  background: #ffffff;
+  padding: 16px 16px;   /* menos espaço interno */
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.04);
+  margin-bottom: 20px;  /* menos espaço externo */
+  height: 100%;         /* garante que siga a altura do contêiner pai */
+  box-sizing: border-box;
 }
 
 /* Responsivo */
@@ -673,6 +683,7 @@ footer {
   .secao-lateral {
     flex-direction: column;
     gap: 32px;
+    
   }
 
   .noticias-em-alta,
@@ -691,4 +702,15 @@ footer {
 .agenda-platform {
   font-size: 0.9rem;   /* Deixa todos os campos um pouco menores */
   word-break: break-word; /* Quebra palavras longas se necessário */
+}
+
+
+.duas-colunas {
+  display: flex;
+  flex-wrap: wrap;         /* Responsivo em telas menores */
+  gap: 20px;
+  align-items: stretch;
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 0 15px;
 }
