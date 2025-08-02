@@ -506,6 +506,22 @@ footer {
   box-sizing: border-box; /* Inclui padding na largura total */
 }
 
+button[type="submit"] {
+  background-color: #e50914;
+  color: #fff;
+  padding: 10px 20px;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+  background-color: #b20710;
+}
 
 
 
