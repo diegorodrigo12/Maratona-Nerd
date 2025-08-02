@@ -116,6 +116,26 @@
   <div id="poll-results" style="margin-top: 30px;"></div>
 </section>
 
+
+<!-- CAMPO DE COMENTÁRIOS - Série favorita -->
+<section class="container" style="margin-top: 60px;">
+  <h2 class="section-title">💬 Qual sua série favorita?</h2>
+  <form id="comment-form">
+    <label for="username">Seu nome:</label><br>
+    <input type="text" id="username" name="username" placeholder="Digite seu nome" required><br><br>
+
+    <label for="comment">Comentário:</label><br>
+    <textarea id="comment" name="comment" placeholder="Escreva o nome da sua série favorita ou o que achou dela..." rows="4" required></textarea><br><br>
+
+    <button type="submit">Enviar Comentário</button>
+  </form>
+
+  <div id="comment-section" style="margin-top: 20px;">
+    <h3>Comentários:</h3>
+    <ul id="comment-list"></ul>
+  </div>
+</section>
+
 <script>
   const votes = {
     'poll-anime': { 'Dragon Ball': 0, 'Naruto': 0, 'Bleach': 0, 'One Piece': 0, 'My Hero Academia': 0 },
@@ -147,6 +167,24 @@
     html += '</ul>';
     resultsDiv.innerHTML = html;
   }
+
+  document.getElementById("comment-form").addEventListener("submit", function (event) {
+    event.preventDefault();
+
+    const name = document.getElementById("username").value.trim();
+    const comment = document.getElementById("comment").value.trim();
+    const commentList = document.getElementById("comment-list");
+
+    if (name && comment) {
+      const listItem = document.createElement("li");
+      listItem.innerHTML = `<strong>${name}:</strong> ${comment}`;
+      commentList.appendChild(listItem);
+
+      // Limpa o formulário após o envio
+      document.getElementById("comment-form").reset();
+    }
+  });
+
 </script>
 
 
