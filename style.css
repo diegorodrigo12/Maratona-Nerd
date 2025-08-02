@@ -1290,5 +1290,11 @@ body.pagina-series footer {
     width: 100%;
     max-width: none;
   }
+  .btn-red {
+    font-size: 1rem;       /* reduz o tamanho da fonte */
+    padding: 8px 16px;     /* diminui o padding para ficar mais compacto */
+    width: auto;           /* permite que o botão tenha largura natural */
+    min-width: 120px;      /* opcional: define uma largura mínima confortável */
+  }
 }
 
