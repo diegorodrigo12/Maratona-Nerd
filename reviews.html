@@ -8,6 +8,10 @@
 <meta name="robots" content="index, follow">
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta property="og:title" content="Reviews - Maratonando Geek">
+<meta property="og:description" content="Análises e opiniões sobre filmes e séries. Descubra o que vale a pena maratonar.">
+<meta property="og:image" content="URL_DA_IMAGEM_DESTACADA_DO_SITE">
+<meta name="twitter:card" content="summary_large_image">
   <title>Reviews de Filmes e Séries</title>
 
   <link
@@ -88,6 +92,41 @@
       font-size: 2rem;
       text-align: center;
     }
+
+    .review-descricao {
+  text-align: center;
+  max-width: 700px;
+  margin: -15px auto 30px auto;
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.6;
+}
+.review-filtros {
+  text-align: center;
+  margin: 40px auto 30px auto;
+}
+
+.review-filtros .tab-btn {
+  background-color: #1E90FF;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  margin: 5px 7px;
+  border-radius: 25px;
+  font-weight: bold;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+}
+
+.review-filtros .tab-btn:hover,
+.review-filtros .tab-btn.active {
+  background-color: #e50914;
+  color: white;
+  transform: scale(1.05);
+}
+
 
     .grid {
       display: grid;
@@ -306,11 +345,22 @@
 
   <main class="container">
     <h2>Reviews de Filmes e Séries</h2>
+    <p class="review-descricao">
+  Confira análises detalhadas dos filmes e séries em destaque. Avaliações com opinião crítica e notas da nossa equipe!
+</p>
+
+<div id="filter-buttons" class="review-filtros">
+  <button class="tab-btn active" data-category="all">Todos</button>
+  <button class="tab-btn" data-category="ação">Ação</button>
+  <button class="tab-btn" data-category="comédia">Comédia</button>
+  <button class="tab-btn" data-category="terror">Terror</button>
+  <button class="tab-btn" data-category="drama">Drama</button>
+</div>
 
     <div class="grid">
 
       <!-- Review 1 - Quarteto Fantástico 2025 -->
-      <article class="review-card">
+      <article class="review-card" data-category="ação ficção aventura">
         <img src="img/the-fantastic-four-first-steps-poster-official-FF_Teaser2_Theatrical_1Sht_Digital_v3_Lg-cover-Th.jpg" alt="Quarteto Fantástico" loading="lazy" />
         <div class="review-content">
           <h3 class="review-title">“Quarteto Fantástico: Primeiros Passos”</h3>
@@ -331,7 +381,7 @@
       </article>
 
       <!-- Review 2 - From Origem -->
-      <article class="review-card">
+      <article class="review-card" data-category="terror suspense mistério">
         <img src="img/AN_ORIGEM-scaled.jpg" alt="From Origem" loading="lazy" />
         <div class="review-content">
           <h3 class="review-title">“From Origem”</h3>
@@ -352,7 +402,7 @@
       </article>
 
       <!-- Review 3 - Stranger Things -->
-      <article class="review-card">
+      <article class="review-card" data-category="ficção terror drama">
         <img src="img/capa-19.jpg" alt="Stranger Things" loading="lazy" />
         <div class="review-content">
           <h3 class="review-title">“Stranger Things”</h3>
@@ -373,7 +423,7 @@
       </article>
 
       <!-- Review 4 - Lilo e Stitch -->
-      <article class="review-card">
+      <article class="review-card" data-category="animação família aventura">
         <img src="img/MV5BMzM0NTRkZWUtOTg5OC00YTBmLWI5NDEtZjQ5NjUwZTEyMTIxXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg" alt="Lilo e Stitch" loading="lazy" />
         <div class="review-content">
           <h3 class="review-title">“Lilo e Stitch”</h3>
@@ -394,7 +444,7 @@
       </article>
 
       <!-- Review 5 - Superman -->
-      <article class="review-card">
+      <article class="review-card" data-category="ação fantasia aventura">
         <img src="img/superman.jpg" alt="Superman" loading="lazy" />
         <div class="review-content">
           <h3 class="review-title">“Superman”</h3>
@@ -415,7 +465,7 @@
       </article>
 
       <!-- Review 6 - Duna (Dune) -->
-      <article class="review-card">
+      <article class="review-card" data-category="ficção aventura drama">
         <img src="img/duna-poster.jpg" alt="Duna" loading="lazy" />
         <div class="review-content">
           <h3 class="review-title">“Duna”</h3>
@@ -436,7 +486,7 @@
       </article>
 
       <!-- Review 7 - The Last of Us -->
-      <article class="review-card">
+      <article class="review-card" data-category="drama ação pós-apocalipse">
         <img src="img/b7e4dad977dd98692307b69da020a0872910e215b240d1c8517437410b0af328.jpg" alt="The Last of Us" loading="lazy" />
         <div class="review-content">
           <h3 class="review-title">“The Last of Us”</h3>
@@ -457,8 +507,8 @@
       </article>
       
       <!-- Review: Megan & Negan -->
-      <article class="review-card">
-        <img src="img/megan-negan.jpg" alt="Megan & Negan" loading="lazy" />
+      <article class="review-card" data-category="drama zumbi ação">
+        <img src="img/megan-negan.jpg" alt="The Walking Dead: Dead City" loading="lazy" />
         <div class="review-content">
           <h3 class="review-title">“The Walking Dead: Dead City”</h3>
           <div class="rating">★★★☆☆ (7.0/10)</div>
@@ -478,7 +528,7 @@
       </article>
 
       <!-- Review: Daryl -->
-      <article class="review-card">
+      <article class="review-card" data-category="drama zumbi ação">
         <img src="img/daryl.jpg" alt="Daryl" loading="lazy" />
         <div class="review-content">
           <h3 class="review-title">“The Walking Dead: Daryl Dixon”</h3>
@@ -507,6 +557,45 @@
     <a href="privacidade.html">Política de Privacidade</a> | 
     <a href="termos.html">Termos de Uso</a>
   </footer>
+
+
+
+ <script>
+  function filtrarPorCategoria(categoria) {
+    document.querySelectorAll('.review-card').forEach(card => {
+      const categorias = card.dataset.category.split(' ');
+      if (categorias.includes(categoria) || categoria === 'all') {
+        card.style.display = 'block';
+      } else {
+        card.style.display = 'none';
+      }
+    });
+
+    // Atualiza os botões ativos
+    document.querySelectorAll('.tab-btn').forEach(btn => {
+      if (btn.dataset.category === categoria) {
+        btn.classList.add('active');
+      } else {
+        btn.classList.remove('active');
+      }
+    });
+  }
+
+document.addEventListener("DOMContentLoaded", () => {
+  filtrarPorCategoria("all");  // aplicar filtro "all" ao carregar a página
+});
+
+  // Adiciona evento a todos os botões
+  document.querySelectorAll('.tab-btn').forEach(button => {
+    button.addEventListener('click', () => {
+      const categoria = button.getAttribute('data-category');
+      filtrarPorCategoria(categoria);
+    });
+  });
+</script>
+
+
+
 </body>
 
 </html>
