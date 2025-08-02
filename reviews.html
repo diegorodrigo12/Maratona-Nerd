@@ -101,6 +101,20 @@
   color: #555;
   line-height: 1.6;
 }
+
+#search-container {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    #search-input {
+      padding: 10px;
+      width: 300px;
+      max-width: 90%;
+      border-radius: 25px;
+      border: 1px solid #ccc;
+      font-size: 1rem;
+    }
 .review-filtros {
   text-align: center;
   margin: 40px auto 30px auto;
@@ -132,6 +146,8 @@
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
       gap: 20px;
+      transition: opacity 0.3s ease;  /* adiciona transição suave */
+      opacity: 1;  
     }
 
     .review-card {
@@ -349,6 +365,15 @@
   Confira análises detalhadas dos filmes e séries em destaque. Avaliações com opinião crítica e notas da nossa equipe!
 </p>
 
+ <!-- Campo de busca -->
+    <div id="search-container">
+      <input
+        type="text"
+        id="search-input"
+        placeholder="Buscar reviews por título..."
+      />
+    </div>
+
 <div id="filter-buttons" class="review-filtros">
   <button class="tab-btn active" data-category="all">Todos</button>
   <button class="tab-btn" data-category="ação">Ação</button>
@@ -548,9 +573,14 @@
         </div>
       </article>
 
+     </div>
+
+    <div style="text-align: center; margin: 30px 0;">
+     <button id="loadMoreBtn" class="btn-red" style="display: block; margin: 30px auto 0;">
+  Carregar Mais
+</button>
     </div>
   </main>
-
   <footer>
     © 2025 Blog de Filmes e Séries. Todos os direitos reservados.
     <br />
@@ -561,10 +591,19 @@
 
 
  <script>
-  function filtrarPorCategoria(categoria) {
+  let categoriaSelecionada = 'all';
+
+  function filtrarReviews(categoria, textoBusca) {
+    const texto = textoBusca.toLowerCase();
+
     document.querySelectorAll('.review-card').forEach(card => {
       const categorias = card.dataset.category.split(' ');
-      if (categorias.includes(categoria) || categoria === 'all') {
+      const titulo = card.querySelector('.review-title').textContent.toLowerCase();
+
+      const correspondeCategoria = categoria === 'all' || categorias.includes(categoria);
+      const correspondeBusca = titulo.includes(texto);
+
+      if (correspondeCategoria && correspondeBusca) {
         card.style.display = 'block';
       } else {
         card.style.display = 'none';
@@ -581,20 +620,68 @@
     });
   }
 
-document.addEventListener("DOMContentLoaded", () => {
-  filtrarPorCategoria("all");  // aplicar filtro "all" ao carregar a página
-});
+  document.addEventListener("DOMContentLoaded", () => {
+    filtrarReviews(categoriaSelecionada, '');
+  });
 
-  // Adiciona evento a todos os botões
+  // Evento para filtro de categoria
   document.querySelectorAll('.tab-btn').forEach(button => {
     button.addEventListener('click', () => {
-      const categoria = button.getAttribute('data-category');
-      filtrarPorCategoria(categoria);
+      categoriaSelecionada = button.getAttribute('data-category');
+      const textoBusca = document.getElementById('search-input').value || '';
+      filtrarReviews(categoriaSelecionada, textoBusca);
     });
   });
-</script>
+
+  // Evento para busca em tempo real
+  document.getElementById('search-input').addEventListener('input', (e) => {
+    const textoBusca = e.target.value;
+    filtrarReviews(categoriaSelecionada, textoBusca);
+  });
 
 
+
+  // Quantidade de cards por página
+const cardsPorPagina = 4;
+let paginaAtual = 0;
+
+const grid = document.querySelector('.grid');
+const cards = Array.from(grid.querySelectorAll('.review-card'));
+const totalPaginas = Math.ceil(cards.length / cardsPorPagina);
+
+function mostrarPagina(pagina) {
+  // Fade out
+  grid.style.opacity = 0;
+
+  setTimeout(() => {
+    // Esconde todos os cards
+    cards.forEach(card => (card.style.display = 'none'));
+
+    // Calcula quais cards mostrar
+    const start = pagina * cardsPorPagina;
+    const end = start + cardsPorPagina;
+
+    // Mostra os cards da página atual
+    cards.slice(start, end).forEach(card => (card.style.display = 'block'));
+
+    // Fade in
+    grid.style.opacity = 1;
+  }, 300);
+}
+
+// Mostrar a primeira página ao carregar
+mostrarPagina(paginaAtual);
+
+// Controla clique no botão Carregar Mais
+const btnLoadMore = document.getElementById('loadMoreBtn');
+btnLoadMore.addEventListener('click', () => {
+  paginaAtual++;
+  if (paginaAtual >= totalPaginas) {
+    paginaAtual = 0; // volta para a primeira página
+  }
+  mostrarPagina(paginaAtual);
+});
+ </script>
 
 </body>
 
