@@ -70,7 +70,8 @@
       transition: 0.3s;
     }
 
-    nav a:hover {
+    nav a:hover,
+    nav a.active {
       color: #1E90FF;
     }
 
@@ -139,6 +140,13 @@
       flex-grow: 0;
     }
 
+    /* Informações extras */
+    .extra-info p {
+      font-size: 0.85rem;
+      margin: 4px 0;
+      color: #444;
+    }
+
     .review-summary {
       flex-grow: 1;
       font-size: 0.95rem;
@@ -204,17 +212,17 @@
 
 <body>
    <header>
-     <h2>Maratonando Geek</h2>
-    <div class="logo-sub">Sua central de cultura pop no cinema e streaming.</div>
+     <h2 class="logo-main">Maratonando Geek</h2>
+     <div class="logo-sub">Sua central de cultura pop no cinema e streaming.</div>
   </header>
 
   <nav>
     <a href="index.html">Início</a>
     <a href="filmes.html">Filmes</a>
-    <a href="series.html" class="active">Séries</a>
-    <a href="reviews.html">Reviews</a>
+    <a href="series.html">Séries</a>
+    <a href="reviews.html" class="active">Reviews</a>
     <a href="contato.html">Contato</a>
-     <a href="sobre.html">Sobre</a>
+    <a href="sobre.html">Sobre</a>
   </nav>
 
   <main class="container">
@@ -222,14 +230,20 @@
 
     <div class="grid">
 
-      <!-- Review 1 -->
+      <!-- Review 1 - Quarteto Fantástico 2025 -->
       <article class="review-card">
-        <img src="img/the-fantastic-four-first-steps-poster-official-FF_Teaser2_Theatrical_1Sht_Digital_v3_Lg-cover-Th.jpg" alt="Quarteto Fantastico" loading="lazy" />
+        <img src="img/the-fantastic-four-first-steps-poster-official-FF_Teaser2_Theatrical_1Sht_Digital_v3_Lg-cover-Th.jpg" alt="Quarteto Fantástico" loading="lazy" />
         <div class="review-content">
           <h3 class="review-title">“Quarteto Fantástico: Primeiros Passos”</h3>
           <div class="rating">★★★★☆ (8.5/10)</div>
+          <div class="extra-info">
+            <p><strong>Diretor:</strong> Jonathan Liebesman</p>
+            <p><strong>Gênero:</strong> Ação, Aventura, Ficção Científica</p>
+            <p><strong>Duração:</strong> 120 minutos</p>
+            <p><strong>Data de Lançamento:</strong> 8 de agosto de 2025</p>
+          </div>
           <p class="review-summary">
-            Uma aventura emocionante que destaca laços familiares e efeitos visuais impressionantes.
+            Uma aventura emocionante que destaca laços familiares e efeitos visuais impressionantes, trazendo uma nova perspectiva ao clássico grupo de super-heróis da Marvel.
           </p>
           <div class="btn-wrapper">
             <a href="review-quarteto-fantastico.html" class="btn-red">Leia mais</a>
@@ -237,14 +251,41 @@
         </div>
       </article>
 
-      <!-- Review 2 -->
+      <!-- Review 2 - From Origem -->
       <article class="review-card">
-        <img src="img/capa-19.jpg" alt="Stranger Things " loading="lazy" />
+        <img src="img/from-origem-poster.jpg" alt="From Origem" loading="lazy" />
         <div class="review-content">
-          <h3 class="review-title">“Stranger Things"</h3>
-          <div class="rating">★★★★☆ (8.0/10)</div>
+          <h3 class="review-title">“From Origem”</h3>
+          <div class="rating">★★★★☆ (8.3/10)</div>
+          <div class="extra-info">
+            <p><strong>Criador:</strong> John Griffin</p>
+            <p><strong>Gênero:</strong> Terror, Suspense, Mistério</p>
+            <p><strong>Temporadas:</strong> 1 (2025)</p>
+            <p><strong>Estreia:</strong> 15 de julho de 2025</p>
+          </div>
           <p class="review-summary">
-            Suspense crescente e trama envolvente fecham a série com chave de ouro.
+            Série que mistura suspense psicológico com horror sobrenatural, conquistando público com sua trama densa e personagens complexos.
+          </p>
+          <div class="btn-wrapper">
+            <a href="review-from-origem.html" class="btn-red">Leia mais</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Review 3 - Stranger Things -->
+      <article class="review-card">
+        <img src="img/capa-19.jpg" alt="Stranger Things" loading="lazy" />
+        <div class="review-content">
+          <h3 class="review-title">“Stranger Things”</h3>
+          <div class="rating">★★★★☆ (8.0/10)</div>
+          <div class="extra-info">
+            <p><strong>Criadores:</strong> The Duffer Brothers</p>
+            <p><strong>Gênero:</strong> Ficção Científica, Terror, Drama</p>
+            <p><strong>Temporadas:</strong> 4</p>
+            <p><strong>Estreia:</strong> 15 de julho de 2016</p>
+          </div>
+          <p class="review-summary">
+            Suspense crescente e trama envolvente fecham a série com chave de ouro, entregando nostalgia e emoção para todas as gerações.
           </p>
           <div class="btn-wrapper">
             <a href="review-stranger-things.html" class="btn-red">Leia mais</a>
@@ -252,14 +293,20 @@
         </div>
       </article>
 
-      <!-- Review 3 -->
+      <!-- Review 4 - Lilo e Stitch -->
       <article class="review-card">
         <img src="img/MV5BMzM0NTRkZWUtOTg5OC00YTBmLWI5NDEtZjQ5NjUwZTEyMTIxXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg" alt="Lilo e Stitch" loading="lazy" />
         <div class="review-content">
           <h3 class="review-title">“Lilo e Stitch”</h3>
           <div class="rating">★★★☆☆ (7.5/10)</div>
+          <div class="extra-info">
+            <p><strong>Diretor:</strong> Dean DeBlois, Chris Sanders</p>
+            <p><strong>Gênero:</strong> Animação, Aventura, Família</p>
+            <p><strong>Duração:</strong> 85 minutos</p>
+            <p><strong>Data de Lançamento:</strong> 21 de junho de 2002</p>
+          </div>
           <p class="review-summary">
-            Nostalgia e emoção para todas as idades, com uma história cativante.
+            Nostalgia e emoção para todas as idades, com uma história cativante sobre amizade e aceitação.
           </p>
           <div class="btn-wrapper">
             <a href="review-lilo-stitch.html" class="btn-red">Leia mais</a>
@@ -267,14 +314,20 @@
         </div>
       </article>
 
-      <!-- Review 4 -->
+      <!-- Review 5 - Superman -->
       <article class="review-card">
         <img src="img/superman.jpg" alt="Superman" loading="lazy" />
         <div class="review-content">
           <h3 class="review-title">“Superman”</h3>
           <div class="rating">★★★★☆ (8.2/10)</div>
+          <div class="extra-info">
+            <p><strong>Diretor:</strong> Zack Snyder</p>
+            <p><strong>Gênero:</strong> Ação, Aventura, Fantasia</p>
+            <p><strong>Duração:</strong> 143 minutos</p>
+            <p><strong>Data de Lançamento:</strong> 14 de junho de 2013</p>
+          </div>
           <p class="review-summary">
-            Uma reinvenção emocionante do clássico herói, com cenas de ação incríveis.
+            Uma reinvenção emocionante do clássico herói, com cenas de ação incríveis e efeitos visuais de tirar o fôlego.
           </p>
           <div class="btn-wrapper">
             <a href="review-superman.html" class="btn-red">Leia mais</a>
@@ -282,11 +335,99 @@
         </div>
       </article>
 
+      <!-- Review 6 - Duna (Dune) -->
+      <article class="review-card">
+        <img src="img/duna-poster.jpg" alt="Duna" loading="lazy" />
+        <div class="review-content">
+          <h3 class="review-title">“Duna”</h3>
+          <div class="rating">★★★★☆ (8.1/10)</div>
+          <div class="extra-info">
+            <p><strong>Diretor:</strong> Denis Villeneuve</p>
+            <p><strong>Gênero:</strong> Ficção Científica, Aventura, Drama</p>
+            <p><strong>Duração:</strong> 155 minutos</p>
+            <p><strong>Data de Lançamento:</strong> 22 de outubro de 2021</p>
+          </div>
+          <p class="review-summary">
+            Uma adaptação visualmente impressionante do clássico sci-fi, combinando política, ação e mistério em um universo vasto.
+          </p>
+          <div class="btn-wrapper">
+            <a href="review-duna.html" class="btn-red">Leia mais</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Review 7 - The Last of Us -->
+      <article class="review-card">
+        <img src="img/the-last-of-us.jpg" alt="The Last of Us" loading="lazy" />
+        <div class="review-content">
+          <h3 class="review-title">“The Last of Us”</h3>
+          <div class="rating">★★★★★ (9.0/10)</div>
+          <div class="extra-info">
+            <p><strong>Criadores:</strong> Craig Mazin, Neil Druckmann</p>
+            <p><strong>Gênero:</strong> Drama, Ação, Pós-apocalíptico</p>
+            <p><strong>Temporadas:</strong> 1 (2023)</p>
+            <p><strong>Estreia:</strong> 15 de janeiro de 2023</p>
+          </div>
+          <p class="review-summary">
+            Série emocionante que combina narrativa poderosa e performances excepcionais, baseada no famoso jogo da Naughty Dog.
+          </p>
+          <div class="btn-wrapper">
+            <a href="review-the-last-of-us.html" class="btn-red">Leia mais</a>
+          </div>
+        </div>
+      </article>
+      
+      <!-- Review: Megan & Negan -->
+      <article class="review-card">
+        <img src="img/megan-negan.jpg" alt="Megan & Negan" loading="lazy" />
+        <div class="review-content">
+          <h3 class="review-title">“The Walking Dead: Dead City”</h3>
+          <div class="rating">★★★☆☆ (7.0/10)</div>
+          <div class="extra-info">
+            <p><strong>Criador:</strong> Scott M. Gimple</p>
+            <p><strong>Gênero:</strong> Drama, Apocalipse Zumbi</p>
+            <p><strong>Temporadas:</strong> 1 (2024)</p>
+            <p><strong>Estreia:</strong> 2024</p>
+          </div>
+          <p class="review-summary">
+            Spin-off focado em Megan e Negan, trazendo mais drama e ação ao universo de The Walking Dead, explorando suas origens e conflitos.
+          </p>
+          <div class="btn-wrapper">
+            <a href="review-megan-negan.html" class="btn-red">Leia mais</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Review: Daryl -->
+      <article class="review-card">
+        <img src="img/daryl.jpg" alt="Daryl" loading="lazy" />
+        <div class="review-content">
+          <h3 class="review-title">“The Walking Dead: Daryl Dixon”</h3>
+          <div class="rating">★★★☆☆ (7.2/10)</div>
+          <div class="extra-info">
+            <p><strong>Criador:</strong> Angela Kang</p>
+            <p><strong>Gênero:</strong> Drama, Apocalipse Zumbi</p>
+            <p><strong>Temporadas:</strong> 1 (2023)</p>
+            <p><strong>Estreia:</strong> 2023</p>
+          </div>
+          <p class="review-summary">
+            Spin-off focado no personagem Daryl Dixon, aprofundando seu passado e aventuras no universo pós-apocalíptico.
+          </p>
+          <div class="btn-wrapper">
+            <a href="review-daryl.html" class="btn-red">Leia mais</a>
+          </div>
+        </div>
+      </article>
+
     </div>
   </main>
-    <footer>© 2025 Blog de Filmes e Séries. Todos os direitos reservados.</footer>
-<a href="privacidade.html">Política de Privacidade</a> | 
-  <a href="termos.html">Termos de Uso</a>
+
+  <footer>
+    © 2025 Blog de Filmes e Séries. Todos os direitos reservados.
+    <br />
+    <a href="privacidade.html">Política de Privacidade</a> | 
+    <a href="termos.html">Termos de Uso</a>
+  </footer>
 </body>
 
 </html>
