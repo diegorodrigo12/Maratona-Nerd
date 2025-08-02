@@ -645,3 +645,50 @@ footer {
 .carrossel-dots .dot.active {
   background-color: #e50914;
 }
+
+
+/* Seção lateral com Notícias e Agenda lado a lado */
+.secao-lateral {
+  display: flex;
+  gap: 24px;
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 0 15px;
+  flex-wrap: wrap;
+}
+
+.noticias-em-alta {
+  flex: 2;
+  min-width: 300px;
+}
+
+.agenda-geek {
+  flex: 1;
+  min-width: 260px;
+  margin-top: 0;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+  .secao-lateral {
+    flex-direction: column;
+    gap: 32px;
+  }
+
+  .noticias-em-alta,
+  .agenda-geek {
+    flex: 100%;
+  }
+}
+
+/* Ajuste do tamanho da fonte na agenda */
+.agenda-list li {
+  font-size: 0.95rem;  /* Tamanho base menor */
+}
+
+.agenda-date,
+.agenda-title,
+.agenda-platform {
+  font-size: 0.9rem;   /* Deixa todos os campos um pouco menores */
+  word-break: break-word; /* Quebra palavras longas se necessário */
+}
