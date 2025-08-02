@@ -510,7 +510,7 @@ footer {
 
 
 @media (max-width: 768px) {
- .topo-header {
+ .header {
   display: flex;
   justify-content: space-between;
   align-items: center;
