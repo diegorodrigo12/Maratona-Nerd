@@ -43,6 +43,10 @@ header {
   line-height: 1;
 }
 
+.logo-text-wrapper h2 {
+  font-size: 45px;
+}
+
 .logo-main {
   display: block;
   font-family:'Montserrat', sans-serif;
