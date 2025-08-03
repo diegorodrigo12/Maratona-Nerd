@@ -138,12 +138,69 @@
     margin: 0;
     box-sizing: border-box;
   }
-  @media (max-width: 768px) {
-    .ratings {
-      flex-direction: column;
-      gap: 10px;
-    }
+/* Estilo base já existe, só adicionando responsividade */
+
+@media (max-width: 768px) {
+  body {
+    padding: 10px;
   }
+
+  header {
+    padding: 15px 10px;
+  }
+
+  nav {
+    flex-direction: column;
+    padding: 10px 0;
+    align-items: center;
+  }
+
+  nav a {
+    margin: 8px 0;
+    font-size: 1rem;
+  }
+
+  .container {
+    margin: 20px 10px;
+    padding: 15px;
+  }
+
+  h1 {
+    font-size: 1.6rem;
+    margin-bottom: 15px;
+  }
+
+  .image {
+    border-radius: 6px;
+  }
+
+  p, ul, blockquote {
+    font-size: 1rem;
+  }
+
+  ul {
+    padding-left: 15px;
+  }
+}
+
+@media (max-width: 400px) {
+  header h2 {
+    font-size: 1.4rem;
+  }
+
+  nav a {
+    font-size: 0.9rem;
+  }
+
+  h1 {
+    font-size: 1.3rem;
+  }
+
+  p, ul, blockquote {
+    font-size: 0.9rem;
+  }
+}
+
 </style>
 </head>
 <body>
