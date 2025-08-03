@@ -237,6 +237,53 @@
         font-size: 0.9rem;
       }
     }
+    .logo-main {
+  font-family: 'Montserrat', sans-serif;
+  font-style: italic;
+  font-weight: 900;
+  font-size: 2.5rem;
+  letter-spacing: 3px;
+  color: #fff;
+  text-transform: uppercase;
+}
+
+.logo-sub {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  font-size: 1rem;
+  color: #fff;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+  .logo-main {
+    font-size: 1.8rem;
+    letter-spacing: 1.5px;
+    text-align: center;
+  }
+
+  .logo-sub {
+    font-size: 0.85rem;
+    text-align: center;
+  }
+
+  header {
+    flex-direction: column;
+    text-align: center;
+    gap: 8px;
+  }
+}
+
+@media (max-width: 400px) {
+  .logo-main {
+    font-size: 1.4rem;
+  }
+
+  .logo-sub {
+    font-size: 0.75rem;
+  }
+}
+
   </style>
 </head>
 
@@ -246,13 +293,15 @@
     <div class="logo-sub">Sua central de cultura pop no cinema e streaming.</div>
   </header>
   <nav>
-    <a href="index.html">Início</a>
-    <a href="filmes.html">Filmes</a>
-    <a href="series.html">Séries</a>
-    <a href="reviews.html" class="active">Reviews</a>
-    <a href="contato.html">Contato</a>
-    <a href="sobre.html">Sobre</a>
-  </nav>
+        <a href="index.html">Início</a>
+        <a href="filmes.html">Filmes</a>
+        <a href="series.html">Séries</a>
+        <a href="animes.html">Animes</a>
+        <a href="games.html">Games</a>
+        <a href="reviews.html" class="active">Reviews</a>
+        <a href="contato.html">Contato</a>
+        <a href="sobre.html">Sobre</a>
+    </nav>
   <div class="container">
     <h1>From Origem (2025)</h1>
     <img src="img/AN_ORIGEM-scaled.jpg" alt="Poster From Origem" class="poster" loading="lazy" />
