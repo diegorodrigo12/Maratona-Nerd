@@ -1,5 +1,5 @@
 
- /* 1. Reset e estilos básicos */
+/* 1. Reset e estilos básicos */
 body {
   font-family: 'Poppins', sans-serif;
   background-color: #ffffff;
@@ -12,26 +12,24 @@ body {
 header {
   background-color: #1E90FF;
   padding: 20px;
-  text-align: center;
-  font-weight: 700;
-  color: #2c3e50;
-  user-select: none;
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 16px;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  user-select: none;
+  color: #2c3e50;
 }
 
 .logo-icon {
   display: flex;
-  justify-content: flex-start; /* 👈 alinha o conteúdo da logo à esquerda */
+  justify-content: flex-start;
   align-items: center;
   overflow: hidden;
 }
 
 .logo-icon img {
-  width: 160px; /* ajuste conforme o tamanho ideal da sua imagem */
+  width: 160px;
   max-width: 100%;
   max-height: 100%;
   object-fit: contain;
@@ -47,26 +45,12 @@ header {
   font-size: 45px;
 }
 
-.logo-main {
-  display: block;
-  font-family:'Montserrat', sans-serif;
-  font-style: italic;
-  font-weight: 900;
-  font-size: 2.8rem;
-  letter-spacing: 5px;
-  text-transform: uppercase;
-  color: #ffffff;
-}
-
 .logo-sub {
-  display: block;
   font-family: 'Poppins', sans-serif;
   font-weight: 500;
   font-size: 0.9rem;
   letter-spacing: 1.5px;
   margin-top: 1px;
-  text-transform: none;
-  font-style: normal;
   color: #ffffff;
 }
 
@@ -74,7 +58,7 @@ header {
 .social-icons {
   display: flex;
   gap: 12px;
-  margin-left: 40px; /* ou 30px, se quiser mais ainda */
+  margin-left: 40px;
 }
 
 .social-icons img {
@@ -88,16 +72,14 @@ header {
   transform: scale(1.2);
 }
 
-
 /* 3. Navegação (nav) */
 nav {
   background: #ecf0f1;
   display: flex;
   justify-content: center;
-  padding: 10px;
+  padding: 10px 0 5px 0;
   border-bottom: 1px solid #bdc3c7;
-  padding-bottom: 5px;   /* diminui padding inferior */
-  margin-bottom: 5px;    /* diminui margem inferior */
+  margin-bottom: 5px;
 }
 
 nav a {
@@ -105,7 +87,7 @@ nav a {
   text-decoration: none;
   margin: 0 15px;
   font-weight: bold;
-  transition: 0.3s;
+  transition: color 0.3s;
 }
 
 nav a:hover {
@@ -117,15 +99,13 @@ nav a:hover {
   width: 90%;
   max-width: 1200px;
   margin: auto;
-  padding: 20px 0;
-  padding-top: 5px;    /* reduz padding superior */
-  margin-top: 0;
+  padding: 5px 0 10px 0;
 }
 
 /* 5. Agenda Geek */
 .agenda-geek {
   background: #ffffff;
-  padding: 15px 15px;
+  padding: 15px;
   border-radius: 10px;
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.05);
   margin-bottom: 30px;
@@ -172,37 +152,10 @@ nav a:hover {
   flex-shrink: 0;
 }
 
-/* 6. Espaço para anúncios */
-.ads {
-  background: #3a3a3a;
-  border: 2px dashed #7e57c2;
-  padding: 20px;
-  text-align: center;
-  margin: 20px 0;
-  border-radius: 10px;
-  color: #ddd;
-}
-
-/* 7. Barra de pesquisa (input) */
-#searchInput {
-  background: #F0F8FF;
-  border: 2px solid #FF6F61;
-  color: #ddd;
-  border-radius: 8px;
-  padding: 10px;
-  font-size: 1rem;
-  width: 80%;
-  max-width: 400px;
-}
-
-#searchInput::placeholder {
-  color: #b39ddb;
-}
-
-/* 8. Últimos lançamentos - grid e cards */
+/* 6. Últimos lançamentos - grid e cards */
 h2 {
   color: #2C3E50;
-  margin: 40px 0 20px;
+  margin: 20px 0;
 }
 
 .grid {
@@ -271,9 +224,9 @@ h2 {
   transform: translateY(-2px);
 }
 
-/* 9. Listas & Rankings */
+/* 7. Listas & Rankings */
 .section-title {
-  color: #e50914;;
+  color: #e50914;
   margin: 40px 0 20px;
   font-size: 1.5rem;
 }
@@ -285,16 +238,15 @@ h2 {
 }
 
 .ranking-card {
-  background:  #F0F8FF;
+  background: #F0F8FF;
   border: 2px solid #1E90FF;
   border-radius: 12px;
   padding: 20px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-  color: #ddd;
+  color: #2C3E50;
 }
 
 .ranking-card h3 {
-  color: #2C3E50;
   margin-top: 0;
 }
 
@@ -318,7 +270,7 @@ h2 {
 }
 
 .pos {
-  background: #1E90FF ;
+  background: #1E90FF;
   color: #fff;
   font-weight: bold;
   width: 26px;
@@ -340,14 +292,14 @@ h2 {
 }
 
 .tag {
-  background: #1E90FF ;
+  background: #1E90FF;
   color: #fff;
   padding: 2px 8px;
   border-radius: 999px;
   font-size: 0.75rem;
 }
 
-/* 10. Área Interativa - abas e conteúdos */
+/* 8. Área Interativa - abas e conteúdos */
 .tabs {
   display: flex;
   gap: 8px;
@@ -379,18 +331,17 @@ h2 {
   display: block;
 }
 
-/* 11. Enquetes */
+/* 9. Enquetes */
 .poll-card {
   background: #F0F8FF;
   border: 2px solid #1E90FF;
   border-radius: 12px;
   padding: 18px;
   margin-bottom: 18px;
-  color:  #2C3E50;
+  color: #2C3E50;
 }
 
 .poll-card h4 {
-  color:#2C3E50;
   margin: 0 0 10px 0;
 }
 
@@ -435,7 +386,7 @@ h2 {
   cursor: not-allowed;
 }
 
-/* 12. Quiz */
+/* 10. Quiz */
 .quiz-card {
   background: #F0F8FF;
   border: 2px solid #1E90FF;
@@ -445,7 +396,6 @@ h2 {
 }
 
 .quiz-card h3 {
-  color: #2C3E50;
   margin-top: 0;
 }
 
@@ -453,7 +403,7 @@ h2 {
   margin-bottom: 6px;
 }
 
-/* 13. Comentários */
+/* 11. Comentários */
 .comments-card {
   background: #F0F8FF;
   border: 2px solid #1E90FF;
@@ -497,7 +447,7 @@ h2 {
   color: #999;
 }
 
-/* 14. Footer */
+/* 12. Footer */
 footer {
   width: 100%;
   background: #ffffff;
@@ -506,8 +456,8 @@ footer {
   color: #888;
   font-size: 0.8rem;
   border-top: 1px solid #ddd;
-  margin: 0;           /* Remove margens externas */
-  box-sizing: border-box; /* Inclui padding na largura total */
+  margin: 0;
+  box-sizing: border-box;
 }
 
 button[type="submit"] {
@@ -527,85 +477,6 @@ button[type="submit"]:hover {
   background-color: #b20710;
 }
 
-
-
-@media (max-width: 768px) {
- .header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 20px;
-  flex-wrap: wrap;
-}
-
-.branding {
-  max-width: 60%;
-}
-
-.social-icons {
-  display: flex;
-  gap: 12px;
-  margin-top: 10px;
-}
-
-.social-icons img {
-  width: 24px;
-  height: 24px;
-  filter: invert(1); /* caso esteja usando fundo escuro */
-}
-  .logo-icon img {
-    width: 120px;
-  }
-
-  .logo-main {
-    font-size: 2rem;
-    letter-spacing: 2px;
-    text-align: center;
-  }
-
-  .logo-sub {
-    font-size: 0.85rem;
-    letter-spacing: 1px;
-    text-align: center;
-  }
-
-
-  nav {
-    flex-wrap: wrap;
-    padding: 10px 5px;
-  }
-
-  nav a {
-    margin: 5px 10px;
-    font-size: 0.95rem;
-  }
-
-  .agenda-list li {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 5px;
-  }
-
-  .agenda-date,
-  .agenda-title,
-  .agenda-platform {
-    width: 100%;
-    text-align: left;
-  }
-
-  .grid {
-    grid-template-columns: 1fr;
-  }
-
-  .ranking-wrapper {
-    grid-template-columns: 1fr;
-  }
-
-  #searchInput {
-    width: 100%;
-    max-width: none;
-  }
-}
 
 .noticias-em-alta > h2 {
   color: #e50914;
@@ -698,20 +569,6 @@ button[type="submit"]:hover {
   box-sizing: border-box;
 }
 
-/* Responsivo */
-@media (max-width: 768px) {
-  .secao-lateral {
-    flex-direction: column;
-    gap: 32px;
-    
-  }
-
-  .noticias-em-alta,
-  .agenda-geek {
-    flex: 100%;
-  }
-}
-
 /* Ajuste do tamanho da fonte na agenda */
 .agenda-list li {
   font-size: 0.95rem;  /* Tamanho base menor */
@@ -734,6 +591,101 @@ button[type="submit"]:hover {
   margin: 40px auto;
   padding: 0 15px;
 }
+
+@media (max-width: 768px) {
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    flex-wrap: wrap;
+  }
+
+  .branding {
+    max-width: 60%;
+  }
+
+  .social-icons {
+    display: flex;
+    gap: 12px;
+    margin-top: 10px;
+  }
+
+  .social-icons img {
+    width: 24px;
+    height: 24px;
+    filter: invert(1); /* caso esteja usando fundo escuro */
+  }
+
+  .logo-icon img {
+    width: 120px;
+  }
+
+  .logo-main {
+    font-size: 2rem;
+    letter-spacing: 2px;
+    text-align: center;
+  }
+
+  .logo-sub {
+    font-size: 0.85rem;
+    letter-spacing: 1px;
+    text-align: center;
+  }
+
+  nav {
+    flex-wrap: wrap;
+    padding: 10px 5px;
+  }
+
+  nav a {
+    margin: 5px 10px;
+    font-size: 0.95rem;
+  }
+
+  .agenda-list li {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 5px;
+  }
+
+  .agenda-date,
+  .agenda-title,
+  .agenda-platform {
+    width: 100%;
+    text-align: left;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .ranking-wrapper {
+    grid-template-columns: 1fr;
+  }
+
+  #searchInput {
+    width: 100%;
+    max-width: none;
+  }
+}
+
+
+/* Responsivo */
+@media (max-width: 768px) {
+  .secao-lateral {
+    flex-direction: column;
+    gap: 32px;
+    
+  }
+
+  .noticias-em-alta,
+  .agenda-geek {
+    flex: 100%;
+  }
+}
+
+
 
 /* Seu CSS original até o final */
 
