@@ -313,31 +313,6 @@
   </div>
 </footer>
 
-<script>
-document.getElementById('comment-form').addEventListener('submit', async function(e) {
-  e.preventDefault();
-
-  const nome = document.getElementById('comment-name').value;
-  const comentario = document.getElementById('comment-text').value;
-
-  const resposta = await fetch('https://maratonandogeek.infinityfreeapp.com/salvar_comentario.php', {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({ nome, comentario })
-  });
-
-  const resultado = await resposta.json();
-
-  if (resposta.ok) {
-    alert('Comentário publicado!');
-    document.getElementById('comment-form').reset();
-  } else {
-    alert('Erro: ' + (resultado.erro || 'Não foi possível publicar.'));
-  }
-});
-
-</script>
-
 </body>
 
 
@@ -613,6 +588,29 @@ dots.forEach(dot => {
     showSlide(parseInt(dot.dataset.index));
     startAutoSlide();
   });
+});
+
+// Publicar Comentarios Inifinity
+document.getElementById('comment-form').addEventListener('submit', async function(e) {
+  e.preventDefault();
+
+  const nome = document.getElementById('comment-name').value;
+  const comentario = document.getElementById('comment-text').value;
+
+  const resposta = await fetch('https://maratonandogeek.infinityfreeapp.com/salvar_comentario.php', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ nome, comentario })
+  });
+
+  const resultado = await resposta.json();
+
+  if (resposta.ok) {
+    alert('Comentário publicado!');
+    document.getElementById('comment-form').reset();
+  } else {
+    alert('Erro: ' + (resultado.erro || 'Não foi possível publicar.'));
+  }
 });
 
     </script>
