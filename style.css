@@ -96,8 +96,8 @@ nav {
   justify-content: center;
   padding: 10px;
   border-bottom: 1px solid #bdc3c7;
-   padding-bottom: 8px;   /* diminui padding inferior */
-  margin-bottom: 8px;    /* diminui margem inferior */
+  padding-bottom: 5px;   /* diminui padding inferior */
+  margin-bottom: 5px;    /* diminui margem inferior */
 }
 
 nav a {
@@ -118,17 +118,17 @@ nav a:hover {
   max-width: 1200px;
   margin: auto;
   padding: 20px 0;
-  padding-top: 10px;    /* reduz padding superior */
+  padding-top: 5px;    /* reduz padding superior */
   margin-top: 0;
 }
 
 /* 5. Agenda Geek */
 .agenda-geek {
   background: #ffffff;
-  padding: 30px 20px;
+  padding: 15px 15px;
   border-radius: 10px;
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.05);
-  margin-bottom: 40px;
+  margin-bottom: 30px;
 }
 
 .agenda-list {
