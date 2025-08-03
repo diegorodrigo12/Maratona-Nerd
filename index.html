@@ -332,9 +332,10 @@ document.getElementById('comment-form').addEventListener('submit', async functio
     alert('Comentário publicado!');
     document.getElementById('comment-form').reset();
   } else {
-    alert('Erro ao salvar comentário: ' + (resultado.erro || 'tente novamente'));
+    alert('Erro: ' + (resultado.erro || 'Não foi possível publicar.'));
   }
 });
+
 </script>
 
 </body>
