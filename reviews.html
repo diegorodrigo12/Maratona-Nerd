@@ -2,22 +2,23 @@
 <html lang="pt-BR">
 
 <head>
-<meta name="description" content="Blog geek com lançamentos, filmes, séries e cultura pop. Maratonando Geek é sua central de entretenimento.">
-<meta name="keywords" content="filmes, séries, cultura geek, lançamentos, reviews, maratonando geek, reviews de filmes, reviews de series">
-<meta name="author" content="Maratonando Geek">
-<meta name="robots" content="index, follow">
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<meta property="og:title" content="Reviews - Maratonando Geek">
-<meta property="og:description" content="Análises e opiniões sobre filmes e séries. Descubra o que vale a pena maratonar.">
-<meta property="og:image" content="URL_DA_IMAGEM_DESTACADA_DO_SITE">
-<meta name="twitter:card" content="summary_large_image">
+  <meta name="description"
+    content="Blog geek com lançamentos, filmes, séries e cultura pop. Maratonando Geek é sua central de entretenimento.">
+  <meta name="keywords"
+    content="filmes, séries, cultura geek, lançamentos, reviews, maratonando geek, reviews de filmes, reviews de series">
+  <meta name="author" content="Maratonando Geek">
+  <meta name="robots" content="index, follow">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta property="og:title" content="Reviews - Maratonando Geek">
+  <meta property="og:description"
+    content="Análises e opiniões sobre filmes e séries. Descubra o que vale a pena maratonar.">
+  <meta property="og:image" content="URL_DA_IMAGEM_DESTACADA_DO_SITE">
+  <meta name="twitter:card" content="summary_large_image">
   <title>Reviews de Filmes e Séries</title>
 
-  <link
-    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@900&family=Poppins:wght@500&display=swap"
-    rel="stylesheet"
-  />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@900&family=Poppins:wght@500&display=swap"
+    rel="stylesheet" />
 
   <style>
     body {
@@ -29,19 +30,19 @@
     }
 
     /* Header */
-header {
-  background-color: #1E90FF;
-  padding: 20px;
-  text-align: center;
-  font-weight: 700;
-  color: #2c3e50;
-  user-select: none;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 16px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-}
+    header {
+      background-color: #1E90FF;
+      padding: 20px;
+      text-align: center;
+      font-weight: 700;
+      color: #2c3e50;
+      user-select: none;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 16px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    }
 
     .logo-main {
       font-family: 'Montserrat', sans-serif;
@@ -53,17 +54,17 @@ header {
       color: #ffffff;
     }
 
- .logo-sub {
-  display: block;
-  font-family: 'Poppins', sans-serif;
-  font-weight: 500;
-  font-size: 0.9rem;
-  letter-spacing: 1.5px;
-  margin-top: 1px;
-  text-transform: none;
-  font-style: normal;
-  color: #ffffff;
-}
+    .logo-sub {
+      display: block;
+      font-family: 'Poppins', sans-serif;
+      font-weight: 500;
+      font-size: 0.9rem;
+      letter-spacing: 1.5px;
+      margin-top: 1px;
+      text-transform: none;
+      font-style: normal;
+      color: #ffffff;
+    }
 
 
     nav {
@@ -84,9 +85,9 @@ header {
 
     nav a:hover,
     nav a.active {
-    color: #e50914;
-  border-bottom: 2px solid #e50914;
-  padding-bottom: 4px;
+      color: #e50914;
+      border-bottom: 2px solid #e50914;
+      padding-bottom: 4px;
     }
 
     .container {
@@ -104,15 +105,15 @@ header {
     }
 
     .review-descricao {
-  text-align: center;
-  max-width: 700px;
-  margin: -15px auto 30px auto;
-  font-size: 1rem;
-  color: #555;
-  line-height: 1.6;
-}
+      text-align: center;
+      max-width: 700px;
+      margin: -15px auto 30px auto;
+      font-size: 1rem;
+      color: #555;
+      line-height: 1.6;
+    }
 
-#search-container {
+    #search-container {
       text-align: center;
       margin-bottom: 20px;
     }
@@ -125,39 +126,41 @@ header {
       border: 1px solid #ccc;
       font-size: 1rem;
     }
-.review-filtros {
-  text-align: center;
-  margin: 40px auto 30px auto;
-}
 
-.review-filtros .tab-btn {
-  background-color: #1E90FF;
-  color: white;
-  border: none;
-  padding: 10px 20px;
-  margin: 5px 7px;
-  border-radius: 25px;
-  font-weight: bold;
-  font-size: 0.95rem;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
-}
+    .review-filtros {
+      text-align: center;
+      margin: 40px auto 30px auto;
+    }
 
-.review-filtros .tab-btn:hover,
-.review-filtros .tab-btn.active {
-  background-color: #e50914;
-  color: white;
-  transform: scale(1.05);
-}
+    .review-filtros .tab-btn {
+      background-color: #1E90FF;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      margin: 5px 7px;
+      border-radius: 25px;
+      font-weight: bold;
+      font-size: 0.95rem;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .review-filtros .tab-btn:hover,
+    .review-filtros .tab-btn.active {
+      background-color: #e50914;
+      color: white;
+      transform: scale(1.05);
+    }
 
 
     .grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
       gap: 20px;
-      transition: opacity 0.3s ease;  /* adiciona transição suave */
-      opacity: 1;  
+      transition: opacity 0.3s ease;
+      /* adiciona transição suave */
+      opacity: 1;
     }
 
     .review-card {
@@ -259,104 +262,106 @@ header {
 
     @media (max-width: 768px) {
 
-  header {
-    flex-direction: column;
-    gap: 10px;
-    padding: 15px 10px;
-    text-align: center;
-  }
+      header {
+        flex-direction: column;
+        gap: 10px;
+        padding: 15px 10px;
+        text-align: center;
+      }
 
-  .logo-icon {
-    justify-content: center;
-  }
+      .logo-icon {
+        justify-content: center;
+      }
 
-  .logo-text-wrapper {
-    text-align: center;
-  }
+      .logo-text-wrapper {
+        text-align: center;
+      }
 
-  .logo-main {
-    font-size: 1.8rem;
-    letter-spacing: 2px;
-  }
+      .logo-main {
+        font-size: 1.8rem;
+        letter-spacing: 2px;
+      }
 
-  .logo-sub {
-    font-size: 0.75rem;
-  }
+      .logo-sub {
+        font-size: 0.75rem;
+      }
 
-  .social-icons {
-    margin-left: 0;
-    justify-content: center;
-    flex-wrap: wrap;
-  }
+      .social-icons {
+        margin-left: 0;
+        justify-content: center;
+        flex-wrap: wrap;
+      }
 
-  nav {
-    flex-direction: column;
-    align-items: center;
-  }
+      nav {
+        flex-direction: column;
+        align-items: center;
+      }
 
-  nav a {
-    margin: 6px 0;
-  }
-  .container {
-    width: 95%;
-    padding: 20px 10px;
-  }
+      nav a {
+        margin: 6px 0;
+      }
 
-  h2 {
-    font-size: 1.6rem;
-    margin-bottom: 20px;
-  }
+      .container {
+        width: 95%;
+        padding: 20px 10px;
+      }
 
-  .grid {
-    grid-template-columns: 1fr; /* só uma coluna no celular */
-    gap: 15px;
-  }
+      h2 {
+        font-size: 1.6rem;
+        margin-bottom: 20px;
+      }
 
-  .review-card {
-    flex-direction: column;
-  }
+      .grid {
+        grid-template-columns: 1fr;
+        /* só uma coluna no celular */
+        gap: 15px;
+      }
 
-  .review-card img {
-    height: 200px; /* ligeiramente maior para telas pequenas */
-    border-bottom: 2px solid #1E90FF;
-  }
+      .review-card {
+        flex-direction: column;
+      }
 
-  .review-content {
-    padding: 12px 15px;
-  }
+      .review-card img {
+        height: 200px;
+        /* ligeiramente maior para telas pequenas */
+        border-bottom: 2px solid #1E90FF;
+      }
 
-  .review-title {
-    font-size: 1.1rem;
-    margin-bottom: 8px;
-  }
+      .review-content {
+        padding: 12px 15px;
+      }
 
-  .rating {
-    font-size: 1rem;
-    margin-bottom: 10px;
-  }
+      .review-title {
+        font-size: 1.1rem;
+        margin-bottom: 8px;
+      }
 
-  .review-summary {
-    font-size: 0.9rem;
-    margin-bottom: 14px;
-  }
+      .rating {
+        font-size: 1rem;
+        margin-bottom: 10px;
+      }
 
-  .btn-red {
-    font-size: 0.9rem;
-    padding: 8px 16px;
-  }
+      .review-summary {
+        font-size: 0.9rem;
+        margin-bottom: 14px;
+      }
 
-  footer {
-    font-size: 0.75rem;
-    padding: 15px 10px;
-  }
-}
+      .btn-red {
+        font-size: 0.9rem;
+        padding: 8px 16px;
+      }
 
+      footer {
+        font-size: 0.75rem;
+        padding: 15px 10px;
+      }
+    }
   </style>
 </head>
 
 <body>
   <header>
-     <h2>Maratonando Geek</h2>
+    <h2>Maratonando Geek</h2>
     <div class="logo-sub">Sua central de cultura pop no cinema e streaming.</div>
   </header>
 
@@ -364,8 +369,8 @@ header {
     <a href="index.html">Início</a>
     <a href="filmes.html">Filmes</a>
     <a href="series.html">Séries</a>
-     <a href="animes.html">Animes</a>
-     <a href="games.html">Games</a>
+    <a href="animes.html">Animes</a>
+    <a href="games.html">Games</a>
     <a href="reviews.html" class="active">Reviews</a>
     <a href="contato.html">Contato</a>
     <a href="sobre.html">Sobre</a>
@@ -374,31 +379,30 @@ header {
   <main class="container">
     <h2>Reviews de Filmes e Séries</h2>
     <p class="review-descricao">
-  Confira análises detalhadas dos filmes e séries em destaque. Avaliações com opinião crítica e notas da nossa equipe!
-</p>
+      Confira análises detalhadas dos filmes e séries em destaque. Avaliações com opinião crítica e notas da nossa
+      equipe!
+    </p>
 
- <!-- Campo de busca -->
+    <!-- Campo de busca -->
     <div id="search-container">
-      <input
-        type="text"
-        id="search-input"
-        placeholder="Buscar reviews por título..."
-      />
+      <input type="text" id="search-input" placeholder="Buscar reviews por título..." />
     </div>
 
-<div id="filter-buttons" class="review-filtros">
-  <button class="tab-btn active" data-category="all">Todos</button>
-  <button class="tab-btn" data-category="ação">Ação</button>
-  <button class="tab-btn" data-category="comédia">Comédia</button>
-  <button class="tab-btn" data-category="terror">Terror</button>
-  <button class="tab-btn" data-category="drama">Drama</button>
-</div>
+    <div id="filter-buttons" class="review-filtros">
+      <button class="tab-btn active" data-category="all">Todos</button>
+      <button class="tab-btn" data-category="ação">Ação</button>
+      <button class="tab-btn" data-category="comédia">Comédia</button>
+      <button class="tab-btn" data-category="terror">Terror</button>
+      <button class="tab-btn" data-category="drama">Drama</button>
+    </div>
 
     <div class="grid">
 
       <!-- Review 1 - Quarteto Fantástico 2025 -->
       <article class="review-card" data-category="ação ficção aventura">
-        <img src="img/the-fantastic-four-first-steps-poster-official-FF_Teaser2_Theatrical_1Sht_Digital_v3_Lg-cover-Th.jpg" alt="Quarteto Fantástico" loading="lazy" />
+        <img
+          src="img/the-fantastic-four-first-steps-poster-official-FF_Teaser2_Theatrical_1Sht_Digital_v3_Lg-cover-Th.jpg"
+          alt="Quarteto Fantástico" loading="lazy" />
         <div class="review-content">
           <h3 class="review-title">“Quarteto Fantástico: Primeiros Passos”</h3>
           <div class="extra-info">
@@ -408,7 +412,8 @@ header {
             <p><strong>Data de Lançamento:</strong> 24 de Julho de 2025</p>
           </div>
           <p class="review-summary">
-            Uma aventura emocionante que destaca laços familiares e efeitos visuais impressionantes, trazendo uma nova perspectiva ao clássico grupo de super-heróis da Marvel.
+            Uma aventura emocionante que destaca laços familiares e efeitos visuais impressionantes, trazendo uma nova
+            perspectiva ao clássico grupo de super-heróis da Marvel.
           </p>
           <div class="btn-wrapper">
             <a href="quartetofantastico.html" class="btn-red">Leia mais</a>
@@ -428,7 +433,8 @@ header {
             <p><strong>Estreia:</strong> 20 de Fevereiro de 2022</p>
           </div>
           <p class="review-summary">
-            Série que mistura suspense psicológico com horror sobrenatural, conquistando público com sua trama densa e personagens complexos.
+            Série que mistura suspense psicológico com horror sobrenatural, conquistando público com sua trama densa e
+            personagens complexos.
           </p>
           <div class="btn-wrapper">
             <a href="origem.html" class="btn-red">Leia mais</a>
@@ -448,7 +454,8 @@ header {
             <p><strong>Estreia:</strong> 15 de julho de 2016</p>
           </div>
           <p class="review-summary">
-            Suspense crescente e trama envolvente fecham a série com chave de ouro, entregando nostalgia e emoção para todas as gerações.
+            Suspense crescente e trama envolvente fecham a série com chave de ouro, entregando nostalgia e emoção para
+            todas as gerações.
           </p>
           <div class="btn-wrapper">
             <a href="strangerthings.html" class="btn-red">Leia mais</a>
@@ -488,7 +495,8 @@ header {
             <p><strong>Data de Lançamento:</strong> 10 de julho de 2025</p>
           </div>
           <p class="review-summary">
-            Uma reinvenção emocionante do clássico herói, com cenas de ação incríveis e efeitos visuais de tirar o fôlego.
+            Uma reinvenção emocionante do clássico herói, com cenas de ação incríveis e efeitos visuais de tirar o
+            fôlego.
           </p>
           <div class="btn-wrapper">
             <a href="superman.html" class="btn-red">Leia mais</a>
@@ -508,7 +516,8 @@ header {
             <p><strong>Data de Lançamento:</strong> 21 de outubro de 2021</p>
           </div>
           <p class="review-summary">
-            Uma adaptação visualmente impressionante do clássico sci-fi, combinando política, ação e mistério em um universo vasto.
+            Uma adaptação visualmente impressionante do clássico sci-fi, combinando política, ação e mistério em um
+            universo vasto.
           </p>
           <div class="btn-wrapper">
             <a href="duna.html" class="btn-red">Leia mais</a>
@@ -518,7 +527,8 @@ header {
 
       <!-- Review 7 - The Last of Us -->
       <article class="review-card" data-category="drama ação pós-apocalipse">
-        <img src="img/b7e4dad977dd98692307b69da020a0872910e215b240d1c8517437410b0af328.jpg" alt="The Last of Us" loading="lazy" />
+        <img src="img/b7e4dad977dd98692307b69da020a0872910e215b240d1c8517437410b0af328.jpg" alt="The Last of Us"
+          loading="lazy" />
         <div class="review-content">
           <h3 class="review-title">“The Last of Us”</h3>
           <div class="extra-info">
@@ -528,14 +538,15 @@ header {
             <p><strong>Estreia:</strong> 15 de janeiro de 2023</p>
           </div>
           <p class="review-summary">
-            Série emocionante que combina narrativa poderosa e performances excepcionais, baseada no famoso jogo da Naughty Dog.
+            Série emocionante que combina narrativa poderosa e performances excepcionais, baseada no famoso jogo da
+            Naughty Dog.
           </p>
           <div class="btn-wrapper">
             <a href="thelastofus.html" class="btn-red">Leia mais</a>
           </div>
         </div>
       </article>
-      
+
       <!-- Review: Megan & Negan -->
       <article class="review-card" data-category="drama zumbi ação">
         <img src="img/the-walking-dead-dead-city-capa.jpg" alt="The Walking Dead: Dead City" loading="lazy" />
@@ -548,7 +559,8 @@ header {
             <p><strong>Estreia:</strong> 18 de Junho de 2023</p>
           </div>
           <p class="review-summary">
-            Spin-off focado em Megan e Negan, trazendo mais drama e ação ao universo de The Walking Dead, explorando suas origens e conflitos.
+            Spin-off focado em Megan e Negan, trazendo mais drama e ação ao universo de The Walking Dead, explorando
+            suas origens e conflitos.
           </p>
           <div class="btn-wrapper">
             <a href="deadcity.html" class="btn-red">Leia mais</a>
@@ -560,7 +572,7 @@ header {
       <article class="review-card" data-category="drama zumbi ação">
         <img src="img/The Walking Dead Daryl Dixon.jpg" alt="Daryl" loading="lazy" />
         <div class="review-content">
-          <h3 class="review-title">“The Walking Dead: Daryl Dixon”</h3>     
+          <h3 class="review-title">“The Walking Dead: Daryl Dixon”</h3>
           <div class="extra-info">
             <p><strong>Criador:</strong> David Zabel</p>
             <p><strong>Gênero:</strong> Drama, Apocalipse Zumbi</p>
@@ -568,7 +580,8 @@ header {
             <p><strong>Estreia:</strong> 10 de Setembro de 2023</p>
           </div>
           <p class="review-summary">
-            Spin-off focado no personagem Daryl Dixon, aprofundando seu passado e aventuras no universo pós-apocalíptico.
+            Spin-off focado no personagem Daryl Dixon, aprofundando seu passado e aventuras no universo
+            pós-apocalíptico.
           </p>
           <div class="btn-wrapper">
             <a href="daryu.html" class="btn-red">Leia mais</a>
@@ -576,135 +589,136 @@ header {
         </div>
       </article>
       <!-- Review: Thunderbolts -->
-<article class="review-card" data-category="ação espionagem marvel">
-  <img src="img/thunderbolts_capa-1.jpg" alt="Thunderbolts" loading="lazy" />
-  <div class="review-content">
-    <h3 class="review-title">“Thunderbolts (2025)”</h3>
-    <div class="extra-info">
-      <p><strong>Diretor:</strong> Jake Schreier</p>
-      <p><strong>Gênero:</strong> Ação, Espionagem, Super-heróis</p>
-      <p><strong>Distribuição:</strong> Marvel Studios / Disney</p>
-      <p><strong>Estreia:</strong> 2 de maio de 2025</p>
-    </div>
-    <p class="review-summary">
-      Um grupo de anti-heróis do universo Marvel é reunido pelo governo para missões secretas. Com Yelena Belova, Bucky Barnes, Red Guardian e outros, o filme promete um tom mais sombrio e tático dentro do MCU.
-    </p>
-    <div class="btn-wrapper">
-      <a href="thunderbolts.html" class="btn-red">Leia mais</a>
-    </div>
-  </div>
-</article>
+      <article class="review-card" data-category="ação espionagem marvel">
+        <img src="img/thunderbolts_capa-1.jpg" alt="Thunderbolts" loading="lazy" />
+        <div class="review-content">
+          <h3 class="review-title">“Thunderbolts (2025)”</h3>
+          <div class="extra-info">
+            <p><strong>Diretor:</strong> Jake Schreier</p>
+            <p><strong>Gênero:</strong> Ação, Espionagem, Super-heróis</p>
+            <p><strong>Distribuição:</strong> Marvel Studios / Disney</p>
+            <p><strong>Estreia:</strong> 2 de maio de 2025</p>
+          </div>
+          <p class="review-summary">
+            Um grupo de anti-heróis do universo Marvel é reunido pelo governo para missões secretas. Com Yelena Belova,
+            Bucky Barnes, Red Guardian e outros, o filme promete um tom mais sombrio e tático dentro do MCU.
+          </p>
+          <div class="btn-wrapper">
+            <a href="thunderbolts.html" class="btn-red">Leia mais</a>
+          </div>
+        </div>
+      </article>
 
 
-     </div>
+    </div>
 
     <div style="text-align: center; margin: 30px 0;">
-     <button id="loadMoreBtn" class="btn-red" style="display: block; margin: 30px auto 0;">
-  Carregar Mais
-</button>
+      <button id="loadMoreBtn" class="btn-red" style="display: block; margin: 30px auto 0;">
+        Carregar Mais
+      </button>
     </div>
   </main>
   <footer>
     © 2025 Blog de Filmes e Séries. Todos os direitos reservados.
     <br />
-    <a href="privacidade.html">Política de Privacidade</a> | 
+    <a href="privacidade.html">Política de Privacidade</a> |
     <a href="termos.html">Termos de Uso</a>
   </footer>
 
 
 
- <script>
-  let categoriaSelecionada = 'all';
+  <script>
+    let categoriaSelecionada = 'all';
 
-  function filtrarReviews(categoria, textoBusca) {
-    const texto = textoBusca.toLowerCase();
+    function filtrarReviews(categoria, textoBusca) {
+      const texto = textoBusca.toLowerCase();
 
-    document.querySelectorAll('.review-card').forEach(card => {
-      const categorias = card.dataset.category.split(' ');
-      const titulo = card.querySelector('.review-title').textContent.toLowerCase();
+      document.querySelectorAll('.review-card').forEach(card => {
+        const categorias = card.dataset.category.split(' ');
+        const titulo = card.querySelector('.review-title').textContent.toLowerCase();
 
-      const correspondeCategoria = categoria === 'all' || categorias.includes(categoria);
-      const correspondeBusca = titulo.includes(texto);
+        const correspondeCategoria = categoria === 'all' || categorias.includes(categoria);
+        const correspondeBusca = titulo.includes(texto);
 
-      if (correspondeCategoria && correspondeBusca) {
-        card.style.display = 'block';
-      } else {
-        card.style.display = 'none';
-      }
+        if (correspondeCategoria && correspondeBusca) {
+          card.style.display = 'block';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+
+      // Atualiza os botões ativos
+      document.querySelectorAll('.tab-btn').forEach(btn => {
+        if (btn.dataset.category === categoria) {
+          btn.classList.add('active');
+        } else {
+          btn.classList.remove('active');
+        }
+      });
+    }
+
+    document.addEventListener("DOMContentLoaded", () => {
+      filtrarReviews(categoriaSelecionada, '');
     });
 
-    // Atualiza os botões ativos
-    document.querySelectorAll('.tab-btn').forEach(btn => {
-      if (btn.dataset.category === categoria) {
-        btn.classList.add('active');
-      } else {
-        btn.classList.remove('active');
-      }
+    // Evento para filtro de categoria
+    document.querySelectorAll('.tab-btn').forEach(button => {
+      button.addEventListener('click', () => {
+        categoriaSelecionada = button.getAttribute('data-category');
+        const textoBusca = document.getElementById('search-input').value || '';
+        filtrarReviews(categoriaSelecionada, textoBusca);
+      });
     });
-  }
 
-  document.addEventListener("DOMContentLoaded", () => {
-    filtrarReviews(categoriaSelecionada, '');
-  });
-
-  // Evento para filtro de categoria
-  document.querySelectorAll('.tab-btn').forEach(button => {
-    button.addEventListener('click', () => {
-      categoriaSelecionada = button.getAttribute('data-category');
-      const textoBusca = document.getElementById('search-input').value || '';
+    // Evento para busca em tempo real
+    document.getElementById('search-input').addEventListener('input', (e) => {
+      const textoBusca = e.target.value;
       filtrarReviews(categoriaSelecionada, textoBusca);
     });
-  });
-
-  // Evento para busca em tempo real
-  document.getElementById('search-input').addEventListener('input', (e) => {
-    const textoBusca = e.target.value;
-    filtrarReviews(categoriaSelecionada, textoBusca);
-  });
 
 
 
-  // Quantidade de cards por página
-const cardsPorPagina = 4;
-let paginaAtual = 0;
+    // Quantidade de cards por página
+    const cardsPorPagina = 4;
+    let paginaAtual = 0;
 
-const grid = document.querySelector('.grid');
-const cards = Array.from(grid.querySelectorAll('.review-card'));
-const totalPaginas = Math.ceil(cards.length / cardsPorPagina);
+    const grid = document.querySelector('.grid');
+    const cards = Array.from(grid.querySelectorAll('.review-card'));
+    const totalPaginas = Math.ceil(cards.length / cardsPorPagina);
 
-function mostrarPagina(pagina) {
-  // Fade out
-  grid.style.opacity = 0;
+    function mostrarPagina(pagina) {
+      // Fade out
+      grid.style.opacity = 0;
 
-  setTimeout(() => {
-    // Esconde todos os cards
-    cards.forEach(card => (card.style.display = 'none'));
+      setTimeout(() => {
+        // Esconde todos os cards
+        cards.forEach(card => (card.style.display = 'none'));
 
-    // Calcula quais cards mostrar
-    const start = pagina * cardsPorPagina;
-    const end = start + cardsPorPagina;
+        // Calcula quais cards mostrar
+        const start = pagina * cardsPorPagina;
+        const end = start + cardsPorPagina;
 
-    // Mostra os cards da página atual
-    cards.slice(start, end).forEach(card => (card.style.display = 'block'));
+        // Mostra os cards da página atual
+        cards.slice(start, end).forEach(card => (card.style.display = 'block'));
 
-    // Fade in
-    grid.style.opacity = 1;
-  }, 300);
-}
+        // Fade in
+        grid.style.opacity = 1;
+      }, 300);
+    }
 
-// Mostrar a primeira página ao carregar
-mostrarPagina(paginaAtual);
+    // Mostrar a primeira página ao carregar
+    mostrarPagina(paginaAtual);
 
-// Controla clique no botão Carregar Mais
-const btnLoadMore = document.getElementById('loadMoreBtn');
-btnLoadMore.addEventListener('click', () => {
-  paginaAtual++;
-  if (paginaAtual >= totalPaginas) {
-    paginaAtual = 0; // volta para a primeira página
-  }
-  mostrarPagina(paginaAtual);
-});
- </script>
+    // Controla clique no botão Carregar Mais
+    const btnLoadMore = document.getElementById('loadMoreBtn');
+    btnLoadMore.addEventListener('click', () => {
+      paginaAtual++;
+      if (paginaAtual >= totalPaginas) {
+        paginaAtual = 0; // volta para a primeira página
+      }
+      mostrarPagina(paginaAtual);
+    });
+  </script>
 
 </body>
 

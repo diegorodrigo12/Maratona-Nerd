@@ -1,4 +1,3 @@
-
 /* 1. Reset e estilos básicos */
 body {
   font-family: 'Poppins', sans-serif;
@@ -478,26 +477,35 @@ button[type="submit"]:hover {
 }
 
 
-.noticias-em-alta > h2 {
+.noticias-em-alta>h2 {
   color: #e50914;
-  text-align: left;      /* Alinha o texto à esquerda */
-  margin-left: 0;        /* Remove margem esquerda */
-  margin-bottom: 10px;   /* Espaço pequeno abaixo do título */
-  padding-left: 5px;     /* Pequeno espaçamento da borda */
+  text-align: left;
+  /* Alinha o texto à esquerda */
+  margin-left: 0;
+  /* Remove margem esquerda */
+  margin-bottom: 10px;
+  /* Espaço pequeno abaixo do título */
+  padding-left: 5px;
+  /* Pequeno espaçamento da borda */
   font-weight: 700;
 }
 
-  .carrossel-em-alta {
+.carrossel-em-alta {
   position: relative;
   max-width: 900px;
   margin: auto;
   overflow: hidden;
 }
+
 .carrossel-em-alta img {
-  width: 120%;         /* Faz a imagem ocupar toda a largura do slide */
-  height: 500px;       /* Altura fixa para uniformizar (ajuste conforme preferir) */
-  object-fit: cover;   /* Corta a imagem para preencher o espaço mantendo proporção */
-  border-radius: 10px; /* Borda arredondada opcional, para ficar mais bonito */
+  width: 120%;
+  /* Faz a imagem ocupar toda a largura do slide */
+  height: 500px;
+  /* Altura fixa para uniformizar (ajuste conforme preferir) */
+  object-fit: cover;
+  /* Corta a imagem para preencher o espaço mantendo proporção */
+  border-radius: 10px;
+  /* Borda arredondada opcional, para ficar mais bonito */
   display: block;
 }
 
@@ -515,7 +523,7 @@ button[type="submit"]:hover {
   bottom: 20px;
   left: 20px;
   color: #fff;
-  background: rgba(0,0,0,0.5);
+  background: rgba(0, 0, 0, 0.5);
   padding: 10px 15px;
   border-radius: 8px;
   max-width: 80%;
@@ -550,8 +558,8 @@ button[type="submit"]:hover {
   margin: 40px auto;
   padding: 0 15px;
   flex-wrap: wrap;
-    align-items: stretch;
-     margin: 10px auto 40px auto;
+  align-items: stretch;
+  margin: 10px auto 40px auto;
 }
 
 .noticias-em-alta {
@@ -561,30 +569,37 @@ button[type="submit"]:hover {
 
 .agenda-geek {
   background: #ffffff;
-  padding: 16px 16px;   /* menos espaço interno */
+  padding: 16px 16px;
+  /* menos espaço interno */
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.04);
-  margin-bottom: 20px;  /* menos espaço externo */
-  height: 100%;         /* garante que siga a altura do contêiner pai */
+  margin-bottom: 20px;
+  /* menos espaço externo */
+  height: 100%;
+  /* garante que siga a altura do contêiner pai */
   box-sizing: border-box;
 }
 
 /* Ajuste do tamanho da fonte na agenda */
 .agenda-list li {
-  font-size: 0.95rem;  /* Tamanho base menor */
+  font-size: 0.95rem;
+  /* Tamanho base menor */
 }
 
 .agenda-date,
 .agenda-title,
 .agenda-platform {
-  font-size: 0.9rem;   /* Deixa todos os campos um pouco menores */
-  word-break: break-word; /* Quebra palavras longas se necessário */
+  font-size: 0.9rem;
+  /* Deixa todos os campos um pouco menores */
+  word-break: break-word;
+  /* Quebra palavras longas se necessário */
 }
 
 
 .duas-colunas {
   display: flex;
-  flex-wrap: wrap;         /* Responsivo em telas menores */
+  flex-wrap: wrap;
+  /* Responsivo em telas menores */
   gap: 20px;
   align-items: stretch;
   max-width: 1200px;
@@ -614,7 +629,8 @@ button[type="submit"]:hover {
   .social-icons img {
     width: 24px;
     height: 24px;
-    filter: invert(1); /* caso esteja usando fundo escuro */
+    filter: invert(1);
+    /* caso esteja usando fundo escuro */
   }
 
   .logo-icon img {
@@ -676,7 +692,7 @@ button[type="submit"]:hover {
   .secao-lateral {
     flex-direction: column;
     gap: 32px;
-    
+
   }
 
   .noticias-em-alta,
@@ -784,7 +800,7 @@ button[type="submit"]:hover {
 
 /* Pagina Filmes */
 
-   .pagina-filmes body {
+.pagina-filmes body {
   font-family: 'Poppins', sans-serif;
   background-color: #fff;
   color: #333;
@@ -1030,7 +1046,7 @@ button[type="submit"]:hover {
 }
 
 
-    /* Pagina Series */
+/* Pagina Series */
 
 body.pagina-series {
   font-family: 'Poppins', sans-serif;
@@ -1262,11 +1278,15 @@ body.pagina-series footer {
     width: 100%;
     max-width: none;
   }
+
   .btn-red {
-    font-size: 1rem;       /* reduz o tamanho da fonte */
-    padding: 8px 16px;     /* diminui o padding para ficar mais compacto */
-    width: auto;           /* permite que o botão tenha largura natural */
-    min-width: 120px;      /* opcional: define uma largura mínima confortável */
+    font-size: 1rem;
+    /* reduz o tamanho da fonte */
+    padding: 8px 16px;
+    /* diminui o padding para ficar mais compacto */
+    width: auto;
+    /* permite que o botão tenha largura natural */
+    min-width: 120px;
+    /* opcional: define uma largura mínima confortável */
   }
 }
-

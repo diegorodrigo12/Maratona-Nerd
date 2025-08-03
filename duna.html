@@ -1,296 +1,342 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<meta name="description" content="Review do filme Duna (2021), épico de ficção científica baseado no clássico de Frank Herbert." />
-<meta name="keywords" content="Duna, Dune, filme, ficção científica, épico, review" />
-<meta name="author" content="Maratonando Geek" />
-<title>Review: Duna (2021)</title>
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@900&family=Poppins:wght@500&display=swap" rel="stylesheet" />
-<style>
-  /* Mesma estilização padrão do site */
-  body {
-    font-family: 'Poppins', sans-serif;
-    background-color: #fff;
-    color: #333;
-    margin: 0; padding: 0;
-  }
-  header {
-    background-color: #1E90FF;
-    padding: 20px;
-    display: flex; justify-content: center; align-items: center; gap: 16px;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-    user-select: none;
-  }
-  .logo-main {
-    font-family: 'Montserrat', sans-serif;
-    font-style: italic; font-weight: 900;
-    font-size: 2.8rem;
-    letter-spacing: 5px;
-    text-transform: uppercase;
-    color: #fff;
-  }
-  .logo-sub {
-    font-family: 'Poppins', sans-serif;
-    font-weight: 500;
-    font-size: 0.9rem;
-    color: #fff;
-    margin-left: 8px;
-  }
-  nav {
-    background: #ecf0f1;
-    display: flex; justify-content: center;
-    padding: 10px;
-    border-bottom: 1px solid #bdc3c7;
-  }
-  nav a {
-    color: #34495e;
-    text-decoration: none;
-    margin: 0 15px;
-    font-weight: bold;
-    transition: 0.3s;
-  }
-  nav a:hover, nav a.active {
-    color: #1E90FF;
-  }
-  .container {
-    width: 90%; max-width: 900px;
-    margin: auto;
-    padding: 30px 0;
-  }
-
-  .avaliacoes-container {
-  display: flex;
-  gap: 40px;
-  margin-top: 20px;
-  align-items: center;
-  justify-content: center;
-  flex-wrap: wrap;
-}
-
-.avaliacao-box {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  background-color: #f3f3f3;
-  padding: 10px 15px;
-  border-radius: 12px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-  font-family: 'Poppins', sans-serif;
-  font-size: 15px;
-}
-
-.avaliacao-icon {
-  width: 40px;
-  height: 40px;
-}
-
-  h1 {
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 900;
-    font-size: 2.4rem;
-    text-align: center;
-    color: #2C3E50;
-    margin-bottom: 30px;
-  }
-  .poster {
-    width: 100%;
-    border-radius: 12px;
-    border: 2px solid #1E90FF;
-    box-shadow: 0 0 10px rgba(30,144,255,0.3);
-    margin-bottom: 30px;
-  }
-  .ratings {
-    font-size: 1.1rem;
-    color: #FF6F61;
-    margin-bottom: 25px;
-    display: flex; justify-content: center;
-    gap: 30px;
-    font-weight: 600;
-  }
-  section {
-    margin-bottom: 35px;
-    color: #444;
-    line-height: 1.5;
-  }
-  section h2 {
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 700;
-    font-size: 1.6rem;
-    color: #1E90FF;
-    margin-bottom: 12px;
-    border-bottom: 3px solid #1E90FF;
-    padding-bottom: 6px;
-  }
-  ul {
-    list-style-type: disc;
-    margin-left: 20px;
-  }
-  footer {
-    width: 100%;
-    background: #fff;
-    text-align: center;
-    padding: 20px;
-    color: #888;
-    font-size: 0.85rem;
-    border-top: 1px solid #ddd;
-    margin: 0;
-    box-sizing: border-box;
-  }
-  @media (max-width: 768px) {
-    .ratings {
-      flex-direction: column;
-      gap: 10px;
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description"
+    content="Review do filme Duna (2021), épico de ficção científica baseado no clássico de Frank Herbert." />
+  <meta name="keywords" content="Duna, Dune, filme, ficção científica, épico, review" />
+  <meta name="author" content="Maratonando Geek" />
+  <title>Review: Duna (2021)</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@900&family=Poppins:wght@500&display=swap"
+    rel="stylesheet" />
+  <style>
+    /* Mesma estilização padrão do site */
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #fff;
+      color: #333;
+      margin: 0;
+      padding: 0;
     }
-  }
-  @media (max-width: 768px) {
-  body {
-    padding: 10px;
-  }
 
-  header {
-    padding: 15px 10px;
-  }
+    header {
+      background-color: #1E90FF;
+      padding: 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 16px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      user-select: none;
+    }
 
-  nav {
-    flex-direction: column;
-    padding: 10px 0;
-    align-items: center;
-  }
+    .logo-main {
+      font-family: 'Montserrat', sans-serif;
+      font-style: italic;
+      font-weight: 900;
+      font-size: 2.8rem;
+      letter-spacing: 5px;
+      text-transform: uppercase;
+      color: #fff;
+    }
 
-  nav a {
-    margin: 8px 0;
-    font-size: 1rem;
-  }
+    .logo-sub {
+      font-family: 'Poppins', sans-serif;
+      font-weight: 500;
+      font-size: 0.9rem;
+      color: #fff;
+      margin-left: 8px;
+    }
 
-  .container {
-    margin: 20px 10px;
-    padding: 15px;
-  }
+    nav {
+      background: #ecf0f1;
+      display: flex;
+      justify-content: center;
+      padding: 10px;
+      border-bottom: 1px solid #bdc3c7;
+    }
 
-  h1 {
-    font-size: 1.6rem;
-    margin-bottom: 15px;
-  }
+    nav a {
+      color: #34495e;
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: bold;
+      transition: 0.3s;
+    }
 
-  .image {
-    border-radius: 6px;
-  }
+    nav a:hover,
+    nav a.active {
+      color: #1E90FF;
+    }
 
-  p, ul, blockquote {
-    font-size: 1rem;
-  }
+    .container {
+      width: 90%;
+      max-width: 900px;
+      margin: auto;
+      padding: 30px 0;
+    }
 
-  ul {
-    padding-left: 15px;
-  }
-}
+    .avaliacoes-container {
+      display: flex;
+      gap: 40px;
+      margin-top: 20px;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
 
-@media (max-width: 400px) {
-  header h2 {
-    font-size: 1.4rem;
-  }
+    .avaliacao-box {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      background-color: #f3f3f3;
+      padding: 10px 15px;
+      border-radius: 12px;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+      font-family: 'Poppins', sans-serif;
+      font-size: 15px;
+    }
 
-  nav a {
-    font-size: 0.9rem;
-  }
+    .avaliacao-icon {
+      width: 40px;
+      height: 40px;
+    }
 
-  h1 {
-    font-size: 1.3rem;
-  }
+    h1 {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 900;
+      font-size: 2.4rem;
+      text-align: center;
+      color: #2C3E50;
+      margin-bottom: 30px;
+    }
 
-  p, ul, blockquote {
-    font-size: 0.9rem;
-  }
-}
-</style>
+    .poster {
+      width: 100%;
+      border-radius: 12px;
+      border: 2px solid #1E90FF;
+      box-shadow: 0 0 10px rgba(30, 144, 255, 0.3);
+      margin-bottom: 30px;
+    }
+
+    .ratings {
+      font-size: 1.1rem;
+      color: #FF6F61;
+      margin-bottom: 25px;
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      font-weight: 600;
+    }
+
+    section {
+      margin-bottom: 35px;
+      color: #444;
+      line-height: 1.5;
+    }
+
+    section h2 {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 700;
+      font-size: 1.6rem;
+      color: #1E90FF;
+      margin-bottom: 12px;
+      border-bottom: 3px solid #1E90FF;
+      padding-bottom: 6px;
+    }
+
+    ul {
+      list-style-type: disc;
+      margin-left: 20px;
+    }
+
+    footer {
+      width: 100%;
+      background: #fff;
+      text-align: center;
+      padding: 20px;
+      color: #888;
+      font-size: 0.85rem;
+      border-top: 1px solid #ddd;
+      margin: 0;
+      box-sizing: border-box;
+    }
+
+    @media (max-width: 768px) {
+      .ratings {
+        flex-direction: column;
+        gap: 10px;
+      }
+    }
+
+    @media (max-width: 768px) {
+      body {
+        padding: 10px;
+      }
+
+      header {
+        padding: 15px 10px;
+      }
+
+      nav {
+        flex-direction: column;
+        padding: 10px 0;
+        align-items: center;
+      }
+
+      nav a {
+        margin: 8px 0;
+        font-size: 1rem;
+      }
+
+      .container {
+        margin: 20px 10px;
+        padding: 15px;
+      }
+
+      h1 {
+        font-size: 1.6rem;
+        margin-bottom: 15px;
+      }
+
+      .image {
+        border-radius: 6px;
+      }
+
+      p,
+      ul,
+      blockquote {
+        font-size: 1rem;
+      }
+
+      ul {
+        padding-left: 15px;
+      }
+    }
+
+    @media (max-width: 400px) {
+      header h2 {
+        font-size: 1.4rem;
+      }
+
+      nav a {
+        font-size: 0.9rem;
+      }
+
+      h1 {
+        font-size: 1.3rem;
+      }
+
+      p,
+      ul,
+      blockquote {
+        font-size: 0.9rem;
+      }
+    }
+  </style>
 </head>
+
 <body>
-<header>
-<h2>Maratonando Geek</h2>
+  <header>
+    <h2>Maratonando Geek</h2>
     <div class="logo-sub">Sua central de cultura pop no cinema e streaming.</div>
-</header>
-<nav>
-  <a href="index.html">Início</a>
-  <a href="filmes.html">Filmes</a>
-  <a href="series.html">Séries</a>
-  <a href="reviews.html" class="active">Reviews</a>
-  <a href="contato.html">Contato</a>
-  <a href="sobre.html">Sobre</a>
-</nav>
-<div class="container">
-  <h1>Duna (2021)</h1>
-  <img src="img/dune_1947.jpg" alt="Poster Duna 2021" class="poster" loading="lazy" />
-  <div class="ratings">
- <div class="avaliacoes-container">
-  <div class="avaliacao-box">
-    <img src="img/open-clapperboard-icon-flat-style-yellow-background_96318-15986.avif" alt="Avaliação Crítica" class="avaliacao-icon">
-    <div><strong>Avaliação Crítica:</strong> ★★★★ (8.3/10)</div>
-  </div>
-  <div class="avaliacao-box">
-    <img src="img/1040005.png" alt="Avaliação Público" class="avaliacao-icon">
-    <div><strong>Avaliação Público:</strong> ★★★★★ (9.0/10)</div>
-  </div>
-</div>
-  </div>
-  <section>
-    <h2>Sinopse</h2>
-    <p>Duna é uma épica aventura de ficção científica baseada no clássico romance de Frank Herbert. A história acompanha Paul Atreides, um jovem herdeiro de uma família nobre, enquanto enfrenta intrigas políticas e os perigos do planeta desértico Arrakis, onde está a valiosa especiaria melange.</p>
-  </section>
-  <section>
-    <h2>Elenco Principal</h2>
-    <ul>
-      <li>Timothée Chalamet como Paul Atreides</li>
-      <li>Rebecca Ferguson como Lady Jessica</li>
-      <li>Oscar Isaac como Duque Leto Atreides</li>
-      <li>Zendaya como Chani</li>
-      <li>Diretor: Denis Villeneuve</li>
-    </ul>
-  </section>
-  <section>
-    <h2>Informações Técnicas</h2>
-    <ul>
-      <li>Gênero: Ficção Científica, Aventura, Drama</li>
-      <li>Duração: 155 minutos</li>
-      <li>Data de lançamento: 22 de outubro de 2021</li>
-      <li>Classificação Indicativa: 14 anos</li>
-    </ul>
-  </section>
-  <section>
-    <h2>Curiosidades</h2>
-    <ul>
-      <li>O filme é conhecido por seus impressionantes efeitos visuais e design de produção detalhado.</li>
-      <li>Foi filmado em vários locais, incluindo Jordânia e Hungria.</li>
-      <li>A trilha sonora foi composta por Hans Zimmer, adicionando uma atmosfera épica à narrativa.</li>
-      <li>Duna recebeu diversas indicações ao Oscar, especialmente em categorias técnicas.</li>
-    </ul>
-  </section>
-  <section>
-  <h2>Recepção da Crítica</h2>
-  <p><strong>Duna</strong> foi amplamente elogiado pela crítica por sua fidelidade ao material original e pela grandiosidade visual. A direção de Denis Villeneuve, o design de produção e a trilha sonora de Hans Zimmer foram particularmente destacados como elementos que elevaram a experiência cinematográfica.</p>
-  <p>No Rotten Tomatoes, o filme alcançou uma aprovação de <strong>83% da crítica</strong> e <strong>90% do público</strong>, consolidando-se como uma das melhores adaptações do gênero sci-fi da década.</p>
-</section>
+  </header>
+  <nav>
+    <a href="index.html">Início</a>
+    <a href="filmes.html">Filmes</a>
+    <a href="series.html">Séries</a>
+    <a href="reviews.html" class="active">Reviews</a>
+    <a href="contato.html">Contato</a>
+    <a href="sobre.html">Sobre</a>
+  </nav>
+  <div class="container">
+    <h1>Duna (2021)</h1>
+    <img src="img/dune_1947.jpg" alt="Poster Duna 2021" class="poster" loading="lazy" />
+    <div class="ratings">
+      <div class="avaliacoes-container">
+        <div class="avaliacao-box">
+          <img src="img/open-clapperboard-icon-flat-style-yellow-background_96318-15986.avif" alt="Avaliação Crítica"
+            class="avaliacao-icon">
+          <div><strong>Avaliação Crítica:</strong> ★★★★ (8.3/10)</div>
+        </div>
+        <div class="avaliacao-box">
+          <img src="img/1040005.png" alt="Avaliação Público" class="avaliacao-icon">
+          <div><strong>Avaliação Público:</strong> ★★★★★ (9.0/10)</div>
+        </div>
+      </div>
+    </div>
+    <section>
+      <h2>Sinopse</h2>
+      <p>Duna é uma épica aventura de ficção científica baseada no clássico romance de Frank Herbert. A história
+        acompanha Paul Atreides, um jovem herdeiro de uma família nobre, enquanto enfrenta intrigas políticas e os
+        perigos do planeta desértico Arrakis, onde está a valiosa especiaria melange.</p>
+    </section>
+    <section>
+      <h2>Elenco Principal</h2>
+      <ul>
+        <li>Timothée Chalamet como Paul Atreides</li>
+        <li>Rebecca Ferguson como Lady Jessica</li>
+        <li>Oscar Isaac como Duque Leto Atreides</li>
+        <li>Zendaya como Chani</li>
+        <li>Diretor: Denis Villeneuve</li>
+      </ul>
+    </section>
+    <section>
+      <h2>Informações Técnicas</h2>
+      <ul>
+        <li>Gênero: Ficção Científica, Aventura, Drama</li>
+        <li>Duração: 155 minutos</li>
+        <li>Data de lançamento: 22 de outubro de 2021</li>
+        <li>Classificação Indicativa: 14 anos</li>
+      </ul>
+    </section>
+    <section>
+      <h2>Curiosidades</h2>
+      <ul>
+        <li>O filme é conhecido por seus impressionantes efeitos visuais e design de produção detalhado.</li>
+        <li>Foi filmado em vários locais, incluindo Jordânia e Hungria.</li>
+        <li>A trilha sonora foi composta por Hans Zimmer, adicionando uma atmosfera épica à narrativa.</li>
+        <li>Duna recebeu diversas indicações ao Oscar, especialmente em categorias técnicas.</li>
+      </ul>
+    </section>
+    <section>
+      <h2>Recepção da Crítica</h2>
+      <p><strong>Duna</strong> foi amplamente elogiado pela crítica por sua fidelidade ao material original e pela
+        grandiosidade visual. A direção de Denis Villeneuve, o design de produção e a trilha sonora de Hans Zimmer foram
+        particularmente destacados como elementos que elevaram a experiência cinematográfica.</p>
+      <p>No Rotten Tomatoes, o filme alcançou uma aprovação de <strong>83% da crítica</strong> e <strong>90% do
+          público</strong>, consolidando-se como uma das melhores adaptações do gênero sci-fi da década.</p>
+    </section>
 
-<section>
-  <h2>Destaques e Temas</h2>
-  <ul>
-    <li><strong>Universo político e social complexo:</strong> disputa pelo controle de Arrakis e os jogos de poder entre as casas.</li>
-    <li><strong>Visual e direção de arte:</strong> cenários amplos, tecnologia minimalista e atmosfera desértica imersiva.</li>
-    <li><strong>Trilha sonora imersiva:</strong> Hans Zimmer utiliza sons étnicos e experimentais para criar tensão e emoção.</li>
-    <li><strong>Mensagem ecológica:</strong> o planeta Arrakis serve como metáfora para a relação entre recursos naturais e poder.</li>
-  </ul>
-</section>
+    <section>
+      <h2>Destaques e Temas</h2>
+      <ul>
+        <li><strong>Universo político e social complexo:</strong> disputa pelo controle de Arrakis e os jogos de poder
+          entre as casas.</li>
+        <li><strong>Visual e direção de arte:</strong> cenários amplos, tecnologia minimalista e atmosfera desértica
+          imersiva.</li>
+        <li><strong>Trilha sonora imersiva:</strong> Hans Zimmer utiliza sons étnicos e experimentais para criar tensão
+          e emoção.</li>
+        <li><strong>Mensagem ecológica:</strong> o planeta Arrakis serve como metáfora para a relação entre recursos
+          naturais e poder.</li>
+      </ul>
+    </section>
 
-<section>
-  <h2>Expectativas para a Continuação</h2>
-  <p>Com o sucesso de bilheteria e crítica, <strong>Duna: Parte 2</strong> foi confirmada e já está gerando grandes expectativas. A sequência promete aprofundar o arco de Paul Atreides, trazer mais conflitos épicos e expandir a mitologia do universo de Frank Herbert. Fãs aguardam intensamente por mais batalhas, revelações e a ascensão de Paul como líder messiânico.</p>
-</section>
+    <section>
+      <h2>Expectativas para a Continuação</h2>
+      <p>Com o sucesso de bilheteria e crítica, <strong>Duna: Parte 2</strong> foi confirmada e já está gerando grandes
+        expectativas. A sequência promete aprofundar o arco de Paul Atreides, trazer mais conflitos épicos e expandir a
+        mitologia do universo de Frank Herbert. Fãs aguardam intensamente por mais batalhas, revelações e a ascensão de
+        Paul como líder messiânico.</p>
+    </section>
 
-</div>
-<footer>
-  © 2025 Blog de Filmes e Séries. Todos os direitos reservados.<br />
-  <a href="privacidade.html">Política de Privacidade</a> | <a href="termos.html">Termos de Uso</a>
-</footer>
+  </div>
+  <footer>
+    © 2025 Blog de Filmes e Séries. Todos os direitos reservados.<br />
+    <a href="privacidade.html">Política de Privacidade</a> | <a href="termos.html">Termos de Uso</a>
+  </footer>
 </body>
+
 </html>
