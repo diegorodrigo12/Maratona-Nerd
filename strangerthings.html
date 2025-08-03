@@ -70,6 +70,33 @@
     margin: auto;
     padding: 30px 0;
   }
+
+  .avaliacoes-container {
+  display: flex;
+  gap: 40px;
+  margin-top: 20px;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.avaliacao-box {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background-color: #f3f3f3;
+  padding: 10px 15px;
+  border-radius: 12px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  font-family: 'Poppins', sans-serif;
+  font-size: 15px;
+}
+
+.avaliacao-icon {
+  width: 40px;
+  height: 40px;
+}
+
   h1 {
     font-family: 'Montserrat', sans-serif;
     font-weight: 900;
@@ -148,8 +175,16 @@
   <h1>Stranger Things</h1>
   <img src="img/stranger-things-poster.jpg" alt="Poster Stranger Things" class="poster" loading="lazy" />
   <div class="ratings">
+    <div class="avaliacoes-container">
+  <div class="avaliacao-box">
+    <img src="img/critica.png" alt="Avaliação Crítica" class="avaliacao-icon">
     <div><strong>Avaliação Crítica:</strong> ★★★★★ (9.0/10)</div>
+  </div>
+  <div class="avaliacao-box">
+    <img src="img/publico.png" alt="Avaliação Público" class="avaliacao-icon">
     <div><strong>Avaliação Público:</strong> ★★★★★ (9.2/10)</div>
+  </div>
+</div>
   </div>
   <section>
     <h2>Sinopse</h2>
