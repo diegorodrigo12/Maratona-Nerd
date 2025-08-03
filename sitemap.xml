@@ -28,6 +28,12 @@
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
+   <url>
+    <loc>https://maratonandogeek.com.br/games.html</loc>
+    <lastmod>2025-08-03</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
   <url>
     <loc>https://maratonandogeek.com.br/reviews.html</loc>
     <lastmod>2025-07-31</lastmod>
