@@ -59,6 +59,33 @@
     margin: auto;
     padding: 30px 0;
   }
+
+  .avaliacoes-container {
+  display: flex;
+  gap: 40px;
+  align-items: center;
+  justify-content: center;
+  margin: 20px 0;
+  flex-wrap: wrap;
+}
+
+.avaliacao-box {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 8px 14px;
+  background-color: #f7f8fa;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  font-family: 'Poppins', sans-serif;
+  font-size: 15px;
+}
+
+.avaliacao-icon {
+  width: 40px;
+  height: 40px;
+}
+
   h1 {
     font-family: 'Montserrat', sans-serif;
     font-weight: 900;
@@ -134,10 +161,18 @@
 </nav>
 <div class="container">
   <h1>The Last of Us (2023)</h1>
-  <img src="img/the-last-of-us-poster.jpg" alt="Poster The Last of Us" class="poster" loading="lazy" />
+  <img src="img/twd.jpg" alt="Poster The Last of Us" class="poster" loading="lazy" />
   <div class="ratings">
+    <div class="avaliacoes-container">
+  <div class="avaliacao-box">
+    <img src="img/open-clapperboard-icon-flat-style-yellow-background_96318-15986.avif" alt="Avaliação Crítica" class="avaliacao-icon">
     <div><strong>Avaliação Crítica:</strong> ★★★★★ (9.6/10)</div>
+  </div>
+  <div class="avaliacao-box">
+    <img src="img/1040005.png" alt="Avaliação Público" class="avaliacao-icon">
     <div><strong>Avaliação Público:</strong> ★★★★★ (9.1/10)</div>
+  </div>
+</div>
   </div>
   <section>
     <h2>Sinopse</h2>
@@ -146,9 +181,9 @@
   <section>
     <h2>Elenco Principal</h2>
     <ul>
-      <li>Pablo Schreiber como Joel</li>
+      <li>Pedro Pascal como Joel</li>
       <li>Bella Ramsey como Ellie</li>
-      <li>Merle Dandridge como Marlene</li>
+      <li>Isabela Merced como Dina</li>
       <li>Criadores: Craig Mazin e Neil Druckmann</li>
     </ul>
   </section>
@@ -156,7 +191,7 @@
     <h2>Informações Técnicas</h2>
     <ul>
       <li>Gênero: Drama, Ação, Suspense</li>
-      <li>Temporadas: 1 (2023)</li>
+      <li>Temporadas: 2 (2023)</li>
       <li>Duração média dos episódios: 55 minutos</li>
       <li>Classificação Indicativa: 16 anos</li>
     </ul>
