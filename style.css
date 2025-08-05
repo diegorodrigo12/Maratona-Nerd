@@ -578,50 +578,45 @@ button[type="submit"]:hover {
 }
 
 
+/* === TABLETS E TELAS MÉDIAS (até 768px) === */
 @media (max-width: 768px) {
   header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px;
     flex-wrap: wrap;
-  }
-
-  .branding {
-    max-width: 60%;
-  }
-
-  .social-icons {
-    display: flex;
-    gap: 12px;
-    margin-top: 10px;
-  }
-
-  .social-icons img {
-    width: 24px;
-    height: 24px;
-    filter: invert(1);
-    /* caso esteja usando fundo escuro */
+    justify-content: space-between;
+    padding: 20px;
   }
 
   .logo-icon img {
     width: 120px;
   }
 
+  .logo-text-wrapper {
+    text-align: center;
+  }
+
   .logo-main {
     font-size: 2rem;
     letter-spacing: 2px;
-    text-align: center;
   }
 
   .logo-sub {
     font-size: 0.85rem;
     letter-spacing: 1px;
-    text-align: center;
+  }
+
+  .social-icons {
+    margin-top: 10px;
+    gap: 12px;
+  }
+
+  .social-icons img {
+    width: 24px;
+    height: 24px;
   }
 
   nav {
     flex-wrap: wrap;
+    justify-content: center;
     padding: 10px 5px;
   }
 
@@ -643,12 +638,20 @@ button[type="submit"]:hover {
     text-align: left;
   }
 
-  .grid {
+  .grid,
+  .ranking-wrapper {
     grid-template-columns: 1fr;
   }
 
-  .ranking-wrapper {
-    grid-template-columns: 1fr;
+  .duas-colunas,
+  .secao-lateral {
+    flex-direction: column;
+    gap: 32px;
+  }
+
+  .noticias-em-alta,
+  .agenda-geek {
+    flex: 100%;
   }
 
   #searchInput {
@@ -657,40 +660,18 @@ button[type="submit"]:hover {
   }
 }
 
-
-/* Responsivo */
-@media (max-width: 768px) {
-  .secao-lateral {
-    flex-direction: column;
-    gap: 32px;
-
-  }
-
-  .noticias-em-alta,
-  .agenda-geek {
-    flex: 100%;
-  }
-}
-
-
-
-/* Seu CSS original até o final */
-
-/* ADIÇÕES PARA CORRIGIR BAGUNÇA EM DISPOSITIVOS MÓVEIS */
+/* === CELULARES E TELAS PEQUENAS (até 480px) === */
 @media (max-width: 480px) {
   header {
     flex-direction: column;
-    gap: 10px;
+    align-items: center;
     padding: 15px 10px;
+    gap: 10px;
     text-align: center;
   }
 
   .logo-icon {
     justify-content: center;
-  }
-
-  .logo-text-wrapper {
-    text-align: center;
   }
 
   .logo-main {
@@ -767,10 +748,7 @@ button[type="submit"]:hover {
   }
 }
 
-/* Fim dos ajustes responsivos */
-
 /* Pagina Filmes */
-
 .pagina-filmes body {
   font-family: 'Poppins', sans-serif;
   background-color: #fff;
