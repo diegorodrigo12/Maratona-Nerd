@@ -45,7 +45,6 @@ header {
 }
 
 .logo-sub {
-  font-family: 'Poppins', sans-serif;
   font-weight: 500;
   font-size: 0.9rem;
   letter-spacing: 1.5px;
@@ -101,13 +100,97 @@ nav a:hover {
   padding: 5px 0 10px 0;
 }
 
-/* 5. Agenda Geek */
+/* 5. Seção lateral: Notícias em Alta e Agenda lado a lado */
+.secao-lateral {
+  display: flex;
+  gap: 24px;
+  max-width: 1200px;
+  margin: 10px auto 40px auto;
+  padding: 0 15px;
+  flex-wrap: wrap;
+  align-items: stretch;
+}
+
+/* Notícias em Alta (carrossel) */
+.noticias-em-alta {
+  flex: 2;
+  min-width: 300px;
+}
+
+.noticias-em-alta > h2 {
+  color: #e50914;
+  text-align: left;
+  margin-left: 0;
+  margin-bottom: 10px;
+  padding-left: 5px;
+  font-weight: 700;
+}
+
+.carrossel-em-alta {
+  position: relative;
+  max-width: 100%;
+  width: 100%;
+  margin: auto;
+  overflow: hidden;
+}
+
+.carrossel-em-alta img {
+  width: 100%;
+  height: 500px;
+  object-fit: cover;
+  border-radius: 10px;
+  display: block;
+}
+
+.slide {
+  display: none;
+  position: relative;
+}
+
+.slide.active {
+  display: block;
+}
+
+.carrossel-caption {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  color: #fff;
+  background: rgba(0, 0, 0, 0.5);
+  padding: 10px 15px;
+  border-radius: 8px;
+  max-width: 80%;
+}
+
+.carrossel-dots {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.carrossel-dots .dot {
+  height: 12px;
+  width: 12px;
+  margin: 0 5px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.carrossel-dots .dot.active {
+  background-color: #e50914;
+}
+
+/* 6. Agenda Geek */
 .agenda-geek {
   background: #ffffff;
-  padding: 15px;
+  padding: 16px;
   border-radius: 10px;
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.05);
-  margin-bottom: 30px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.04);
+  margin-bottom: 20px;
+  height: 100%;
+  box-sizing: border-box;
 }
 
 .agenda-list {
@@ -117,6 +200,7 @@ nav a:hover {
 }
 
 .agenda-list li {
+  font-size: 0.95rem;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -151,12 +235,7 @@ nav a:hover {
   flex-shrink: 0;
 }
 
-/* 6. Últimos lançamentos - grid e cards */
-h2 {
-  color: #2C3E50;
-  margin: 20px 0;
-}
-
+/* 7. Grid de cards para Últimos lançamentos */
 .grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -223,7 +302,7 @@ h2 {
   transform: translateY(-2px);
 }
 
-/* 7. Listas & Rankings */
+/* 8. Listas & Rankings */
 .section-title {
   color: #e50914;
   margin: 40px 0 20px;
@@ -298,7 +377,7 @@ h2 {
   font-size: 0.75rem;
 }
 
-/* 8. Área Interativa - abas e conteúdos */
+/* 9. Área Interativa - abas e conteúdos */
 .tabs {
   display: flex;
   gap: 8px;
@@ -330,7 +409,7 @@ h2 {
   display: block;
 }
 
-/* 9. Enquetes */
+/* 10. Enquetes */
 .poll-card {
   background: #F0F8FF;
   border: 2px solid #1E90FF;
@@ -385,7 +464,7 @@ h2 {
   cursor: not-allowed;
 }
 
-/* 10. Quiz */
+/* 11. Quiz */
 .quiz-card {
   background: #F0F8FF;
   border: 2px solid #1E90FF;
@@ -402,7 +481,7 @@ h2 {
   margin-bottom: 6px;
 }
 
-/* 11. Comentários */
+/* 12. Comentários */
 .comments-card {
   background: #F0F8FF;
   border: 2px solid #1E90FF;
@@ -446,7 +525,7 @@ h2 {
   color: #999;
 }
 
-/* 12. Footer */
+/* 13. Footer */
 footer {
   width: 100%;
   background: #ffffff;
@@ -459,6 +538,7 @@ footer {
   box-sizing: border-box;
 }
 
+/* 14. Botões */
 button[type="submit"] {
   background-color: #e50914;
   color: #fff;
@@ -476,136 +556,27 @@ button[type="submit"]:hover {
   background-color: #b20710;
 }
 
-
-.noticias-em-alta>h2 {
-  color: #e50914;
-  text-align: left;
-  /* Alinha o texto à esquerda */
-  margin-left: 0;
-  /* Remove margem esquerda */
-  margin-bottom: 10px;
-  /* Espaço pequeno abaixo do título */
-  padding-left: 5px;
-  /* Pequeno espaçamento da borda */
-  font-weight: 700;
-}
-
-.carrossel-em-alta {
-  position: relative;
-  max-width: 900px;
-  margin: auto;
-  overflow: hidden;
-}
-
-.carrossel-em-alta img {
-  width: 120%;
-  /* Faz a imagem ocupar toda a largura do slide */
-  height: 500px;
-  /* Altura fixa para uniformizar (ajuste conforme preferir) */
-  object-fit: cover;
-  /* Corta a imagem para preencher o espaço mantendo proporção */
-  border-radius: 10px;
-  /* Borda arredondada opcional, para ficar mais bonito */
-  display: block;
-}
-
-.slide {
-  display: none;
-  position: relative;
-}
-
-.slide.active {
-  display: block;
-}
-
-.carrossel-caption {
-  position: absolute;
-  bottom: 20px;
-  left: 20px;
-  color: #fff;
-  background: rgba(0, 0, 0, 0.5);
-  padding: 10px 15px;
-  border-radius: 8px;
-  max-width: 80%;
-}
-
-.carrossel-dots {
-  text-align: center;
-  margin-top: 10px;
-}
-
-.carrossel-dots .dot {
-  height: 12px;
-  width: 12px;
-  margin: 0 5px;
-  background-color: #bbb;
-  border-radius: 50%;
-  display: inline-block;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-.carrossel-dots .dot.active {
-  background-color: #e50914;
-}
-
-
-/* Seção lateral com Notícias e Agenda lado a lado */
-.secao-lateral {
+/* 15. Wrapper para colocar Agenda e Cartaz lado a lado (use no HTML) */
+.agenda-e-cartaz-wrapper {
   display: flex;
   gap: 24px;
   max-width: 1200px;
   margin: 40px auto;
   padding: 0 15px;
   flex-wrap: wrap;
-  align-items: stretch;
-  margin: 10px auto 40px auto;
+  align-items: flex-start;
 }
 
-.noticias-em-alta {
-  flex: 2;
-  min-width: 300px;
-}
-
-.agenda-geek {
+.agenda-e-cartaz-wrapper section {
+  flex: 1 1 45%;
   background: #ffffff;
-  padding: 16px 16px;
-  /* menos espaço interno */
+  padding: 16px;
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.04);
-  margin-bottom: 20px;
-  /* menos espaço externo */
-  height: 100%;
-  /* garante que siga a altura do contêiner pai */
   box-sizing: border-box;
+  min-width: 280px;
 }
 
-/* Ajuste do tamanho da fonte na agenda */
-.agenda-list li {
-  font-size: 0.95rem;
-  /* Tamanho base menor */
-}
-
-.agenda-date,
-.agenda-title,
-.agenda-platform {
-  font-size: 0.9rem;
-  /* Deixa todos os campos um pouco menores */
-  word-break: break-word;
-  /* Quebra palavras longas se necessário */
-}
-
-
-.duas-colunas {
-  display: flex;
-  flex-wrap: wrap;
-  /* Responsivo em telas menores */
-  gap: 20px;
-  align-items: stretch;
-  max-width: 1200px;
-  margin: 40px auto;
-  padding: 0 15px;
-}
 
 @media (max-width: 768px) {
   header {
