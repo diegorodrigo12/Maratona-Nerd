@@ -629,7 +629,7 @@ button[type="submit"]:hover {
   display: flex;
   align-items: center;
   gap: 6px;
-  font-size: 0.9rem;
+  font-size: 0.7rem;
   font-weight: 500;
   color: #cecbcb;
   text-transform: uppercase;
