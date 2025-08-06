@@ -72,25 +72,122 @@ header {
 
 /* 3. Navegação (nav) */
 nav {
-  background: #ecf0f1;
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
-  padding: 10px 0 5px 0;
+  padding: 8px 10px; /* reduzi um pouco o padding para ficar mais compacto */
+  background: #ecf0f1;
   border-bottom: 1px solid #bdc3c7;
-  margin-bottom: 5px;
+  gap: 8px; /* reduzi gap para diminuir espaços */
+  font-weight: bold;
+}
+
+nav > ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px; /* menos espaçamento horizontal */
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
 nav a {
+  margin: 4px 8px; /* margens menores */
+  font-size: 0.95rem;
   color: #34495e;
   text-decoration: none;
-  margin: 0 15px;
-  font-weight: bold;
+  padding: 6px 10px;
+  display: block;
   transition: color 0.3s;
+  white-space: nowrap; /* evita quebra de linha */
 }
 
-nav a:hover {
+nav a:hover,
+nav a.active {
   color: #1E90FF;
 }
+
+/* submenu container */
+.submenu-parent {
+  position: relative;
+}
+
+/* setinha no item pai */
+.submenu-parent > a::after {
+  content: " ▼";
+  font-size: 0.7em;
+  margin-left: 5px;
+  user-select: none;
+}
+
+/* submenu */
+.submenu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: #ecf0f1;
+  border: 1px solid #bdc3c7;
+  border-radius: 5px;
+  display: none;
+  min-width: 140px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  z-index: 100;
+  flex-direction: column;
+  padding: 5px 0; /* espaçamento vertical interno */
+  margin: 0; /* remove margens que causam espaçamento extra */
+}
+
+/* remove margem/padding dos itens do submenu para que alinhem perfeitamente */
+.submenu li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.submenu li a {
+  padding: 8px 15px;
+  font-weight: normal;
+  color: #34495e;
+  white-space: nowrap;
+}
+
+.submenu li a:hover {
+  background: #1E90FF;
+  color: white;
+}
+
+/* mostra submenu no hover */
+.submenu-parent:hover > .submenu {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Ajuste para telas pequenas */
+@media (max-width: 600px) {
+  nav {
+    justify-content: flex-start;
+    padding: 10px;
+  }
+  nav > ul {
+    flex-direction: column;
+    gap: 5px;
+  }
+  nav a {
+    margin: 5px 0;
+  }
+  /* submenu fica relativo e escondido no mobile */
+  .submenu {
+    position: relative;
+    top: 0;
+    left: 0;
+    box-shadow: none;
+    border: none;
+  }
+  .submenu-parent:hover > .submenu {
+    display: none; /* para controlar via JS no mobile */
+  }
+}
+
 
 /* 4. Container geral */
 .container {
