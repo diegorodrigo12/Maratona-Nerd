@@ -906,16 +906,17 @@ button[type="submit"]:hover {
   background: #ecf0f1;
   display: flex;
   justify-content: center;
-  padding: 10px 0;
+  padding: 8px 0; /* reduzido para diminuir espaço vertical */
   border-bottom: 1px solid #bdc3c7;
 }
 
 .pagina-filmes nav a {
   color: #34495e;
   text-decoration: none;
-  margin: 0 15px;
+  margin: 0 8px; /* reduzido para links ficarem mais próximos */
   font-weight: bold;
   transition: 0.3s;
+  padding: 4px 6px; /* leve padding para aumentar área clicável, mas compacto */
 }
 
 .pagina-filmes nav a:hover {
@@ -925,8 +926,9 @@ button[type="submit"]:hover {
 .pagina-filmes nav a.active {
   color: #e50914;
   border-bottom: 2px solid #e50914;
-  padding-bottom: 4px;
+  padding-bottom: 4px; /* mantém o efeito do underline */
 }
+
 
 /* Container */
 .pagina-filmes .container {
@@ -1154,16 +1156,17 @@ body.pagina-series nav {
   background: #ecf0f1;
   display: flex;
   justify-content: center;
-  padding: 10px 0;
+  padding: 8px 0; /* menos altura */
   border-bottom: 1px solid #bdc3c7;
 }
 
 body.pagina-series nav a {
   color: #34495e;
   text-decoration: none;
-  margin: 0 15px;
+  margin: 0 8px; /* menos espaço entre os links */
   font-weight: bold;
   transition: 0.3s;
+  padding: 4px 6px; /* espaço interno leve para clique */
 }
 
 body.pagina-series nav a:hover {
