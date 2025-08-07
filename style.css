@@ -924,10 +924,11 @@ button[type="submit"]:hover {
 }
 
 .pagina-filmes nav a.active {
-  color: #e50914;
-  border-bottom: 2px solid #e50914;
-  padding-bottom: 4px; /* mantém o efeito do underline */
+  color:#1E90FF;
+  border-bottom: 2px solid #1E90FF;
+  padding-bottom: 4px;
 }
+
 
 
 /* Container */
@@ -1174,8 +1175,8 @@ body.pagina-series nav a:hover {
 }
 
 body.pagina-series nav a.active {
-  color: #e50914;
-  border-bottom: 2px solid #e50914;
+  color:#1E90FF;
+  border-bottom: 2px solid #1E90FF;
   padding-bottom: 4px;
 }
 
