@@ -521,8 +521,16 @@ nav a.active {
       renderComments(topics[currentTopicIndex].comments);
     });
 
-    // Inicializa a lista de tópicos
-    renderTopics();
+   // Verifica se é modo admin
+const isAdmin = new URLSearchParams(window.location.search).get('admin') === '1';
+
+// Esconde formulário de novo tópico se não for admin
+if (!isAdmin) {
+  document.getElementById('new-topic-form').style.display = 'none';
+}
+
+renderTopics();
+
   </script>
 
 </body>
