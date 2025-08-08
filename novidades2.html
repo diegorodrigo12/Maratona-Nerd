@@ -2,22 +2,23 @@
 <html lang="pt-BR">
 
 <head>
-    <!-- Google tag (gtag.js) -->
+  <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-VGPPMHC0E1"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag() { dataLayer.push(arguments); }
     gtag('js', new Date());
-
     gtag('config', 'G-VGPPMHC0E1');
   </script>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Tom Holland revela bastidores de Homem-Aranha: Um Novo Dia</title>
-  <meta name="description" content="Tom Holland compartilha fotos do set de filmagens de Homem-Aranha: Um Novo Dia e empolga fãs com o novo traje e detalhes do elenco." />
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@900&family=Poppins:wght@500&display=swap" rel="stylesheet" />
+  <title>Oi, eu sou o Goku: conheça a inusitada origem da frase de Dragon Ball</title>
+  <meta name="description"
+    content="Entenda como surgiu a icônica frase 'Oi, eu sou o Goku', eternizada no anime Dragon Ball e que virou marca registrada do herói Saiyajin." />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@900&family=Poppins:wght@500&display=swap"
+    rel="stylesheet" />
   <style>
-    body {
+ body {
       font-family: 'Poppins', sans-serif;
       margin: 0;
       padding: 0;
@@ -38,13 +39,12 @@
       justify-content: center;
       padding: 10px;
       border-bottom: 1px solid #bdc3c7;
-      flex-wrap: wrap;
     }
 
     nav a {
       color: #34495e;
       text-decoration: none;
-      margin: 8px 15px;
+      margin: 0 15px;
       font-weight: bold;
       transition: 0.3s;
     }
@@ -66,7 +66,6 @@
       color: #e50914;
       text-align: center;
       margin-bottom: 20px;
-      font-size: 2rem;
     }
 
     .image {
@@ -108,10 +107,26 @@
       color: #777;
     }
 
-    /* Responsividade */
+    /* Estilo base já existe, só adicionando responsividade */
+
     @media (max-width: 768px) {
+      body {
+        padding: 10px;
+      }
+
+      header {
+        padding: 15px 10px;
+      }
+
       nav {
         flex-direction: column;
+        padding: 10px 0;
+        align-items: center;
+      }
+
+      nav a {
+        margin: 8px 0;
+        font-size: 1rem;
       }
 
       .container {
@@ -121,6 +136,11 @@
 
       h1 {
         font-size: 1.6rem;
+        margin-bottom: 15px;
+      }
+
+      .image {
+        border-radius: 6px;
       }
 
       p,
@@ -128,9 +148,17 @@
       blockquote {
         font-size: 1rem;
       }
+
+      ul {
+        padding-left: 15px;
+      }
     }
 
     @media (max-width: 400px) {
+      header h2 {
+        font-size: 1.4rem;
+      }
+
       nav a {
         font-size: 0.9rem;
       }
@@ -145,59 +173,60 @@
         font-size: 0.9rem;
       }
     }
-
     .logo-main {
-      font-family: 'Montserrat', sans-serif;
-      font-style: italic;
-      font-weight: 900;
-      font-size: 2.5rem;
-      letter-spacing: 3px;
-      color: #fff;
-      text-transform: uppercase;
-    }
+  font-family: 'Montserrat', sans-serif;
+  font-style: italic;
+  font-weight: 900;
+  font-size: 2.5rem;
+  letter-spacing: 3px;
+  color: #fff;
+  text-transform: uppercase;
+}
 
-    .logo-sub {
-      font-family: 'Poppins', sans-serif;
-      font-weight: 500;
-      font-size: 1rem;
-      color: #fff;
-    }
+.logo-sub {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  font-size: 1rem;
+  color: #fff;
+}
 
-    @media (max-width: 768px) {
-      .logo-main {
-        font-size: 1.8rem;
-        letter-spacing: 1.5px;
-        text-align: center;
-      }
+/* Responsivo */
+@media (max-width: 768px) {
+  .logo-main {
+    font-size: 1.8rem;
+    letter-spacing: 1.5px;
+    text-align: center;
+  }
 
-      .logo-sub {
-        font-size: 0.85rem;
-        text-align: center;
-      }
+  .logo-sub {
+    font-size: 0.85rem;
+    text-align: center;
+  }
 
-      header {
-        flex-direction: column;
-        text-align: center;
-        gap: 8px;
-      }
-    }
+  header {
+    flex-direction: column;
+    text-align: center;
+    gap: 8px;
+  }
+}
 
-    @media (max-width: 400px) {
-      .logo-main {
-        font-size: 1.4rem;
-      }
+@media (max-width: 400px) {
+  .logo-main {
+    font-size: 1.4rem;
+  }
 
-      .logo-sub {
-        font-size: 0.75rem;
-      }
-    }
+  .logo-sub {
+    font-size: 0.75rem;
+  }
+}
+
   </style>
 </head>
 
 <body>
 
   <header>
-    <h2>Maratonando Geek</h2>
+    <h2 class="logo-main">Maratonando Geek</h2>
     <div class="logo-sub">Sua central de cultura pop no cinema e streaming.</div>
   </header>
 
@@ -207,41 +236,39 @@
     <a href="series.html">Séries</a>
     <a href="animes.html">Animes</a>
     <a href="games.html">Games</a>
-    <a href="reviews.html">Reviews</a>
+    <a href="reviews.html" class="active">Reviews</a>
     <a href="contato.html">Contato</a>
     <a href="sobre.html">Sobre</a>
   </nav>
 
   <div class="container">
-    <h1>Tom Holland dá spoilers de ‘Homem‑Aranha: Um Novo Dia’ postando fotos dos bastidores</h1>
-    <img class="image" src="img/MixCollage-03-Aug-2025-05-10-PM-2513.webp" alt="Tom Holland no set de Um Novo Dia" />
-<div class="styled-date">
-  <i class="calendar-icon">📅</i>
-  <span class="date-text">AGOSTO 4TH, 2025</span>
-</div>
+    <h1>"Oi, eu sou o Goku! A surpreendente origem da frase icônica de Dragon Ball"</h1>
+    <img class="image" src="img/goku-oi-eu-sou.jpg" alt="Goku dizendo sua frase icônica" />
 
-    <p>Tom Holland iniciou oficialmente as filmagens de <strong>Homem‑Aranha: Um Novo Dia</strong>, o quarto filme solo do herói no MCU, e já causou alvoroço nas redes sociais. O ator publicou fotos do set em que aparece com o novo traje do Aranha, reacendendo teorias e especulações dos fãs.</p>
+    <p>Quem já assistiu <strong>Dragon Ball Z</strong> dificilmente esquece da clássica saudação do protagonista: <em>"Oi, eu sou o Goku!"</em>. Simples, direta e extremamente carismática, a frase virou uma das marcas registradas do anime e do próprio personagem.</p>
 
-    <p>O traje, com cores vibrantes e design clássico, remete aos uniformes de versões anteriores como os de Tobey Maguire e Andrew Garfield. Além do símbolo maior no peito e as teias em relevo, o uniforme traz um visual nostálgico que agradou a muitos fãs.</p>
+    <h2>Como surgiu a frase?</h2>
+    <p>A origem dessa introdução peculiar está ligada diretamente à dublagem brasileira do anime, realizada nos anos 90. Durante a adaptação dos episódios para o público nacional, os estúdios de dublagem optaram por inserir uma saudação padrão no início dos episódios — algo que não existia da mesma forma na versão original japonesa.</p>
 
-    <h2>Elenco confirmado</h2>
+    <p>O dublador <strong>Wendel Bezerra</strong>, responsável por dar voz ao Goku, acabou eternizando a frase com sua entonação única e amigável. A ideia era criar uma identificação imediata com o público, especialmente com as crianças que estavam conhecendo o herói Saiyajin.</p>
+
+    <h2>Impacto cultural e legado</h2>
     <ul>
-      <li><strong>Tom Holland</strong> como Peter Parker</li>
-      <li><strong>Zendaya</strong> como MJ</li>
-      <li><strong>Jacob Batalon</strong> como Ned</li>
-      <li><strong>Mark Ruffalo</strong> como Hulk</li>
-      <li><strong>Jon Bernthal</strong> como Justiceiro</li>
-      <li><strong>Michael Mando</strong> como Escorpião</li>
-      <li><strong>Sadie Sink</strong> em papel misterioso</li>
+      <li>A frase virou meme e referência em outras mídias.</li>
+      <li>É usada em produtos licenciados e jogos da franquia.</li>
+      <li>É lembrada por gerações de fãs como símbolo do anime.</li>
+      <li>Virou bordão oficial do personagem no Brasil.</li>
     </ul>
 
     <blockquote>
-      "As filmagens começaram em agosto de 2025 e já mostram que o novo filme será um recomeço empolgante para o herói." — Maratonando Geek
+      “Não era algo do roteiro original. Foi uma ideia simples que deu muito certo.” — Wendel Bezerra
     </blockquote>
 
-    <p>Com direção de <strong>Destin Daniel Cretton</strong> e roteiro da dupla <strong>Chris McKenna</strong> e <strong>Erik Sommers</strong>, o filme tem estreia marcada para <strong>31 de julho de 2026</strong>. Segundo rumores, o longa focará em histórias mais urbanas, trazendo de volta o Homem-Aranha mais próximo das ruas de Nova York.</p>
+    <p>A expressão acabou ganhando tanta força que mesmo as versões mais recentes de Dragon Ball mantiveram a saudação, como em <strong>Dragon Ball Super</strong>. Fora do Brasil, outras dublagens também passaram a usar variações da frase após seu sucesso por aqui.</p>
 
-    <p>Holland, conhecido por soltar spoilers sem querer, mais uma vez revelou mais do que deveria. E claro, os fãs adoraram. Será que teremos ainda mais vazamentos ao longo da produção? Só o tempo dirá.</p>
+    <p>Hoje, "Oi, eu sou o Goku" não é apenas uma fala de introdução. É uma memória afetiva para muitos fãs e um exemplo de como a dublagem pode agregar personalidade e impacto cultural a uma obra estrangeira.</p>
+
+    <p>Curtiu descobrir a origem dessa frase icônica? Continue acompanhando o <strong>Maratonando Geek</strong> para mais curiosidades sobre o mundo dos animes!</p>
   </div>
 
   <footer>
