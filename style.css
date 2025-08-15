@@ -52,6 +52,31 @@ header {
   color: #ffffff;
 }
 
+.img-wrapper {
+  position: relative;
+}
+
+.tag {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  background-color: #e50914; /* vermelho marcante */
+  color: #fff;
+  font-size: 0.85rem;
+  font-weight: bold;
+  padding: 6px 10px;
+  border-radius: 6px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  transform: rotate(-3deg);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.img-wrapper:hover .tag {
+  transform: rotate(0deg);
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.4);
+}
+
+
 /* Redes sociais */
 .social-icons {
   display: flex;
