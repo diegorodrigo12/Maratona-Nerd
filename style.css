@@ -632,7 +632,7 @@ button[type="submit"]:hover {
     font-size: 0.85rem;
     letter-spacing: 1px;
   }
-  
+
 .social-icons a {
   font-size: 28px;
   margin: 0 10px;
@@ -642,6 +642,13 @@ button[type="submit"]:hover {
 
 .social-icons a:hover {
   color: #e50914; /* cor quando passa o mouse */
+}
+
+.social-icons img {
+  width: 32px;
+  height: 32px;
+  object-fit: contain;
+  background: none;
 }
 
   nav {
