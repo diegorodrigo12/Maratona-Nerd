@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BGS 2025 – Brasil Game Show</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background: #0d0d0d;
+      color: #fff;
+    }
+    header {
+      background: #e91e63;
+      padding: 1rem;
+      text-align: center;
+    }
+    header h1 {
+      margin: 0;
+    }
+    section {
+      padding: 2rem;
+      max-width: 1000px;
+      margin: auto;
+    }
+    .countdown {
+      font-size: 1.5rem;
+      font-weight: bold;
+      margin: 1rem 0 2rem 0;
+      color: #ffeb3b;
+      text-align: center;
+    }
+    .cards {
+      display: grid;
+      gap: 1rem;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    }
+    .card {
+      background: #1a1a1a;
+      padding: 1rem;
+      border-radius: 10px;
+      border: 1px solid #333;
+      transition: transform 0.2s ease;
+    }
+    .card:hover {
+      transform: scale(1.05);
+    }
+    .card h3 {
+      color: #e91e63;
+      margin-bottom: 0.5rem;
+    }
+    .btn {
+      display: inline-block;
+      margin-top: 0.8rem;
+      padding: 0.6rem 1.2rem;
+      background: #e91e63;
+      color: #fff;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: background 0.3s;
+    }
+    .btn:hover {
+      background: #c2185b;
+    }
+    /* Seção de notícias */
+    .noticias {
+      margin-top: 3rem;
+    }
+    .noticia {
+      background: #1a1a1a;
+      margin-bottom: 1rem;
+      padding: 1rem;
+      border-radius: 10px;
+    }
+    .noticia h4 {
+      margin: 0 0 0.5rem 0;
+      color: #ffeb3b;
+    }
+    iframe {
+      width: 100%;
+      border-radius: 10px;
+      margin-top: 1rem;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>🎮 BGS 2025 – Brasil Game Show</h1>
+  </header>
+
+  <section>
+    <p>Acompanhe todas as novidades da maior feira de games da América Latina!</p>
+
+    <!-- Contagem regressiva -->
+    <div id="countdown" class="countdown"></div>
+
+    <!-- Cards principais -->
+    <div class="cards">
+      <div class="card">
+        <h3>📅 Data</h3>
+        <p>08 a 12 de outubro de 2025</p>
+        <p>Expo Center Norte – São Paulo/SP</p>
+      </div>
+      <div class="card">
+        <h3>✨ Destaques</h3>
+        <ul>
+          <li>Novidades do Xbox e PlayStation</li>
+          <li>Área dedicada a eSports</li>
+          <li>Exposição retrô gamer</li>
+          <li>Encontros com influenciadores</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>🎟️ Ingressos</h3>
+        <p>À venda no site oficial da BGS.</p>
+        <a href="https://www.brasilgameshow.com.br/" target="_blank" class="btn">Garanta o seu</a>
+      </div>
+    </div>
+
+    <!-- Notícias e trailers -->
+    <div class="noticias">
+      <h2>📰 Notícias da BGS 2025</h2>
+
+      <div class="noticia">
+        <h4>Xbox confirma presença com estande gigante</h4>
+        <p>A Microsoft anunciou que vai trazer demos jogáveis do próximo Gears of War.</p>
+      </div>
+
+      <div class="noticia">
+        <h4>Trailer oficial revelado durante a BGS</h4>
+        <iframe width="560" height="315" src="https://www.youtube.com/watch?v=dE-c5zqj9EM"
+        title="Trailer BGS" frameborder="0" allowfullscreen></iframe>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    // Data da BGS 2025 (início em 08/10/2025 às 10h)
+    const eventDate = new Date("Oct 8, 2025 10:00:00").getTime();
+
+    const timer = setInterval(function() {
+      const now = new Date().getTime();
+      const distance = eventDate - now;
+
+      if (distance < 0) {
+        clearInterval(timer);
+        document.getElementById("countdown").innerHTML = "🚀 A BGS 2025 já começou!";
+        return;
+      }
+
+      const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+      document.getElementById("countdown").innerHTML =
+        `⏳ Faltam ${days}d ${hours}h ${minutes}m ${seconds}s para a BGS 2025`;
+    }, 1000);
+  </script>
+</body>
+</html>
