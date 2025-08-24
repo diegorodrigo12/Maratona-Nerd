@@ -1,53 +1,115 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-
 <head>
-  <!-- SEO Básico -->
-  <meta name="description"
-    content="Fique por dentro dos lançamentos, animes, reviews e rankings do universo geek. Explore tudo com o Maratonando Geek.">
-  <meta name="keywords"
-    content="filmes, séries, cultura geek, lançamentos, reviews, maratonando geek, filmes lancamentos, series lancamentos, animes">
-  <meta name="author" content="Maratonando Geek">
-  <meta name="robots" content="index, follow">
+  <!-- Metadados básicos -->
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Maratonando Geek – Sua central de cultura pop no cinema e streaming</title>
+  <meta name="description" content="Fique por dentro de lançamentos, animes, reviews e rankings do universo geek. Explore notícias, agenda e especiais no Maratonando Geek." />
+  <meta name="keywords" content="filmes, séries, animes, games, cultura geek, lançamentos, reviews, maratonando geek" />
+  <meta name="author" content="Maratonando Geek" />
+  <meta name="robots" content="index,follow,max-image-preview:large" />
+  <link rel="canonical" href="https://www.seudominio.com.br/" />
+
+  <!-- Open Graph / Twitter -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Maratonando Geek" />
+  <meta property="og:title" content="Maratonando Geek – Sua central de cultura pop no cinema e streaming" />
+  <meta property="og:description" content="Notícias, lançamentos, reviews e rankings do universo geek." />
+  <meta property="og:url" content="https://www.seudominio.com.br/" />
+  <meta property="og:image" content="https://www.seudominio.com.br/img/og-cover.jpg" />
+  <meta property="og:image:alt" content="Capa do site Maratonando Geek" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Maratonando Geek – Cultura pop no cinema e streaming" />
+  <meta name="twitter:description" content="Notícias, lançamentos, reviews e rankings do universo geek." />
+  <meta name="twitter:image" content="https://www.seudominio.com.br/img/og-cover.jpg" />
 
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-VGPPMHC0E1"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
-    function gtag() { dataLayer.push(arguments); }
+    function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
-
     gtag('config', 'G-VGPPMHC0E1');
   </script>
 
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3533636004938881"
-     crossorigin="anonymous"></script>
-  <link rel="stylesheet" href="style.css">
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@900&family=Poppins:wght@500&display=swap"
-    rel="stylesheet" />
+  <!-- Google AdSense -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3533636004938881" crossorigin="anonymous"></script>
 
-  <title>Maratonando Geek – Sua Central de Cultura Pop no Cinema e Streaming</title>
+  <!-- Preconnect e fontes -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@900&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet" />
 
+  <!-- Ícones / Favicon -->
+  <link rel="icon" href="img/favicon.ico" sizes="any" />
+  <link rel="icon" type="image/svg+xml" href="img/favicon.svg" />
+  <link rel="apple-touch-icon" href="img/apple-touch-icon.png" />
+
+  <!-- CSS principal -->
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- JSON-LD (Website + Organization) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebSite",
+        "name": "Maratonando Geek",
+        "url": "https://www.seudominio.com.br/",
+        "inLanguage": "pt-BR",
+        "potentialAction": {
+          "@type": "SearchAction",
+          "target": "https://www.seudominio.com.br/busca?q={search_term_string}",
+          "query-input": "required name=search_term_string"
+        }
+      },
+      {
+        "@type": "Organization",
+        "name": "Maratonando Geek",
+        "url": "https://www.seudominio.com.br/",
+        "logo": "https://www.seudominio.com.br/img/logo-512.png",
+        "sameAs": [
+          "https://www.facebook.com/seudominio",
+          "https://www.instagram.com/seudominio",
+          "https://www.youtube.com/@seudominio"
+        ]
+      }
+    ]
+  }
+  </script>
 </head>
 
 <body>
-  <header>
-    <h2>Maratonando Geek</h2>
-    <div class="logo-sub">Sua central de cultura pop no cinema e streaming.</div>
-    <!-- Redes sociais -->
-    <div class="social-icons">
-      <a href="#" aria-label="Facebook"><img src="img/facebook.png" alt="Facebook" /></a>
-    <a href="#" aria-label="Instagram"><img src="img/2227.jpg" alt="Instagram" /></a>
-    <a href="#" aria-label="YouTube"><img src="img/youtube.png" alt="YouTube" /></a>
+  <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+
+  <header role="banner">
+    <div class="header-inner" aria-label="Topo do site">
+      <div class="branding">
+        <!-- H1 global na home para SEO -->
+        <h1 class="site-title">Maratonando Geek</h1>
+        <p class="logo-sub">Sua central de cultura pop no cinema e streaming.</p>
+      </div>
+
+      <!-- Redes sociais -->
+      <div class="social-icons">
+  <a href="https://facebook.com" target="_blank">
+    <i class="fab fa-facebook-f"></i>
+  </a>
+  <a href="https://instagram.com" target="_blank">
+    <i class="fab fa-instagram"></i>
+  </a>
+  <a href="https://youtube.com" target="_blank">
+    <i class="fab fa-youtube"></i>
+  </a>
+</div>
     </div>
- 
-</header>
- 
-  <nav>
-    <a href="index.html"class="active">Início</a>
+  </header>
+
+  <!-- Navegação principal -->
+  <nav class="main-nav" aria-label="Principal">
+    <a href="index.html" class="active" aria-current="page">Início</a>
     <a href="filmes.html">Filmes</a>
     <a href="series.html">Séries</a>
     <a href="animes.html">Animes</a>
@@ -57,274 +119,322 @@
     <a href="sobre.html">Sobre</a>
   </nav>
 
+  <!-- Introdução textual (SEO e contexto) -->
+  <section class="intro container" id="conteudo" aria-labelledby="intro-title">
+    <h2 id="intro-title">O que você encontra por aqui</h2>
+    <p>
+      No Maratonando Geek você acompanha <strong>lançamentos</strong>, <strong>notícias</strong>,
+      <strong>reviews</strong>, <strong>listas&nbsp;&amp;&nbsp;rankings</strong> e uma área
+      <strong>interativa</strong> com enquetes, quiz e comentários. Fique por dentro do que rola no
+      cinema, streaming, animes e games – tudo em um só lugar.
+    </p>
+  </section>
 
-   <div class="duas-colunas">
-    <div class="secao-lateral">
+  <main id="main" class="main" role="main">
+    <div class="duas-colunas">
+      <aside class="secao-lateral" aria-labelledby="noticias-title">
+        <!-- Notícias em Alta -->
+        <section class="noticias-em-alta" aria-live="polite">
+          <h2 id="noticias-title" class="highlight">Notícias em Alta</h2>
 
-   <section class="noticias-em-alta">
-  <h2 style="color:#e50914;">Notícias em Alta</h2>
-  
-  <div class="carrossel-em-alta">
-    <!-- Slide 1 -->
-    <div class="slide active">
-      <img src="img/sonicracingcrossworlds_hero.jpg.webp" alt="Sonic Racing">
-      <div class="carrossel-caption">
-        <h3>Novo vídeo revela trilha sonora de Sonic Racing: CrossWorlds; confira</h3>
-        <p>A prévia destaca músicas eletrizantes que prometem embalar as corridas no novo game.</p>
-      </div>
-    </div>
+          <div class="carrossel-em-alta" role="region" aria-label="Carrossel de notícias em alta">
+            <!-- Slide 1 -->
+            <article class="slide active" aria-roledescription="slide" aria-label="1 de 3">
+              <img src="img/sonicracingcrossworlds_hero.jpg.webp"
+                   alt="Prévia de Sonic Racing: CrossWorlds com destaque para a trilha sonora"
+                   width="960" height="540" loading="lazy" decoding="async" />
+              <div class="carrossel-caption">
+                <h3 class="slide-title">Novo vídeo revela trilha sonora de Sonic Racing: CrossWorlds</h3>
+                <p>A prévia destaca músicas eletrizantes que prometem embalar as corridas no novo game.</p>
+              </div>
+            </article>
 
-    <!-- Slide 2 -->
-    <div class="slide">
-      <img src="img/GRLF_S1_Static16x9_DinnerTable_3840x2160_PRE_PV_FINAL_en-US_KAPS_3000.jpg" alt="The Girlfriend">
-      <div class="carrossel-caption">
-        <h3>Robin Wright e Olivia Cooke estrelam nova série de suspense da Prime Video; assista ao trailer</h3>
-        <p>A trama promete reviravoltas intensas e jogos de manipulação que vão prender o público do início ao fim.</p>
-      </div>
-    </div>
+            <!-- Slide 2 -->
+            <article class="slide" aria-roledescription="slide" aria-label="2 de 3">
+              <img src="img/GRLF_S1_Static16x9_DinnerTable_3840x2160_PRE_PV_FINAL_en-US_KAPS_3000.jpg"
+                   alt="Cena de The Girlfriend com Robin Wright e Olivia Cooke"
+                   width="960" height="540" loading="lazy" decoding="async" />
+              <div class="carrossel-caption">
+                <h3 class="slide-title">Robin Wright e Olivia Cooke estrelam nova série da Prime Video</h3>
+                <p>Suspense promete reviravoltas intensas e jogos de manipulação. Assista ao trailer.</p>
+              </div>
+            </article>
 
-    <!-- Slide 3 -->
-    <div class="slide">
-      <img src="img/battlefield-6-6-scaled.jpg" alt="Battlefield 6 suporte a teclado e mouse nos consoles">
-      <div class="carrossel-caption">
-        <h3>Battlefield 6 terá suporte oficial a teclado e mouse nos consoles</h3>
-        <p>Jogadores de Xbox e PlayStation poderão usar periféricos com matchmaking equilibrado por tipo de controle.</p>
-      </div>
-    </div>
-  </div>
+            <!-- Slide 3 -->
+            <article class="slide" aria-roledescription="slide" aria-label="3 de 3">
+              <img src="img/battlefield-6-6-scaled.jpg"
+                   alt="Imagem promocional de Battlefield com menção a teclado e mouse nos consoles"
+                   width="960" height="540" loading="lazy" decoding="async" />
+              <div class="carrossel-caption">
+                <h3 class="slide-title">Battlefield 6 terá suporte a teclado e mouse nos consoles</h3>
+                <p>Matchmaking equilibrado por tipo de controle deve ser adotado em Xbox e PlayStation.</p>
+              </div>
+            </article>
+          </div>
 
-  <!-- Dots -->
-  <div class="carrossel-dots">
-    <span class="dot active" data-index="0"></span>
-    <span class="dot" data-index="1"></span>
-    <span class="dot" data-index="2"></span>
-  </div>
-</section>
-
-
-      <!-- Container flex para agenda e cartaz lado a lado -->
-      <div class="agenda-e-cartaz-wrapper">
-
-        <section class="em-cartaz">
-          <h2 class="section-title">🎬 Em Cartaz – Agosto 2025</h2>
-          <ul class="agenda-list">
-            <li>
-              <span class="agenda-date">07/08/2025</span>
-              <span class="agenda-title">Filme: "Quarteto Fantastico - Primeiros Passos"</span>
-              <span class="agenda-platform">Em cartaz / Estreia</span>
-            </li>
-            <li>
-              <span class="agenda-date">07/08/2025</span>
-              <span class="agenda-title">Filme: "A Hora do Mal"</span>
-              <span class="agenda-platform">Em cartaz / Estreia</span>
-            </li>
-            <li>
-              <span class="agenda-date">14/08/2025</span>
-              <span class="agenda-title">Filme: "Corra que a Polícia Vem Aí!"</span>
-              <span class="agenda-platform">Pré‑estreia / Em cartaz</span>
-            </li>
-            <li>
-              <span class="agenda-date">14/08/2025</span>
-              <span class="agenda-title">Filme: "Os Caras Malvados 2"</span>
-              <span class="agenda-platform">Em cartaz / Estreia</span>
-            </li>
-            <li>
-              <span class="agenda-date">28/08/2025</span>
-              <span class="agenda-title">Filme: "Os Roses: Até que a Morte os Separe"</span>
-              <span class="agenda-platform">Em cartaz / Estreia</span>
-            </li>
-          </ul>
+          <!-- Dots do carrossel -->
+          <div class="carrossel-dots" role="tablist" aria-label="Navegação do carrossel">
+            <button class="dot active" role="tab" aria-selected="true" aria-controls="slide-1" data-index="0">
+              <span class="visually-hidden"></span>
+            </button>
+            <button class="dot" role="tab" aria-selected="false" aria-controls="slide-2" data-index="1">
+              <span class="visually-hidden"></span>
+            </button>
+            <button class="dot" role="tab" aria-selected="false" aria-controls="slide-3" data-index="2">
+              <span class="visually-hidden"></span>
+            </button>
+          </div>
         </section>
 
-        <section class="agenda-geek">
-          <h2 class="section-title">Agenda Geek - Próximos Lançamentos 2025</h2>
-          <ul class="agenda-list">
-            <li>
-              <span class="agenda-date">06/11/2025</span>
-              <span class="agenda-title">Filme: "O Agente Secreto"</span>
-              <span class="agenda-platform">Nos cinemas (Brasil)</span>
-            </li>
-            <li>
-              <span class="agenda-date">27/11/2025</span>
-              <span class="agenda-title">Filme: "Zootopia 2"</span>
-              <span class="agenda-platform">Nos cinemas</span>
-            </li>
-            <li>
-              <span class="agenda-date">04/12/2025</span>
-              <span class="agenda-title">Filme: "Five Nights at Freddy’s 2"</span>
-              <span class="agenda-platform">Nos cinemas</span>
-            </li>
-            <li>
-              <span class="agenda-date">18/12/2025</span>
-              <span class="agenda-title">Filme: "Avatar 3 – Fogo e Cinzas"</span>
-              <span class="agenda-platform">Nos cinemas</span>
-            </li>
-          </ul>
-        </section>
+        <!-- Em Cartaz + Agenda Geek -->
+        <div class="agenda-e-cartaz-wrapper">
+          <section class="em-cartaz" aria-labelledby="cartaz-title">
+            <h2 id="cartaz-title" class="section-title">🎬 Em Cartaz – Agosto 2025</h2>
+            <ul class="agenda-list" role="list">
+              <li>
+                <span class="agenda-date">07/08/2025</span>
+                <span class="agenda-title">Filme: “Quarteto Fantástico – Primeiros Passos”</span>
+                <span class="agenda-platform">Em cartaz / Estreia</span>
+              </li>
+              <li>
+                <span class="agenda-date">07/08/2025</span>
+                <span class="agenda-title">Filme: “A Hora do Mal”</span>
+                <span class="agenda-platform">Em cartaz / Estreia</span>
+              </li>
+              <li>
+                <span class="agenda-date">14/08/2025</span>
+                <span class="agenda-title">Filme: “Corra que a Polícia Vem Aí!”</span>
+                <span class="agenda-platform">Pré-estreia / Em cartaz</span>
+              </li>
+              <li>
+                <span class="agenda-date">14/08/2025</span>
+                <span class="agenda-title">Filme: “Os Caras Malvados 2”</span>
+                <span class="agenda-platform">Em cartaz / Estreia</span>
+              </li>
+              <li>
+                <span class="agenda-date">28/08/2025</span>
+                <span class="agenda-title">Filme: “Os Roses: Até que a Morte os Separe”</span>
+                <span class="agenda-platform">Em cartaz / Estreia</span>
+              </li>
+            </ul>
+          </section>
 
-      </div>
-
+          <section class="agenda-geek" aria-labelledby="agenda-title">
+            <h2 id="agenda-title" class="section-title">Agenda Geek – Próximos Lançamentos 2025</h2>
+            <ul class="agenda-list" role="list">
+              <li>
+                <span class="agenda-date">06/11/2025</span>
+                <span class="agenda-title">Filme: “O Agente Secreto”</span>
+                <span class="agenda-platform">Nos cinemas (Brasil)</span>
+              </li>
+              <li>
+                <span class="agenda-date">27/11/2025</span>
+                <span class="agenda-title">Filme: “Zootopia 2”</span>
+                <span class="agenda-platform">Nos cinemas</span>
+              </li>
+              <li>
+                <span class="agenda-date">04/12/2025</span>
+                <span class="agenda-title">Filme: “Five Nights at Freddy’s 2”</span>
+                <span class="agenda-platform">Nos cinemas</span>
+              </li>
+              <li>
+                <span class="agenda-date">18/12/2025</span>
+                <span class="agenda-title">Filme: “Avatar 3 – Fogo e Cinzas”</span>
+                <span class="agenda-platform">Nos cinemas</span>
+              </li>
+            </ul>
+          </section>
+        </div>
+      </aside>
     </div>
-  </div>
 
-  <div class="container">
-    <h2 style="color:#e50914;">Últimas Noticias</h2>
-<div class="grid">
-  <!-- Novidades 1 -->
-  <div class="card">
-    <div class="img-wrapper">
-      <img src="img/wandinha-addams-2864384-article.webp" alt="Wandinha 2" loading="lazy">
-      <span class="tag">Séries</span>
-    </div>
-    <h3>Trailer da 2ª temporada de "Wandinha" promete mais mistério e aventura</h3>
-    <div class="btn-wrapper">
-      <a href="novidades1.html" class="btn-red">Saiba Mais</a>
-    </div>
-  </div>
+    <div class="container">
+      <!-- Últimas Notícias -->
+      <section aria-labelledby="ultimas-noticias-title">
+        <h2 id="ultimas-noticias-title" class="highlight">Últimas Notícias</h2>
 
-  <!-- Novidades 2 -->
-  <div class="card">
-    <div class="img-wrapper">
-      <img src="img/hora-mal-foto3.avif" alt="A Hora do Mal 4" loading="lazy">
-      <span class="tag">Filmes</span>
-    </div>
-    <h3>Estreia de "A Hora do Mal 4" nos cinemas promete sustos e reviravoltas</h3>
-    <div class="btn-wrapper">
-      <a href="novidades2.html" class="btn-red">Saiba Mais</a>
-    </div>
-  </div>
+        <div class="grid" role="list">
+          <!-- Novidades 1 -->
+          <article class="card" role="listitem">
+            <div class="img-wrapper">
+              <img src="img/wandinha-addams-2864384-article.webp"
+                   alt="Imagem promocional da 2ª temporada de Wandinha"
+                   width="480" height="270" loading="lazy" decoding="async">
+              <span class="tag" aria-label="Categoria: Séries">Séries</span>
+            </div>
+            <h3>Trailer da 2ª temporada de “Wandinha” promete mais mistério e aventura</h3>
+            <p class="card-excerpt">Prévia traz pistas do novo ano e volta de personagens queridos. Confira os detalhes.</p>
+            <div class="btn-wrapper">
+              <a href="novidades1.html" class="btn-red" aria-label="Ler mais sobre Wandinha, novidades 1">Saiba Mais</a>
+            </div>
+          </article>
 
-<!-- Novidades 3 -->
-<div class="card">
-  <div class="img-wrapper">
-    <img src="img/oscaras.jpg" alt="Os Caras Malvados 2" loading="lazy">
-    <span class="tag">Filmes</span>
-  </div>
-  <h3>"Os Caras Malvados 2" chega aos cinemas com mais ação e humor</h3>
-  <div class="btn-wrapper">
-    <a href="novidades3.html" class="btn-red">Saiba Mais</a>
-  </div>
-</div>
+          <!-- Novidades 2 -->
+          <article class="card" role="listitem">
+            <div class="img-wrapper">
+              <img src="img/hora-mal-foto3.avif"
+                   alt="Pôster de A Hora do Mal 4"
+                   width="480" height="270" loading="lazy" decoding="async">
+              <span class="tag" aria-label="Categoria: Filmes">Filmes</span>
+            </div>
+            <h3>Estreia de “A Hora do Mal 4” nos cinemas promete sustos e reviravoltas</h3>
+            <p class="card-excerpt">Novo capítulo da franquia de terror chega com clima sombrio e viradas de roteiro.</p>
+            <div class="btn-wrapper">
+              <a href="novidades2.html" class="btn-red" aria-label="Ler mais sobre A Hora do Mal 4, novidades 2">Saiba Mais</a>
+            </div>
+          </article>
 
-  <!-- Novidades 4 -->
-  <div class="card">
-    <div class="img-wrapper">
-      <img src="img/HQFvV6zWeXuQJTeB26Qk36-1200-80.jpg" alt="Call of Duty: Black Ops 7" loading="lazy">
-      <span class="tag">Games</span>
-    </div>
-    <h3>"Call of Duty: Black Ops 7" é anunciado para novembro e agita fãs</h3>
-    <div class="btn-wrapper">
-      <a href="novidades4.html" class="btn-red">Saiba Mais</a>
-    </div>
-  </div>
-</div>
+          <!-- Novidades 3 -->
+          <article class="card" role="listitem">
+            <div class="img-wrapper">
+              <img src="img/oscaras.jpg"
+                   alt="Imagem promocional de Os Caras Malvados 2"
+                   width="480" height="270" loading="lazy" decoding="async">
+              <span class="tag" aria-label="Categoria: Filmes">Filmes</span>
+            </div>
+            <h3>“Os Caras Malvados 2” chega aos cinemas com mais ação e humor</h3>
+            <p class="card-excerpt">Sequência aposta em ritmo acelerado e piadas afiadas para toda a família.</p>
+            <div class="btn-wrapper">
+              <a href="novidades3.html" class="btn-red" aria-label="Ler mais sobre Os Caras Malvados 2, novidades 3">Saiba Mais</a>
+            </div>
+          </article>
 
+          <!-- Novidades 4 -->
+          <article class="card" role="listitem">
+            <div class="img-wrapper">
+              <img src="img/HQFvV6zWeXuQJTeB26Qk36-1200-80.jpg"
+                   alt="Imagem de Call of Duty: Black Ops 7"
+                   width="480" height="270" loading="lazy" decoding="async">
+              <span class="tag" aria-label="Categoria: Games">Games</span>
+            </div>
+            <h3>“Call of Duty: Black Ops 7” é anunciado para novembro e agita fãs</h3>
+            <p class="card-excerpt">Título promete campanha intensa e novidades no multiplayer competitivo.</p>
+            <div class="btn-wrapper">
+              <a href="novidades4.html" class="btn-red" aria-label="Ler mais sobre Black Ops 7, novidades 4">Saiba Mais</a>
+            </div>
+          </article>
+        </div>
+      </section>
 
-    <section id="listas" class="container">
-      <h2 class="section-title">Listas & Rankings</h2>
+      <!-- Listas & Rankings -->
+      <section id="listas" aria-labelledby="listas-title">
+        <h2 id="listas-title" class="section-title">Listas & Rankings</h2>
 
-      <div class="ranking-wrapper">
+        <div class="ranking-wrapper">
+          <!-- Ranking 1 -->
+          <article class="ranking-card" aria-labelledby="rk-filmes-2025">
+            <h3 id="rk-filmes-2025">Top 10 filmes de 2025 para assistir no cinema</h3>
+            <ol class="ranking-list">
+              <li><span class="pos">1</span> Quarteto Fantástico: Primeiros Passos</li>
+              <li><span class="pos">2</span> Mickey 17</li>
+              <li><span class="pos">3</span> Final Destination: Bloodlines</li>
+              <li><span class="pos">4</span> Como Treinar o Seu Dragão</li>
+              <li><span class="pos">5</span> Joker: Folie à Deux</li>
+              <li><span class="pos">6</span> Divertida Mente 2</li>
+              <li><span class="pos">7</span> Wicked: For Good</li>
+              <li><span class="pos">8</span> Thunderbolts</li>
+              <li><span class="pos">9</span> The Batman – Parte II (aguardando confirmação)</li>
+              <li><span class="pos">10</span> Deadpool & Wolverine</li>
+            </ol>
+          </article>
 
-        <!-- Ranking 1 -->
-        <div class="ranking-card">
-          <h3>Top 10 Filmes de 2025 para assistir no cinema</h3>
-          <ol class="ranking-list">
-            <li><span class="pos">1</span> Quarteto Fantástico: Primeiros Passos</li>
-            <li><span class="pos">2</span> Mickey 17</li>
-            <li><span class="pos">3</span> Final Destination: Bloodlines</li>
-            <li><span class="pos">4</span> Como Treinar o seu Dragão</li>
-            <li><span class="pos">5</span> Joker: Folie à Deux</li>
-            <li><span class="pos">6</span> Inside Out 2 (Divertida Mente 2)</li>
-            <li><span class="pos">7</span> Wicked: For Good</li>
-            <li><span class="pos">8</span> Thunderbolts</li>
-            <li><span class="pos">9</span> The Batman – Parte II (quando confirmado)</li>
-            <li><span class="pos">10</span> Deadpool & Wolverine</li>
-          </ol>
+          <!-- Ranking 2 -->
+          <article class="ranking-card" aria-labelledby="rk-series-2025">
+            <h3 id="rk-series-2025">Melhores séries para maratonar em 2025 (streaming)</h3>
+            <ol class="ranking-list">
+              <li><span class="pos">1</span> Stranger Things</li>
+              <li><span class="pos">2</span> The Boys – Temp. 5</li>
+              <li><span class="pos">3</span> House of the Dragon – Temp. 2</li>
+              <li><span class="pos">4</span> The Last of Us – Temp. 2</li>
+              <li><span class="pos">5</span> Andor – Temp. 2</li>
+            </ol>
+          </article>
+        </div>
+      </section>
+
+      <!-- Área Interativa -->
+      <section id="interativo" aria-labelledby="interativo-title">
+        <h2 id="interativo-title" class="section-title">Área Interativa</h2>
+
+        <div class="tabs" role="tablist" aria-label="Navegação de conteúdo interativo">
+          <button class="tab-btn active" role="tab" aria-selected="true" aria-controls="tab-polls" data-tab="polls">Enquetes</button>
+          <button class="tab-btn" role="tab" aria-selected="false" aria-controls="tab-quiz" data-tab="quiz">Quiz</button>
+          <button class="tab-btn" role="tab" aria-selected="false" aria-controls="tab-comments" data-tab="comments">Comentários</button>
         </div>
 
-        <!-- Ranking 2 -->
-        <div class="ranking-card">
-          <h3>Melhores séries para maratonar em 2025 (Streaming)</h3>
-          <ol class="ranking-list">
-            <li><span class="pos">1</span> Stranger Things</li>
-            <li><span class="pos">2</span> The Boys – Temp. 5</li>
-            <li><span class="pos">3</span> House of the Dragon – Temp. 2</li>
-            <li><span class="pos">4</span> The Last of Us – Temp. 2</li>
-            <li><span class="pos">5</span> Andor – Temp. 2</li>
-          </ol>
+        <!-- ENQUETES -->
+        <div class="tab-content active" id="tab-polls" role="tabpanel" aria-labelledby="tab-polls-label">
+          <h3 id="tab-polls-label" class="visually-hidden">Enquetes</h3>
+          <div id="polls-root"></div>
         </div>
-      </div>
-    </section>
-    <section id="interativo" class="container">
-      <h2 class="section-title">Área Interativa</h2>
 
-      <!-- Abas -->
-      <div class="tabs">
-        <button class="tab-btn active" data-tab="polls">Enquetes</button>
-        <button class="tab-btn" data-tab="quiz">Quiz</button>
-        <button class="tab-btn" data-tab="comments">Comentários</button>
-      </div>
+        <!-- QUIZ -->
+        <div class="tab-content" id="tab-quiz" role="tabpanel" aria-labelledby="tab-quiz-label">
+          <h3 id="tab-quiz-label" class="visually-hidden">Quiz</h3>
+          <form id="quiz-form" class="quiz-card" novalidate>
+            <h3>Quiz: Você manja de filmes & séries?</h3>
 
-      <!-- ENQUETES -->
-      <div class="tab-content active" id="polls">
-        <div id="polls-root"></div>
-      </div>
+            <fieldset class="quiz-question">
+              <legend>1) Quem dirige “Mickey 17”?</legend>
+              <label><input type="radio" name="q1" value="a"> Denis Villeneuve</label>
+              <label><input type="radio" name="q1" value="b"> Bong Joon Ho</label>
+              <label><input type="radio" name="q1" value="c"> Christopher Nolan</label>
+            </fieldset>
 
-      <!-- QUIZ -->
-      <div class="tab-content" id="quiz">
-        <form id="quiz-form" class="quiz-card">
-          <h3>Quiz: Você manja de filmes & séries?</h3>
+            <fieldset class="quiz-question">
+              <legend>2) Em qual década se passa Stranger Things?</legend>
+              <label><input type="radio" name="q2" value="a"> 1970</label>
+              <label><input type="radio" name="q2" value="b"> 1980</label>
+              <label><input type="radio" name="q2" value="c"> 1990</label>
+            </fieldset>
 
-          <div class="quiz-question">
-            <p>1) Quem dirige “Mickey 17”?</p>
-            <label><input type="radio" name="q1" value="a"> Denis Villeneuve</label>
-            <label><input type="radio" name="q1" value="b"> Bong Joon Ho</label>
-            <label><input type="radio" name="q1" value="c"> Christopher Nolan</label>
-          </div>
+            <fieldset class="quiz-question">
+              <legend>3) Qual é o poder de Sue Storm no Quarteto Fantástico?</legend>
+              <label><input type="radio" name="q3" value="a"> Elasticidade</label>
+              <label><input type="radio" name="q3" value="b"> Invisibilidade e campos de força</label>
+              <label><input type="radio" name="q3" value="c"> Controle do fogo</label>
+            </fieldset>
 
-          <div class="quiz-question">
-            <p>2) Em qual década se passa Stranger Things?</p>
-            <label><input type="radio" name="q2" value="a"> 1970</label>
-            <label><input type="radio" name="q2" value="b"> 1980</label>
-            <label><input type="radio" name="q2" value="c"> 1990</label>
-          </div>
-
-          <div class="quiz-question">
-            <p>3) Qual é o poder de Sue Storm no Quarteto Fantástico?</p>
-            <label><input type="radio" name="q3" value="a"> Elasticidade</label>
-            <label><input type="radio" name="q3" value="b"> Invisibilidade e campos de força</label>
-            <label><input type="radio" name="q3" value="c"> Controle do fogo</label>
-          </div>
-
-          <button type="submit" class="btn-red">Enviar respostas</button>
-          <p id="quiz-result" class="quiz-result"></p>
-        </form>
-      </div>
-
-      <!-- COMENTÁRIOS -->
-      <div class="tab-content" id="comments">
-        <div class="comments-card">
-          <h3>Deixe seu comentário</h3>
-          <form id="comment-form">
-            <input type="text" id="comment-name" placeholder="Seu nome" required>
-            <textarea id="comment-text" placeholder="O que você achou dos lançamentos?" required></textarea>
-            <button type="submit" class="btn-red">Publicar</button>
+            <button type="submit" class="btn-red">Enviar respostas</button>
+            <p id="quiz-result" class="quiz-result" aria-live="polite"></p>
           </form>
-          <div id="comments-list" class="comments-list"></div>
         </div>
-      </div>
-    </section>
 
-    <footer>
-      <p>© 2025 Blog de Filmes e Séries. Todos os direitos reservados.</p>
-      <div class="footer-links">
-        <a href="forum.html">Forum da Comunidade</a> |
-        <a href="privacidade.html">Política de Privacidade</a> |
-        <a href="termos.html">Termos de Uso</a>
-        <a href="sobre.html">Sobre</a>
-      </div>
-    </footer>
-    <script src="script.js"></script>
-  </body>
+        <!-- COMENTÁRIOS -->
+        <div class="tab-content" id="tab-comments" role="tabpanel" aria-labelledby="tab-comments-label">
+          <h3 id="tab-comments-label" class="visually-hidden">Comentários</h3>
+          <div class="comments-card">
+            <h3>Deixe seu comentário</h3>
+            <form id="comment-form" novalidate>
+              <label class="visually-hidden" for="comment-name">Seu nome</label>
+              <input type="text" id="comment-name" placeholder="Seu nome" required aria-required="true">
+              <label class="visually-hidden" for="comment-text">Seu comentário</label>
+              <textarea id="comment-text" placeholder="O que você achou dos lançamentos?" required aria-required="true"></textarea>
+              <button type="submit" class="btn-red">Publicar</button>
+            </form>
+            <div id="comments-list" class="comments-list" aria-live="polite"></div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
 
+  <footer role="contentinfo">
+    <p>© 2025 Maratonando Geek. Todos os direitos reservados.</p>
+    <nav class="footer-links" aria-label="Links do rodapé">
+      <a href="forum.html">Fórum da Comunidade</a> |
+      <a href="privacidade.html">Política de Privacidade</a> |
+      <a href="termos.html">Termos de Uso</a> |
+      <a href="sobre.html">Sobre</a>
+    </nav>
+  </footer>
+
+  <!-- Script principal -->
+  <script src="script.js" defer></script>
+
+  <!-- Noscript para imagens críticas -->
+  <noscript>
+    <style>.carrossel-em-alta .slide{display:block !important;}</style>
+  </noscript>
+</body>
 </html>

@@ -169,6 +169,7 @@ header {
   display: block;
 }
 
+
 .slide {
   display: none;
   position: relative;
@@ -208,6 +209,7 @@ header {
 .carrossel-dots .dot.active {
   background-color: #e50914;
 }
+
 
 /* 6. Agenda Geek */
 .agenda-geek {
@@ -630,16 +632,17 @@ button[type="submit"]:hover {
     font-size: 0.85rem;
     letter-spacing: 1px;
   }
+  
+.social-icons a {
+  font-size: 28px;
+  margin: 0 10px;
+  color: #000; /* cor padrão */
+  transition: color 0.3s;
+}
 
-  .social-icons {
-    margin-top: 10px;
-    gap: 12px;
-  }
-
-  .social-icons img {
-    width: 24px;
-    height: 24px;
-  }
+.social-icons a:hover {
+  color: #e50914; /* cor quando passa o mouse */
+}
 
   nav {
     flex-wrap: wrap;
