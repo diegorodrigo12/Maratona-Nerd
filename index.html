@@ -437,4 +437,31 @@
     <style>.carrossel-em-alta .slide{display:block !important;}</style>
   </noscript>
 </body>
+<script>
+// ===== Controle das Abas =====
+document.querySelectorAll(".tab-btn").forEach((btn) => {
+  btn.addEventListener("click", function () {
+    const tab = this.getAttribute("data-tab");
+
+    // Esconde todos os conteúdos
+    document.querySelectorAll(".tab-content").forEach((content) => {
+      content.classList.remove("active");
+    });
+
+    // Remove "active" de todos os botões
+    document.querySelectorAll(".tab-btn").forEach((button) => {
+      button.classList.remove("active");
+      button.setAttribute("aria-selected", "false");
+    });
+
+    // Mostra a aba clicada
+    document.getElementById("tab-" + tab).classList.add("active");
+
+    // Marca o botão como ativo
+    this.classList.add("active");
+    this.setAttribute("aria-selected", "true");
+  });
+});
+
+</script>
 </html>
