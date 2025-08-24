@@ -259,29 +259,49 @@
         </div>
       </aside>
     </div>
+
 <!-- Destaque BGS 2025 -->
 <section class="bgs-destaque">
-  <h2>🎮 Brasil Game Show 2025</h2>
-  <p>A maior feira de games da América Latina já tem data marcada!</p>
-  
-  <div class="bgs-box">
-  <p><strong>📅 09 a 12 de outubro de 2025</strong> <br> Distrito Anhembi – São Paulo/SP</p>
-  <a href="bgs2025.html" class="btn-bgs-home">Ver detalhes</a>
-</div>
-
+  <div class="overlay">
+    <h2>🎮 Brasil Game Show 2025</h2>
+    <p>A maior feira de games da América Latina já tem data marcada!</p>
+    
+    <div class="bgs-box">
+      <p><strong>📅 09 a 12 de outubro de 2025</strong> <br> Distrito Anhembi – São Paulo/SP</p>
+      <a href="bgs2025.html" class="btn-bgs-home">Ver detalhes</a>
+    </div>
+  </div>
 </section>
 
 <style>
 .bgs-destaque {
+  position: relative;
   text-align: center;
-  padding: 2rem;
+  padding: 4rem 2rem;
   margin: 2rem auto;
-  background: linear-gradient(135deg, #1a1a1a, #0d0d0d);
   color: #fff;
   border-radius: 15px;
-  box-shadow: 0 0 15px rgba(0,0,0,0.5);
-  max-width: 1000px;
+ max-width: 1200px;
+  background: url("img/bgs.jpg") center/cover no-repeat; /* 🔹 coloca a imagem atrás */
+  overflow: hidden;
 }
+
+/* overlay escuro para o texto ficar legível */
+.bgs-destaque::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.6);
+  border-radius: 15px;
+}
+
+/* conteúdo por cima da imagem */
+.overlay {
+  position: relative;
+  z-index: 1;
+}
+
 .bgs-destaque h2 {
   color: #e91e63;
   font-size: 2rem;
@@ -292,7 +312,7 @@
   font-size: 1.1rem;
 }
 .bgs-box {
-  background: #292929;
+  background: rgba(41,41,41,0.9); /* fundo semi-transparente */
   padding: 1.5rem;
   border-radius: 10px;
   display: inline-block;
@@ -312,6 +332,8 @@
   background: #c2185b;
 }
 </style>
+
+
 
 
     <div class="container">
