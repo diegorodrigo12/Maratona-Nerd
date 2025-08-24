@@ -352,116 +352,83 @@
         </div>
       </section>
 
-      <!-- Área Interativa -->
-      <section id="interativo" aria-labelledby="interativo-title">
-        <h2 id="interativo-title" class="section-title">Área Interativa</h2>
+   <!-- Área Interativa -->
+<section id="interativo" aria-labelledby="interativo-title">
+  <h2 id="interativo-title" class="section-title">Área Interativa</h2>
 
-        <div class="tabs" role="tablist" aria-label="Navegação de conteúdo interativo">
-          <button class="tab-btn active" role="tab" aria-selected="true" aria-controls="tab-polls" data-tab="polls">Enquetes</button>
-          <button class="tab-btn" role="tab" aria-selected="false" aria-controls="tab-quiz" data-tab="quiz">Quiz</button>
-          <button class="tab-btn" role="tab" aria-selected="false" aria-controls="tab-comments" data-tab="comments">Comentários</button>
-        </div>
+  <!-- Botões de navegação -->
+  <div class="tabs" role="tablist" aria-label="Navegação de conteúdo interativo">
+    <button class="tab-btn active" role="tab" aria-selected="true" aria-controls="polls" data-tab="polls">Enquetes</button>
+    <button class="tab-btn" role="tab" aria-selected="false" aria-controls="quiz" data-tab="quiz">Quiz</button>
+    <button class="tab-btn" role="tab" aria-selected="false" aria-controls="comments" data-tab="comments">Comentários</button>
+  </div>
 
-        <!-- ENQUETES -->
-        <div class="tab-content active" id="tab-polls" role="tabpanel" aria-labelledby="tab-polls-label">
-          <h3 id="tab-polls-label" class="visually-hidden">Enquetes</h3>
-          <div id="polls-root"></div>
-        </div>
+  <!-- ENQUETES -->
+  <div class="tab-content active" id="polls" role="tabpanel" aria-labelledby="polls-label">
+    <h3 id="polls-label" class="visually-hidden">Enquetes</h3>
+    <div id="polls-root"></div>
+  </div>
 
-        <!-- QUIZ -->
-        <div class="tab-content" id="tab-quiz" role="tabpanel" aria-labelledby="tab-quiz-label">
-          <h3 id="tab-quiz-label" class="visually-hidden">Quiz</h3>
-          <form id="quiz-form" class="quiz-card" novalidate>
-            <h3>Quiz: Você manja de filmes & séries?</h3>
+  <!-- QUIZ -->
+  <div class="tab-content" id="quiz" role="tabpanel" aria-labelledby="quiz-label">
+    <h3 id="quiz-label" class="visually-hidden">Quiz</h3>
+    <form id="quiz-form" class="quiz-card" novalidate>
+      <h3>Quiz: Você manja de filmes & séries?</h3>
 
-            <fieldset class="quiz-question">
-              <legend>1) Quem dirige “Mickey 17”?</legend>
-              <label><input type="radio" name="q1" value="a"> Denis Villeneuve</label>
-              <label><input type="radio" name="q1" value="b"> Bong Joon Ho</label>
-              <label><input type="radio" name="q1" value="c"> Christopher Nolan</label>
-            </fieldset>
+      <fieldset class="quiz-question">
+        <legend>1) Quem dirige “Mickey 17”?</legend>
+        <label><input type="radio" name="q1" value="a"> Denis Villeneuve</label>
+        <label><input type="radio" name="q1" value="b"> Bong Joon Ho</label>
+        <label><input type="radio" name="q1" value="c"> Christopher Nolan</label>
+      </fieldset>
 
-            <fieldset class="quiz-question">
-              <legend>2) Em qual década se passa Stranger Things?</legend>
-              <label><input type="radio" name="q2" value="a"> 1970</label>
-              <label><input type="radio" name="q2" value="b"> 1980</label>
-              <label><input type="radio" name="q2" value="c"> 1990</label>
-            </fieldset>
+      <fieldset class="quiz-question">
+        <legend>2) Em qual década se passa Stranger Things?</legend>
+        <label><input type="radio" name="q2" value="a"> 1970</label>
+        <label><input type="radio" name="q2" value="b"> 1980</label>
+        <label><input type="radio" name="q2" value="c"> 1990</label>
+      </fieldset>
 
-            <fieldset class="quiz-question">
-              <legend>3) Qual é o poder de Sue Storm no Quarteto Fantástico?</legend>
-              <label><input type="radio" name="q3" value="a"> Elasticidade</label>
-              <label><input type="radio" name="q3" value="b"> Invisibilidade e campos de força</label>
-              <label><input type="radio" name="q3" value="c"> Controle do fogo</label>
-            </fieldset>
+      <fieldset class="quiz-question">
+        <legend>3) Qual é o poder de Sue Storm no Quarteto Fantástico?</legend>
+        <label><input type="radio" name="q3" value="a"> Elasticidade</label>
+        <label><input type="radio" name="q3" value="b"> Invisibilidade e campos de força</label>
+        <label><input type="radio" name="q3" value="c"> Controle do fogo</label>
+      </fieldset>
 
-            <button type="submit" class="btn-red">Enviar respostas</button>
-            <p id="quiz-result" class="quiz-result" aria-live="polite"></p>
-          </form>
-        </div>
+      <button type="submit" class="btn-red">Enviar respostas</button>
+      <p id="quiz-result" class="quiz-result" aria-live="polite"></p>
+    </form>
+  </div>
 
-        <!-- COMENTÁRIOS -->
-        <div class="tab-content" id="tab-comments" role="tabpanel" aria-labelledby="tab-comments-label">
-          <h3 id="tab-comments-label" class="visually-hidden">Comentários</h3>
-          <div class="comments-card">
-            <h3>Deixe seu comentário</h3>
-            <form id="comment-form" novalidate>
-              <label class="visually-hidden" for="comment-name">Seu nome</label>
-              <input type="text" id="comment-name" placeholder="Seu nome" required aria-required="true">
-              <label class="visually-hidden" for="comment-text">Seu comentário</label>
-              <textarea id="comment-text" placeholder="O que você achou dos lançamentos?" required aria-required="true"></textarea>
-              <button type="submit" class="btn-red">Publicar</button>
-            </form>
-            <div id="comments-list" class="comments-list" aria-live="polite"></div>
-          </div>
-        </div>
-      </section>
+  <!-- COMENTÁRIOS -->
+  <div class="tab-content" id="comments" role="tabpanel" aria-labelledby="comments-label">
+    <h3 id="comments-label" class="visually-hidden">Comentários</h3>
+    <div class="comments-card">
+      <h3>Deixe seu comentário</h3>
+      <form id="comment-form" novalidate>
+        <label class="visually-hidden" for="comment-name">Seu nome</label>
+        <input type="text" id="comment-name" placeholder="Seu nome" required aria-required="true">
+
+        <label class="visually-hidden" for="comment-text">Seu comentário</label>
+        <textarea id="comment-text" placeholder="O que você achou dos lançamentos?" required aria-required="true"></textarea>
+
+        <button type="submit" class="btn-red">Publicar</button>
+      </form>
+      <div id="comments-list" class="comments-list" aria-live="polite"></div>
     </div>
-  </main>
-
-  <footer role="contentinfo">
-    <p>© 2025 Maratonando Geek. Todos os direitos reservados.</p>
-    <nav class="footer-links" aria-label="Links do rodapé">
-      <a href="forum.html">Fórum da Comunidade</a> |
-      <a href="privacidade.html">Política de Privacidade</a> |
-      <a href="termos.html">Termos de Uso</a> |
-      <a href="sobre.html">Sobre</a>
-    </nav>
-  </footer>
-
-  <!-- Script principal -->
-  <script src="script.js" defer></script>
-
-  <!-- Noscript para imagens críticas -->
-  <noscript>
-    <style>.carrossel-em-alta .slide{display:block !important;}</style>
-  </noscript>
+  </div>
+</section>
+</main>
 </body>
-<script>
-// ===== Controle das Abas =====
-document.querySelectorAll(".tab-btn").forEach((btn) => {
-  btn.addEventListener("click", function () {
-    const tab = this.getAttribute("data-tab");
-
-    // Esconde todos os conteúdos
-    document.querySelectorAll(".tab-content").forEach((content) => {
-      content.classList.remove("active");
-    });
-
-    // Remove "active" de todos os botões
-    document.querySelectorAll(".tab-btn").forEach((button) => {
-      button.classList.remove("active");
-      button.setAttribute("aria-selected", "false");
-    });
-
-    // Mostra a aba clicada
-    document.getElementById("tab-" + tab).classList.add("active");
-
-    // Marca o botão como ativo
-    this.classList.add("active");
-    this.setAttribute("aria-selected", "true");
-  });
-});
-
-</script>
+<script src="script.js"></script>
+<footer role="contentinfo">
+  <p>© 2025 Maratonando Geek. Todos os direitos reservados.</p>
+  <nav class="footer-links" aria-label="Links do rodapé">
+    <a href="forum.html">Fórum da Comunidade</a> |
+    <a href="privacidade.html">Política de Privacidade</a> |
+    <a href="termos.html">Termos de Uso</a> |
+    <a href="sobre.html">Sobre</a>
+  </nav>
+</footer>
 </html>
