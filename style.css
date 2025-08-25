@@ -77,6 +77,7 @@ header {
 }
 
 
+
 /* Redes sociais */
 .social-icons {
   display: flex;
@@ -189,6 +190,22 @@ header {
   border-radius: 8px;
   max-width: 80%;
 }
+
+.carrossel-caption h3{
+  color:#ffffff;
+text-decoration: underline; /* mantém o sublinhado */
+  }
+
+.carrossel-caption p{
+  color:#ffffff;
+text-decoration: underline; /* mantém o sublinhado */
+  }
+
+  .carrossel-caption figcaption{
+  color:#ffffff;
+ text-decoration: underline; /* mantém o sublinhado */
+  }
+
 
 .carrossel-dots {
   text-align: center;
