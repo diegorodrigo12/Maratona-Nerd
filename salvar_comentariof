@@ -2,15 +2,21 @@
 include 'conexao.php';
 
 // Recebe os dados do formulário
-$titulo = $_POST['titulo'] ?? '';
-$conteudo = $_POST['conteudo'] ?? '';
+$topico_id = $_POST['topico_id'] ?? '';
+$comentario = $_POST['comentario'] ?? '';
 
-// Prepared statement para evitar problemas com aspas e segurança
-$stmt = $conn->prepare("INSERT INTO topicos (titulo, conteudo) VALUES (?, ?)");
-$stmt->bind_param("ss", $titulo, $conteudo);
+// Verifica se os campos não estão vazios
+if(empty($topico_id) || empty($comentario)) {
+    echo "Erro: Campos obrigatórios não preenchidos. <a href='forum.php'>Voltar</a>";
+    exit;
+}
+
+// Prepared statement para inserir comentário
+$stmt = $conn->prepare("INSERT INTO comentarios (topico_id, comentario) VALUES (?, ?)");
+$stmt->bind_param("is", $topico_id, $comentario);
 
 if ($stmt->execute()) {
-    echo "Tópico criado com sucesso! <a href='forum.php'>Voltar</a>";
+    echo "Comentário enviado com sucesso! <a href='forum.php'>Voltar</a>";
 } else {
     echo "Erro: " . $stmt->error;
 }
