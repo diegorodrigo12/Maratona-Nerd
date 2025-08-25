@@ -203,9 +203,19 @@ text-decoration: underline; /* mantém o sublinhado */
 
   .carrossel-caption figcaption{
   color:#ffffff;
- text-decoration: underline; /* mantém o sublinhado */
-  }
 
+  }
+figcaption {
+  font-size: 0.85rem;       /* menor que o texto normal */
+  color: #ffffff;           /* texto branco */
+  background-color: rgba(0, 0, 0, 0.5); /* fundo semi-transparente */
+  padding: 4px 8px;         /* espaço interno */
+  text-align: right;        /* alinha à direita, mas pode ser left ou center */
+  border-radius: 4px;       /* cantos arredondados */
+  font-style: italic;       /* deixa em itálico para diferenciar */
+  margin-top: 4px;          /* espaço entre imagem e legenda */
+  display: inline-block;    /* deixa o fundo ajustado ao tamanho do texto */
+}
 
 .carrossel-dots {
   text-align: center;
