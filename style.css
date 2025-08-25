@@ -660,23 +660,42 @@ button[type="submit"]:hover {
     letter-spacing: 1px;
   }
 
+/* Container fixo no canto */
+.social-icons {
+  position: fixed;     /* Fixa no canto da tela */
+  bottom: 20px;        /* Distância da parte inferior */
+  right: 20px;         /* Distância da lateral direita */
+  display: flex;
+  flex-direction: column; /* Ícones empilhados verticalmente */
+  gap: 10px;           /* Espaço entre ícones */
+  z-index: 1000;       /* Sempre acima do conteúdo */
+}
+
+/* Ícones */
 .social-icons a {
-  font-size: 28px;
-  margin: 0 10px;
-  color: #000; /* cor padrão */
-  transition: color 0.3s;
+  background: #fff;    /* Fundo branco */
+  color: #000;         /* Ícone preto */
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;  /* Circulo */
+  font-size: 18px;
+  transition: all 0.3s ease;
 }
 
+/* Hover */
 .social-icons a:hover {
-  color: #e50914; /* cor quando passa o mouse */
+  transform: scale(1.2);
+  box-shadow: 0 0 10px #ffcc00; /* Brilho sutil */
 }
 
-.social-icons img {
-  width: 32px;
-  height: 32px;
-  object-fit: contain;
-  background: none;
-}
+/* Cores específicas por rede */
+.social-icons a[href*="facebook"]:hover { background: #3b5998; color: #fff; }
+.social-icons a[href*="instagram"]:hover { background: #e4405f; color: #fff; }
+.social-icons a[href*="youtube"]:hover { background: #ff0000; color: #fff; }
+
 
   nav {
     flex-wrap: wrap;
