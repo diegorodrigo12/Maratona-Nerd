@@ -1,8 +1,8 @@
 <?php
 $servername = "sqlXXX.epizy.com"; 
-$username   = "epiz_12345678";    
-$password   = "sua_senha";        
-$dbname     = "epiz_12345678_comunidade"; 
+$username   = "if0_39624833";    
+$password   = "YXO4pGTV5z5G";        
+$dbname     = "if0_39624833_comunidade"; 
 
 $conn = new mysqli($servername, $username, $password, $dbname);
 
