@@ -1,0 +1,15 @@
+<?php
+include 'conexao.php';
+
+$topico_id = $_POST['topico_id'];
+$comentario = $_POST['comentario'];
+
+$sql = "INSERT INTO comentarios (topico_id, comentario) VALUES ('$topico_id', '$comentario')";
+if ($conn->query($sql) === TRUE) {
+    echo "Comentário enviado com sucesso! <a href='forum.php'>Voltar</a>";
+} else {
+    echo "Erro: " . $conn->error;
+}
+
+$conn->close();
+?>

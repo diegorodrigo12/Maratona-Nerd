@@ -379,30 +379,37 @@ nav a.active {
     <h1>Fórum Maratonando Geek</h1>
 
     <section id="forum-main">
-      <form id="new-topic-form" autocomplete="off">
-        <h2>Criar novo tópico</h2>
-        <input type="text" id="topic-title" placeholder="Título do tópico" required maxlength="100" />
-        <textarea id="topic-content" rows="5" placeholder="Conteúdo do tópico" required maxlength="1000"></textarea>
-        <button type="submit">Criar tópico</button>
-      </form>
+    <!-- Formulário de novo tópico (somente admin) -->
+<form id="new-topic-form" action="salvar_topico.php" method="POST" autocomplete="off">
+  <h2>Criar novo tópico</h2>
+  <input type="text" name="titulo" placeholder="Título do tópico" required maxlength="100" />
+  <textarea name="conteudo" rows="5" placeholder="Conteúdo do tópico" required maxlength="1000"></textarea>
+  <button type="submit">Criar tópico</button>
+</form>
 
-      <h2>Tópicos</h2>
-      <ul id="topics-list"></ul>
-    </section>
+<!-- Lista de tópicos carregada via listar.php -->
+<h2>Tópicos</h2>
+<div id="topics-list">
+  <?php include 'listar.php'; ?>
+</div>
 
-    <section id="topic-view" style="display:none;">
-      <button class="back-btn" id="back-to-forum">&larr; Voltar aos tópicos</button>
-      <h2 id="view-topic-title"></h2>
-      <p id="view-topic-content"></p>
+<!-- Visualização do tópico -->
+<section id="topic-view" style="display:none;">
+  <button class="back-btn" id="back-to-forum">&larr; Voltar aos tópicos</button>
+  <h2 id="view-topic-title"></h2>
+  <p id="view-topic-content"></p>
 
-      <h3>Comentários</h3>
-      <ul id="comments-list"></ul>
+  <h3>Comentários</h3>
+  <div id="comments-list"></div>
 
-      <form id="comment-form" autocomplete="off">
-        <textarea id="comment-text" rows="3" placeholder="Escreva seu comentário aqui..." required maxlength="500"></textarea>
-        <button type="submit">Enviar comentário</button>
-      </form>
-    </section>
+  <!-- Formulário de comentário -->
+  <form id="comment-form" action="salvar_comentariof.php" method="POST" autocomplete="off">
+    <input type="hidden" name="topico_id" id="topico_id">
+    <textarea name="comentario" rows="3" placeholder="Escreva seu comentário aqui..." required maxlength="500"></textarea>
+    <button type="submit">Enviar comentário</button>
+  </form>
+</section>
+
 
   </div>
 
