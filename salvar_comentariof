@@ -1,15 +1,20 @@
 <?php
 include 'conexao.php';
 
-$topico_id = $_POST['topico_id'];
-$comentario = $_POST['comentario'];
+// Recebe os dados do formulário
+$titulo = $_POST['titulo'] ?? '';
+$conteudo = $_POST['conteudo'] ?? '';
 
-$sql = "INSERT INTO comentarios (topico_id, comentario) VALUES ('$topico_id', '$comentario')";
-if ($conn->query($sql) === TRUE) {
-    echo "Comentário enviado com sucesso! <a href='forum.php'>Voltar</a>";
+// Prepared statement para evitar problemas com aspas e segurança
+$stmt = $conn->prepare("INSERT INTO topicos (titulo, conteudo) VALUES (?, ?)");
+$stmt->bind_param("ss", $titulo, $conteudo);
+
+if ($stmt->execute()) {
+    echo "Tópico criado com sucesso! <a href='forum.php'>Voltar</a>";
 } else {
-    echo "Erro: " . $conn->error;
+    echo "Erro: " . $stmt->error;
 }
 
+$stmt->close();
 $conn->close();
 ?>
