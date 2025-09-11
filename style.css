@@ -1,174 +1,195 @@
-/* ==================== 1. Reset e básicos ==================== */
+/* ==================== 1. Reset e estilos básicos ==================== */
 body {
   font-family: 'Poppins', sans-serif;
-  background-color: #fdfdfd;
+  background-color: #ffffff;
   color: #333;
   margin: 0;
   padding: 0;
-  line-height: 1.6;
 }
 
 /* ==================== 2. Header ==================== */
 header {
-  background: linear-gradient(135deg,#1E90FF,#2C3E50);
+  background-color: #1E90FF;
   padding: 20px;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
+  gap: 16px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  user-select: none;
+  color: #2c3e50;
   flex-wrap: wrap;
-  gap: 20px;
-  color: #fff;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.15);
 }
 
-.logo-text-wrapper h1, .logo-main {
+.logo-icon {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  overflow: hidden;
+}
+
+.logo-icon img {
+  width: 160px;
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  display: block;
+}
+
+.logo-text-wrapper {
+  text-align: left;
+  line-height: 1;
+}
+
+.logo-text-wrapper h2, .logo-main {
   font-family: 'Montserrat', sans-serif;
+  font-style: italic;
   font-weight: 900;
-  font-size: 2.4rem;
-  letter-spacing: 3px;
+  font-size: 2.8rem;
+  letter-spacing: 5px;
   text-transform: uppercase;
-  margin: 0;
-  color: #fff;
+  color: #ffffff;
 }
 
 .logo-sub {
+  font-family: 'Poppins', sans-serif;
   font-weight: 500;
   font-size: 0.9rem;
-  color: #e0e0e0;
-  margin-top: 4px;
+  color: #ffffff;
+  margin-left: 8px;
 }
 
 /* ==================== 3. Redes sociais ==================== */
 .social-icons {
   display: flex;
   gap: 12px;
+  margin-left: 40px;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 
-.social-icons i {
-  font-size: 1.2rem;
-  transition: transform 0.2s, color 0.2s;
+.social-icons img {
+  width: 28px;
+  height: 28px;
+  filter: invert(1);
+  transition: transform 0.2s, filter 0.2s;
 }
 
-.social-icons a:hover i {
-  transform: scale(1.3);
+.social-icons a:hover img {
+  transform: scale(1.2);
+  filter: invert(0);
 }
 
 .social-icons a[href*="facebook"]:hover { color: #3b5998; }
 .social-icons a[href*="instagram"]:hover { color: #e4405f; }
 .social-icons a[href*="youtube"]:hover { color: #ff0000; }
 
-/* ==================== 4. Navegação ==================== */
+/* ==================== 4. Navegação (nav) ==================== */
 nav {
-  background: #f7f7f7;
+  background: #ecf0f1;
   display: flex;
   justify-content: center;
-  gap: 20px;
-  padding: 12px 0;
-  border-bottom: 1px solid #ddd;
+  padding: 10px;
+  border-bottom: 1px solid #bdc3c7;
   flex-wrap: wrap;
 }
 
 nav a {
   color: #34495e;
   text-decoration: none;
-  font-weight: 600;
-  padding: 6px 8px;
-  transition: all 0.3s;
-  border-radius: 5px;
+  margin: 0 15px;
+  font-weight: bold;
+  transition: 0.3s;
+  padding: 4px 6px;
 }
 
 nav a:hover,
 nav a.active {
-  color: #fff;
-  background: #1E90FF;
-  padding: 6px 12px;
+  color: #1E90FF;
+  border-bottom: 2px solid #1E90FF;
+  padding-bottom: 4px;
 }
 
 /* ==================== 5. Container geral ==================== */
 .container {
-  width: 95%;
-  max-width: 1300px;
-  margin: 30px auto;
-  padding: 0 15px;
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+  padding: 5px 0 10px 0;
 }
 
-/* ==================== 6. Seção lateral e carrossel ==================== */
+/* ==================== 6. Seção lateral ==================== */
 .secao-lateral {
   display: flex;
-  gap: 30px;
+  gap: 24px;
+  max-width: 1200px;
+  margin: 10px auto 40px auto;
+  padding: 0 15px;
   flex-wrap: wrap;
-  align-items: flex-start;
+  align-items: stretch;
 }
 
+/* Notícias em Alta (carrossel) */
 .noticias-em-alta {
-  flex: 2 1 600px; /* ocupa mais espaço */
+  flex: 2;
   min-width: 300px;
 }
 
-.noticias-em-alta h2 {
+.noticias-em-alta > h2 {
   color: #e50914;
-  margin-bottom: 16px;
-  font-size: 1.6rem;
+  margin-bottom: 10px;
+  padding-left: 5px;
   font-weight: 700;
 }
 
-/* ==================== Carrossel - Ajustes ==================== */
 .carrossel-em-alta {
   position: relative;
-  overflow: hidden;
-  border-radius: 12px;
   max-width: 100%;
+  overflow: hidden;
 }
 
 .carrossel-em-alta img {
   width: 100%;
-  height: 450px;
+  height: 500px;
   object-fit: cover;
-  display: block;
-  transition: transform 0.5s ease;
+  border-radius: 10px;
 }
 
-.slide { display: none; }
+.slide { display: none; position: relative; }
 .slide.active { display: block; }
 
-/* Overlay do texto */
 .carrossel-caption {
   position: absolute;
-  bottom: 15px;
-  left: 15px;
-  right: 15px;
-  padding: 12px 16px;
-  background: rgba(0,0,0,0.6);
+  bottom: 20px;
+  left: 20px;
   color: #fff;
+  background: rgba(0,0,0,0.5);
+  padding: 10px 15px;
   border-radius: 8px;
-  font-size: 0.95rem;
-  line-height: 1.3;
+  max-width: 80%;
 }
 
-.carrossel-caption h3 {
-  font-size: 1.25rem;
-  margin: 0 0 6px;
+.carrossel-caption h3,
+.carrossel-caption p {
+  color:#fff;
   text-decoration: underline;
 }
 
-.carrossel-caption p {
-  margin: 0;
-  font-size: 0.85rem;
-}
-
 .carrossel-caption figcaption {
-  display: block;
-  font-size: 0.75rem;
+  font-size: 0.85rem;
+  color:#fff;
+  background-color: rgba(0,0,0,0.5);
+  padding: 4px 8px;
   text-align: right;
-  color: #ddd;
-  margin-top: 6px;
+  border-radius: 4px;
   font-style: italic;
+  margin-top: 4px;
+  display: inline-block;
 }
 
-/* Dots centralizados e espaçamento */
 .carrossel-dots {
   text-align: center;
-  margin-top: 12px;
+  margin-top: 10px;
 }
 
 .carrossel-dots .dot {
@@ -179,28 +200,18 @@ nav a.active {
   border-radius: 50%;
   display: inline-block;
   cursor: pointer;
-  transition: background-color 0.3s ease, transform 0.2s;
+  transition: background-color 0.3s ease;
 }
 
-.carrossel-dots .dot.active {
-  background-color: #e50914;
-  transform: scale(1.2);
-}
+.carrossel-dots .dot.active { background-color: #e50914; }
 
-/* ==================== 7. Agenda e Cartaz ==================== */
-.agenda-e-cartaz-wrapper {
-  flex: 1 1 300px;
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-}
-
-.agenda-e-cartaz-wrapper section {
-  background: #fff;
-  padding: 18px;
-  border-radius: 12px;
-  box-shadow: 0 0 12px rgba(0,0,0,0.05);
-  flex: 1;
+/* ==================== 7. Agenda Geek ==================== */
+.agenda-geek, .agenda-e-cartaz-wrapper section {
+  background: #ffffff;
+  padding: 16px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.04);
+  box-sizing: border-box;
 }
 
 .agenda-list {
@@ -210,116 +221,152 @@ nav a.active {
 }
 
 .agenda-list li {
+  font-size: 0.95rem;
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
-  padding: 12px 8px;
+  align-items: center;
+  padding: 15px 10px;
   border-bottom: 1px solid #eee;
   transition: background 0.3s;
 }
 
-.agenda-list li:hover { background: #f0f8ff; }
+.agenda-list li:hover { background: #fcecea; }
 
-.agenda-date { font-weight: 700; color: #1E90FF; width: 120px; }
-.agenda-title { flex: 1; color: #2c3e50; font-weight: 500; }
-.agenda-platform { font-style: italic; color: #7f8c8d; width: 140px; text-align:right; }
+.agenda-date {
+  font-weight: 700;
+  color: #FF6F61;
+  width: 120px;
+  flex-shrink: 0;
+}
+
+.agenda-title { flex: 1; color:#2c3e50; font-weight:600; }
+.agenda-platform { font-style:italic; color:#7f8c8d; width:140px; text-align:right; flex-shrink:0; }
+
+/* Wrapper Agenda + Cartaz */
+.agenda-e-cartaz-wrapper {
+  display: flex;
+  gap: 24px;
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 0 15px;
+  flex-wrap: wrap;
+  align-items: flex-start;
+}
+
+.agenda-e-cartaz-wrapper section {
+  flex: 1 1 45%;
+  min-width: 280px;
+}
 
 /* ==================== 8. Grid de cards ==================== */
 .grid, .ranking-wrapper {
   display: grid;
-  grid-template-columns: repeat(auto-fit,minmax(280px,1fr));
-  gap: 22px;
+  grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+  gap: 20px;
 }
 
 .card, .ranking-card, .poll-card, .quiz-card, .comments-card {
   background: #fff;
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  border-radius: 10px;
+  border: 1px solid #ddd;
   overflow: hidden;
-  display: flex;
-  flex-direction: column;
+  box-shadow: 0 0 10px rgba(0,0,0,0.05);
   transition: transform 0.3s, box-shadow 0.3s;
+  display:flex;
+  flex-direction:column;
 }
 
-.card:hover, .ranking-card:hover, .poll-card:hover, .quiz-card:hover, .comments-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 8px 18px rgba(0,0,0,0.15);
+.card:hover,
+.ranking-card:hover,
+.poll-card:hover,
+.quiz-card:hover,
+.comments-card:hover {
+  transform: scale(1.03);
+  box-shadow: 0 0 15px rgba(0,0,0,0.15);
 }
 
-.card img, .ranking-card img { width: 100%; height: 300px; object-fit: cover; }
-.card h3, .ranking-card h3 { margin: 12px 16px; color: #2c3e50; }
+.card img, .ranking-card img {
+  width: 100%;
+  height: 350px;
+  object-fit: cover;
+  border-bottom:1px solid #ddd;
+}
+
+.card h3, .ranking-card h3, .quiz-card h3, .poll-card h4 {
+  margin: 15px;
+  color: #2C3E50;
+}
 
 .card .tag {
-  display: inline-block;
-  background: #1E90FF;
-  color: #fff;
-  font-size: 0.75rem;
-  padding: 3px 10px;
-  border-radius: 25px;
-  margin: 0 16px 12px;
-  font-weight: 600;
+  display:inline-block;
+  background:#1E90FF;
+  color:#fff;
+  font-size:0.8rem;
+  padding:4px 10px;
+  border-radius:25px;
+  margin:0 15px 10px 15px;
+  font-weight:600;
+  transition: transform 0.2s;
 }
 
-.btn-wrapper { text-align: center; margin: 12px; }
+.card .tag:hover { transform: scale(1.05); }
+
+/* Botão Saiba Mais */
+.btn-wrapper { text-align:center; margin: 10px; }
 
 .btn-red {
-  display: inline-block;
-  background: linear-gradient(135deg,#1E90FF,#2C3E50);
-  color: #fff;
-  padding: 10px 20px;
-  border-radius: 50px;
-  font-weight: 600;
-  text-decoration: none;
-  transition: all 0.3s;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+  display:inline-block;
+  background:linear-gradient(135deg,#1E90FF,#2C3E50);
+  color:#fff;
+  text-decoration:none;
+  padding:10px 20px;
+  border-radius:50px;
+  font-weight:bold;
+  font-size:0.95rem;
+  border:none;
+  cursor:pointer;
+  transition: background 0.3s, transform 0.2s;
+  box-shadow:0 4px 10px rgba(0,0,0,0.2);
 }
 
-.btn-red:hover { background: linear-gradient(135deg,#2C3E50,#1E90FF); transform: translateY(-2px); }
+.btn-red:hover {
+  background: linear-gradient(135deg,#2C3E50,#1E90FF);
+  transform: translateY(-2px);
+}
 
-/* ==================== 9. Rankings ==================== */
-.ranking-card { border: 2px solid #1E90FF; background:#F0F8FF; }
-.ranking-list li { border-bottom: 1px solid rgba(255,255,255,0.1); padding: 8px 6px; display:flex; align-items:center; gap:10px; }
-.pos { background:#1E90FF; color:#fff; width:26px; height:26px; border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:0.85rem; }
+/* ==================== 9. Listas, Rankings, Tags ==================== */
+.ranking-card { background:#F0F8FF; border:2px solid #1E90FF; padding:20px; border-radius:12px; }
+.ranking-list { list-style:none; padding:0; margin:10px 0 0; }
+.ranking-list li { display:flex; align-items:center; gap:10px; padding:6px 0; border-bottom:1px solid rgba(255,255,255,0.1); }
+.ranking-list li:last-child { border-bottom:0; }
+.pos { background:#1E90FF; color:#fff; font-weight:bold; width:26px; height:26px; border-radius:50%; display:inline-flex; align-items:center; justify-content:center; font-size:0.85rem; }
+.tag-list { list-style:none; padding:0; margin:0 0 8px; display:flex; flex-wrap:wrap; gap:6px; }
+.tag { background:#1E90FF; color:#fff; padding:2px 8px; border-radius:999px; font-size:0.75rem; }
 
 /* ==================== 10. Área Interativa ==================== */
-.tabs { display:flex; gap:8px; margin-bottom:16px; flex-wrap: wrap; }
-.tab-btn { background:#1E90FF; color:#fff; border:none; padding:8px 14px; border-radius:8px; cursor:pointer; transition:0.2s; font-weight:600; }
-.tab-btn.active, .tab-btn:hover { background:#FF6F61; color:#2c3e50; }
+.tabs { display:flex; gap:8px; margin-bottom:16px; }
+.tab-btn { background:#1E90FF; color:#F0F8FF; border:2px solid #1E90FF; border-radius:8px; padding:8px 14px; cursor:pointer; font-weight:bold; transition:0.2s; }
+.tab-btn.active, .tab-btn:hover { background:#FF6F61; color:#2C3E50; }
 .tab-content { display:none; }
 .tab-content.active { display:block; }
 
 /* ==================== 11. Comentários ==================== */
-#comment-form input, #comment-form textarea {
-  background:#f0f8ff; border:2px solid #1E90FF; border-radius:8px;
-  padding:10px; width:100%; font-family:inherit; color:#2c3e50; margin-bottom:10px;
-}
+#comment-form input, #comment-form textarea { background:#F0F8FF; border:2px solid #2C3E50; border-radius:8px; padding:10px; font-family:inherit; color:#2C3E50; width:90%; margin-bottom:10px; }
 
-.comments-list { display:flex; flex-direction:column; gap:12px; margin-top:12px; }
+.comments-list { margin-top:18px; display:flex; flex-direction:column; gap:12px; }
 
-.comment-item { border-left:4px solid #1E90FF; padding-left:10px; color:#2c3e50; }
-.comment-item .author { font-weight:bold; color:#1E90FF; }
-.comment-item .date { font-size:0.75rem; color:#7f8c8d; }
+.comment-item { border-left:4px solid #7e57c2; padding-left:10px; color:#ccc; }
+.comment-item .author { font-weight:bold; color:#d1c4e9; }
+.comment-item .date { font-size:0.75rem; color:#999; }
 
 /* ==================== 12. Footer ==================== */
-footer {
-  background: #1E90FF;
-  color: #fff;
-  text-align: center;
-  padding: 20px;
-  margin-top: 50px;
-}
-
-footer .footer-links a {
-  color:#fff;
-  text-decoration:none;
-  margin:0 8px;
-  font-weight:500;
-}
-
-footer .footer-links a:hover { text-decoration:underline; }
+footer { text-align:center; padding:16px 0; background:#1E90FF; color:#fff; margin-top:50px; }
 
 /* ==================== 13. Responsividade ==================== */
-@media (max-width: 1024px) {
-  .secao-lateral, .agenda-e-cartaz-wrapper { flex-direction: column; }
+@media (max-width: 1024px) { 
+  .secao-lateral { flex-direction:column; }
+  .agenda-e-cartaz-wrapper { flex-direction:column; }
 }
 
 @media (max-width: 768px) {
@@ -330,7 +377,7 @@ footer .footer-links a:hover { text-decoration:underline; }
 
 @media (max-width: 480px) {
   .carrossel-em-alta img { height:250px; }
-  .carrossel-caption { font-size:0.9rem; padding:8px 10px; }
+  .carrossel-caption { font-size:0.9rem; padding:6px 10px; }
   .card img, .ranking-card img { max-height:250px; }
   nav { flex-wrap:wrap; justify-content:center; }
 }

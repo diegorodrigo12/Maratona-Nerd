@@ -1,198 +1,407 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <!-- Metadados básicos -->
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Maratonando Geek – Sua central de cultura pop no cinema e streaming</title>
+  <meta name="description" content="Fique por dentro de lançamentos, animes, reviews e rankings do universo geek. Explore notícias, agenda e especiais no Maratonando Geek." />
+  <meta name="keywords" content="filmes, séries, animes, games, cultura geek, lançamentos, reviews, maratonando geek" />
+  <meta name="author" content="Maratonando Geek" />
+  <meta name="robots" content="index,follow,max-image-preview:large" />
+  <link rel="canonical" href="https://www.seudominio.com.br/" />
 
-  <!-- Font Awesome -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <!-- Open Graph / Twitter -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Maratonando Geek" />
+  <meta property="og:title" content="Maratonando Geek – Sua central de cultura pop no cinema e streaming" />
+  <meta property="og:description" content="Notícias, lançamentos, reviews e rankings do universo geek." />
+  <meta property="og:url" content="https://www.seudominio.com.br/" />
+  <meta property="og:image" content="https://www.seudominio.com.br/img/og-cover.jpg" />
+  <meta property="og:image:alt" content="Capa do site Maratonando Geek" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Maratonando Geek – Cultura pop no cinema e streaming" />
+  <meta name="twitter:description" content="Notícias, lançamentos, reviews e rankings do universo geek." />
+  <meta name="twitter:image" content="https://www.seudominio.com.br/img/og-cover.jpg" />
 
-  <!-- Google Fonts -->
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-VGPPMHC0E1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-VGPPMHC0E1');
+  </script>
+
+  <!-- Google AdSense -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3533636004938881" crossorigin="anonymous"></script>
+
+  <!-- Preconnect e fontes -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@900&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet" />
+
+  <!-- Ícones / Favicon -->
+  <link rel="icon" href="img/favicon.ico" sizes="any" />
+  <link rel="icon" type="image/svg+xml" href="img/favicon.svg" />
+  <link rel="apple-touch-icon" href="img/apple-touch-icon.png" />
 
   <!-- CSS principal -->
   <link rel="stylesheet" href="style.css" />
+
+<!-- JSON-LD (Website + Organization) -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "name": "Maratonando Geek",
+      "url": "https://maratonandogeek.com.br/",
+      "inLanguage": "pt-BR",
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://maratonandogeek.com.br/busca?q={search_term_string}",
+        "query-input": "required name=search_term_string"
+      }
+    },
+    {
+      "@type": "Organization",
+      "name": "Maratonando Geek",
+      "url": "https://maratonandogeek.com.br/",
+      "logo": "https://maratonandogeek.com.br/img/logo.png",
+      "sameAs": [
+        "https://www.instagram.com/maratonandogeekoficial/"
+      ]
+    }
+  ]
+}
+</script>
+
 </head>
 
 <body>
 
-<!-- ==================== HEADER ==================== -->
-<header role="banner">
-  <div class="header-inner" aria-label="Topo do site">
-    <div class="branding">
-      <h1 class="site-title">Maratonando Geek</h1>
-      <p class="logo-sub">Sua central de cultura pop no cinema e streaming.</p>
-    </div>
-
-    <div class="social-icons">
-      <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
-      <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
-      <a href="https://youtube.com" target="_blank"><i class="fab fa-youtube"></i></a>
-    </div>
+  <header role="banner">
+    <div class="header-inner" aria-label="Topo do site">
+      <div class="branding">
+        <!-- H1 global na home para SEO -->
+        <h1 class="site-title">Maratonando Geek</h1>
+        <p class="logo-sub">Sua central de cultura pop no cinema e streaming.</p>
+      </div>
+ </div>
+    <!-- Redes sociais -->
+  <div class="social-icons">
+    <a href="https://facebook.com" target="_blank">
+      <i class="fab fa-facebook-f"></i>
+    </a>
+    <a href="https://instagram.com" target="_blank">
+      <i class="fab fa-instagram"></i>
+    </a>
+    <a href="https://youtube.com" target="_blank">
+      <i class="fab fa-youtube"></i>
+    </a>
   </div>
-</header>
+  
+  </header>
 
-<!-- ==================== NAV ==================== -->
-<nav class="main-nav" aria-label="Principal">
-  <a href="index.html" class="active">Início</a>
-  <a href="filmes.html">Filmes</a>
-  <a href="series.html">Séries</a>
-  <a href="games.html">Games</a>
-  <a href="reviews.html">Reviews</a>
-  <a href="contato.html">Contato</a>
-  <a href="sobre.html">Sobre</a>
-</nav>
+  <!-- Navegação principal -->
+  <nav class="main-nav" aria-label="Principal">
+    <a href="index.html" class="active" aria-current="page">Início</a>
+    <a href="filmes.html">Filmes</a>
+    <a href="series.html">Séries</a>
+    <a href="games.html">Games</a>
+    <a href="reviews.html">Reviews</a>
+    <a href="contato.html">Contato</a>
+    <a href="sobre.html">Sobre</a>
+  </nav>
 
-<!-- ==================== INTRO ==================== -->
-<section class="intro container" id="conteudo" aria-labelledby="intro-title">
-  <h2 id="intro-title">O que você encontra por aqui</h2>
-  <p>
-    No Maratonando Geek você acompanha <strong>lançamentos</strong>, <strong>notícias</strong>,
-    <strong>reviews</strong>, <strong>listas & rankings</strong> e uma área
-    <strong>interativa</strong> com enquetes, quiz e comentários. Fique por dentro do que rola no
-    cinema, streaming, animes e games – tudo em um só lugar.
-  </p>
+  <!-- Introdução textual (SEO e contexto) -->
+  <section class="intro container" id="conteudo" aria-labelledby="intro-title">
+    <h2 id="intro-title">O que você encontra por aqui</h2>
+    <p>
+      No Maratonando Geek você acompanha <strong>lançamentos</strong>, <strong>notícias</strong>,
+      <strong>reviews</strong>, <strong>listas&nbsp;&amp;&nbsp;rankings</strong> e uma área
+      <strong>interativa</strong> com enquetes, quiz e comentários. Fique por dentro do que rola no
+      cinema, streaming, animes e games – tudo em um só lugar.
+    </p>
+  </section>
+
+  <main id="main" class="main" role="main">
+    <div class="duas-colunas">
+      <aside class="secao-lateral" aria-labelledby="noticias-title">
+        <!-- Notícias em Alta -->
+<section class="noticias-em-alta" aria-live="polite">
+  <h2 id="noticias-title" class="highlight">Notícias em Alta</h2>
+
+  <div class="carrossel-em-alta" role="region" aria-label="Carrossel de notícias em alta">
+    <!-- Slide 1 -->
+    <article class="slide active" aria-roledescription="slide" aria-label="1 de 3">
+      <a href="altas1.html">
+      <img src="img/novidadesgamescom.jpg"
+           alt="Novos gadgets e games em destaque na Gamescom 2025"
+           width="960" height="540" loading="lazy" decoding="async" />
+           
+      <div class="carrossel-caption">
+        <h3 class="slide-title">Gamescom 2025: Melhores gadgets e games</h3>
+        <p>Nvidia RTX 5080 em nuvem, ROG Ally X, simuladores e novos jogos como Resident Evil Requiem marcaram presença.
+           <figcaption>Foto: Future / Tom’s Guide</figcaption>
+              </a>
+        </p>
+      </div>
+    </article>
+
+    <!-- Slide 2 -->
+    <article class="slide" aria-roledescription="slide" aria-label="2 de 3">
+      <a href="altas2.html">
+      <img src="img/hallowem.avif"
+           alt="Michael Myers em Halloween The Game anunciado na Gamescom"
+           width="960" height="540" loading="lazy" decoding="async" />
+           
+      <div class="carrossel-caption">
+        <h3 class="slide-title">Halloween The Game anunciado</h3>
+        <p>Michael Myers chega em novo horror multiplayer assimétrico revelado oficialmente na Gamescom 2025.
+            <figcaption>Foto: Future / Gamerant</figcaption>
+        </a>
+        </p>
+      </div>
+      
+    </article>
+
+   <!-- Slide 3 -->
+<article class="slide" aria-roledescription="slide" aria-label="3 de 3">
+  <a href="altas3.html">
+  <img src="img/gamescomnoticias.jpg"
+       alt="Palco iluminado da Opening Night Live na Gamescom 2025 com público e iluminação impactante"
+       width="960" height="540" loading="lazy" decoding="async" />
+  <div class="carrossel-caption">
+    <h3 class="slide-title">Opening Night Live trouxe novidades épicas e Resident Evil: Requiem em destaque</h3>
+    <p>Evento da Gamescom 2025 revelou grandes anúncios e destacou o aguardado Resident Evil: Requiem.</p>
+     <figcaption>Foto: Future / Gamerant</figcaption>
+         </a>
+    </p>
+  </div>
+</article>
+
+  <!-- Dots do carrossel -->
+  <div class="carrossel-dots" role="tablist" aria-label="Navegação do carrossel">
+    <button class="dot active" role="tab" aria-selected="true" aria-controls="slide-1" data-index="0">
+      <span class="visually-hidden"></span>
+    </button>
+    <button class="dot" role="tab" aria-selected="false" aria-controls="slide-2" data-index="1">
+      <span class="visually-hidden"></span>
+    </button>
+    <button class="dot" role="tab" aria-selected="false" aria-controls="slide-3" data-index="2">
+      <span class="visually-hidden"></span>
+    </button>
+  </div>
 </section>
 
-<!-- ==================== MAIN ==================== -->
-<main id="main" class="main" role="main">
-  <div class="container duas-colunas">
 
-    <!-- ==================== SECÃO LATERAL ==================== -->
-    <aside class="secao-lateral" aria-labelledby="noticias-title">
-      <!-- Notícias em Alta -->
-      <section class="noticias-em-alta" aria-live="polite">
-        <h2 id="noticias-title" class="highlight">Notícias em Alta</h2>
-
-        <div class="carrossel-em-alta" role="region" aria-label="Carrossel de notícias em alta">
-          <!-- Slide 1 -->
-          <article class="slide active" aria-roledescription="slide" aria-label="1 de 3">
-            <a href="altas1.html">
-              <img src="img/novidadesgamescom.jpg" alt="Novos gadgets e games em destaque na Gamescom 2025" />
-              <div class="carrossel-caption">
-                <h3 class="slide-title">Gamescom 2025: Melhores gadgets e games</h3>
-                <p>Nvidia RTX 5080 em nuvem, ROG Ally X, simuladores e novos jogos como Resident Evil Requiem marcaram presença.</p>
-                <figcaption>Foto: Future / Tom’s Guide</figcaption>
-              </div>
-            </a>
-          </article>
-
-          <!-- Slide 2 -->
-          <article class="slide" aria-roledescription="slide" aria-label="2 de 3">
-            <a href="altas2.html">
-              <img src="img/hallowem.avif" alt="Michael Myers em Halloween The Game anunciado na Gamescom" />
-              <div class="carrossel-caption">
-                <h3 class="slide-title">Halloween The Game anunciado</h3>
-                <p>Michael Myers chega em novo horror multiplayer assimétrico revelado oficialmente na Gamescom 2025.</p>
-                <figcaption>Foto: Future / Gamerant</figcaption>
-              </div>
-            </a>
-          </article>
-
-          <!-- Slide 3 -->
-          <article class="slide" aria-roledescription="slide" aria-label="3 de 3">
-            <a href="altas3.html">
-              <img src="img/gamescomnoticias.jpg" alt="Palco iluminado da Opening Night Live na Gamescom 2025 com público e iluminação impactante" />
-              <div class="carrossel-caption">
-                <h3 class="slide-title">Opening Night Live trouxe novidades épicas e Resident Evil: Requiem em destaque</h3>
-                <p>Evento da Gamescom 2025 revelou grandes anúncios e destacou o aguardado Resident Evil: Requiem.</p>
-                <figcaption>Foto: Future / Gamerant</figcaption>
-              </div>
-            </a>
-          </article>
-
-          <!-- Dots do carrossel -->
-          <div class="carrossel-dots" role="tablist" aria-label="Navegação do carrossel">
-            <button class="dot active" role="tab" aria-selected="true" data-index="0"><span class="visually-hidden">Slide 1</span></button>
-            <button class="dot" role="tab" aria-selected="false" data-index="1"><span class="visually-hidden">Slide 2</span></button>
-            <button class="dot" role="tab" aria-selected="false" data-index="2"><span class="visually-hidden">Slide 3</span></button>
-          </div>
-        </div>
-
-        <!-- ==================== EM CARTAZ + AGENDA ==================== -->
+        <!-- Em Cartaz + Agenda Geek -->
         <div class="agenda-e-cartaz-wrapper">
           <section class="em-cartaz" aria-labelledby="cartaz-title">
             <h2 id="cartaz-title" class="section-title">🎬 Em Cartaz – Agosto 2025</h2>
-            <ul class="agenda-list">
-              <li><span class="agenda-date">07/08/2025</span><span class="agenda-title">Filme: “Quarteto Fantástico – Primeiros Passos”</span><span class="agenda-platform">Em cartaz / Estreia</span></li>
-              <li><span class="agenda-date">07/08/2025</span><span class="agenda-title">Filme: “A Hora do Mal”</span><span class="agenda-platform">Em cartaz / Estreia</span></li>
-              <li><span class="agenda-date">14/08/2025</span><span class="agenda-title">Filme: “Corra que a Polícia Vem Aí!”</span><span class="agenda-platform">Pré-estreia / Em cartaz</span></li>
-              <li><span class="agenda-date">14/08/2025</span><span class="agenda-title">Filme: “Os Caras Malvados 2”</span><span class="agenda-platform">Em cartaz / Estreia</span></li>
-              <li><span class="agenda-date">28/08/2025</span><span class="agenda-title">Filme: “Os Roses: Até que a Morte os Separe”</span><span class="agenda-platform">Em cartaz / Estreia</span></li>
+            <ul class="agenda-list" role="list">
+              <li>
+                <span class="agenda-date">07/08/2025</span>
+                <span class="agenda-title">Filme: “Quarteto Fantástico – Primeiros Passos”</span>
+                <span class="agenda-platform">Em cartaz / Estreia</span>
+              </li>
+              <li>
+                <span class="agenda-date">07/08/2025</span>
+                <span class="agenda-title">Filme: “A Hora do Mal”</span>
+                <span class="agenda-platform">Em cartaz / Estreia</span>
+              </li>
+              <li>
+                <span class="agenda-date">14/08/2025</span>
+                <span class="agenda-title">Filme: “Corra que a Polícia Vem Aí!”</span>
+                <span class="agenda-platform">Pré-estreia / Em cartaz</span>
+              </li>
+              <li>
+                <span class="agenda-date">14/08/2025</span>
+                <span class="agenda-title">Filme: “Os Caras Malvados 2”</span>
+                <span class="agenda-platform">Em cartaz / Estreia</span>
+              </li>
+              <li>
+                <span class="agenda-date">28/08/2025</span>
+                <span class="agenda-title">Filme: “Os Roses: Até que a Morte os Separe”</span>
+                <span class="agenda-platform">Em cartaz / Estreia</span>
+              </li>
             </ul>
           </section>
 
           <section class="agenda-geek" aria-labelledby="agenda-title">
             <h2 id="agenda-title" class="section-title">Agenda Geek – Próximos Lançamentos 2025</h2>
-            <ul class="agenda-list">
-              <li><span class="agenda-date">06/11/2025</span><span class="agenda-title">Filme: “O Agente Secreto”</span><span class="agenda-platform">Nos cinemas (Brasil)</span></li>
-              <li><span class="agenda-date">27/11/2025</span><span class="agenda-title">Filme: “Zootopia 2”</span><span class="agenda-platform">Nos cinemas</span></li>
-              <li><span class="agenda-date">04/12/2025</span><span class="agenda-title">Filme: “Five Nights at Freddy’s 2”</span><span class="agenda-platform">Nos cinemas</span></li>
-              <li><span class="agenda-date">18/12/2025</span><span class="agenda-title">Filme: “Avatar 3 – Fogo e Cinzas”</span><span class="agenda-platform">Nos cinemas</span></li>
+            <ul class="agenda-list" role="list">
+              <li>
+                <span class="agenda-date">06/11/2025</span>
+                <span class="agenda-title">Filme: “O Agente Secreto”</span>
+                <span class="agenda-platform">Nos cinemas (Brasil)</span>
+              </li>
+              <li>
+                <span class="agenda-date">27/11/2025</span>
+                <span class="agenda-title">Filme: “Zootopia 2”</span>
+                <span class="agenda-platform">Nos cinemas</span>
+              </li>
+              <li>
+                <span class="agenda-date">04/12/2025</span>
+                <span class="agenda-title">Filme: “Five Nights at Freddy’s 2”</span>
+                <span class="agenda-platform">Nos cinemas</span>
+              </li>
+              <li>
+                <span class="agenda-date">18/12/2025</span>
+                <span class="agenda-title">Filme: “Avatar 3 – Fogo e Cinzas”</span>
+                <span class="agenda-platform">Nos cinemas</span>
+              </li>
             </ul>
           </section>
         </div>
-      </section>
-    </aside>
+      </aside>
+    </div>
 
-    <!-- ==================== CONTEÚDO PRINCIPAL ==================== -->
-    <div class="conteudo-principal">
+<!-- Destaque BGS 2025 -->
+<section class="bgs-destaque">
+  <div class="overlay">
+    <h2>🎮 Brasil Game Show 2025</h2>
+    <p>A maior feira de games da América Latina já tem data marcada!</p>
+    
+    <div class="bgs-box">
+      <p><strong>📅 09 a 12 de outubro de 2025</strong> <br> Distrito Anhembi – São Paulo/SP</p>
+      <a href="bgs2025.html" class="btn-bgs-home">Ver detalhes</a>
+    </div>
+  </div>
+</section>
 
-      <!-- BGS 2025 -->
-      <section class="bgs-destaque">
-        <div class="overlay">
-          <h2>🎮 Brasil Game Show 2025</h2>
-          <p>A maior feira de games da América Latina já tem data marcada!</p>
-          <div class="bgs-box">
-            <p><strong>📅 09 a 12 de outubro de 2025</strong> <br> Distrito Anhembi – São Paulo/SP</p>
-            <a href="bgs2025.html" class="btn-bgs-home">Ver detalhes</a>
-          </div>
-        </div>
-      </section>
+<style>
+.bgs-destaque {
+  position: relative;
+  text-align: center;
+  padding: 4rem 2rem;
+  margin: 2rem auto;
+  color: #fff;
+  border-radius: 15px;
+ max-width: 1200px;
+  background: url("img/bgs.jpg") center/cover no-repeat; /* 🔹 coloca a imagem atrás */
+  overflow: hidden;
+}
 
+/* overlay escuro para o texto ficar legível */
+.bgs-destaque::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.6);
+  border-radius: 15px;
+}
+
+/* conteúdo por cima da imagem */
+.overlay {
+  position: relative;
+  z-index: 1;
+}
+
+.bgs-destaque h2 {
+  color: #e91e63;
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+.bgs-destaque p {
+  margin-bottom: 1rem;
+  font-size: 1.1rem;
+}
+.bgs-box {
+  background: rgba(41,41,41,0.9); /* fundo semi-transparente */
+  padding: 1.5rem;
+  border-radius: 10px;
+  display: inline-block;
+}
+.btn-bgs-home {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.8rem 1.5rem;
+  background: #e91e63;
+  color: #fff;
+  font-weight: bold;
+  border-radius: 10px;
+  text-decoration: none;
+  transition: background 0.3s;
+}
+.btn-bgs-home:hover {
+  background: #c2185b;
+}
+</style>
+
+
+
+
+    <div class="container">
       <!-- Últimas Notícias -->
       <section aria-labelledby="ultimas-noticias-title">
         <h2 id="ultimas-noticias-title" class="highlight">Últimas Notícias</h2>
-        <div class="grid" role="list">
-          <article class="card" role="listitem">
-            <div class="img-wrapper">
-              <img src="img/gamescon2.png" alt="Imagem oficial da Gamescom 2025" />
-              <span class="tag">Games</span>
-            </div>
-            <h3>Gamescom 2025 traz novidades bombásticas no universo gamer</h3>
-            <p class="card-excerpt">Call of Duty: Black Ops 7, Resident Evil Requiem, Silent Hill f, Lego Batman e mais foram revelados no evento.</p>
-            <a href="novidades1.html" class="btn-red">Saiba Mais</a>
-          </article>
+<div class="grid" role="list">
+  <!-- Novidades Gamescom -->
+  <article class="card" role="listitem">
+    <div class="img-wrapper">
+      <img src="img/gamescon2.png".png"
+           alt="Imagem oficial da Gamescom 2025"
+           width="480" height="270" loading="lazy" decoding="async">
+      <span class="tag" aria-label="Categoria: Games">Games</span>
+    </div>
+    <h3>Gamescom 2025 traz novidades bombásticas no universo gamer</h3>
+    <p class="card-excerpt">Call of Duty: Black Ops 7, Resident Evil Requiem, Silent Hill f, Lego Batman e mais foram revelados no evento.</p>
+    <div class="btn-wrapper">
+      <a href="novidades1.html" class="btn-red" aria-label="Ler mais sobre Gamescom 2025">Saiba Mais</a>
+    </div>
+  </article>
 
-          <article class="card" role="listitem">
-            <div class="img-wrapper">
-              <img src="img/falloult2.png" alt="Pôster da 2ª temporada de Fallout no Prime Video" />
-              <span class="tag">Séries</span>
-            </div>
-            <h3>Fallout: 2ª temporada promete expandir o universo pós-apocalíptico</h3>
-            <p class="card-excerpt">A série do Prime Video retorna com mais ação, novos personagens e revelações surpreendentes.</p>
-            <a href="novidades2.html" class="btn-red">Saiba Mais</a>
-          </article>
 
+
+        <!-- Novidades Fallout -->
+<article class="card" role="listitem">
+  <div class="img-wrapper">
+    <img src="img/falloult2.png"
+         alt="Pôster da 2ª temporada de Fallout no Prime Video"
+         width="480" height="270" loading="lazy" decoding="async">
+    <span class="tag" aria-label="Categoria: Séries">Séries</span>
+  </div>
+  <h3>Fallout: 2ª temporada promete expandir o universo pós-apocalíptico</h3>
+  <p class="card-excerpt">A série do Prime Video retorna com mais ação, novos personagens e revelações surpreendentes.</p>
+  <div class="btn-wrapper">
+    <a href="novidades2.html" class="btn-red" aria-label="Ler mais sobre Fallout 2ª temporada">Saiba Mais</a>
+  </div>
+</article>
+
+          <!-- Novidades 3 -->
           <article class="card" role="listitem">
             <div class="img-wrapper">
-              <img src="img/oscaras.jpg" alt="Imagem promocional de Os Caras Malvados 2" />
-              <span class="tag">Filmes</span>
+              <img src="img/oscaras.jpg"
+                   alt="Imagem promocional de Os Caras Malvados 2"
+                   width="480" height="270" loading="lazy" decoding="async">
+              <span class="tag" aria-label="Categoria: Filmes">Filmes</span>
             </div>
             <h3>“Os Caras Malvados 2” chega aos cinemas com mais ação e humor</h3>
             <p class="card-excerpt">Sequência aposta em ritmo acelerado e piadas afiadas para toda a família.</p>
-            <a href="novidades3.html" class="btn-red">Saiba Mais</a>
+            <div class="btn-wrapper">
+              <a href="novidades3.html" class="btn-red" aria-label="Ler mais sobre Os Caras Malvados 2, novidades 3">Saiba Mais</a>
+            </div>
           </article>
 
+          <!-- Novidades 4 -->
           <article class="card" role="listitem">
             <div class="img-wrapper">
-              <img src="img/HQFvV6zWeXuQJTeB26Qk36-1200-80.jpg" alt="Imagem de Call of Duty: Black Ops 7" />
-              <span class="tag">Games</span>
+              <img src="img/HQFvV6zWeXuQJTeB26Qk36-1200-80.jpg"
+                   alt="Imagem de Call of Duty: Black Ops 7"
+                   width="480" height="270" loading="lazy" decoding="async">
+              <span class="tag" aria-label="Categoria: Games">Games</span>
             </div>
             <h3>“Call of Duty: Black Ops 7” é anunciado para novembro e agita fãs</h3>
             <p class="card-excerpt">Título promete campanha intensa e novidades no multiplayer competitivo.</p>
-            <a href="novidades4.html" class="btn-red">Saiba Mais</a>
+            <div class="btn-wrapper">
+              <a href="novidades4.html" class="btn-red" aria-label="Ler mais sobre Black Ops 7, novidades 4">Saiba Mais</a>
+            </div>
           </article>
         </div>
       </section>
@@ -200,72 +409,116 @@
       <!-- Listas & Rankings -->
       <section id="listas" aria-labelledby="listas-title">
         <h2 id="listas-title" class="section-title">Listas & Rankings</h2>
+
         <div class="ranking-wrapper">
-          <article class="ranking-card">
-            <h3>Top 10 filmes de 2025 para assistir no cinema</h3>
+          <!-- Ranking 1 -->
+          <article class="ranking-card" aria-labelledby="rk-filmes-2025">
+            <h3 id="rk-filmes-2025">Top 10 filmes de 2025 para assistir no cinema</h3>
             <ol class="ranking-list">
-              <li>Quarteto Fantástico: Primeiros Passos</li>
-              <li>Mickey 17</li>
-              <li>Final Destination: Bloodlines</li>
-              <li>Como Treinar o Seu Dragão</li>
-              <li>Joker: Folie à Deux</li>
-              <li>Divertida Mente 2</li>
-              <li>Wicked: For Good</li>
-              <li>Thunderbolts</li>
-              <li>The Batman – Parte II (aguardando confirmação)</li>
-              <li>Deadpool & Wolverine</li>
+              <li><span class="pos">1</span> Quarteto Fantástico: Primeiros Passos</li>
+              <li><span class="pos">2</span> Mickey 17</li>
+              <li><span class="pos">3</span> Final Destination: Bloodlines</li>
+              <li><span class="pos">4</span> Como Treinar o Seu Dragão</li>
+              <li><span class="pos">5</span> Joker: Folie à Deux</li>
+              <li><span class="pos">6</span> Divertida Mente 2</li>
+              <li><span class="pos">7</span> Wicked: For Good</li>
+              <li><span class="pos">8</span> Thunderbolts</li>
+              <li><span class="pos">9</span> The Batman – Parte II (aguardando confirmação)</li>
+              <li><span class="pos">10</span> Deadpool & Wolverine</li>
             </ol>
           </article>
 
-          <article class="ranking-card">
-            <h3>Melhores séries para maratonar em 2025 (streaming)</h3>
+          <!-- Ranking 2 -->
+          <article class="ranking-card" aria-labelledby="rk-series-2025">
+            <h3 id="rk-series-2025">Melhores séries para maratonar em 2025 (streaming)</h3>
             <ol class="ranking-list">
-              <li>Stranger Things</li>
-              <li>The Boys – Temp. 5</li>
-              <li>House of the Dragon – Temp. 2</li>
-              <li>The Last of Us – Temp. 2</li>
-              <li>Andor – Temp. 2</li>
+              <li><span class="pos">1</span> Stranger Things</li>
+              <li><span class="pos">2</span> The Boys – Temp. 5</li>
+              <li><span class="pos">3</span> House of the Dragon – Temp. 2</li>
+              <li><span class="pos">4</span> The Last of Us – Temp. 2</li>
+              <li><span class="pos">5</span> Andor – Temp. 2</li>
             </ol>
           </article>
         </div>
       </section>
 
-      <!-- Área Interativa -->
-      <section id="interativo" aria-labelledby="interativo-title">
-        <h2 id="interativo-title" class="section-title">Área Interativa</h2>
+   <!-- Área Interativa -->
+<section id="interativo" aria-labelledby="interativo-title">
+  <h2 id="interativo-title" class="section-title">Área Interativa</h2>
 
-        <div class="tabs" role="tablist">
-          <button class="tab-btn active" data-tab="polls">Enquetes</button>
-          <button class="tab-btn" data-tab="quiz">Quiz</button>
-          <button class="tab-btn" data-tab="comments">Comentários</button>
-        </div>
+  <!-- Botões de navegação -->
+  <div class="tabs" role="tablist" aria-label="Navegação de conteúdo interativo">
+    <button class="tab-btn active" role="tab" aria-selected="true" aria-controls="polls" data-tab="polls">Enquetes</button>
+    <button class="tab-btn" role="tab" aria-selected="false" aria-controls="quiz" data-tab="quiz">Quiz</button>
+    <button class="tab-btn" role="tab" aria-selected="false" aria-controls="comments" data-tab="comments">Comentários</button>
+  </div>
 
-        <div class="tab-content active" id="polls">
-          <h3 class="visually-hidden">Enquetes</h3>
-          <div id="polls-root"></div>
-        </div>
+  <!-- ENQUETES -->
+  <div class="tab-content active" id="polls" role="tabpanel" aria-labelledby="polls-label">
+    <h3 id="polls-label" class="visually-hidden">Enquetes</h3>
+    <div id="polls-root"></div>
+  </div>
 
-        <div class="tab-content" id="quiz">
-          <h3 class="visually-hidden">Quiz</h3>
-          <form id="quiz-form" class="quiz-card">
-            <p>Qual é o seu herói favorito da Marvel?</p>
-            <label><input type="radio" name="hero" value="homem-aranha"> Homem-Aranha</label>
-            <label><input type="radio" name="hero" value="homem-de-ferro"> Homem de Ferro</label>
-            <label><input type="radio" name="hero" value="capitao-america"> Capitão América</label>
-            <label><input type="radio" name="hero" value="thor"> Thor</label>
-            <button type="submit">Enviar</button>
-          </form>
-        </div>
+  <!-- QUIZ -->
+  <div class="tab-content" id="quiz" role="tabpanel" aria-labelledby="quiz-label">
+    <h3 id="quiz-label" class="visually-hidden">Quiz</h3>
+    <form id="quiz-form" class="quiz-card" novalidate>
+      <h3>Quiz: Você manja de filmes & séries?</h3>
 
-        <div class="tab-content" id="comments">
-          <h3 class="visually-hidden">Comentários</h3>
-          <div id="comments-root"></div>
-        </div>
-      </section>
+      <fieldset class="quiz-question">
+        <legend>1) Quem dirige “Mickey 17”?</legend>
+        <label><input type="radio" name="q1" value="a"> Denis Villeneuve</label>
+        <label><input type="radio" name="q1" value="b"> Bong Joon Ho</label>
+        <label><input type="radio" name="q1" value="c"> Christopher Nolan</label>
+      </fieldset>
 
+      <fieldset class="quiz-question">
+        <legend>2) Em qual década se passa Stranger Things?</legend>
+        <label><input type="radio" name="q2" value="a"> 1970</label>
+        <label><input type="radio" name="q2" value="b"> 1980</label>
+        <label><input type="radio" name="q2" value="c"> 1990</label>
+      </fieldset>
+
+      <fieldset class="quiz-question">
+        <legend>3) Qual é o poder de Sue Storm no Quarteto Fantástico?</legend>
+        <label><input type="radio" name="q3" value="a"> Elasticidade</label>
+        <label><input type="radio" name="q3" value="b"> Invisibilidade e campos de força</label>
+        <label><input type="radio" name="q3" value="c"> Controle do fogo</label>
+      </fieldset>
+
+      <button type="submit" class="btn-red">Enviar respostas</button>
+      <p id="quiz-result" class="quiz-result" aria-live="polite"></p>
+    </form>
+  </div>
+
+  <!-- COMENTÁRIOS -->
+  <div class="tab-content" id="comments" role="tabpanel" aria-labelledby="comments-label">
+    <h3 id="comments-label" class="visually-hidden">Comentários</h3>
+    <div class="comments-card">
+      <h3>Deixe seu comentário</h3>
+      <form id="comment-form" novalidate>
+        <label class="visually-hidden" for="comment-name">Seu nome</label>
+        <input type="text" id="comment-name" placeholder="Seu nome" required aria-required="true">
+
+        <label class="visually-hidden" for="comment-text">Seu comentário</label>
+        <textarea id="comment-text" placeholder="O que você achou dos lançamentos?" required aria-required="true"></textarea>
+
+        <button type="submit" class="btn-red">Publicar</button>
+      </form>
+      <div id="comments-list" class="comments-list" aria-live="polite"></div>
     </div>
   </div>
+</section>
 </main>
-<script src="script.js"></script>
 </body>
+<script src="script.js"></script>
+<footer role="contentinfo">
+  <p>© 2025 Maratonando Geek. Todos os direitos reservados.</p>
+  <nav class="footer-links" aria-label="Links do rodapé">
+    <a href="forum.html">Fórum da Comunidade</a> |
+    <a href="privacidade.html">Política de Privacidade</a> |
+    <a href="termos.html">Termos de Uso</a> |
+    <a href="sobre.html">Sobre</a>
+  </nav>
+</footer>
 </html>
