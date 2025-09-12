@@ -62,27 +62,35 @@ header {
 /* ==================== 3. Redes sociais ==================== */
 .social-icons {
   display: flex;
-  gap: 12px;
-  margin-left: 40px;
   justify-content: center;
-  flex-wrap: wrap;
+  gap: 15px; /* espaçamento entre os ícones */
+  margin: 20px 0;
 }
 
-.social-icons img {
-  width: 28px;
-  height: 28px;
-  filter: invert(1);
-  transition: transform 0.2s, filter 0.2s;
+.social-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  border-radius: 12px; /* cantos arredondados */
+  color: #fff; /* ícone branco */
+  font-size: 24px;
+  transition: transform 0.3s, box-shadow 0.3s;
 }
 
-.social-icons a:hover img {
-  transform: scale(1.2);
-  filter: invert(0);
+.social-btn:hover {
+  transform: scale(1.1);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
 }
 
-.social-icons a[href*="facebook"]:hover { color: #3b5998; }
-.social-icons a[href*="instagram"]:hover { color: #e4405f; }
-.social-icons a[href*="youtube"]:hover { color: #ff0000; }
+/* Cores oficiais de cada rede */
+.social-btn.facebook { background-color: #1877F2; }
+.social-btn.twitter { background-color: #1DA1F2; }
+.social-btn.instagram { background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%); }
+.social-btn.youtube { background-color: #FF0000; }
+.social-btn.tiktok { background-color: #000000; }
+
 
 /* ==================== 4. Navegação (nav) ==================== */
 nav {
