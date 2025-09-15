@@ -99,6 +99,24 @@
             font-size: 0.85rem;
             color: #777;
         }
+
+        .video-container {
+  position: relative;
+  padding-bottom: 56.25%; /* Proporção 16:9 */
+  height: 0;
+  overflow: hidden;
+  border-radius: 10px;
+  margin: 20px 0;
+}
+
+.video-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;   /* largura sempre 100% do container */
+  height: 100%;  /* altura automática pela proporção */
+  border: 0;
+}
   </style>
 </head>
 <body>
