@@ -266,154 +266,83 @@
       </aside>
     </div>
 
-<!-- Destaque BGS 2025 -->
-<section class="bgs-destaque">
-  <div class="overlay">
-    <h2>🎮 Brasil Game Show 2025</h2>
-    <p>A maior feira de games da América Latina já tem data marcada!</p>
-    
-    <div class="bgs-box">
-      <p><strong>📅 09 a 12 de outubro de 2025</strong> <br> Distrito Anhembi – São Paulo/SP</p>
-      <a href="bgs2025.html" class="btn-bgs-home">Ver detalhes</a>
-    </div>
+    <div class="container">
+  <!-- Últimas Notícias -->
+<section aria-labelledby="ultimas-noticias-title">
+  <h2 id="ultimas-noticias-title" class="highlight">Últimas Notícias</h2>
+  <div class="grid" role="list">
+
+    <!-- Stranger Things 5 Vol.2 -->
+    <article class="card" role="listitem">
+      <div class="img-wrapper">
+        <img src="img/stranger-things-5-news.webp"
+             alt="Stranger Things Volume 2 e o fim da série"
+             width="480" height="270" loading="lazy" decoding="async">
+        <span class="tag" aria-label="Categoria: Séries">Séries</span>
+      </div>
+      <h3>Stranger Things: episódios de Volume 2 já estão no streaming</h3>
+      <p class="card-excerpt">
+        A segunda parte da 5ª temporada de *Stranger Things* estreou dia 25 de dezembro, com três novos episódios que elevam a tensão em Hawkins e preparam o final da série. 
+      </p>
+      <div class="btn-wrapper">
+        <a href="novidades-stranger-things.html" class="btn-red" aria-label="Ler mais sobre Stranger Things Volume 2">Saiba Mais</a>
+      </div>
+    </article>
+
+    <!-- Filme destaque da semana -->
+    <article class="card" role="listitem">
+      <div class="img-wrapper">
+        <img src="img/wake-up-dead-man.webp"
+             alt="Wake Up Dead Man: A Knives Out Mystery"
+             width="480" height="270" loading="lazy" decoding="async">
+        <span class="tag" aria-label="Categoria: Filmes">Filmes</span>
+      </div>
+      <h3>Wake Up Dead Man chega ao streaming e cinema</h3>
+      <p class="card-excerpt">
+        O novo filme da franquia *Knives Out*, dirigido por Rian Johnson, já está disponível na Netflix após estreia nos cinemas, com Daniel Craig de volta como Benoit Blanc. :contentReference[oaicite:2]{index=2}
+      </p>
+      <div class="btn-wrapper">
+        <a href="novidades-wake-up-dead-man.html" class="btn-red" aria-label="Ler mais sobre Wake Up Dead Man">Saiba Mais</a>
+      </div>
+    </article>
+
+    <!-- Jogo gratuito no PC -->
+    <article class="card" role="listitem">
+      <div class="img-wrapper">
+        <img src="img/we-were-here-together.webp"
+             alt="We Were Here Together grátis no PC"
+             width="480" height="270" loading="lazy" decoding="async">
+        <span class="tag" aria-label="Categoria: Games">Games</span>
+      </div>
+      <h3>We Were Here Together fica grátis no PC por tempo limitado</h3>
+      <p class="card-excerpt">
+        O jogo cooperativo *We Were Here Together* está disponível gratuitamente na Epic Games Store por tempo limitado — perfeito para jogar com um amigo antes que a promoção acabe. :contentReference[oaicite:3]{index=3}
+      </p>
+      <div class="btn-wrapper">
+        <a href="novidades-games-gratis.html" class="btn-red" aria-label="Ler mais sobre We Were Here Together grátis">Saiba Mais</a>
+      </div>
+    </article>
+
+    <!-- Outra notícia de streaming desta semana -->
+    <article class="card" role="listitem">
+      <div class="img-wrapper">
+        <img src="img/streaming-this-week.webp"
+             alt="Novos filmes e séries no streaming esta semana"
+             width="480" height="270" loading="lazy" decoding="async">
+        <span class="tag" aria-label="Categoria: Streaming">Streaming</span>
+      </div>
+      <h3>Novos filmes e séries para assistir nesta semana</h3>
+      <p class="card-excerpt">
+        Plataformas como Netflix, Prime Video e iTunes lançam títulos como *Springsteen: Deliver Me From Nowhere* e *Sentimental Value*, além de outros lançamentos imperdíveis. :contentReference[oaicite:4]{index=4}
+      </div>
+      <div class="btn-wrapper">
+        <a href="novidades-streaming-semana.html" class="btn-red" aria-label="Ler mais sobre novidades de streaming">Saiba Mais</a>
+      </div>
+    </article>
+
   </div>
 </section>
 
-<style>
-.bgs-destaque {
-  position: relative;
-  text-align: center;
-  padding: 4rem 2rem;
-  margin: 2rem auto;
-  color: #fff;
-  border-radius: 15px;
- max-width: 1200px;
-  background: url("img/bgs.jpg") center/cover no-repeat; /* 🔹 coloca a imagem atrás */
-  overflow: hidden;
-}
-
-/* overlay escuro para o texto ficar legível */
-.bgs-destaque::before {
-  content: "";
-  position: absolute;
-  top: 0; left: 0;
-  width: 100%; height: 100%;
-  background: rgba(0,0,0,0.6);
-  border-radius: 15px;
-}
-
-/* conteúdo por cima da imagem */
-.overlay {
-  position: relative;
-  z-index: 1;
-}
-
-.bgs-destaque h2 {
-  color: #e91e63;
-  font-size: 2rem;
-  margin-bottom: 0.5rem;
-}
-.bgs-destaque p {
-  margin-bottom: 1rem;
-  font-size: 1.1rem;
-}
-.bgs-box {
-  background: rgba(41,41,41,0.9); /* fundo semi-transparente */
-  padding: 1.5rem;
-  border-radius: 10px;
-  display: inline-block;
-}
-.btn-bgs-home {
-  display: inline-block;
-  margin-top: 1rem;
-  padding: 0.8rem 1.5rem;
-  background: #e91e63;
-  color: #fff;
-  font-weight: bold;
-  border-radius: 10px;
-  text-decoration: none;
-  transition: background 0.3s;
-}
-.btn-bgs-home:hover {
-  background: #c2185b;
-}
-</style>
-
-
-
-
-    <div class="container">
-      <!-- Últimas Notícias -->
-      <section aria-labelledby="ultimas-noticias-title">
-        <h2 id="ultimas-noticias-title" class="highlight">Últimas Notícias</h2>
-<div class="grid" role="list">
-
-
-
-<!-- O Telefone Preto 2 -->
-<article class="card" role="listitem">
-  <div class="img-wrapper">
-    <img src="img/telefonepreto2.webp"
-         alt="O Telefone Preto 2 domina as bilheterias mundiais e lidera no Brasil"
-         width="480" height="270" loading="lazy" decoding="async">
-    <span class="tag" aria-label="Categoria: Filmes">Filmes</span>
-  </div>
-  <h3>O Telefone Preto 2 domina as bilheterias e lidera no Brasil</h3>
-  <p class="card-excerpt">
-    A aguardada sequência de terror de Scott Derrickson estreia com força total, arrecadando mais de R$ 12 milhões no Brasil e assumindo a liderança mundial nas bilheterias.
-  </p>
-  <div class="btn-wrapper">
-    <a href="novidades1.html" class="btn-red" aria-label="Ler mais sobre O Telefone Preto 2">Saiba Mais</a>
-  </div>
-</article>
-
-
-<!-- Call of Duty League 2026 -->
-<article class="card" role="listitem">
-  <div class="img-wrapper">
-    <img src="img/calofdutyleague.webp"
-         alt="Call of Duty League retorna à Europa e Reino Unido em 2026"
-         width="480" height="270" loading="lazy" decoding="async">
-    <span class="tag" aria-label="Categoria: Games">Games</span>
-  </div>
-  <h3>Call of Duty League volta para Europa e Reino Unido em 2026</h3>
-  <p class="card-excerpt">A liga retorna à Europa com eventos em Paris e Birmingham, marcando uma nova era para o cenário competitivo.</p>
-  <div class="btn-wrapper">
-    <a href="novidades2.html" class="btn-red" aria-label="Ler mais sobre Call of Duty League 2026">Saiba Mais</a>
-  </div>
-</article>
-
-
-         <!-- Novidades 3 -->
-<article class="card" role="listitem">
-  <div class="img-wrapper">
-    <img src="img/wandinha.png"
-         alt="Imagem promocional da nova temporada de Wandinha"
-         width="480" height="270" loading="lazy" decoding="async">
-    <span class="tag" aria-label="Categoria: Séries">Séries</span>
-  </div>
-  <h3>Wandinha: segredos da nova temporada e pistas da terceira</h3>
-  <p class="card-excerpt">Criadores revelam bastidores explosivos, reviravoltas e o que esperar para o futuro da série.</p>
-  <div class="btn-wrapper">
-    <a href="novidades3.html" class="btn-red" aria-label="Ler mais sobre Wandinha e as novidades da nova temporada">Saiba Mais</a>
-  </div>
-</article>
-
-
-      <!-- Novidades 4 -->
-<article class="card" role="listitem">
-  <div class="img-wrapper">
-    <img src="img/gta6.webp"
-         alt="Imagem ilustrativa de GTA 6"
-         width="480" height="270" loading="lazy" decoding="async">
-    <span class="tag" aria-label="Categoria: Games">Games</span>
-  </div>
-  <h3>Vazamento de GTA 6 revela polícia avançada, apps como WhatsApp e até Uber</h3>
-  <p class="card-excerpt">Detalhes sugerem um mundo ainda mais imersivo, com mecânicas inovadoras e interações do dia a dia nunca vistas antes.</p>
-  <div class="btn-wrapper">
-    <a href="novidades4.html" class="btn-red" aria-label="Ler mais sobre vazamento de GTA 6">Saiba Mais</a>
-  </div>
-</article>
 
 </div>
       <!-- Listas & Rankings -->
