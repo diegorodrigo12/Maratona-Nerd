@@ -1,168 +1,162 @@
- /* ======= Pagina Filmes ======= */
+/* ======= Pagina Filmes (versão otimizada) ======= */
 
-    const API_KEY = 'e33ea358df3fec9b511058ec9ef1701f';
-    const BASE_URL = 'https://api.themoviedb.org/3';
+const API_KEY = 'e33ea358df3fec9b511058ec9ef1701f';
+const BASE_URL = 'https://api.themoviedb.org/3';
 
-    const container = document.getElementById('tmdb-filmes');
-    const searchInput = document.getElementById('searchInput');
-    const filterButtons = document.querySelectorAll('#filter-buttons .tab-btn');
+const container = document.getElementById('tmdb-filmes');
+const searchInput = document.getElementById('searchInput');
+const filterButtons = document.querySelectorAll('#filter-buttons .tab-btn');
 
-    // Função para buscar plataformas de streaming e retornar a principal que você quer usar
-    async function buscarPlataforma(filmeId) {
-      try {
-        const res = await fetch(`${BASE_URL}/movie/${filmeId}/watch/providers?api_key=${API_KEY}`);
-        if (!res.ok) throw new Error('Erro ao buscar providers');
-        const dados = await res.json();
+/* Cache para não chamar API toda hora */
+const plataformaCache = new Map();
 
-        // A API tem providers por país, vamos usar 'BR' (Brasil) se disponível
-        const providersBR = dados.results?.BR;
-        if (!providersBR) return 'Cinemas'; // fallback se não encontrado
+/* Formatar data */
+function formatarData(data) {
+  if (!data) return 'N/A';
+  const d = new Date(data);
+  return d.toLocaleDateString('pt-BR');
+}
 
-        // providersBR pode ter flatrate (streaming), rent, buy
-        if (providersBR.flatrate) {
-          // Pegamos o nome da primeira plataforma que oferece streaming
-          const plataformas = providersBR.flatrate.map(p => p.provider_name);
+/* ===== Buscar plataforma ===== */
+async function buscarPlataforma(filmeId) {
+  if (plataformaCache.has(filmeId)) return plataformaCache.get(filmeId);
 
-          // Defina regras para escolher uma plataforma que você quer filtrar:
-          if (plataformas.includes('Netflix')) return 'Netflix';
-          if (plataformas.includes('Prime Video')) return 'Prime Video';
-          if (plataformas.includes('Disney Plus')) return 'Disney+';
+  try {
+    const res = await fetch(`${BASE_URL}/movie/${filmeId}/watch/providers?api_key=${API_KEY}`);
+    const dados = await res.json();
 
-          // Se não for nenhuma acima, retornar 'Outros'
-          return 'Outros';
-        }
+    const providersBR = dados.results?.BR;
 
-        // Se só tiver para aluguel ou compra, considera 'Cinemas' ou 'Outros'
-        return 'Cinemas';
+    let plataforma = 'Cinemas';
 
-      } catch {
-        return 'Cinemas'; // erro na busca
-      }
+    if (providersBR?.flatrate) {
+      const nomes = providersBR.flatrate.map(p => p.provider_name);
+
+      if (nomes.includes('Netflix')) plataforma = 'Netflix';
+      else if (nomes.includes('Prime Video')) plataforma = 'Prime Video';
+      else if (nomes.includes('Disney Plus')) plataforma = 'Disney+';
+      else plataforma = 'Outros';
     }
 
-    async function criarCardFilme(filme) {
-      const posterUrl = filme.poster_path
-        ? `https://image.tmdb.org/t/p/w500${filme.poster_path}`
-        : 'img/poster-placeholder.jpg';
+    plataformaCache.set(filmeId, plataforma);
+    return plataforma;
 
-      // Buscando a plataforma do filme antes de criar o card
-      const plataforma = await buscarPlataforma(filme.id);
+  } catch {
+    return 'Cinemas';
+  }
+}
 
-      const card = document.createElement('div');
-      card.className = 'card';
-      card.setAttribute('data-platform', plataforma);
+/* ===== Criar Card ===== */
+async function criarCardFilme(filme) {
 
-      card.innerHTML = `
-    <img src="${posterUrl}" alt="${filme.title}" loading="lazy" />
-    <h3>${filme.title}</h3>
-    <p>Data de lançamento: ${filme.release_date || 'N/A'}</p>
-    <span class="tag">${plataforma}</span>
-    <div class="btn-wrapper">
-      <a href="https://www.themoviedb.org/movie/${filme.id}" target="_blank" class="btn-red">Saiba Mais</a>
-    </div>
-  `;
+  const posterUrl = filme.poster_path
+    ? `https://image.tmdb.org/t/p/w500${filme.poster_path}`
+    : 'img/poster-placeholder.jpg';
 
-      return card;
+  const plataforma = await buscarPlataforma(filme.id);
+
+  const card = document.createElement('div');
+  card.className = 'card';
+  card.setAttribute('data-platform', plataforma);
+
+  card.innerHTML = `
+<img src="${posterUrl}" alt="${filme.title}" loading="lazy" />
+
+<div class="card-content">
+  <h3>${filme.title}</h3>
+  <p>📅 ${filme.release_date || 'N/A'}</p>
+  <span class="tag">${plataforma}</span>
+
+  <div class="btn-wrapper">
+    <a href="https://www.themoviedb.org/movie/${filme.id}" target="_blank" class="btn-red">
+      Saiba Mais
+    </a>
+  </div>
+</div>
+`;
+
+  return card;
+}
+
+/* ===== Renderizar lista ===== */
+async function renderFilmes(lista) {
+
+  container.innerHTML = '<p>Carregando...</p>';
+
+  const cardsPromises = lista.map(criarCardFilme);
+  const cards = await Promise.all(cardsPromises);
+
+  container.innerHTML = '';
+  cards.forEach(card => container.appendChild(card));
+
+  aplicarFiltros();
+}
+
+/* ===== Filmes populares ===== */
+async function carregarFilmesPopulares() {
+  try {
+    const res = await fetch(`${BASE_URL}/movie/popular?api_key=${API_KEY}&language=pt-BR`);
+    const dados = await res.json();
+    renderFilmes(dados.results);
+  } catch {
+    container.innerHTML = '<p>Erro ao carregar filmes.</p>';
+  }
+}
+
+/* ===== Buscar ===== */
+async function buscarFilmes(query) {
+
+  if (!query) return carregarFilmesPopulares();
+
+  try {
+    const res = await fetch(`${BASE_URL}/search/movie?api_key=${API_KEY}&language=pt-BR&query=${encodeURIComponent(query)}`);
+    const dados = await res.json();
+
+    if (dados.results.length === 0) {
+      container.innerHTML = '<p>Nenhum filme encontrado.</p>';
+      return;
     }
 
-    async function carregarFilmesPopulares() {
-      try {
-        const res = await fetch(`${BASE_URL}/movie/popular?api_key=${API_KEY}&language=pt-BR&page=1`);
-        if (!res.ok) throw new Error('Erro ao buscar filmes populares');
-        const dados = await res.json();
+    renderFilmes(dados.results);
 
-        container.innerHTML = '';
-        // Para evitar carregar todos em sequência (muito lento), carregue com Promise.all
-        const cardsPromises = dados.results.map(filme => criarCardFilme(filme));
-        const cards = await Promise.all(cardsPromises);
+  } catch {
+    container.innerHTML = '<p>Erro na busca.</p>';
+  }
+}
 
-        cards.forEach(card => container.appendChild(card));
+/* ===== Filtros ===== */
+function aplicarFiltros() {
 
-        // Aplica o filtro atual
-        const plataformaAtiva = document.querySelector('#filter-buttons .tab-btn.active').getAttribute('data-platform');
-        const textoBusca = searchInput.value.trim().toLowerCase();
-        filterCards(plataformaAtiva, textoBusca);
+  const plataformaAtiva = document.querySelector('.tab-btn.active')?.dataset.platform || 'all';
+  const textoBusca = searchInput.value.trim().toLowerCase();
 
-      } catch (err) {
-        console.error(err);
-        container.innerHTML = '<p>Erro ao carregar filmes.</p>';
-      }
-    }
+  document.querySelectorAll('.card').forEach(card => {
 
-    async function buscarFilmes(query) {
-      if (!query) {
-        carregarFilmesPopulares();
-        return;
-      }
+    const cardPlatform = card.dataset.platform;
+    const title = card.querySelector('h3').textContent.toLowerCase();
 
-      try {
-        const res = await fetch(`${BASE_URL}/search/movie?api_key=${API_KEY}&language=pt-BR&query=${encodeURIComponent(query)}&page=1&include_adult=false`);
-        if (!res.ok) throw new Error('Erro na busca');
-        const dados = await res.json();
+    const platformMatch = plataformaAtiva === 'all' || cardPlatform === plataformaAtiva;
+    const textMatch = title.includes(textoBusca);
 
-        container.innerHTML = '';
-        if (dados.results.length === 0) {
-          container.innerHTML = '<p>Nenhum filme encontrado.</p>';
-          return;
-        }
+    card.style.display = (platformMatch && textMatch) ? 'flex' : 'none';
+  });
+}
 
-        const cardsPromises = dados.results.map(filme => criarCardFilme(filme));
-        const cards = await Promise.all(cardsPromises);
-        cards.forEach(card => container.appendChild(card));
+/* ===== Eventos ===== */
 
-        const plataformaAtiva = document.querySelector('#filter-buttons .tab-btn.active').getAttribute('data-platform');
-        const textoBusca = searchInput.value.trim().toLowerCase();
-        filterCards(plataformaAtiva, textoBusca);
+filterButtons.forEach(btn => {
+  btn.addEventListener('click', () => {
+    filterButtons.forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    aplicarFiltros();
+  });
+});
 
-      } catch (err) {
-        console.error(err);
-        container.innerHTML = '<p>Erro ao buscar filmes.</p>';
-      }
-    }
+searchInput.addEventListener('keydown', e => {
+  if (e.key === 'Enter') buscarFilmes(searchInput.value.trim());
+});
 
-    // Filtra os cards visíveis baseado na plataforma e texto de busca localmente
-    function filterCards(platform, searchText) {
-      const cards = document.querySelectorAll('.card');
+searchInput.addEventListener('input', aplicarFiltros);
 
-      cards.forEach(card => {
-        const cardPlatform = card.getAttribute('data-platform') || 'all';
-        const title = card.querySelector('h3').textContent.toLowerCase();
-
-        const platformMatch = platform === 'all' || cardPlatform === platform;
-        const textMatch = title.includes(searchText);
-
-        if (platformMatch && textMatch) {
-          card.style.display = 'flex';
-        } else {
-          card.style.display = 'none';
-        }
-      });
-    }
-
-    // Eventos para filtro por plataforma (botões)
-    filterButtons.forEach(button => {
-      button.addEventListener('click', () => {
-        filterButtons.forEach(btn => btn.classList.remove('active'));
-        button.classList.add('active');
-
-        const plataforma = button.getAttribute('data-platform');
-        const textoBusca = searchInput.value.trim().toLowerCase();
-
-        filterCards(plataforma, textoBusca);
-      });
-    });
-
-    // Evento para busca ao pressionar Enter no campo de texto
-    searchInput.addEventListener('keydown', e => {
-      if (e.key === 'Enter') {
-        const query = searchInput.value.trim();
-        buscarFilmes(query);
-      }
-    });
-
-    // Inicializa a página carregando os filmes populares
-    document.addEventListener('DOMContentLoaded', () => {
-      carregarFilmesPopulares();
-    });
-
-
+/* ===== Start ===== */
+document.addEventListener('DOMContentLoaded', carregarFilmesPopulares);

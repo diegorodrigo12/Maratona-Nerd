@@ -131,60 +131,67 @@ nav a.active,
   transform: scale(1.1);
 }
 
-/* ================= GRID & CARDS ================= */
-.grid,
-.ranking-wrapper {
+/* ================= GRID & CARDS NOVO ================= */
+
+.grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px,1fr));
+  grid-template-columns: repeat(auto-fit, minmax(420px,1fr));
   gap: 20px;
 }
 
-.card,
-.ranking-card,
-.poll-card,
-.quiz-card,
-.comments-card {
+.card {
+  display: flex;
+  gap: 16px;
   background: #111;
-  border-radius: 12px;
-  overflow: hidden;
+  border-radius: 14px;
+  padding: 14px;
   border: 1px solid #222;
   transition: .25s;
+  align-items: flex-start;
 }
 
-.card:hover,
-.ranking-card:hover,
-.poll-card:hover,
-.quiz-card:hover,
-.comments-card:hover {
+.card:hover {
   transform: translateY(-6px);
   box-shadow: 0 14px 30px rgba(0,0,0,.4);
 }
 
 .card img {
-  width: 100%;
-  height: 200px;
+  width: 120px;
+  height: 180px;
   object-fit: cover;
+  border-radius: 8px;
+  flex-shrink: 0;
 }
 
-.card h3,
-.ranking-card h3 {
-  margin: 15px;
-  color: #fff;
+.card-content {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  flex: 1;
+}
+
+.card h3 {
+  margin: 0;
+  font-size: 1.1rem;
+  line-height: 1.2;
 }
 
 .card p {
-  margin: 0 15px 15px;
-  opacity: .85;
+  margin: 0;
+  opacity: .8;
+  font-size: .9rem;
 }
 
-/* TAG */
 .tag {
   background: #e50914;
   padding: 4px 10px;
   border-radius: 999px;
   font-size: .75rem;
-  margin: 0 15px 10px;
-  display: inline-block;
+  width: fit-content;
+}
+
+.btn-wrapper {
+  margin-top: auto;
 }
 
 /* ================= CARROSSEL ================= */
@@ -284,4 +291,11 @@ footer {
   .btn-red {
     width: 100%;
   }
+}
+.card h3 {
+  margin: 15px;
+  color: #fff;
+  font-size: 1.1rem;
+  line-height: 1.3;
+  min-height: 48px;
 }
