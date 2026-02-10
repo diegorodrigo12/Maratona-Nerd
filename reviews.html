@@ -2,751 +2,125 @@
 <html lang="pt-BR">
 
 <head>
-  <meta name="description"
-    content="Blog geek com lançamentos, filmes, séries e cultura pop. Maratonando Geek é sua central de entretenimento.">
-  <meta name="keywords"
-    content="filmes, séries, cultura geek, lançamentos, reviews, maratonando geek, reviews de filmes, reviews de series">
-  <meta name="author" content="Maratonando Geek">
-  <meta name="robots" content="index, follow">
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta property="og:title" content="Reviews - Maratonando Geek">
-  <meta property="og:description"
-    content="Análises e opiniões sobre filmes e séries. Descubra o que vale a pena maratonar.">
-  <meta property="og:image" content="URL_DA_IMAGEM_DESTACADA_DO_SITE">
-  <meta name="twitter:card" content="summary_large_image">
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3533636004938881"
-     crossorigin="anonymous"></script>
-    <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-VGPPMHC0E1"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag() { dataLayer.push(arguments); }
-    gtag('js', new Date());
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    gtag('config', 'G-VGPPMHC0E1');
-  </script>
-  
-  <title>Reviews de Filmes e Séries</title>
+<title>Reviews – Maratonando Geek</title>
 
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@900&family=Poppins:wght@500&display=swap"
-    rel="stylesheet" />
+<meta name="description" content="Reviews de filmes e séries – Maratonando Geek">
+<meta name="keywords" content="reviews, filmes, séries, cultura geek">
 
-  <style>
-    body {
-      font-family: 'Poppins', sans-serif;
-      background-color: #fff;
-      color: #333;
-      margin: 0;
-      padding: 0;
-    }
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@900&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
 
-    /* Header */
-    header {
-      background-color: #1E90FF;
-      padding: 20px;
-      text-align: center;
-      font-weight: 700;
-      color: #2c3e50;
-      user-select: none;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      gap: 16px;
-      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    }
-
-    h1{
-      text-align: center;
-      color:#e50914;
-    }
-    .logo-main {
-      font-family: 'Montserrat', sans-serif;
-      font-style: italic;
-      font-weight: 900;
-      font-size: 2.8rem;
-      letter-spacing: 5px;
-      text-transform: uppercase;
-      color: #ffffff;
-    }
-
-    .logo-sub {
-      display: block;
-      font-family: 'Poppins', sans-serif;
-      font-weight: 500;
-      font-size: 0.9rem;
-      letter-spacing: 1.5px;
-      margin-top: 1px;
-      text-transform: none;
-      font-style: normal;
-      color: #ffffff;
-    }
-
-
-   /* 3. Navegação (nav) */
-    nav {
-      background: #ecf0f1;
-      display: flex;
-      justify-content: center;
-      padding: 10px;
-      border-bottom: 1px solid #bdc3c7;
-    }
-
-    nav a {
-      color: #34495e;
-      text-decoration: none;
-      margin: 0 15px;
-      font-weight: bold;
-      transition: 0.3s;
-    }
-
-     nav a:hover,
-    nav a.active {
-      color: #1E90FF;
-       border-bottom: 2px solid #1E90FF;
-     padding-bottom: 4px;
-    }
-
-
-    .container {
-      width: 90%;
-      max-width: 1200px;
-      margin: auto;
-      padding: 30px 0;
-    }
-
-   
-
-    .review-descricao {
-      text-align: center;
-      max-width: 700px;
-      margin: -15px auto 30px auto;
-      font-size: 1rem;
-      color: #555;
-      line-height: 1.6;
-    }
-
-    #search-container {
-      text-align: center;
-      margin-bottom: 20px;
-    }
-
-    #search-input {
-      padding: 10px;
-      width: 300px;
-      max-width: 90%;
-      border-radius: 25px;
-      border: 1px solid #ccc;
-      font-size: 1rem;
-    }
-
-    .review-filtros {
-      text-align: center;
-      margin: 40px auto 30px auto;
-    }
-
-    .review-filtros .tab-btn {
-      background-color: #1E90FF;
-      color: white;
-      border: none;
-      padding: 10px 20px;
-      margin: 5px 7px;
-      border-radius: 25px;
-      font-weight: bold;
-      font-size: 0.95rem;
-      cursor: pointer;
-      transition: all 0.3s ease;
-      box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
-    }
-
-    .review-filtros .tab-btn:hover,
-    .review-filtros .tab-btn.active {
-      background-color: #e50914;
-      color: white;
-      transform: scale(1.05);
-    }
-
-
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 20px;
-      transition: opacity 0.3s ease;
-      /* adiciona transição suave */
-      opacity: 1;
-    }
-
-    .review-card {
-      background: #f0f8ff;
-      border-radius: 12px;
-      border: 2px solid #1E90FF;
-      box-shadow: 0 0 10px rgba(30, 144, 255, 0.2);
-      overflow: hidden;
-      color: #2C3E50;
-      display: flex;
-      flex-direction: column;
-      transition: transform 0.3s;
-    }
-
-    .review-card:hover {
-      transform: scale(1.04);
-      box-shadow: 0 0 18px rgba(30, 144, 255, 0.4);
-    }
-
-    .review-card img {
-      width: 100%;
-      height: 180px;
-      object-fit: cover;
-      border-bottom: 2px solid #1E90FF;
-    }
-
-    .review-content {
-      padding: 15px 20px;
-      flex-grow: 1;
-      display: flex;
-      flex-direction: column;
-    }
-
-    .review-title {
-      font-weight: 700;
-      font-size: 1.3rem;
-      margin-bottom: 10px;
-      flex-grow: 0;
-    }
-
-    .rating {
-      color: #FF6F61;
-      font-size: 1.2rem;
-      margin-bottom: 12px;
-      flex-grow: 0;
-    }
-
-    /* Informações extras */
-    .extra-info p {
-      font-size: 0.85rem;
-      margin: 4px 0;
-      color: #444;
-    }
-
-    .review-summary {
-      flex-grow: 1;
-      font-size: 0.95rem;
-      color: #444;
-      margin-bottom: 18px;
-      line-height: 1.3;
-    }
-
-    .btn-wrapper {
-      text-align: center;
-      margin-top: auto;
-    }
-
-    .btn-red {
-      display: inline-block;
-      background: linear-gradient(135deg, #1E90FF, #2C3E50);
-      color: #fff;
-      text-decoration: none;
-      padding: 10px 20px;
-      border-radius: 50px;
-      font-weight: bold;
-      font-size: 0.95rem;
-      border: none;
-      cursor: pointer;
-      transition: background 0.3s, transform 0.2s;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-    }
-
-    .btn-red:hover {
-      background: linear-gradient(135deg, #2C3E50, #1E90FF);
-      transform: translateY(-2px);
-    }
-
-    footer {
-      width: 100%;
-      background: #ffffff;
-      text-align: center;
-      padding: 20px;
-      color: #888;
-      font-size: 0.8rem;
-      border-top: 1px solid #ddd;
-      margin: 0;
-      box-sizing: border-box;
-    }
-
-    @media (max-width: 768px) {
-
-      header {
-        flex-direction: column;
-        gap: 10px;
-        padding: 15px 10px;
-        text-align: center;
-      }
-
-      .logo-icon {
-        justify-content: center;
-      }
-
-      .logo-text-wrapper {
-        text-align: center;
-      }
-
-      .logo-main {
-        font-size: 1.8rem;
-        letter-spacing: 2px;
-      }
-
-      .logo-sub {
-        font-size: 0.75rem;
-      }
-
-      .social-icons {
-        margin-left: 0;
-        justify-content: center;
-        flex-wrap: wrap;
-      }
-
-      nav {
-        flex-direction: column;
-        align-items: center;
-      }
-
-      nav a {
-        margin: 6px 0;
-      }
-
-      .container {
-        width: 95%;
-        padding: 20px 10px;
-      }
-
-      h2 {
-        font-size: 1.6rem;
-        margin-bottom: 20px;
-      }
-
-      .grid {
-        grid-template-columns: 1fr;
-        /* só uma coluna no celular */
-        gap: 15px;
-      }
-
-      .review-card {
-        flex-direction: column;
-      }
-
-      .review-card img {
-        height: 200px;
-        /* ligeiramente maior para telas pequenas */
-        border-bottom: 2px solid #1E90FF;
-      }
-
-      .review-content {
-        padding: 12px 15px;
-      }
-
-      .review-title {
-        font-size: 1.1rem;
-        margin-bottom: 8px;
-      }
-
-      .rating {
-        font-size: 1rem;
-        margin-bottom: 10px;
-      }
-
-      .review-summary {
-        font-size: 0.9rem;
-        margin-bottom: 14px;
-      }
-
-      .btn-red {
-        font-size: 0.9rem;
-        padding: 8px 16px;
-      }
-
-     /* ==================== 12. Footer ==================== */
-      footer { 
-        text-align:center; 
-        padding:16px 0; 
-        background:#1E90FF; 
-        color:#fff; 
-        margin-top:50px; }
-
-    }
-  </style>
 </head>
 
 <body>
-  <header>
-    <h2>Maratonando Geek</h2>
-    <div class="logo-sub">Sua central de cultura pop no cinema e streaming.</div>
-  </header>
 
- 
-  <nav>
-    <a href="index.html">Início</a>
-    <a href="filmes.html">Filmes</a>
-    <a href="series.html">Séries</a>
-    <a href="games.html">Games</a>
-    <a href="reviews.html"class="active">Reviews</a>
-    <a href="contato.html">Contato</a>
-    <a href="sobre.html">Sobre</a>
-  </nav>
+<header>
+  <h1 class="site-title">Maratonando Geek</h1>
+  <p class="logo-sub">Sua central de cultura pop</p>
+</header>
 
+<nav class="main-nav">
+  <a href="index.html">Início</a>
+  <a href="filmes.html">Filmes</a>
+  <a href="series.html">Séries</a>
+  <a href="games.html">Games</a>
+  <a href="reviews.html" class="active">Reviews</a>
+  <a href="contato.html">Contato</a>
+</nav>
 
-  <div class="container">
-    <h1>Reviews de Filmes e Séries</h1>
-    <p class="review-descricao">
-      Confira análises detalhadas dos filmes e séries em destaque. Avaliações com opinião crítica e notas da nossa
-      equipe!
-    </p>
+<div class="container">
 
-    <!-- Campo de busca -->
-    <div id="search-container">
-      <input type="text" id="search-input" placeholder="Buscar reviews por título..." />
-    </div>
+<h2 style="text-align:center">Reviews de Filmes e Séries</h2>
 
-    <div id="filter-buttons" class="review-filtros">
-      <button class="tab-btn active" data-category="all">Todos</button>
-      <button class="tab-btn" data-category="ação">Ação</button>
-      <button class="tab-btn" data-category="comédia">Comédia</button>
-      <button class="tab-btn" data-category="terror">Terror</button>
-      <button class="tab-btn" data-category="drama">Drama</button>
-    </div>
+<p style="text-align:center; opacity:.8; max-width:700px; margin:auto">
+Confira análises detalhadas dos filmes e séries em destaque.
+Avaliações com opinião crítica da equipe Maratonando Geek.
+</p>
 
-    <div class="grid">
+<br>
 
-      <!-- Review 1 - Quarteto Fantástico 2025 -->
-      <article class="review-card" data-category="ação ficção aventura">
-        <img
-          src="img/the-fantastic-four-first-steps-poster-official-FF_Teaser2_Theatrical_1Sht_Digital_v3_Lg-cover-Th.jpg"
-          alt="Quarteto Fantástico" loading="lazy" />
-        <div class="review-content">
-          <h3 class="review-title">“Quarteto Fantástico: Primeiros Passos”</h3>
-          <div class="extra-info">
-            <p><strong>Diretor:</strong> Matt Shakman </p>
-            <p><strong>Gênero:</strong> Ação, Aventura, Ficção Científica</p>
-            <p><strong>Duração:</strong> 115 minutos</p>
-            <p><strong>Data de Lançamento:</strong> 24 de Julho de 2025</p>
-          </div>
-          <p class="review-summary">
-            Uma aventura emocionante que destaca laços familiares e efeitos visuais impressionantes, trazendo uma nova
-            perspectiva ao clássico grupo de super-heróis da Marvel.
-          </p>
-          <div class="btn-wrapper">
-            <a href="quartetofantastico.html" class="btn-red">Leia mais</a>
-          </div>
-        </div>
-      </article>
+<div style="text-align:center; margin:20px 0;">
+<input id="search-input" placeholder="Buscar reviews..."
+style="padding:12px; width:320px; max-width:90%; border-radius:8px; border:1px solid #333; background:#111; color:#fff;">
+</div>
 
-      <!-- Review 2 - From Origem -->
-      <article class="review-card" data-category="terror suspense mistério">
-        <img src="img/AN_ORIGEM-scaled.jpg" alt="From Origem" loading="lazy" />
-        <div class="review-content">
-          <h3 class="review-title">“FROM - Origem”</h3>
-          <div class="extra-info">
-            <p><strong>Criador:</strong> Jack Bender </p>
-            <p><strong>Gênero:</strong> Terror, Suspense, Mistério</p>
-            <p><strong>Temporadas:</strong> 3 (2025)</p>
-            <p><strong>Estreia:</strong> 20 de Fevereiro de 2022</p>
-          </div>
-          <p class="review-summary">
-            Série que mistura suspense psicológico com horror sobrenatural, conquistando público com sua trama densa e
-            personagens complexos.
-          </p>
-          <div class="btn-wrapper">
-            <a href="origem.html" class="btn-red">Leia mais</a>
-          </div>
-        </div>
-      </article>
+<div style="text-align:center; margin-bottom:30px;">
+<button class="tab-btn active" data-category="all">Todos</button>
+<button class="tab-btn" data-category="ação">Ação</button>
+<button class="tab-btn" data-category="terror">Terror</button>
+<button class="tab-btn" data-category="drama">Drama</button>
+</div>
 
-      <!-- Review 3 - Stranger Things -->
-      <article class="review-card" data-category="ficção terror drama">
-        <img src="img/capa-19.jpg" alt="Stranger Things" loading="lazy" />
-        <div class="review-content">
-          <h3 class="review-title">“Stranger Things”</h3>
-          <div class="extra-info">
-            <p><strong>Criadores:</strong> The Duffer Brothers</p>
-            <p><strong>Gênero:</strong> Ficção Científica, Terror, Drama</p>
-            <p><strong>Temporadas:</strong> 4</p>
-            <p><strong>Estreia:</strong> 15 de julho de 2016</p>
-          </div>
-          <p class="review-summary">
-            Suspense crescente e trama envolvente fecham a série com chave de ouro, entregando nostalgia e emoção para
-            todas as gerações.
-          </p>
-          <div class="btn-wrapper">
-            <a href="strangerthings.html" class="btn-red">Leia mais</a>
-          </div>
-        </div>
-      </article>
+<div class="grid">
 
-      <!-- Review 4 - Lilo e Stitch -->
-      <article class="review-card" data-category="animação família aventura">
-        <img src="img/lilo-stitch-beauty-5120x2880-21935.jpg" alt="Lilo e Stitch" loading="lazy" />
-        <div class="review-content">
-          <h3 class="review-title">“Lilo e Stitch”</h3>
-          <div class="extra-info">
-            <p><strong>Diretor:</strong> Dean Fleischer Camp</p>
-            <p><strong>Gênero:</strong> Animação, Aventura, Família</p>
-            <p><strong>Duração:</strong> 108 minutos</p>
-            <p><strong>Data de Lançamento:</strong> 22 de maio de 2025</p>
-          </div>
-          <p class="review-summary">
-            Nostalgia e emoção para todas as idades, com uma história cativante sobre amizade e aceitação.
-          </p>
-          <div class="btn-wrapper">
-            <a href="liloeestitch.html" class="btn-red">Leia mais</a>
-          </div>
-        </div>
-      </article>
-
-      <!-- Review 5 - Superman -->
-      <article class="review-card" data-category="ação fantasia aventura">
-        <img src="img/superman.jpg" alt="Superman" loading="lazy" />
-        <div class="review-content">
-          <h3 class="review-title">“Superman”</h3>
-          <div class="extra-info">
-            <p><strong>Diretor:</strong> James Gunnr </p>
-            <p><strong>Gênero:</strong> Ficção científica, Aventura, Ação </p>
-            <p><strong>Duração:</strong> 129 minutos</p>
-            <p><strong>Data de Lançamento:</strong> 10 de julho de 2025</p>
-          </div>
-          <p class="review-summary">
-            Uma reinvenção emocionante do clássico herói, com cenas de ação incríveis e efeitos visuais de tirar o
-            fôlego.
-          </p>
-          <div class="btn-wrapper">
-            <a href="superman.html" class="btn-red">Leia mais</a>
-          </div>
-        </div>
-      </article>
-
-      <!-- Review 6 - Duna (Dune) -->
-      <article class="review-card" data-category="ficção aventura drama">
-        <img src="img/dune_1947.jpg" alt="Duna" loading="lazy" />
-        <div class="review-content">
-          <h3 class="review-title">“Duna”</h3>
-          <div class="extra-info">
-            <p><strong>Diretor:</strong> Denis Villeneuve</p>
-            <p><strong>Gênero:</strong> Ficção Científica, Aventura, Drama</p>
-            <p><strong>Duração:</strong> 155 minutos</p>
-            <p><strong>Data de Lançamento:</strong> 21 de outubro de 2021</p>
-          </div>
-          <p class="review-summary">
-            Uma adaptação visualmente impressionante do clássico sci-fi, combinando política, ação e mistério em um
-            universo vasto.
-          </p>
-          <div class="btn-wrapper">
-            <a href="duna.html" class="btn-red">Leia mais</a>
-          </div>
-        </div>
-      </article>
-
-      <!-- Review 7 - The Last of Us -->
-      <article class="review-card" data-category="drama ação pós-apocalipse">
-        <img src="img/b7e4dad977dd98692307b69da020a0872910e215b240d1c8517437410b0af328.jpg" alt="The Last of Us"
-          loading="lazy" />
-        <div class="review-content">
-          <h3 class="review-title">“The Last of Us”</h3>
-          <div class="extra-info">
-            <p><strong>Criadores:</strong> Craig Mazin, Neil Druckmann</p>
-            <p><strong>Gênero:</strong> Drama, Ação, Pós-apocalíptico</p>
-            <p><strong>Temporadas:</strong> 2 (2023)</p>
-            <p><strong>Estreia:</strong> 15 de janeiro de 2023</p>
-          </div>
-          <p class="review-summary">
-            Série emocionante que combina narrativa poderosa e performances excepcionais, baseada no famoso jogo da
-            Naughty Dog.
-          </p>
-          <div class="btn-wrapper">
-            <a href="thelastofus.html" class="btn-red">Leia mais</a>
-          </div>
-        </div>
-      </article>
-
-      <!-- Review 8 -  Megan & Negan -->
-      <article class="review-card" data-category="drama zumbi ação">
-        <img src="img/the-walking-dead-dead-city-capa.jpg" alt="The Walking Dead: Dead City" loading="lazy" />
-        <div class="review-content">
-          <h3 class="review-title">“The Walking Dead: Dead City”</h3>
-          <div class="extra-info">
-            <p><strong>Criador:</strong> Eli Jorné</p>
-            <p><strong>Gênero:</strong> Drama, Apocalipse Zumbi</p>
-            <p><strong>Temporadas:</strong> 2 (2023)</p>
-            <p><strong>Estreia:</strong> 18 de Junho de 2023</p>
-          </div>
-          <p class="review-summary">
-            Spin-off focado em Megan e Negan, trazendo mais drama e ação ao universo de The Walking Dead, explorando
-            suas origens e conflitos.
-          </p>
-          <div class="btn-wrapper">
-            <a href="deadcity.html" class="btn-red">Leia mais</a>
-          </div>
-        </div>
-      </article>
-
-      <!-- Review 9 -  Daryl -->
-      <article class="review-card" data-category="drama zumbi ação">
-        <img src="img/The Walking Dead Daryl Dixon.jpg" alt="Daryl" loading="lazy" />
-        <div class="review-content">
-          <h3 class="review-title">“The Walking Dead: Daryl Dixon”</h3>
-          <div class="extra-info">
-            <p><strong>Criador:</strong> David Zabel</p>
-            <p><strong>Gênero:</strong> Drama, Apocalipse Zumbi</p>
-            <p><strong>Temporadas:</strong> 3 (2023)</p>
-            <p><strong>Estreia:</strong> 10 de Setembro de 2023</p>
-          </div>
-          <p class="review-summary">
-            Spin-off focado no personagem Daryl Dixon, aprofundando seu passado e aventuras no universo
-            pós-apocalíptico.
-          </p>
-          <div class="btn-wrapper">
-            <a href="daryu.html" class="btn-red">Leia mais</a>
-          </div>
-        </div>
-      </article>
-      <!-- Review 10 - Thunderbolts -->
-      <article class="review-card" data-category="ação espionagem marvel">
-        <img src="img/thunderbolts_capa-1.jpg" alt="Thunderbolts" loading="lazy" />
-        <div class="review-content">
-          <h3 class="review-title">“Thunderbolts (2025)”</h3>
-          <div class="extra-info">
-            <p><strong>Diretor:</strong> Jake Schreier</p>
-            <p><strong>Gênero:</strong> Ação, Espionagem, Super-heróis</p>
-            <p><strong>Distribuição:</strong> Marvel Studios / Disney</p>
-            <p><strong>Estreia:</strong> 2 de maio de 2025</p>
-          </div>
-          <p class="review-summary">
-            Um grupo de anti-heróis do universo Marvel é reunido pelo governo para missões secretas. Com Yelena Belova,
-            Bucky Barnes, Red Guardian e outros, o filme promete um tom mais sombrio e tático dentro do MCU.
-          </p>
-          <div class="btn-wrapper">
-            <a href="thunderbolts.html" class="btn-red">Leia mais</a>
-          </div>
-        </div>
-      </article>
-      <!-- Review 11 - Deadpool & Wolverine (2024) -->
-<article class="review-card" data-category="ação comédia marvel">
-  <img src="img/deadpollevolverine.jpg" alt="Deadpool & Wolverine" loading="lazy" />
-  <div class="review-content">
-    <h3 class="review-title">“Deadpool & Wolverine”</h3>
-    <div class="extra-info">
-      <p><strong>Diretor:</strong> Shawn Levy</p>
-      <p><strong>Gênero:</strong> Ação, Comédia, Super-heróis</p>
-      <p><strong>Duração:</strong> 128 minutos</p>
-      <p><strong>Lançamento:</strong> 26 de julho de 2024</p>
-    </div>
-    <p class="review-summary">
-      Um encontro explosivo entre dois ícones da Marvel. Repleto de humor ácido e ação desenfreada, o filme marca o retorno triunfal de Wolverine no MCU.
-    </p>
-    <div class="btn-wrapper">
-      <a href="deadpoolwolverine.html" class="btn-red">Leia mais</a>
-    </div>
-  </div>
+<article class="card" data-category="drama">
+<img src="img/duna.jpg">
+<h3>Duna: Parte 2</h3>
+<p>Visual épico, batalhas intensas e uma continuação grandiosa.</p>
+<a href="duna.html" class="btn-red" style="margin:10px">Leia mais</a>
 </article>
 
-<!-- Review - Harry Potter e as Relíquias da Morte – Parte 1 (2010) -->
-<article class="review-card" data-category="fantasia aventura magia">
-  <img src="img/673797.jpg" alt="Harry Potter e as Relíquias da Morte – Parte 1" loading="lazy" />
-  <div class="review-content">
-    <h3 class="review-title">“Harry Potter e as Relíquias da Morte – Parte 1”</h3>
-    <div class="extra-info">
-      <p><strong>Diretor:</strong> David Yates</p>
-      <p><strong>Gênero:</strong> Fantasia, Aventura, Magia</p>
-      <p><strong>Duração:</strong> 146 minutos</p>
-      <p><strong>Lançamento:</strong> 19 de novembro de 2010</p>
-    </div>
-    <p class="review-summary">
-      Primeiro capítulo do desfecho da saga Harry Potter, onde Harry, Hermione e Rony partem em uma missão perigosa para destruir as Horcruxes e derrotar Voldemort.
-    </p>
-    <div class="btn-wrapper">
-      <a href="reliquiasdamortept1.html" class="btn-red">Leia mais</a>
-    </div>
-  </div>
+<article class="card" data-category="ação">
+<img src="img/gta6.jpg">
+<h3>GTA 6</h3>
+<p>Rockstar redefine o mundo aberto com tecnologia absurda.</p>
+<a href="gta6.html" class="btn-red" style="margin:10px">Leia mais</a>
 </article>
 
-
-
-<!-- Review 13 - The Marvels (2025) -->
-<article class="review-card" data-category="ação aventura fantasia">
-  <img src="img/themarvels.jpeg" alt="The Marvels" loading="lazy" />
-  <div class="review-content">
-    <h3 class="review-title">“The Marvels”</h3>
-    <div class="extra-info">
-      <p><strong>Diretor:</strong> Nia DaCosta</p>
-      <p><strong>Gênero:</strong> Ação, Aventura, Fantasia</p>
-      <p><strong>Duração:</strong> 120 minutos</p>
-      <p><strong>Lançamento:</strong> 28 de fevereiro de 2025</p>
-    </div>
-    <p class="review-summary">
-      As heroínas Carol Danvers, Monica Rambeau e Kamala Khan unem forças para enfrentar uma ameaça cósmica que pode destruir o universo.
-    </p>
-    <div class="btn-wrapper">
-      <a href="the-marvels.html" class="btn-red">Leia mais</a>
-    </div>
-  </div>
+<article class="card" data-category="drama">
+<img src="img/daryl.jpg">
+<h3>Daryl Dixon</h3>
+<p>O spin-off mais cinematográfico de The Walking Dead.</p>
+<a href="daryl.html" class="btn-red" style="margin:10px">Leia mais</a>
 </article>
 
-<!-- Review - Harry Potter e as Relíquias da Morte – Parte 2 (2011) -->
-<article class="review-card" data-category="fantasia aventura magia">
-  <img src="img/harrypotter.jpeg" alt="Harry Potter e as Relíquias da Morte – Parte 2" loading="lazy" />
-  <div class="review-content">
-    <h3 class="review-title">“Harry Potter e as Relíquias da Morte – Parte 2”</h3>
-    <div class="extra-info">
-      <p><strong>Diretor:</strong> David Yates</p>
-      <p><strong>Gênero:</strong> Fantasia, Aventura, Magia</p>
-      <p><strong>Duração:</strong> 130 minutos</p>
-      <p><strong>Lançamento:</strong> 15 de julho de 2011</p>
-    </div>
-    <p class="review-summary">
-      Conclusão épica da saga Harry Potter, com a batalha final em Hogwarts, onde o destino do mundo mágico é decidido e segredos são revelados.
-    </p>
-    <div class="btn-wrapper">
-      <a href="reliquiasdamortept2.html" class="btn-red">Leia mais</a>
-    </div>
-  </div>
+<article class="card" data-category="ação">
+<img src="img/avatar3.jpg">
+<h3>Avatar 3</h3>
+<p>James Cameron entrega outro espetáculo visual.</p>
+<a href="avatar3.html" class="btn-red" style="margin:10px">Leia mais</a>
 </article>
 
-
-<!-- Review 15 - Um Lugar Silencioso: Dia Um -->
-<article class="review-card" data-category="terror suspense ficção">
-  <img src="img/umlugarsilencioso.jpg" alt="Um Lugar Silencioso: Dia Um" loading="lazy" />
-  <div class="review-content">
-    <h3 class="review-title">“Um Lugar Silencioso: Dia Um”</h3>
-    <div class="extra-info">
-      <p><strong>Diretor:</strong> Michael Sarnoski</p>
-      <p><strong>Gênero:</strong> Terror, Suspense, Ficção Científica</p>
-      <p><strong>Duração:</strong> 100 minutos</p>
-      <p><strong>Lançamento:</strong> 27 de junho de 2024</p>
-    </div>
-    <p class="review-summary">
-      O prelúdio da saga mostra como a invasão alienígena começou. Uma experiência angustiante, silenciosa e aterrorizante que expande o universo original.
-    </p>
-    <div class="btn-wrapper">
-      <a href="umlugarsilencioso.html" class="btn-red">Leia mais</a>
-    </div>
-  </div>
+<article class="card" data-category="ação">
+<img src="img/deadpool.jpg">
+<h3>Deadpool & Wolverine</h3>
+<p>A dupla mais caótica da Marvel domina os cinemas.</p>
+<a href="deadpool.html" class="btn-red" style="margin:10px">Leia mais</a>
 </article>
-    </div>
 
-    <div style="text-align: center; margin: 30px 0;">
-      <button id="loadMoreBtn" class="btn-red" style="display: block; margin: 30px auto 0;">
-        Carregar Mais
-      </button>
-    </div>
-  </div>
-  
-<footer role="contentinfo">
-  <p>© 2025 Maratonando Geek. Todos os direitos reservados.</p>
-  <nav class="footer-links" aria-label="Links do rodapé">
-    <a href="forum.html">Fórum da Comunidade</a> |
-    <a href="privacidade.html">Política de Privacidade</a> |
-    <a href="termos.html">Termos de Uso</a> |
-    <a href="sobre.html">Sobre</a>
-  </nav>
+<article class="card" data-category="drama">
+<img src="img/house.jpg">
+<h3>House of the Dragon</h3>
+<p>Dragões, política e guerra em nível cinematográfico.</p>
+<a href="house.html" class="btn-red" style="margin:10px">Leia mais</a>
+</article>
+
+<article class="card" data-category="terror">
+<img src="img/alanwake.jpg">
+<h3>Alan Wake 2</h3>
+<p>Terror psicológico com narrativa brilhante.</p>
+<a href="alanwake.html" class="btn-red" style="margin:10px">Leia mais</a>
+</article>
+
+<article class="card" data-category="ação">
+<img src="img/theboys.jpg">
+<h3>The Boys</h3>
+<p>Violência, crítica social e super-heróis fora de controle.</p>
+<a href="theboys.html" class="btn-red" style="margin:10px">Leia mais</a>
+</article>
+
+</div>
+
+</div>
+
+<footer>
+© 2025 Maratonando Geek – Todos os direitos reservados
 </footer>
- <script src="reviews.js"></script>
-</body>
 
+<script src="reviews.js"></script>
+
+</body>
 </html>
