@@ -1,447 +1,235 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <!-- Metadados básicos -->
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Maratonando Geek – Sua central de cultura pop no cinema e streaming</title>
-  <meta name="description" content="Fique por dentro de lançamentos, animes, reviews e rankings do universo geek. Explore notícias, agenda e especiais no Maratonando Geek." />
-  <meta name="keywords" content="filmes, séries, animes, games, cultura geek, lançamentos, reviews, maratonando geek" />
-  <meta name="author" content="Maratonando Geek" />
-  <meta name="robots" content="index,follow,max-image-preview:large" />
-  <link rel="canonical" href="https://www.seudominio.com.br/" />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <!-- Open Graph / Twitter -->
-  <meta property="og:type" content="website" />
-  <meta property="og:site_name" content="Maratonando Geek" />
-  <meta property="og:title" content="Maratonando Geek – Sua central de cultura pop no cinema e streaming" />
-  <meta property="og:description" content="Notícias, lançamentos, reviews e rankings do universo geek." />
-  <meta property="og:url" content="https://www.seudominio.com.br/" />
-  <meta property="og:image" content="https://www.seudominio.com.br/img/og-cover.jpg" />
-  <meta property="og:image:alt" content="Capa do site Maratonando Geek" />
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Maratonando Geek – Cultura pop no cinema e streaming" />
-  <meta name="twitter:description" content="Notícias, lançamentos, reviews e rankings do universo geek." />
-  <meta name="twitter:image" content="https://www.seudominio.com.br/img/og-cover.jpg" />
+<title>Maratonando Geek – Cultura pop, cinema e streaming</title>
 
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-VGPPMHC0E1"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-VGPPMHC0E1');
-  </script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@900&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
 
+<link rel="preload" as="image" href="img/max.webp">
 
-
-  <!-- Google AdSense -->
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3533636004938881" crossorigin="anonymous"></script>
-
-  <!-- Preconnect e fontes -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@900&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet" />
-
-  <!-- Ícones / Favicon -->
-  <link rel="icon" href="img/favicon.ico" sizes="any" />
-  <link rel="icon" type="image/svg+xml" href="img/favicon.svg" />
-  <link rel="apple-touch-icon" href="img/apple-touch-icon.png" />
-
-  <!-- CSS principal -->
-  <link rel="stylesheet" href="style.css" />
-
-<!-- JSON-LD (Website + Organization) -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@graph": [
-    {
-      "@type": "WebSite",
-      "name": "Maratonando Geek",
-      "url": "https://maratonandogeek.com.br/",
-      "inLanguage": "pt-BR",
-      "potentialAction": {
-        "@type": "SearchAction",
-        "target": "https://maratonandogeek.com.br/busca?q={search_term_string}",
-        "query-input": "required name=search_term_string"
-      }
-    },
-    {
-      "@type": "Organization",
-      "name": "Maratonando Geek",
-      "url": "https://maratonandogeek.com.br/",
-      "logo": "https://maratonandogeek.com.br/img/logo.png",
-      "sameAs": [
-        "https://www.instagram.com/maratonandogeekoficial/"
-      ]
-    }
-  ]
+<style>
+body {
+  margin:0;
+  font-family:Poppins, sans-serif;
+  background:#0e0e0e;
+  color:#fff;
 }
-</script>
 
+.container {
+  max-width:1200px;
+  margin:auto;
+  padding:20px;
+}
+
+/* HEADER */
+header {
+  background:#000;
+  padding:20px;
+  text-align:center;
+}
+
+.site-title {
+  font-family:Montserrat;
+  font-size:2.2rem;
+  margin:0;
+}
+
+.logo-sub {
+  opacity:.8;
+}
+
+/* NAV */
+.main-nav {
+  position:sticky;
+  top:0;
+  background:rgba(0,0,0,.9);
+  backdrop-filter:blur(12px);
+  z-index:999;
+  display:flex;
+  justify-content:center;
+  gap:20px;
+  padding:12px;
+}
+
+.main-nav a {
+  color:#fff;
+  text-decoration:none;
+  font-weight:500;
+}
+
+.main-nav a:hover {
+  color:#e50914;
+}
+
+/* HERO */
+.hero {
+  background:linear-gradient(rgba(0,0,0,.6), rgba(0,0,0,.9)),
+  url("img/hero-bg.jpg") center/cover;
+  padding:100px 20px;
+  text-align:center;
+}
+
+.hero h2 {
+  font-size:2.6rem;
+}
+
+.hero p {
+  opacity:.9;
+}
+
+.btn-red {
+  background:#e50914;
+  padding:12px 22px;
+  border-radius:6px;
+  text-decoration:none;
+  color:#fff;
+  font-weight:600;
+  display:inline-block;
+  margin-top:10px;
+  transition:.2s;
+}
+
+.btn-red:hover {
+  transform:scale(1.05);
+  background:#ff1e2d;
+}
+
+/* TRENDING */
+.trending-tags {
+  display:flex;
+  gap:10px;
+  flex-wrap:wrap;
+}
+
+.trending-tags a {
+  background:#111;
+  padding:8px 14px;
+  border-radius:20px;
+  text-decoration:none;
+  color:#fff;
+  font-size:.9rem;
+  transition:.2s;
+}
+
+.trending-tags a:hover {
+  background:#e50914;
+}
+
+/* CARDS */
+.grid {
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+  gap:20px;
+}
+
+.card {
+  background:#111;
+  border-radius:12px;
+  overflow:hidden;
+  transition:.25s;
+}
+
+.card img {
+  width:100%;
+  height:180px;
+  object-fit:cover;
+}
+
+.card:hover {
+  transform:translateY(-6px);
+  box-shadow:0 14px 30px rgba(0,0,0,.4);
+}
+
+.card h3 {
+  padding:10px;
+  margin:0;
+}
+
+.card p {
+  padding:0 10px 10px;
+  opacity:.85;
+}
+
+/* FOOTER */
+footer {
+  background:#000;
+  text-align:center;
+  padding:30px;
+  margin-top:60px;
+  font-size:.9rem;
+}
+</style>
 </head>
 
 <body>
 
-  <header role="banner">
-    <div class="header-inner" aria-label="Topo do site">
-      <div class="branding">
-        <!-- H1 global na home para SEO -->
-        <h1 class="site-title">Maratonando Geek</h1>
-        <p class="logo-sub">Sua central de cultura pop no cinema e streaming.</p>
-      </div>
- </div>
+<header>
+<h1 class="site-title">Maratonando Geek</h1>
+<p class="logo-sub">Sua central de cultura pop</p>
+</header>
 
-<!-- Social Icons -->
-<div class="social-icons">
-  <a href="https://www.facebook.com" target="_blank" aria-label="Facebook" class="social-btn facebook">
-    <i class="fab fa-facebook-f"></i>
-  </a>
-  <a href="https://www.twitter.com" target="_blank" aria-label="Twitter" class="social-btn twitter">
-    <i class="fab fa-twitter"></i>
-  </a>
-  <a href="https://www.instagram.com" target="_blank" aria-label="Instagram" class="social-btn instagram">
-    <i class="fab fa-instagram"></i>
-  </a>
-  <a href="https://www.youtube.com" target="_blank" aria-label="YouTube" class="social-btn youtube">
-    <i class="fab fa-youtube"></i>
-  </a>
-  <a href="https://www.tiktok.com" target="_blank" aria-label="TikTok" class="social-btn tiktok">
-    <i class="fab fa-tiktok"></i>
-  </a>
+<nav class="main-nav">
+<a href="#">Início</a>
+<a href="filmes.html">Filmes</a>
+<a href="series.html">Séries</a>
+<a href="games.html">Games</a>
+<a href="reviews.html">Reviews</a>
+</nav>
+
+<section class="hero">
+<div class="container">
+<h2>O melhor da cultura geek em um só lugar</h2>
+<p>Lançamentos, rankings, reviews e notícias atualizadas</p>
+<a href="#" class="btn-red">Explorar Reviews</a>
 </div>
-  </header>
-
-  <!-- Navegação principal -->
-  <nav class="main-nav" aria-label="Principal">
-    <a href="index.html" class="active" aria-current="page">Início</a>
-    <a href="filmes.html">Filmes</a>
-    <a href="series.html">Séries</a>
-    <a href="games.html">Games</a>
-    <a href="reviews.html">Reviews</a>
-    <a href="contato.html">Contato</a>
-    <a href="sobre.html">Sobre</a>
-  </nav>
-
-  <!-- Introdução textual (SEO e contexto) -->
-  <section class="intro container" id="conteudo" aria-labelledby="intro-title">
-    <h2 id="intro-title">O que você encontra por aqui</h2>
-    <p>
-      No Maratonando Geek você acompanha <strong>lançamentos</strong>, <strong>notícias</strong>,
-      <strong>reviews</strong>, <strong>listas&nbsp;&amp;&nbsp;rankings</strong> e uma área
-      <strong>interativa</strong> com enquetes, quiz e comentários. Fique por dentro do que rola no
-      cinema, streaming, animes e games – tudo em um só lugar.
-    </p>
-  </section>
-
-  <main id="main" class="main" role="main">
-    <div class="duas-colunas">
-      <aside class="secao-lateral" aria-labelledby="noticias-title">
-        <!-- Notícias em Alta -->
-<section class="noticias-em-alta" aria-live="polite">
-  <h2 id="noticias-title" class="highlight">Notícias em Alta</h2>
-
-  <div class="carrossel-em-alta" role="region" aria-label="Carrossel de notícias em alta">
-
-<!-- Slide 1 -->
-<article class="slide active" aria-roledescription="slide" aria-label="1 de 3">
-  <a href="altas1.html">
-  
-      <img src="img/max.webp"
-           alt="Stranger Things 5ª temporada na Netflix"
-           width="960" height="540" loading="lazy" decoding="async" />
-   
-    <div class="carrossel-caption">
-      <h3 class="slide-title">Stranger Things: Volume 2 da temporada final já está disponível</h3>
-      <p>Os novos episódios lançados no dia 25 elevam a tensão em Hawkins e preparam o terreno para o grande final da série na Netflix.</p>
-    </div>
-  </a>
-</article>
-
-
- 
-    <!-- Slide 2 -->
-
-  <article class="slide" aria-roledescription="slide" aria-label="3 de 3">
-    <a href="altas2.html">
-      <img src="img/vingadores.webp"
-           alt="Os Vingadores e os X-Men no futuro do MCU"
-           width="960" height="540" loading="lazy" decoding="async" />
-           
-      <div class="carrossel-caption">
-        <h3 class="slide-title">Os Vingadores vão dar lugar aos X-Men?</h3>
-        <p>O MCU pode estar prestes a viver uma nova era, com os mutantes assumindo o protagonismo.</p>
-        <figcaption>Imagem: Marvel Studios / Divulgação</figcaption>
-      </div>
-    </a>
-  </article>
-
-
-   <!-- Slide 3 -->
-<article class="slide" aria-roledescription="slide" aria-label="4 de 4">
-  <a href="altas3.html">
-    <img src="img/neonabysis.jpg"
-         alt="Personagem de Neon Abyss 2 em um cenário colorido e caótico"
-         width="960" height="540" loading="lazy" decoding="async" />
-    <div class="carrossel-caption">
-      <h3 class="slide-title">Neon Abyss 2 recebe grande atualização no Acesso Antecipado</h3>
-      <p>Sequência do roguelike ganha novos modos, personagem inédito e co-op online para até 4 jogadores.</p>
-      <figcaption>Foto: Divulgação / Veewo Games</figcaption>
-    </div>
-  </a>
-</article>
-
-
-  <!-- Dots do carrossel -->
-  <div class="carrossel-dots" role="tablist" aria-label="Navegação do carrossel">
-    <button class="dot active" role="tab" aria-selected="true" aria-controls="slide-1" data-index="0">
-      <span class="visually-hidden"></span>
-    </button>
-    <button class="dot" role="tab" aria-selected="false" aria-controls="slide-2" data-index="1">
-      <span class="visually-hidden"></span>
-    </button>
-    <button class="dot" role="tab" aria-selected="false" aria-controls="slide-3" data-index="2">
-      <span class="visually-hidden"></span>
-    </button>
-  </div>
 </section>
 
-
-        <!-- Em Cartaz + Agenda Geek -->
-        <div class="agenda-e-cartaz-wrapper">
-          <section class="em-cartaz" aria-labelledby="cartaz-title">
-            <h2 id="cartaz-title" class="section-title">🎬 Em Cartaz – Outubro 2025</h2>
-            <ul class="agenda-list" role="list">
-              <li>
-                <span class="agenda-date">09.10.2025</span>
-                <span class="agenda-title">Filme: “A Casa Mágica da Gabby”</span>
-                <span class="agenda-platform">Em cartaz / Estreia</span>
-              </li>
-              <li>
-                <span class="agenda-date">09.10.2025</span>
-                <span class="agenda-title">Filme: “Perrengue Fashion”</span>
-                <span class="agenda-platform">Em cartaz / Estreia</span>
-              </li>
-              <li>
-                <span class="agenda-date">16.10.20255</span>
-                <span class="agenda-title">Filme: “O Telefone Preto 2”</span>
-                <span class="agenda-platform">Em cartaz / Estreia</span>
-              </li>
-              <li>
-                <span class="agenda-date">09.10.2025</span>
-                <span class="agenda-title">Filme: “TRON: Ares”</span>
-                <span class="agenda-platform">Em cartaz / Estreia</span>
-              </li>
-            </ul>
-          </section>
-
-          <section class="agenda-geek" aria-labelledby="agenda-title">
-            <h2 id="agenda-title" class="section-title">Agenda Geek – Próximos Lançamentos 2025</h2>
-            <ul class="agenda-list" role="list">
-              <li>
-                <span class="agenda-date">23/10/2025</span>
-                <span class="agenda-title">Filme: “Frankie e os Monstros”</span>
-                <span class="agenda-platform">Nos cinemas</span>
-              </li>
-              <li>
-                <span class="agenda-date">23/10/2025</span>
-                <span class="agenda-title">Filme: “Mauricio de Sousa - O Filme”</span>
-                <span class="agenda-platform">Nos cinemas</span>
-              </li>
-              <li>
-                <span class="agenda-date">04/12/2025</span>
-                <span class="agenda-title">Filme: “Five Nights at Freddy’s 2”</span>
-                <span class="agenda-platform">Nos cinemas</span>
-              </li>
-              <li>
-                <span class="agenda-date">18/12/2025</span>
-                <span class="agenda-title">Filme: “Avatar 3 – Fogo e Cinzas”</span>
-                <span class="agenda-platform">Nos cinemas</span>
-              </li>
-            </ul>
-          </section>
-        </div>
-      </aside>
-    </div>
-
-    <div class="container">
-  <!-- Últimas Notícias -->
-<section aria-labelledby="ultimas-noticias-title">
-  <h2 id="ultimas-noticias-title" class="highlight">Últimas Notícias</h2>
-  <div class="grid" role="list">
-
-    <!-- Stranger Things 5 Vol.2 -->
-    <article class="card" role="listitem">
-      <div class="img-wrapper">
-        <img src="img/stneflix.webp"
-             alt="Stranger Things Volume 2 e o fim da série"
-             width="480" height="270" loading="lazy" decoding="async">
-        <span class="tag" aria-label="Categoria: Séries">Séries</span>
-      </div>
-      <h3>Stranger Things: episódios de Volume 2 já estão no streaming</h3>
-      <p class="card-excerpt">
-        A segunda parte da 5ª temporada de *Stranger Things* estreou dia 25 de dezembro, com três novos episódios que elevam a tensão em Hawkins e preparam o final da série. 
-      </p>
-      <div class="btn-wrapper">
-        <a href="novidades1.html" class="btn-red" aria-label="Ler mais sobre Stranger Things Volume 2">Saiba Mais</a>
-      </div>
-    </article>
-
-    <!-- Filme destaque da semana -->
-    <article class="card" role="listitem">
-      <div class="img-wrapper">
-        <img src="img/wakedman.jpg"
-             alt="Wake Up Dead Man: A Knives Out Mystery"
-             width="480" height="270" loading="lazy" decoding="async">
-        <span class="tag" aria-label="Categoria: Filmes">Filmes</span>
-      </div>
-      <h3>Wake Up Dead Man chega ao streaming e cinema</h3>
-      <p class="card-excerpt">
-        O novo filme da franquia *Knives Out*, dirigido por Rian Johnson, já está disponível na Netflix após estreia nos cinemas, com Daniel Craig de volta como Benoit Blanc. :contentReference[oaicite:2]{index=2}
-      </p>
-      <div class="btn-wrapper">
-        <a href="novidades-wake-up-dead-man.html" class="btn-red" aria-label="Ler mais sobre Wake Up Dead Man">Saiba Mais</a>
-      </div>
-    </article>
-
-    <!-- Jogo gratuito no PC -->
-    <article class="card" role="listitem">
-      <div class="img-wrapper">
-        <img src="img/wewere2.jpg"
-             alt="We Were Here Together grátis no PC"
-             width="480" height="270" loading="lazy" decoding="async">
-        <span class="tag" aria-label="Categoria: Games">Games</span>
-      </div>
-      <h3>We Were Here Together fica grátis no PC por tempo limitado</h3>
-      <p class="card-excerpt">
-        O jogo cooperativo *We Were Here Together* está disponível gratuitamente na Epic Games Store por tempo limitado — perfeito para jogar com um amigo antes que a promoção acabe. 
-      </p>
-      <div class="btn-wrapper">
-        <a href="novidades-games-gratis.html" class="btn-red" aria-label="Ler mais sobre We Were Here Together grátis">Saiba Mais</a>
-      </div>
-    </article>
-  </div>
+<section class="container">
+<h2>🔥 Em Alta Agora</h2>
+<div class="trending-tags">
+<a href="#">Stranger Things</a>
+<a href="#">GTA 6</a>
+<a href="#">Avatar 3</a>
+<a href="#">X-Men</a>
+<a href="#">MCU</a>
+</div>
 </section>
 
+<section class="container">
+<h2>Últimas Notícias</h2>
 
+<div class="grid">
 
-      <!-- Listas & Rankings -->
-      <section id="listas" aria-labelledby="listas-title">
-        <h2 id="listas-title" class="section-title">Listas & Rankings</h2>
-<div class="ranking-wrapper">
-  <!-- Ranking atualizado -->
-  <article class="ranking-card" aria-labelledby="rk-filmes-mais-esperados">
-    <h3 id="rk-filmes-mais-esperados">Top 10 Filmes Mais Esperados</h3>
-    <ol class="ranking-list">
-      <li><span class="pos">1</span> A Longa Marcha: Caminhe ou Morra – Suspense, Terror</li>
-      <li><span class="pos">2</span> O Morro dos Ventos Uivantes | Drama, Romance</li>
-      <li><span class="pos">3</span> Nossa Culpa | Drama, Romance</li>
-      <li><span class="pos">4</span> O Telefone Preto 2 | Suspense, Terror</li>
-      <li><span class="pos">5</span> Predador: Terras Selvagens | Ação, Ficção Científica, Terror</li>
-      <li><span class="pos">6</span> Coração de Lutador: The Smashing Machine | Biopic, Drama</li>
-      <li><span class="pos">7</span> O Agente Secreto | Drama, Policial</li>
-      <li><span class="pos">8</span> A Odisseia | Drama, Histórico</li>
-      <li><span class="pos">9</span> A Grande Viagem da Sua Vida | Drama</li>
-    </ol>
-  </article>
-
-        <!-- Ranking 3 -->
-<article class="ranking-card" aria-labelledby="rk-games-2025">
-  <h3 id="rk-games-2025">Top 10 Games Mais Esperados em 2025</h3>
-  <ol class="ranking-list">
-    <li><span class="pos">1</span> GTA 6</li>
-    <li><span class="pos">2</span> Call of Duty: Black Ops 7</li>
-    <li><span class="pos">3</span> The Legend of Zelda: Echoes of Time</li>
-    <li><span class="pos">4</span> Starfield: Beyond the Stars</li>
-    <li><span class="pos">5</span> Hogwarts Legacy 2</li>
-    <li><span class="pos">6</span> Assassin’s Creed: Empire Reborn</li>
-    <li><span class="pos">7</span> Resident Evil: Nemesis Rising</li>
-    <li><span class="pos">8</span> Final Fantasy XVI – Expansion</li>
-    <li><span class="pos">9</span> Cyberpunk 2077: Afterlife</li>
-    <li><span class="pos">10</span> Mario Kart 10</li>
-  </ol>
-</article>
+<div class="card">
+<img src="img/stneflix.webp">
+<h3>Stranger Things Volume 2 já disponível</h3>
+<p>Os episódios finais elevam a tensão e preparam o grande final.</p>
 </div>
 
-   <!-- Área Interativa -->
-<section id="interativo" aria-labelledby="interativo-title">
-  <h2 id="interativo-title" class="section-title">Área Interativa</h2>
+<div class="card">
+<img src="img/wakedman.jpg">
+<h3>Wake Up Dead Man estreia</h3>
+<p>Daniel Craig retorna como Benoit Blanc em novo mistério.</p>
+</div>
 
-  <!-- Botões de navegação -->
-  <div class="tabs" role="tablist" aria-label="Navegação de conteúdo interativo">
-    <button class="tab-btn active" role="tab" aria-selected="true" aria-controls="polls" data-tab="polls">Enquetes</button>
-    <button class="tab-btn" role="tab" aria-selected="false" aria-controls="quiz" data-tab="quiz">Quiz</button>
-    <button class="tab-btn" role="tab" aria-selected="false" aria-controls="comments" data-tab="comments">Comentários</button>
-  </div>
+<div class="card">
+<img src="img/wewere2.jpg">
+<h3>Jogo grátis na Epic</h3>
+<p>We Were Here Together está gratuito por tempo limitado.</p>
+</div>
 
-  <!-- ENQUETES -->
-  <div class="tab-content active" id="polls" role="tabpanel" aria-labelledby="polls-label">
-    <h3 id="polls-label" class="visually-hidden">Enquetes</h3>
-    <div id="polls-root"></div>
-  </div>
-
-  <!-- QUIZ -->
-  <div class="tab-content" id="quiz" role="tabpanel" aria-labelledby="quiz-label">
-    <h3 id="quiz-label" class="visually-hidden">Quiz</h3>
-    <form id="quiz-form" class="quiz-card" novalidate>
-      <h3>Quiz: Você manja de filmes & séries?</h3>
-
-      <fieldset class="quiz-question">
-        <legend>1) Quem dirige “Mickey 17”?</legend>
-        <label><input type="radio" name="q1" value="a"> Denis Villeneuve</label>
-        <label><input type="radio" name="q1" value="b"> Bong Joon Ho</label>
-        <label><input type="radio" name="q1" value="c"> Christopher Nolan</label>
-      </fieldset>
-
-      <fieldset class="quiz-question">
-        <legend>2) Em qual década se passa Stranger Things?</legend>
-        <label><input type="radio" name="q2" value="a"> 1970</label>
-        <label><input type="radio" name="q2" value="b"> 1980</label>
-        <label><input type="radio" name="q2" value="c"> 1990</label>
-      </fieldset>
-
-      <fieldset class="quiz-question">
-        <legend>3) Qual é o poder de Sue Storm no Quarteto Fantástico?</legend>
-        <label><input type="radio" name="q3" value="a"> Elasticidade</label>
-        <label><input type="radio" name="q3" value="b"> Invisibilidade e campos de força</label>
-        <label><input type="radio" name="q3" value="c"> Controle do fogo</label>
-      </fieldset>
-
-      <button type="submit" class="btn-red">Enviar respostas</button>
-      <p id="quiz-result" class="quiz-result" aria-live="polite"></p>
-    </form>
-  </div>
-
-  <!-- COMENTÁRIOS -->
-  <div class="tab-content" id="comments" role="tabpanel" aria-labelledby="comments-label">
-    <h3 id="comments-label" class="visually-hidden">Comentários</h3>
-    <div class="comments-card">
-      <h3>Deixe seu comentário</h3>
-      <form id="comment-form" novalidate>
-        <label class="visually-hidden" for="comment-name">Seu nome</label>
-        <input type="text" id="comment-name" placeholder="Seu nome" required aria-required="true">
-
-        <label class="visually-hidden" for="comment-text">Seu comentário</label>
-        <textarea id="comment-text" placeholder="O que você achou dos lançamentos?" required aria-required="true"></textarea>
-
-        <button type="submit" class="btn-red">Publicar</button>
-      </form>
-      <div id="comments-list" class="comments-list" aria-live="polite"></div>
-    </div>
-  </div>
+</div>
 </section>
-</main>
-</body>
-<script src="script.js"></script>
-<footer role="contentinfo">
-  <p>© 2025 Maratonando Geek. Todos os direitos reservados.</p>
-  <nav class="footer-links" aria-label="Links do rodapé">
-    <a href="forum.html">Fórum da Comunidade</a> |
-    <a href="privacidade.html">Política de Privacidade</a> |
-    <a href="termos.html">Termos de Uso</a> |
-    <a href="sobre.html">Sobre</a>
-  </nav>
+
+<footer>
+© 2025 Maratonando Geek – Todos os direitos reservados
 </footer>
+
+<script defer src="script.js"></script>
+
+</body>
 </html>

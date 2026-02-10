@@ -1,288 +1,154 @@
-/* ==================== 1. Reset e estilos básicos ==================== */
+/* ================= RESET GLOBAL ================= */
+* {
+  box-sizing: border-box;
+}
+
 body {
   font-family: 'Poppins', sans-serif;
-  background-color: #ffffff;
-  color: #333;
+  background: #0e0e0e;
+  color: #f5f5f5;
   margin: 0;
   padding: 0;
+  line-height: 1.6;
 }
 
-/* ==================== 2. Header ==================== */
+/* ================= HEADER ================= */
 header {
-  background-color: #1E90FF;
+  background: #000;
   padding: 20px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 16px;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-  user-select: none;
-  color: #2c3e50;
-  flex-wrap: wrap;
+  text-align: center;
+  border-bottom: 1px solid #111;
 }
 
-.logo-icon {
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  overflow: hidden;
-}
-
-.logo-icon img {
-  width: 160px;
-  max-width: 100%;
-  max-height: 100%;
-  object-fit: contain;
-  display: block;
-}
-
-.logo-text-wrapper {
-  text-align: left;
-  line-height: 1;
-}
-
-.logo-text-wrapper h2, .logo-main {
+.logo-main,
+.site-title {
   font-family: 'Montserrat', sans-serif;
-  font-style: italic;
   font-weight: 900;
-  font-size: 2.8rem;
-  letter-spacing: 5px;
-  text-transform: uppercase;
-  color: #ffffff;
+  font-size: 2.4rem;
+  letter-spacing: 2px;
+  color: #fff;
+  margin: 0;
 }
 
 .logo-sub {
-  font-family: 'Poppins', sans-serif;
-  font-weight: 500;
-  font-size: 0.9rem;
-  color: #ffffff;
-  margin-left: 8px;
+  opacity: .8;
+  color: #aaa;
 }
 
-/* ==================== 3. Redes sociais ==================== */
+/* ================= NAV ================= */
+nav,
+.main-nav {
+  position: sticky;
+  top: 0;
+  background: rgba(0,0,0,.9);
+  backdrop-filter: blur(10px);
+  z-index: 999;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding: 12px;
+  border-bottom: 1px solid #111;
+}
+
+nav a,
+.main-nav a {
+  color: #ccc;
+  text-decoration: none;
+  font-weight: 500;
+  transition: .2s;
+}
+
+nav a:hover,
+nav a.active,
+.main-nav a:hover {
+  color: #e50914;
+}
+
+/* ================= CONTAINER ================= */
+.container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 20px;
+}
+
+/* ================= HERO ================= */
+.hero {
+  background: linear-gradient(rgba(0,0,0,.6), rgba(0,0,0,.9)),
+              url("img/hero-bg.jpg") center/cover;
+  padding: 100px 20px;
+  text-align: center;
+}
+
+.hero h2 {
+  font-size: 2.6rem;
+  margin-bottom: 10px;
+}
+
+.hero p {
+  opacity: .9;
+}
+
+/* ================= BOTÕES ================= */
+.btn-red {
+  background: #e50914;
+  padding: 12px 22px;
+  border-radius: 6px;
+  text-decoration: none;
+  color: #fff;
+  font-weight: 600;
+  display: inline-block;
+  margin-top: 10px;
+  transition: .2s;
+  border: none;
+  cursor: pointer;
+}
+
+.btn-red:hover {
+  transform: scale(1.05);
+  background: #ff1e2d;
+}
+
+/* ================= SOCIAL ================= */
 .social-icons {
   display: flex;
   justify-content: center;
-  gap: 15px; /* espaçamento entre os ícones */
+  gap: 15px;
   margin: 20px 0;
 }
 
 .social-btn {
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 50px;
-  height: 50px;
-  border-radius: 12px; /* cantos arredondados */
-  color: #fff; /* ícone branco */
-  font-size: 24px;
-  transition: transform 0.3s, box-shadow 0.3s;
+  color: #fff;
+  transition: .3s;
 }
 
 .social-btn:hover {
   transform: scale(1.1);
-  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
 }
 
-/* Cores oficiais de cada rede */
-.social-btn.facebook { background-color: #1877F2; }
-.social-btn.twitter { background-color: #1DA1F2; }
-.social-btn.instagram { background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%); }
-.social-btn.youtube { background-color: #FF0000; }
-.social-btn.tiktok { background-color: #000000; }
-
-
-/* ==================== 4. Navegação (nav) ==================== */
-nav {
-  background: #ecf0f1;
-  display: flex;
-  justify-content: center;
-  padding: 10px;
-  border-bottom: 1px solid #bdc3c7;
-  flex-wrap: wrap;
-}
-
-nav a {
-  color: #34495e;
-  text-decoration: none;
-  margin: 0 15px;
-  font-weight: bold;
-  transition: 0.3s;
-  padding: 4px 6px;
-}
-
-nav a:hover,
-nav a.active {
-  color: #1E90FF;
-  border-bottom: 2px solid #1E90FF;
-  padding-bottom: 4px;
-}
-
-/* ==================== 5. Container geral ==================== */
-.container {
-  width: 90%;
-  max-width: 1200px;
-  margin: auto;
-  padding: 5px 0 10px 0;
-}
-
-/* ==================== 6. Seção lateral ==================== */
-.secao-lateral {
-  display: flex;
-  gap: 24px;
-  max-width: 1200px;
-  margin: 10px auto 40px auto;
-  padding: 0 15px;
-  flex-wrap: wrap;
-  align-items: stretch;
-}
-
-/* Notícias em Alta (carrossel) */
-.noticias-em-alta {
-  flex: 2;
-  min-width: 300px;
-}
-
-.noticias-em-alta > h2 {
-  color: #e50914;
-  margin-bottom: 10px;
-  padding-left: 5px;
-  font-weight: 700;
-}
-
-.carrossel-em-alta {
-  position: relative;
-  max-width: 100%;
-  overflow: hidden;
-}
-
-.carrossel-em-alta img {
-  width: 100%;
-  height: 500px;
-  object-fit: cover;
-  border-radius: 10px;
-}
-
-.slide { display: none; position: relative; }
-.slide.active { display: block; }
-
-.carrossel-caption {
-  position: absolute;
-  bottom: 20px;
-  left: 20px;
-  color: #fff;
-  background: rgba(0,0,0,0.5);
-  padding: 10px 15px;
-  border-radius: 8px;
-  max-width: 80%;
-}
-
-.carrossel-caption h3,
-.carrossel-caption p {
-  color:#fff;
-  text-decoration: underline;
-}
-
-.carrossel-caption figcaption {
-  font-size: 0.85rem;
-  color:#fff;
-  background-color: rgba(0,0,0,0.5);
-  padding: 4px 8px;
-  text-align: right;
-  border-radius: 4px;
-  font-style: italic;
-  margin-top: 4px;
-  display: inline-block;
-}
-
-.carrossel-dots {
-  text-align: center;
-  margin-top: 10px;
-}
-
-.carrossel-dots .dot {
-  height: 12px;
-  width: 12px;
-  margin: 0 5px;
-  background-color: #bbb;
-  border-radius: 50%;
-  display: inline-block;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-.carrossel-dots .dot.active { background-color: #e50914; }
-
-/* ==================== 7. Agenda Geek ==================== */
-.agenda-geek, .agenda-e-cartaz-wrapper section {
-  background: #ffffff;
-  padding: 16px;
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.04);
-  box-sizing: border-box;
-}
-
-.agenda-list {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.agenda-list li {
-  font-size: 0.95rem;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: center;
-  padding: 15px 10px;
-  border-bottom: 1px solid #eee;
-  transition: background 0.3s;
-}
-
-.agenda-list li:hover { background: #fcecea; }
-
-.agenda-date {
-  font-weight: 700;
-  color: #FF6F61;
-  width: 120px;
-  flex-shrink: 0;
-}
-
-.agenda-title { flex: 1; color:#2c3e50; font-weight:600; }
-.agenda-platform { font-style:italic; color:#7f8c8d; width:140px; text-align:right; flex-shrink:0; }
-
-/* Wrapper Agenda + Cartaz */
-.agenda-e-cartaz-wrapper {
-  display: flex;
-  gap: 24px;
-  max-width: 1200px;
-  margin: 40px auto;
-  padding: 0 15px;
-  flex-wrap: wrap;
-  align-items: flex-start;
-}
-
-.agenda-e-cartaz-wrapper section {
-  flex: 1 1 45%;
-  min-width: 280px;
-}
-
-/* ==================== 8. Grid de cards ==================== */
-.grid, .ranking-wrapper {
+/* ================= GRID & CARDS ================= */
+.grid,
+.ranking-wrapper {
   display: grid;
-  grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+  grid-template-columns: repeat(auto-fit, minmax(260px,1fr));
   gap: 20px;
 }
 
-.card, .ranking-card, .poll-card, .quiz-card, .comments-card {
-  background: #fff;
-  border-radius: 10px;
-  border: 1px solid #ddd;
+.card,
+.ranking-card,
+.poll-card,
+.quiz-card,
+.comments-card {
+  background: #111;
+  border-radius: 12px;
   overflow: hidden;
-  box-shadow: 0 0 10px rgba(0,0,0,0.05);
-  transition: transform 0.3s, box-shadow 0.3s;
-  display:flex;
-  flex-direction:column;
+  border: 1px solid #222;
+  transition: .25s;
 }
 
 .card:hover,
@@ -290,102 +156,132 @@ nav a.active {
 .poll-card:hover,
 .quiz-card:hover,
 .comments-card:hover {
-  transform: scale(1.03);
-  box-shadow: 0 0 15px rgba(0,0,0,0.15);
+  transform: translateY(-6px);
+  box-shadow: 0 14px 30px rgba(0,0,0,.4);
 }
 
-.card img, .ranking-card img {
+.card img {
   width: 100%;
-  height: 350px;
+  height: 200px;
   object-fit: cover;
-  border-bottom:1px solid #ddd;
 }
 
-.card h3, .ranking-card h3, .quiz-card h3, .poll-card h4 {
+.card h3,
+.ranking-card h3 {
   margin: 15px;
-  color: #2C3E50;
+  color: #fff;
 }
 
-.card .tag {
-  display:inline-block;
-  background:#1E90FF;
-  color:#fff;
-  font-size:0.8rem;
-  padding:4px 10px;
-  border-radius:25px;
-  margin:0 15px 10px 15px;
-  font-weight:600;
-  transition: transform 0.2s;
+.card p {
+  margin: 0 15px 15px;
+  opacity: .85;
 }
 
-.card .tag:hover { transform: scale(1.05); }
-
-/* Botão Saiba Mais */
-.btn-wrapper { text-align:center; margin: 10px; }
-
-.btn-red {
-  display:inline-block;
-  background:linear-gradient(135deg,#1E90FF,#2C3E50);
-  color:#fff;
-  text-decoration:none;
-  padding:10px 20px;
-  border-radius:50px;
-  font-weight:bold;
-  font-size:0.95rem;
-  border:none;
-  cursor:pointer;
-  transition: background 0.3s, transform 0.2s;
-  box-shadow:0 4px 10px rgba(0,0,0,0.2);
+/* TAG */
+.tag {
+  background: #e50914;
+  padding: 4px 10px;
+  border-radius: 999px;
+  font-size: .75rem;
+  margin: 0 15px 10px;
+  display: inline-block;
 }
 
-.btn-red:hover {
-  background: linear-gradient(135deg,#2C3E50,#1E90FF);
-  transform: translateY(-2px);
+/* ================= CARROSSEL ================= */
+.carrossel-em-alta img {
+  width: 100%;
+  height: 450px;
+  object-fit: cover;
+  border-radius: 12px;
 }
 
-/* ==================== 9. Listas, Rankings, Tags ==================== */
-.ranking-card { background:#F0F8FF; border:2px solid #1E90FF; padding:20px; border-radius:12px; }
-.ranking-list { list-style:none; padding:0; margin:10px 0 0; }
-.ranking-list li { display:flex; align-items:center; gap:10px; padding:6px 0; border-bottom:1px solid rgba(255,255,255,0.1); }
-.ranking-list li:last-child { border-bottom:0; }
-.pos { background:#1E90FF; color:#fff; font-weight:bold; width:26px; height:26px; border-radius:50%; display:inline-flex; align-items:center; justify-content:center; font-size:0.85rem; }
-.tag-list { list-style:none; padding:0; margin:0 0 8px; display:flex; flex-wrap:wrap; gap:6px; }
-.tag { background:#1E90FF; color:#fff; padding:2px 8px; border-radius:999px; font-size:0.75rem; }
-
-/* ==================== 10. Área Interativa ==================== */
-.tabs { display:flex; gap:8px; margin-bottom:16px; }
-.tab-btn { background:#1E90FF; color:#F0F8FF; border:2px solid #1E90FF; border-radius:8px; padding:8px 14px; cursor:pointer; font-weight:bold; transition:0.2s; }
-.tab-btn.active, .tab-btn:hover { background:#FF6F61; color:#2C3E50; }
-.tab-content { display:none; }
-.tab-content.active { display:block; }
-
-/* ==================== 11. Comentários ==================== */
-#comment-form input, #comment-form textarea { background:#F0F8FF; border:2px solid #2C3E50; border-radius:8px; padding:10px; font-family:inherit; color:#2C3E50; width:90%; margin-bottom:10px; }
-
-.comments-list { margin-top:18px; display:flex; flex-direction:column; gap:12px; }
-
-.comment-item { border-left:4px solid #7e57c2; padding-left:10px; color:#ccc; }
-.comment-item .author { font-weight:bold; color:#d1c4e9; }
-.comment-item .date { font-size:0.75rem; color:#999; }
-
-/* ==================== 12. Footer ==================== */
-footer { text-align:center; padding:16px 0; background:#1E90FF; color:#fff; margin-top:50px; }
-
-/* ==================== 13. Responsividade ==================== */
-@media (max-width: 1024px) { 
-  .secao-lateral { flex-direction:column; }
-  .agenda-e-cartaz-wrapper { flex-direction:column; }
+.carrossel-caption {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  background: rgba(0,0,0,.6);
+  padding: 12px;
+  border-radius: 8px;
+  max-width: 80%;
 }
 
+/* ================= AGENDA ================= */
+.agenda-e-cartaz-wrapper section {
+  background: #111;
+  border-radius: 12px;
+  border: 1px solid #222;
+}
+
+.agenda-list li {
+  padding: 12px;
+  border-bottom: 1px solid #222;
+}
+
+.agenda-date {
+  color: #e50914;
+  font-weight: bold;
+}
+
+/* ================= RANKING ================= */
+.pos {
+  background: #e50914;
+  color: #fff;
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ================= TABS ================= */
+.tab-btn {
+  background: #111;
+  border: 1px solid #333;
+  color: #fff;
+  padding: 8px 14px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.tab-btn.active,
+.tab-btn:hover {
+  background: #e50914;
+}
+
+/* ================= COMENTÁRIOS ================= */
+#comment-form input,
+#comment-form textarea {
+  width: 100%;
+  background: #111;
+  border: 1px solid #333;
+  color: #fff;
+  padding: 10px;
+  border-radius: 6px;
+  margin-bottom: 10px;
+}
+
+/* ================= FOOTER ================= */
+footer {
+  background: #000;
+  text-align: center;
+  padding: 30px;
+  margin-top: 60px;
+  font-size: .9rem;
+  border-top: 1px solid #111;
+}
+
+/* ================= RESPONSIVO ================= */
 @media (max-width: 768px) {
-  .carrossel-em-alta img { height:300px; }
-  .btn-red { width:100%; font-size:1rem; padding:12px; }
-  .social-icons { justify-content:center; margin:20px 0; gap:15px; }
-}
+  .hero h2 {
+    font-size: 1.8rem;
+  }
 
-@media (max-width: 480px) {
-  .carrossel-em-alta img { height:250px; }
-  .carrossel-caption { font-size:0.9rem; padding:6px 10px; }
-  .card img, .ranking-card img { max-height:250px; }
-  nav { flex-wrap:wrap; justify-content:center; }
+  .carrossel-em-alta img {
+    height: 280px;
+  }
+
+  .btn-red {
+    width: 100%;
+  }
 }
