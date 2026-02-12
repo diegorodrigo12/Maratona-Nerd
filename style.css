@@ -369,3 +369,39 @@ footer a {
   color: #e50914;
   text-decoration: none;
 }
+
+.card {
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+}
+
+.card-content {
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  flex: 1;
+}
+
+.tag {
+  background: #e50914;
+  padding: 4px 10px;
+  border-radius: 999px;
+  font-size: .75rem;
+  width: fit-content;
+}
+
+.btn-wrapper {
+  margin-top: auto;
+}
+
+.btn-red {
+  background: #e50914;
+  padding: 8px 12px;
+  border-radius: 6px;
+  text-decoration: none;
+  color: #fff;
+  font-size: .85rem;
+  display: inline-block;
+}
